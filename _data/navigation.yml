@@ -15,12 +15,8 @@ en: &DEFAULT_EN
       section: about
     - title: "Program"
       section: services
-    - title: "Application"
-      section: portfolio
-    - title: "Contact"
-      section: contact
-    # - title: "Theme Source"
-    #   url: https://github.com/raviriley/agency-jekyll-theme/
+    - title: "Apply"
+      section: button
 en-US:
   <<: *DEFAULT_EN
 en-CA:
