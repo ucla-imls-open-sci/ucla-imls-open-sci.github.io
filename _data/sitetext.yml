@@ -14,8 +14,7 @@ en: &DEFAULT_EN
     title: Lessons for Librarians in
     text: Open Science Principles and Methods 2022
     button: Submit a Proposal!
-    buttonlink: about 
-    # needs a link
+    buttonlink: https://www.surveymonkey.com/r/63JTJSQ
 
   about:
     title: "Call for Proposals"
@@ -38,8 +37,7 @@ en: &DEFAULT_EN
   button:
     title: "Ready to Apply?"
     button: Submit a Proposal!
-    buttonlink: about 
-    # needs a link
+    buttonlink: https://www.surveymonkey.com/r/63JTJSQ
 
   footer:
     legal: "Privacy Policy"
