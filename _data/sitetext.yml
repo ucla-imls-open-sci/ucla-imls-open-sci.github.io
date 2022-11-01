@@ -34,10 +34,10 @@ en: &DEFAULT_EN
         desc: "This program will result in **14** open science course modules for librarians at any career stage.  These curricula will be published online in an **unrestricted** and **freely available** manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer institutes, and we will use feedback from lesson piloting to test the lessons with librarian learners."
         icon: fas fa-bullseye # find more at https://fontawesome.com/icons
   
-  button:
-    title: "Ready to Apply?"
-    button: Submit a Proposal!
-    buttonlink: 
+#  button:
+#    title: "Ready to Apply?"
+#    button: Call
+#    buttonlink: 
     
   footer:
     legal: "Privacy Policy"
