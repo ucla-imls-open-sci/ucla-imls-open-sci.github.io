@@ -37,8 +37,8 @@ en: &DEFAULT_EN
   button:
     title: "Ready to Apply?"
     button: Submit a Proposal!
-    buttonlink: https://www.surveymonkey.com/r/63JTJSQ
-
+    buttonlink: 
+    
   footer:
     legal: "Privacy Policy"
 
