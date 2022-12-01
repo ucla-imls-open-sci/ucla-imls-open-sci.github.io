@@ -38,6 +38,35 @@ en: &DEFAULT_EN
     title: "Ready to Apply?"
     button: Coming Soon! 
     buttonlink: 
+      
+  staff:
+    title: "Staff"
+    section: staff
+    people:
+      - name: "Tim Dennis"
+        role: "Program Director"
+        image: assets/img/staff/timdennis.jpeg
+        social:
+          - url: https://twitter.com/jt14den
+            icon: fab fa-twitter
+          - url: https://linkedin.com/in/jtimdennis/
+            icon: fab fa-linkedin-in
+      - name: "Zhiyuan Yao"
+        role: "Program Coordinator"
+        image: assets/img/staff/zhiyuan_500x500.jpeg
+        social:
+          - url: https://twitter.com/zhiyuangis
+            icon: fab fa-twitter
+          - url: https://www.linkedin.com/in/zhiyuan-yao-8b7b13101/
+            icon: fab fa-linkedin-in
+      - name: "Emily Gong"
+        role: "Lesson Infrastructure Developer"
+        image: assets/img/staff/EmilyGong.jpeg
+        social:
+          - url: https://twitter.com/Emily24459272
+            icon: fab fa-twitter
+          - url: https://www.linkedin.com/in/emily-gong-11b5a719b/
+            icon: fab fa-linkedin-in
     
   footer:
     legal: "Privacy Policy"

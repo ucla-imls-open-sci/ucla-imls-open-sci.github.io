@@ -17,6 +17,8 @@ en: &DEFAULT_EN
       section: services
     - title: "Apply"
       section: button
+    - title: "Staff"
+      section: staff
 en-US:
   <<: *DEFAULT_EN
 en-CA:
