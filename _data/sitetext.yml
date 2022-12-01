@@ -67,7 +67,54 @@ en: &DEFAULT_EN
             icon: fab fa-twitter
           - url: https://www.linkedin.com/in/emily-gong-11b5a719b/
             icon: fab fa-linkedin-in
-    
+  team:
+    title: "Committee"
+    # text: "Powell Student DataSquad"
+    section: team
+    people:
+      - name: "Clifford Kravit"
+        role: UCLA
+        image: assets/img/500x500.jpg
+        social: 
+          - url: ckravit@g.ucla.edu
+            icon: fas fa-envelope-open-text
+
+      - name: "Joy Juey"
+        role: UCLA
+        image: assets/img/500x500.jpg
+        social: 
+          - url: joy@ssc.ucla.edu
+            icon: fas fa-envelope-open-text
+
+      - name: "Chris Erdmann"
+        role: Associate Director for Open Science at Michael J. Fox Foundation
+        image: assets/img/500x500.jpg
+        social: 
+          - url: christopher.c.erdmann@gmail.com
+            icon: fas fa-envelope-open-text
+
+      - name: "Cody Hennessey"
+        role: University of Minnesota/Journalism and Digital Media Librarian
+        image: assets/img/500x500.jpg
+        social: 
+          - url: chennesy@umn.edu
+            icon: fas fa-envelope-open-text
+
+      - name: "Elaine Westbrooks"
+        role: Carl A. Kroch University Librarian, Cornell University Library
+        image: assets/img/500x500.jpg
+        social: 
+          - url: elw25@cornell.edu
+            icon: fas fa-envelope-open-text
+
+      - name: "Caroline Coward"
+        role: Information Science Manager and Library Group Supervisor, Jet Propulsion Lab, National Aeronautics and Space Administration
+        image: assets/img/500x500.jpg
+        social: 
+          - url: caroline.m.coward@jpl.nasa.gov
+            icon: fas fa-envelope-open-text
+
+
   footer:
     legal: "Privacy Policy"
 

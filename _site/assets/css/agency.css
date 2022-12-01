@@ -116,7 +116,7 @@ header.masthead .intro-text .intro-heading { font-size: 50px; font-weight: 700; 
 
 .portfolio-modal .close-modal .lr .rl { /* Safari and Chrome */ z-index: 1052; width: 1px; height: 75px; /* IE 9 */ -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg); background-color: #212529; }
 
-.team-member { display: none; margin-bottom: 50px; text-align: center; }
+.team-member { margin-bottom: 50px; text-align: center; }
 
 .team-member img { width: 225px; height: 225px; border: 7px solid rgba(0, 0, 0, 0.1); }
 
@@ -124,7 +124,7 @@ header.masthead .intro-text .intro-heading { font-size: 50px; font-weight: 700; 
 
 .team-member p { margin-top: 0; }
 
-.staff-member { display: none; margin-bottom: 50px; text-align: center; }
+.staff-member { margin-bottom: 50px; text-align: center; }
 
 .staff-member img { width: 225px; height: 225px; border: 7px solid rgba(0, 0, 0, 0.1); }
 

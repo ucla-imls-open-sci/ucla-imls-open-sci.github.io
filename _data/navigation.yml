@@ -17,6 +17,8 @@ en: &DEFAULT_EN
       section: services
     - title: "Apply"
       section: button
+    - title: "Committee"
+      section: team
     - title: "Staff"
       section: staff
 en-US:
