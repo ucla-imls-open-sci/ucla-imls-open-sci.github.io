@@ -37,8 +37,8 @@ en: &DEFAULT_EN
   button:
     title: "Ready to Apply?"
     button: Coming Soon! 
-    buttonlink: 
-      
+    buttonlink: https://ucla-datasquad.github.io/imls-open-sci-ucla/
+    
   staff:
     title: "Staff"
     section: staff
