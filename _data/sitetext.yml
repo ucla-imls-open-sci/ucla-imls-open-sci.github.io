@@ -74,45 +74,57 @@ en: &DEFAULT_EN
     people:
       - name: "Clifford Kravit"
         role: UCLA
-        image: assets/img/500x500.jpg
+        image: assets/img/committee/Clifford-Kravit.png
         social: 
           - url: ckravit@g.ucla.edu
-            icon: fas fa-envelope-open-text
+            icon: fas fa-envelope
+          - url: https://www.linkedin.com/in/clifford-kravit/
+            icon: fab fa-linkedin-in
 
       - name: "Joy Juey"
         role: UCLA
         image: assets/img/500x500.jpg
         social: 
           - url: joy@ssc.ucla.edu
-            icon: fas fa-envelope-open-text
+            icon: fas fa-envelope
+          - url: https://www.linkedin.com/in/joyguey/
+            icon: fab fa-linkedin-in
 
       - name: "Chris Erdmann"
         role: Associate Director for Open Science at Michael J. Fox Foundation
         image: assets/img/500x500.jpg
         social: 
           - url: christopher.c.erdmann@gmail.com
-            icon: fas fa-envelope-open-text
+            icon: fas fa-envelope
+          - url: https://www.linkedin.com/in/christopher-erdmann-1213a456/
+            icon: fab fa-linkedin-in
 
       - name: "Cody Hennessey"
         role: University of Minnesota/Journalism and Digital Media Librarian
         image: assets/img/500x500.jpg
         social: 
           - url: chennesy@umn.edu
-            icon: fas fa-envelope-open-text
+            icon: fas fa-envelope
+          - url: https://www.linkedin.com/in/cody-hennesy-8a915a117/
+            icon: fab fa-linkedin-in
 
       - name: "Elaine Westbrooks"
         role: Carl A. Kroch University Librarian, Cornell University Library
         image: assets/img/500x500.jpg
         social: 
           - url: elw25@cornell.edu
-            icon: fas fa-envelope-open-text
+            icon: fas fa-envelope
+          - url: https://www.linkedin.com/in/elaine-w-13b1811/
+            icon: fab fa-linkedin-in
 
       - name: "Caroline Coward"
         role: Information Science Manager and Library Group Supervisor, Jet Propulsion Lab, National Aeronautics and Space Administration
         image: assets/img/500x500.jpg
         social: 
           - url: caroline.m.coward@jpl.nasa.gov
-            icon: fas fa-envelope-open-text
+            icon: fas fa-envelope
+          - url: https://www.linkedin.com/in/caroline-coward-nasa-jpl/
+            icon: fab fa-linkedin-in
 
 
   footer:
