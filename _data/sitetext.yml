@@ -125,6 +125,16 @@ en: &DEFAULT_EN
             icon: fas fa-envelope
           - url: https://www.linkedin.com/in/caroline-coward-nasa-jpl/
             icon: fab fa-linkedin-in
+     
+      - name: "Yvonne Ivey"
+        role: NAS TOPS, Program Manager
+        image: assets/img/500x500.jpg
+        social: 
+          - url: ypivey@gmail.com
+            icon: fas fa-envelope
+          - url: https://www.linkedin.com/in/ypive
+            icon: fab fa-linkedin-in
+
 
 
   footer:
