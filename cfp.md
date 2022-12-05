@@ -1,4 +1,8 @@
-# Call for proposals: Lessons for Librarians in Open Science Principles and Methods 
+---
+layout: page
+title: Call for Proposals: Lessons for Librarians in Open Science Principles and Methods 
+background: grey
+---
 
 ## Program Overview 
 
