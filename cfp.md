@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Call for Proposals: Lessons for Librarians in Open Science Principles and Methods 
+title: "Call for Proposals: Lessons for Librarians in Open Science Principles and Methods" 
 background: grey
 ---
 
