@@ -69,5 +69,5 @@ If you have any questions, please contact [datascience+imls@ucla.edu](mailto:dat
 This project was made possible in part by the Institute of Museum and Library Services, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22). 
 Este proyecto ha sido posible en parte por el Instituto de Servicios de Museos y Bibliotecas, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22).
 
-
+<img src="https://www.imls.gov/sites/default/files/imls_logo_white.png" />
 
