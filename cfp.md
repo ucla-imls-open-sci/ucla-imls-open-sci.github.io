@@ -44,7 +44,7 @@ We will accept applications from one applicant or several applicants as a group.
 
 ## Proposal Details
 
-The proposal should include lesson justification, a brief statement on your intended lesson audience, learning objectives, and a description of the lesson content. The proposal should be 500-700 words, in Arial font, size 12, and with a line spacing of 1.5. References and other supporting materials can be added. All documents need to be in one pdf. Please submit your proposal [here](https://www.surveymonkey.com/r/63JTJSQ). 
+The proposal should include a lesson topic, key words, a brief statement on your intended lesson audience, a description of lesson content, and learning objectives. The proposal should be 500-700 words, in Arial font, size 12, and with a line spacing of 1.5. References and other supporting materials can be added. All documents need to be in one pdf. Please submit your proposal [here](https://www.surveymonkey.com/r/63JTJSQ). 
 
 ## Dates 
 
