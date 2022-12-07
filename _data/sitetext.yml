@@ -23,6 +23,8 @@ en: &DEFAULT_EN
     Led by the UCLA Library Data Science Center, this project will incentivize two sequential one year cohorts of authors to develop and refine lessons through summer workshops. 
     As part of this project, the UCLA Library Data Science Center is pleased to announce the call for proposals to develop lessons for librarians focused on open science methods and principles."
     section: about
+    button: Read the Full Call 
+    buttonlink: https://ucla-imls-open-sci.info/cfp
 
   services:
     title: "Program"
@@ -33,13 +35,13 @@ en: &DEFAULT_EN
         desc: "This call seeks to support **continued skills development** for librarians in open science to effectively provide instruction to new researchers and effectively collaborate with faculty and researchers in science projects using open science practices. We aim to fund projects with high potential for **subsequent impact on the open science community**. We invite proposals based on **diverse intellectual approaches** and **personal backgrounds** to achieve these ends. "
         icon: fas fa-envelope-open-text
       - title: "Program Goals"
-        desc: "This program will result in **14** open science course modules for librarians at any career stage.  These curricula will be published online in an **unrestricted** and **freely available** manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer institutes, and we will use feedback from lesson piloting to test the lessons with librarian learners."
+        desc: "This program will result in 14 open science course modules for librarians at any career stage, with seven lesson proposals selected each year of the grant. These curricula will be published online in an unrestricted and freely available manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer workshops, and we will use feedback from lesson piloting to test the learning objectives with librarian learners."
         icon: fas fa-bullseye # find more at https://fontawesome.com/icons
   
   button:
     title: "Ready to Apply?"
     button: Coming Soon! 
-    buttonlink: https://ucla-datasquad.github.io/imls-open-sci-ucla/
+    buttonlink: https://ucla-imls-open-sci.info/
     
   staff:
     title: "Staff"
