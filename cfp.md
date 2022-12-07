@@ -3,6 +3,9 @@ layout: page
 title: "Call for Proposals: Lessons for Librarians in Open Science Principles and Methods" 
 background: grey
 ---
+<div class="col-lg-12 text-center">
+	<h2 class="section-heading text-uppercase">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods</h2>
+</div>
 
 ## Program Overview 
 
