@@ -55,11 +55,10 @@ We will provide each award recipient or group with $5,000 for developing a lesso
 
 * University of California applicants need to reach out to the program officers [here](datascience+imls@ucla.edu) for rules regarding UC compensation. 
 * Compensation restrictions may apply depending on an individual’s employment status and employer. 
-* 
+
 ## Proposal Review and Review Criteria
 
 Lessons for Librarians in Open Science Principles and Methods Steering Committee will evaluate the proposals based on quality, originality, and potential impact.
-
 
 ## Statement on Equity, Diversity, and Inclusion
 
