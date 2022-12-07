@@ -17,7 +17,7 @@ remote_theme: raviriley/agency-jekyll-theme
 url    : "https://ucla-datasquad.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "/pages/DataSquad" # the subpath of your site, e.g. /blog
 
-title      : IMLS Open Science Lessons
+title      : Open Science Lessons for Librarians
 email      : datascience+imls@ucla.edu #this is also the email contact forms will go to
 description: "Create an Impact for the Open Science Community!"
 author     : UCLA Library Data Science Center
