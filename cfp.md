@@ -3,9 +3,6 @@ layout: page
 title: "Call for Proposals: Lessons for Librarians in Open Science Principles and Methods" 
 background: grey
 ---
-<div class="col-lg-12 text-center">
-	<h2 class="section-heading text-uppercase">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods</h2>
-</div>
 
 ## Program Overview 
 
@@ -44,7 +41,7 @@ We will accept applications from one applicant or several applicants as a group.
 
 ## Proposal Details
 
-The proposal should include a lesson topic, key words, a brief statement on your intended lesson audience, a description of lesson content, and learning objectives. The proposal should be 500-700 words, in Arial font, size 12, and with a line spacing of 1.5. References and other supporting materials can be added. All documents need to be in one pdf. Please submit your proposal [here](https://www.surveymonkey.com/r/63JTJSQ). 
+The proposal should include lesson justification, a brief statement on your intended lesson audience, learning objectives, and a description of the lesson content. The proposal should be 500-700 words, in Arial font, size 12, and with a line spacing of 1.5. References and other supporting materials can be added. All documents need to be in one pdf. Please submit your proposal [here](https://www.surveymonkey.com/r/63JTJSQ). 
 
 ## Dates 
 
@@ -72,5 +69,5 @@ If you have any questions, please contact [datascience+imls@ucla.edu](mailto:dat
 This project was made possible in part by the Institute of Museum and Library Services, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22). 
 Este proyecto ha sido posible en parte por el Instituto de Servicios de Museos y Bibliotecas, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22).
 
-<img src="https://www.imls.gov/sites/default/files/imls_logo_white.png" />
+<img src="https://www.imls.gov/sites/default/files/imls_logo_2c.jpg" />
 
