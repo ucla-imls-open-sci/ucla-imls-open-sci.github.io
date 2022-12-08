@@ -24,12 +24,13 @@ en: &DEFAULT_EN
     As part of this project, the UCLA Library Data Science Center is pleased to announce the call for proposals to develop lessons for librarians focused on open science methods and principles. 
     **[Read the Full Call for Proposals](/cfp)**"
     section: about
-    button: Read the Full Call 
-    buttonlink: https://ucla-imls-open-sci.info/cfp
+    button:
+      text: Read the Full Call!
+      buttonlink: https://ucla-imls-open-sci.info/cfp
 
   services:
     title: "Program"
-    text: "Create an Impact on the Open Science Community!"
+    text: "Creating a librarian-focused curriculum for open science!"
     section: services
     list:
       - title: "Program Overview"
