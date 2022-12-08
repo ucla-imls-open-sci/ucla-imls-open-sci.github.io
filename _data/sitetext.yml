@@ -74,7 +74,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
   team:
     title: "Committee"
-    # text: "Powell Student DataSquad"
+    text: "Review Committe for the Program"
     section: team
     people:
       - name: "Clifford Kravit"
