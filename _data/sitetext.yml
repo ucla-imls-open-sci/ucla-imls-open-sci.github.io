@@ -98,7 +98,7 @@ en: &DEFAULT_EN
 
       - name: "Chris Erdmann"
         role: Associate Director for Open Science at Michael J. Fox Foundation
-        image: assets/img/500x500.jpg
+        image: assets/img/c_erdmann.png
         social: 
           - url: christopher.c.erdmann@gmail.com
             icon: fas fa-envelope
@@ -107,7 +107,7 @@ en: &DEFAULT_EN
 
       - name: "Cody Hennessey"
         role: University of Minnesota/Journalism and Digital Media Librarian
-        image: assets/img/500x500.jpg
+        image: assets/img/hennesy_2019_web.JPG
         social: 
           - url: chennesy@umn.edu
             icon: fas fa-envelope
