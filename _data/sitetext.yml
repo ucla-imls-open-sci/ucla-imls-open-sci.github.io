@@ -134,7 +134,7 @@ en: &DEFAULT_EN
      
       - name: "Yvonne Ivey"
         role: NAS TOPS, Program Manager
-        image: assets/img/500x500.jpg
+        image: assets/img/committee/Yvonne.jpg
         social: 
           - url: ypivey@gmail.com
             icon: fas fa-envelope
