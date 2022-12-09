@@ -89,7 +89,7 @@ en: &DEFAULT_EN
 
       - name: "Joy Juey"
         role: UCLA
-        image: assets/img/500x500.jpg
+        image: assets/img/committee/Joy.jpeg
         social: 
           - url: joy@ssc.ucla.edu
             icon: fas fa-envelope
@@ -116,7 +116,7 @@ en: &DEFAULT_EN
 
       - name: "Elaine Westbrooks"
         role: Carl A. Kroch University Librarian, Cornell University Library
-        image: assets/img/500x500.jpg
+        image: assets/img/committee/ElaineWestBrooks.jpg
         social: 
           - url: elw25@cornell.edu
             icon: fas fa-envelope
