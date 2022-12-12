@@ -12,11 +12,7 @@ en: &DEFAULT_EN
 
   header:
     title: Lessons for Librarians in
-<<<<<<< HEAD
     text: Open Science 
-=======
-    text: Open Science Principles and Methods
->>>>>>> e212fb6b110379aeccbb0f48b79e040fe3bf2e9c
     button: Apply Now!
     buttonlink: https://www.surveymonkey.com/r/63JTJSQ
 
