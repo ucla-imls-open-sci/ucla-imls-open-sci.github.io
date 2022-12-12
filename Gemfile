@@ -6,6 +6,10 @@ gem "webrick"
 
 gem "jekyll-remote-theme"
 
+gem 'rmagick'
+
+gem "jekyll-responsive-image"
+
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
   # gem "github-pages" # https://github.com/github/pages-gem

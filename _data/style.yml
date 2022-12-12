@@ -4,7 +4,8 @@
 #black: "#000"
 
 #Image Customization
-header-image: "../img/IMLS_blue.png"
+header-image: "../img/background-image-blue.png"
+header-image-sml: "../img/IMLS_blue"
 contact-image: "../img/contact.png"
 #Font Awesome icon for portfolio grid when an item is hovered over
 #portfolio-icon: fas fa-expand-arrows-alt fa-3x #default: fas fa-plus fa-3x
