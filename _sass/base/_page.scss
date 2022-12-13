@@ -28,6 +28,10 @@ h6 {
   font-weight: 700;
   @include heading-font;
 }
+p img {
+  width: 100%;
+  height: auto;
+}
 
 .page-section {
   padding: 100px 0;
@@ -44,12 +48,14 @@ h6 {
     text-transform: none;
     @include serif-font;
   }
+
 }
 @media (min-width: 768px) {
   section {
     padding: 150px 0;
   }
 }
+
 
 // Highlight color customization
 ::-moz-selection {

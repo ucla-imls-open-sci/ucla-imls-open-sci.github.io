@@ -15,7 +15,7 @@
 remote_theme: raviriley/agency-jekyll-theme
 
 url    : "https://ucla-datasquad.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : Open Science for Librarians
 email      : datascience+imls@ucla.edu #this is also the email contact forms will go to
@@ -23,7 +23,7 @@ description: "Create an Impact for the Open Science Community!"
 author     : UCLA Library Data Science Center
 logo:     #optional, defaults to site title
   path: assets\img\clients\Uxd_Wht_A_Library_300.png
-  height: 60 #height in px, defaults to 52px
+  height: 52 #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
 
