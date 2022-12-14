@@ -35,13 +35,17 @@ en: &DEFAULT_EN
     list:
       - title: "Program Overview"
         desc: "This call seeks to support **continued skills development** for librarians in open science to effectively provide instruction to new researchers and effectively collaborate with faculty and researchers in science projects using open science practices. We aim to fund projects with high potential for **subsequent impact on the open science community**. We invite proposals based on **diverse intellectual approaches** and **personal backgrounds** to achieve these ends. "
-        icon: fas fa-envelope-open-text
+        icon: fas fa-clipboard-list
       - title: "Program Goals"
         desc: "This program will result in 14 open science course modules for librarians at any career stage, with seven lesson proposals selected each year of the grant. These curricula will be published online in an unrestricted and freely available manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer workshops, and we will use feedback from lesson piloting to test the learning objectives with librarian learners."
         icon: fas fa-bullseye # find more at https://fontawesome.com/icons
+      - title: "Program Parameters"
+        desc: "We are seeking lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be 90 minutes to 3 hours long. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all."
+        icon: fas fa-edit
   
   button:
     title: "Ready to Apply?"
+    text: "We will accept applications from one applicant or several applicants as a group. No specific professional qualifications are required. The deadline for submission is January 31st, 2023. Awards will be announced by April 30th, 2023."
     button: "Apply Now!" 
     buttonlink: https://www.surveymonkey.com/r/63JTJSQ
     
@@ -107,7 +111,7 @@ en: &DEFAULT_EN
 
       - name: "Cody Hennessey"
         role: University of Minnesota/Journalism and Digital Media Librarian
-        image: assets/img/committee/hennesy_2019_web.JPG
+        image: assets/img/committee/hennesy_2019_web-sml.png
         social: 
           - url: chennesy@umn.edu
             icon: fas fa-envelope
@@ -116,7 +120,7 @@ en: &DEFAULT_EN
 
       - name: "Elaine Westbrooks"
         role: Carl A. Kroch University Librarian, Cornell University Library
-        image: assets/img/committee/ElaineWestBrooks.jpg
+        image: assets/img/committee/ElaineWestBrooks-sml.png
         social: 
           - url: elw25@cornell.edu
             icon: fas fa-envelope
@@ -139,6 +143,15 @@ en: &DEFAULT_EN
           - url: ypivey@gmail.com
             icon: fas fa-envelope
           - url: https://www.linkedin.com/in/ypive
+            icon: fab fa-linkedin-in
+
+      - name: "Jenny Muilenburg"
+        role:  Research Data Services Librarian
+        image: assets/img/committee/Jenny-Muilenburg-2015-web-sml.png
+        social: 
+          - url: jmuil@uw.edu
+            icon: fas fa-envelope
+          - url: https://www.linkedin.com/in/jennifermuilenburg/
             icon: fab fa-linkedin-in
 
 
