@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 gem "webrick"
 
-gem "jekyll-responsive-image"
+gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
