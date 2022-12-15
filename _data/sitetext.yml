@@ -83,7 +83,7 @@ en: &DEFAULT_EN
     section: team
     people:
       - name: "Clifford Kravit"
-        role: UCLA
+        role: IT Program Manager of Research Computing @ UCLA
         image: assets/img/committee/Clifford-Kravit.png
         social: 
           - url: ckravit@g.ucla.edu
@@ -92,7 +92,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
 
       - name: "Joy Guey"
-        role: UCLA
+        role: Emerging Technologies Advocate @ UCLA
         image: assets/img/committee/Joy.jpeg
         social: 
           - url: joy@ssc.ucla.edu
@@ -101,7 +101,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
 
       - name: "Chris Erdmann"
-        role: Associate Director for Open Science at Michael J. Fox Foundation
+        role: Associate Director for Open Science @ Michael J. Fox Foundation
         image: assets/img/committee/c_erdmann.png
         social: 
           - url: christopher.c.erdmann@gmail.com
@@ -110,7 +110,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
 
       - name: "Cody Hennesy"
-        role: University of Minnesota/Journalism and Digital Media Librarian
+        role: Journalism and Digital Media Librarian @ University of Minnesota
         image: assets/img/committee/hennesy_2019_web-sml.png
         social: 
           - url: chennesy@umn.edu
@@ -119,7 +119,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
 
       - name: "Elaine Westbrooks"
-        role: Carl A. Kroch University Librarian, Cornell University Library
+        role: Carl A. Kroch University Librarian @ Cornell University Library
         image: assets/img/committee/ElaineWestBrooks-sml.png
         social: 
           - url: elw25@cornell.edu
@@ -128,7 +128,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
 
       - name: "Caroline Coward"
-        role: Information Science Manager and Library Group Supervisor, Jet Propulsion Lab, National Aeronautics and Space Administration
+        role: Information Science Manager and Library Group Supervisor @ Jet Propulsion Lab, National Aeronautics and Space Administration
         image: assets/img/committee/caroline-coward.png
         social: 
           - url: caroline.m.coward@jpl.nasa.gov
@@ -137,16 +137,16 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
      
       - name: "Yvonne Ivey"
-        role: NAS TOPS, Program Manager
+        role: Program Manager @ NAS TOPS
         image: assets/img/committee/Yvonne.jpg
         social: 
           - url: ypivey@gmail.com
             icon: fas fa-envelope
-          - url: https://www.linkedin.com/in/ypive
+          - url: https://www.linkedin.com/in/ypivey
             icon: fab fa-linkedin-in
 
       - name: "Jenny Muilenburg"
-        role:  Research Data Services Librarian
+        role:  Research Data Services Librarian @ Association of Research Libraries
         image: assets/img/committee/Jenny-Muilenburg-2015-web-sml.png
         social: 
           - url: jmuil@uw.edu
