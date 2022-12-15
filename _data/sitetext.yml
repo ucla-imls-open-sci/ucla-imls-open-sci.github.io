@@ -91,7 +91,7 @@ en: &DEFAULT_EN
           - url: https://www.linkedin.com/in/clifford-kravit/
             icon: fab fa-linkedin-in
 
-      - name: "Joy Juey"
+      - name: "Joy Guey"
         role: UCLA
         image: assets/img/committee/Joy.jpeg
         social: 
