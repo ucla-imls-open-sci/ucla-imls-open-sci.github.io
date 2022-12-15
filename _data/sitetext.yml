@@ -129,7 +129,7 @@ en: &DEFAULT_EN
 
       - name: "Caroline Coward"
         role: Information Science Manager and Library Group Supervisor, Jet Propulsion Lab, National Aeronautics and Space Administration
-        image: assets/img/500x500.jpg
+        image: assets/img/committee/caroline-coward.png
         social: 
           - url: caroline.m.coward@jpl.nasa.gov
             icon: fas fa-envelope
