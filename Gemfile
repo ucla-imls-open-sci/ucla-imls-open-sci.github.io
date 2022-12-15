@@ -4,10 +4,6 @@ source "https://rubygems.org"
 
 gem "webrick"
 
-gem "jekyll-remote-theme"
-
-gem 'rmagick'
-
 gem "jekyll-responsive-image"
 
 group :jekyll_plugins do
