@@ -15,6 +15,10 @@
     text-transform: none;
     @include heading-font;
   }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 ul.social-buttons {
