@@ -15,8 +15,8 @@ en: &DEFAULT_EN
       section: about
     - title: "Program"
       section: services
-    # - title: "Timeline"
-    #   section: timeline
+    - title: "Timeline"
+      section: timeline
     - title: "Apply"
       section: button
     - title: "Committee"
