@@ -43,36 +43,38 @@ en: &DEFAULT_EN
         desc: "We are seeking lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be 90 minutes to 3 hours long. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all."
         icon: fas fa-edit
 
+    another_title: "Read the [Full Call for Proposal](/cfp)"
+
   timeline:
     title: "Timeline"
-    # text: "Lorem ipsum timeline"
+    text: "for Lessons for Librarians in Open Science"
     section: timeline
     # left is the default
     #start_align: "left"
     events:
       - title: "Call for Proposals"
         year: "December 13, 2022"
-        # desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+        desc: "Please submit your Open Science for Librarians lesson proposals! Read the full **[Call for Proposals](/cfp)**."
         image: assets/img/portfolio/call.png
         alt:
       - title: "Proposal Deadline"
         year: "January 31, 2023"
-        # desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!"
+        desc: "Lesson proposals are due. **[Please submit your lesson idea](https://www.surveymonkey.com/r/63JTJSQ)!**"
         image: assets/img/portfolio/deadline.png
         alt:
       - title: "Accepted Proposals Announced"
         year: "April 30, 2023"
-        # desc: "Ravi Riley converted Agency, a Bootstrap-based theme, into a Jekyll theme. The Jekyll theme can be installed as a Ruby gem, or remotely. For more information, visit the documentation."
+        desc: "We will announce the lessons selected for development."
         image: assets/img/portfolio/acceptance.png
         alt: 
       - title: "Summer Seminar"
         year: "July, 2023"
-        # desc: "Your description here, **Markdown** is fully supported."
+        desc: "A curriculum development workshop where lesson authors participate in a program to support lesson design."
         image: assets/img/portfolio/seminar.png
         alt:
         # you can enforce the alignment
         align: right
-    end: "Submit <br> a Proposal <br> Now!"
+    # end: "Submit <br> a Proposal <br> Now!"
 
   button:
     title: "Ready to Apply?"
