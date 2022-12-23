@@ -58,7 +58,7 @@ We will provide each award recipient or group with $5,000 for developing a lesso
 
 #### Eligibility for Financial Portion of Award
 
-* University of California applicants need to reach out to the program officers [here](datascience+imls@ucla.edu) for rules regarding UC compensation. 
+* University of California applicants need to reach out to the program officers [here](mailto:datascience+imls@ucla.edu) for rules regarding UC compensation. 
 * Compensation restrictions may apply depending on an individual’s employment status and employer. 
 
 ### Proposal Review and Review Criteria
@@ -69,7 +69,7 @@ Lessons for Librarians in Open Science Principles and Methods Review Committee w
 
 We are committed to equal opportunity regardless of race, color, ancestry, religion, sex, national origin, sexual orientation, age, citizenship, marital status, disability, gender identity, or Veteran status.
 
-If you have any questions, please contact [datascience+imls@ucla.edu](mailto:datascience+gis@ucla.edu). 
+If you have any questions, please contact [datascience+imls@ucla.edu](mailto:datascience+imls@ucla.edu). 
 
 This project was made possible in part by the Institute of Museum and Library Services, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22). 
 Este proyecto ha sido posible en parte por el Instituto de Servicios de Museos y Bibliotecas, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22).
