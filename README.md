@@ -5,7 +5,8 @@ The University of California, Los Angeles (UCLA) Library, with funding from the 
 **Website**: <https://ucla-imls-open-sci.info> 
 **Staff**: 
 * Tim Dennis, Project Director, [tdennis@library.ucla.edu](mailto:tdennis@library.ucla.edu) 
-* Zhiyuan Yao, Project Coodinator 
+* Zhiyuan Yao, Project Coodinator  
+* Emily Gong [@emilygong-zhuying](https://github.com/emilygong-zhuying), Lesson Development Developer 
 
 
 
