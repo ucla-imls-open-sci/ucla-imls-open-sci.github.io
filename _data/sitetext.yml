@@ -162,7 +162,7 @@ en: &DEFAULT_EN
        
        - name: "Juliane Schneider"
         role:  Research Librarian - Metadata @ Pacific Northwest National Laboratory 
-        image: assets/img/500x500.jpg
+        image: assets/img/committee/juliane.jpg
         social: 
           - url: juliane.schneider@pnnl.gov
             icon: fas fa-envelope
