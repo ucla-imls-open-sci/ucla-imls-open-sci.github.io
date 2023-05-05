@@ -161,13 +161,13 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
        
        - name: "Juliane Schneider"
-        role:  Research Librarian - Metadata @ Pacific Northwest National Laboratory 
-        image: assets/img/committee/juliane.jpg
-        social: 
-          - url: juliane.schneider@pnnl.gov
-            icon: fas fa-envelope
-          - url: https://www.linkedin.com/in/juliane-schneider-4a06535/
-            icon: fab fa-linkedin-in
+         role:  Research Librarian - Metadata @ Pacific Northwest National Laboratory 
+         image: assets/img/committee/juliane.jpg
+         social: 
+           - url: juliane.schneider@pnnl.gov
+             icon: fas fa-envelope
+           - url: https://www.linkedin.com/in/juliane-schneider-4a06535/
+             icon: fab fa-linkedin-in
 
       - name: "Jenny Muilenburg"
         role:  Research Data Services Librarian @ Association of Research Libraries
