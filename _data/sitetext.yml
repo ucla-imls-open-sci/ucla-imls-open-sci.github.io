@@ -195,6 +195,14 @@ en: &DEFAULT_EN
             icon: fas fa-envelope
           - url: https://www.linkedin.com/in/joyguey/
             icon: fab fa-linkedin-in
+        
+      - name: "Florio Arguillas"
+        role: Researcher 
+        image: assets/img/500x500.jpg
+        social: 
+          - url: https://linkedin.com/in/florio-arguillas-06391310
+            icon: fab fa-linkedin-in
+        
 
   footer:
     legal: "Privacy Policy"
