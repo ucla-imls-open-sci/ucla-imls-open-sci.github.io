@@ -202,6 +202,13 @@ en: &DEFAULT_EN
         social: 
           - url: https://linkedin.com/in/florio-arguillas-06391310
             icon: fab fa-linkedin-in
+            
+      - name: "Jane Greenberg"
+        role: Alice B. Kroeger Professor and Director, Metadata Research Center & Drexel University 
+        image: assets/img/500x500.jpg
+        social: 
+          - url: jg3243@drexel.edu
+            icon: fab fa-envelope
         
 
   footer:
