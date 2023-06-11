@@ -205,8 +205,10 @@ en: &DEFAULT_EN
             
       - name: "Jane Greenberg"
         role: Alice B. Kroeger Professor and Director, Metadata Research Center & Drexel University 
-        image: assets/img/committee/500x500.jpg
+        image: assets/img/committee/Greenberg_Small.jpg
         social: 
+          - url: https://www.linkedin.com/in/jane-greenberg-b57b24128/
+            icon: fab fa-linkedin-in
           - url: jg3243@drexel.edu
             icon: fab fa-envelope
         
