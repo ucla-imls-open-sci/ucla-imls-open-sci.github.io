@@ -198,7 +198,7 @@ en: &DEFAULT_EN
         
       - name: "Florio Arguillas"
         role: Researcher 
-        image: assets/img/500x500.jpg
+        image: assets/img/committee/florio.jpeg
         social: 
           - url: https://linkedin.com/in/florio-arguillas-06391310
             icon: fab fa-linkedin-in
