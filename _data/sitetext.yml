@@ -197,7 +197,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
         
       - name: "Florio Arguillas"
-        role: Researcher 
+        role: Researcher,  Cornell Institute for Social and Economic Research 
         image: assets/img/committee/florio.jpg
         social: 
           - url: https://linkedin.com/in/florio-arguillas-06391310
@@ -205,7 +205,7 @@ en: &DEFAULT_EN
             
       - name: "Jane Greenberg"
         role: Alice B. Kroeger Professor and Director, Metadata Research Center & Drexel University 
-        image: assets/img/500x500.jpg
+        image: assets/img/committee/500x500.jpg
         social: 
           - url: jg3243@drexel.edu
             icon: fab fa-envelope
