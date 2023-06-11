@@ -2,7 +2,7 @@
 
 The University of California, Los Angeles (UCLA) Library, with funding from the Institute of Museum and Library Services as part of the Laura Bush 21st Century Librarian Program, aims to create 14 lessons that invite librarians to increase their aptitudes in the principles and practices of Open Science. Led by the UCLA Library Data Science Center, this project will incentivize two sequential one year cohorts of authors to develop and refine lessons through summer workshops. As part of this project, the UCLA Library Data Science Center is pleased to announce the call for proposals to develop lessons for librarians focused on open science methods and principles.
 
-**Website**: <https://ucla-imls-open-sci.info> 
+**Website**: <https://ucla-imls-open-sci.info>   
 **Staff**: 
 * Tim Dennis, Project Director, [tdennis@library.ucla.edu](mailto:tdennis@library.ucla.edu) 
 * Zhiyuan Yao, Project Coodinator  
