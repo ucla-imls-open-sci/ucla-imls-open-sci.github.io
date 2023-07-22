@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<style>
+    #pagecontainer2 {
+      padding-top: 150px;
+    }
+    @media only screen and (max-width: 991px) {
+      #pagecontainer2 {
+        padding-top: 100px;
+      }
+    }
+</style>
+{% include nav.html %}
+
+{% if page.background == "grey" or page.background == "gray" %}
+<script>
+document.getElementById("page-top").className="bg-light";
+</script>
+{% endif %}
+
+<div class="container" id="pagecontainer2">
+  <p style="font-weight:200"> By {{ page.author }} <b><i>published</i></b> on {{ page.date | date_to_string: "ordinal", "US"}}
+  <div class="col-lg-12 text-left">
+    <h1 class="section-heading text-center">{{ page.title }}</h1>
+  </div>
+  <div style="height: 42.5vh">
+  {{ content }}
+  </div>
+</div>
