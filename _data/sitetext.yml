@@ -220,14 +220,17 @@ en: &DEFAULT_EN
         date: 2023-07-06
         author: "Hyerin Lee"
         content: "here is the content"
+        url: "path/to/file"
       - title: "post two - this is where the title goes!"
         date: 2023-07-21
         author: "Lawrence Lee"
         content: "this is the content"
+        url: "path/to/file"
       - title: "post three - this is where the title goes!"
         date: 2022-07-23
         author: "Loretta Hu"
         content: "this is the content"
+        url: "path/to/file"
 
   footer:
     legal: "Privacy Policy"
