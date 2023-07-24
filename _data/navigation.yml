@@ -23,6 +23,8 @@ en: &DEFAULT_EN
       section: team
     - title: "Staff"
       section: staff
+    - title: "Blog"
+      section: blog
 en-US:
   <<: *DEFAULT_EN
 en-CA:

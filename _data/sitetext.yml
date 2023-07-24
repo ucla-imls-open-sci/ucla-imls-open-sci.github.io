@@ -211,7 +211,13 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
           - url: jg3243@drexel.edu
             icon: fab fa-envelope
-        
+  blog:
+    title: "Check out our blog!" 
+    section: blog
+    text: "These are blogs on what we've done"
+    posts:
+      - date: "7/6/2023"
+      - author: "Hyerin Lee"
 
   footer:
     legal: "Privacy Policy"
