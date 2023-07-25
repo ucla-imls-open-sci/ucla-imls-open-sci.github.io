@@ -197,7 +197,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
         
       - name: "Florio Arguillas"
-        role: Researcher,  Cornell Institute for Social and Economic Research 
+        role: Researcher,  Cornell Center for Social Sciences
         image: assets/img/committee/florio.jpg
         social: 
           - url: https://linkedin.com/in/florio-arguillas-06391310
