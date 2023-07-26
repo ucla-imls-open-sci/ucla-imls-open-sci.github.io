@@ -13,8 +13,8 @@ en: &DEFAULT_EN
   header:
     title: Lessons for Librarians in
     text: Open Science 
-    button: Apply Now!
-    buttonlink: https://www.surveymonkey.com/r/63JTJSQ
+    # button: Apply Now!
+    # buttonlink: https://www.surveymonkey.com/r/63JTJSQ
 
   about:
     title: "Call for Proposals"
