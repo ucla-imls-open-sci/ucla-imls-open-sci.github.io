@@ -19,12 +19,12 @@ en: &DEFAULT_EN
       section: timeline
    # - title: "Apply"
     # section: button
-    - title: "Authors"
-      section: authors
     - title: "Committee"
       section: team
     - title: "Staff"
       section: staff
+    - title: "Authors"
+      section: authors
 en-US:
   <<: *DEFAULT_EN
 en-CA:
