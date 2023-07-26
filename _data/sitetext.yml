@@ -76,11 +76,12 @@ en: &DEFAULT_EN
         align: right
     # end: "Submit <br> a Proposal <br> Now!"
 
-  button:
-    title: "Ready to Apply?"
-    text: "We will accept applications from one applicant or several applicants as a group. No specific professional qualifications are required. The deadline for submission is January 31st, 2023. Awards will be announced by April 30th, 2023."
-    button: "Apply Now!" 
-    buttonlink: https://www.surveymonkey.com/r/63JTJSQ
+ # button:
+   # title: "Ready to Apply?"
+   # text: "We will accept applications from one applicant or several applicants as a group. No specific professional qualifications are required. The deadline for submission is January 31st, 2023. Awards will be announced by April 30th, 2023."
+   # button: "Apply Now!" 
+   # buttonlink: https://www.surveymonkey.com/r/63JTJSQ
+    
     
   staff:
     title: "Staff"
