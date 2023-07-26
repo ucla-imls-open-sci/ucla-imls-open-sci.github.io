@@ -19,6 +19,8 @@ en: &DEFAULT_EN
       section: timeline
    # - title: "Apply"
     # section: button
+    - title: "Authors"
+      section: authors
     - title: "Committee"
       section: team
     - title: "Staff"
