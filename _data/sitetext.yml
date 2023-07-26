@@ -214,7 +214,7 @@ en: &DEFAULT_EN
             icon: fab fa-envelope
   authors:
     title: "Authors"
-    text: "Lesson Authors for IMLS Project"
+    text: 
     section: authors
     people:
       - name: "Ria Hamblett"
