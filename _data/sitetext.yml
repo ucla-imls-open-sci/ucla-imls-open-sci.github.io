@@ -118,6 +118,12 @@ en: &DEFAULT_EN
             icon: fab fa-twitter
           - url: https://www.linkedin.com/in/lawrencetlee/
             icon: fab fa-linkedin-in
+      - name: "Hyerin Lee"
+        role: "Lesson Infrastructure Developer"
+        image: assets/img/staff/HyerinLee.jpeg
+        social:
+          - url: https://www.linkedin.com/in/hyerin-lee/
+            icon: fab fa-linkedin-in
   team:
     title: "Committee"
     text: "Review Committe for the Program"
