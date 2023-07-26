@@ -68,7 +68,7 @@ en: &DEFAULT_EN
         image: assets/img/portfolio/acceptance.png
         alt: 
       - title: "Summer Seminar"
-        year: "July 24 -August 17, 2023"
+        year: "July 31 - October 2, 2023"
         desc: "A curriculum development workshop where lesson authors participate in a program to support lesson design."
         image: assets/img/portfolio/seminar.png
         alt:
