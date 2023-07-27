@@ -118,6 +118,12 @@ en: &DEFAULT_EN
             icon: fab fa-twitter
           - url: https://www.linkedin.com/in/lawrencetlee/
             icon: fab fa-linkedin-in
+      - name: "Loretta Hu"
+        role: "Lesson Infrastructure Developer"
+        image: assets/img/staff/LorettaHu.jpeg
+        social:
+          - url: https://www.linkedin.com/in/loretta-hu/
+            icon: fab fa-linkedin-in
       - name: "Hyerin Lee"
         role: "Lesson Infrastructure Developer"
         image: assets/img/staff/HyerinLee.jpeg
