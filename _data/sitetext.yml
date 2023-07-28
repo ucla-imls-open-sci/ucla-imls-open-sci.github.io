@@ -232,6 +232,75 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
           - url: jg3243@drexel.edu
             icon: fab fa-envelope
+  
+  authors:
+    title: "Authors"
+    text: 
+    section: authors
+    people:
+      - name: "Ria Hamblett"
+        role: Senior Specialist, Data Librarian at University of Technology Sydney
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: cria.hamblett@uts.edu.au
+            icon: fas fa-envelope    
+      - name: "Duncan Loxton"
+        role: 
+        image: assets/img/authors/default.jpeg
+      - name: "Sara Su"
+        role: 
+        image: assets/img/authors/default.jpeg
+      - name: "Samantha Teplitzky"
+        role: Open Science Librarian, UC Berkeley Library
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: samteplitzky@berkeley.edu
+            icon: fas fa-envelope   
+      - name: "Sam Wilairat"
+        role: Research Communications Librarian, Stanford University
+        image: assets/img/authors/default.jpeg
+      - name: "Ariel Deardorff"
+        role: 
+        image: assets/img/authors/default.jpeg
+      - name: "Julieta Arancio"
+        role: 
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: jca88@drexel.edu
+            icon: fas fa-envelope 
+      - name: "Irene Vazano"
+        role: 
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: irene.vazano@metadocencia.org
+            icon: fas fa-envelope 
+      - name: "Jessica Formoso"
+        role: 
+        image: assets/img/authors/default.jpeg
+      - name: "Lena Bohman"
+        role: 
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: lena.g.bohman@hofstra.edu
+            icon: fas fa-envelope 
+      - name: "Daria Orlowka"
+        role: 
+        image: assets/img/authors/default.jpeg
+      - name: "Maria Hertz"
+        role: 
+        image: assets/img/authors/default.jpeg
+      - name: "Nathaniel Porter"
+        role: 
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: ndporter@vt.edu
+            icon: fas fa-envelope 
+      - name: "Agata Bochynska"
+        role: 
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: agata.bochynska@ub.uio.no
+            icon: fas fa-envelope 
 
   lessontab:
     title: "Lessons"
@@ -279,7 +348,6 @@ en: &DEFAULT_EN
         notes: 
         status:  
         author: "Agata Bochynska"
-
   footer:
     legal: "Privacy Policy"
 
