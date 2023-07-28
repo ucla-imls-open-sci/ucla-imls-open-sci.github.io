@@ -127,7 +127,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
       - name: "Hyerin Lee"
         role: "Lesson Infrastructure Developer"
-        image: assets/img/staff/HyerinLee.jpg
+        image: assets/img/staff/HyerinLee.jpeg
         social:
           - url: https://www.linkedin.com/in/hyerin-lee/
             icon: fab fa-linkedin-in
