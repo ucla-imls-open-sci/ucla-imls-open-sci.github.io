@@ -111,6 +111,26 @@ en: &DEFAULT_EN
             icon: fab fa-twitter
           - url: https://www.linkedin.com/in/emily-gong-11b5a719b/
             icon: fab fa-linkedin-in
+      - name: "Lawrence Lee"
+        role: "Lesson Infrastructure Developer"
+        image: assets/img/staff/LawrenceLee.jpg
+        social:
+          - url: https://twitter.com/lawrence_tlee
+            icon: fab fa-twitter
+          - url: https://www.linkedin.com/in/lawrencetlee/
+            icon: fab fa-linkedin-in
+      - name: "Loretta Hu"
+        role: "Lesson Infrastructure Developer"
+        image: assets/img/staff/LorettaHu.jpeg
+        social:
+          - url: https://www.linkedin.com/in/loretta-hu/
+            icon: fab fa-linkedin-in
+      - name: "Hyerin Lee"
+        role: "Lesson Infrastructure Developer"
+        image: assets/img/staff/HyerinLee.jpeg
+        social:
+          - url: https://www.linkedin.com/in/hyerin-lee/
+            icon: fab fa-linkedin-in
   team:
     title: "Committee"
     text: "Review Committe for the Program"
@@ -212,6 +232,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
           - url: jg3243@drexel.edu
             icon: fab fa-envelope
+  
   authors:
     title: "Authors"
     text: 
@@ -280,8 +301,53 @@ en: &DEFAULT_EN
         social: 
           - url: agata.bochynska@ub.uio.no
             icon: fas fa-envelope 
-      
 
+  lessontab:
+    title: "Lessons"
+    section: lessontab
+    lessons:
+      - lesson-title: "Understanding CARE Principles for research data"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Ria Hamblett, Duncan Loxton, Sara Su"
+      - lesson-title: "Research Community Outreach with Open Science Team Agreements"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
+      - lesson-title: "Open science hardware: an introduction for librarians"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Julieta Arancio"
+      - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Irene Vazano, Jessica Formoso"
+      - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Lena Bohman, Daria Orlowka, Maria Hertz"
+      - lesson-title: "Open Qualitative Research"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Nathaniel Porter"
+      - lesson-title: "Reproducible Research Workflows"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Agata Bochynska"
   footer:
     legal: "Privacy Policy"
 
