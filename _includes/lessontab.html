@@ -1,0 +1,32 @@
+<section class="page-section " id="{{ site.data.sitetext[site.locale].lessontab.section | default: "lessontab" }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].lessontab.title }}</h2>
+              <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].lessontab.text }}</h3>
+            </div>
+          </div>
+
+            <table class="table table-striped">
+            <tr>
+            <th>Lesson</th>
+            <th>Site</th>
+            <th>Repository</th>
+            <th>Instructor Notes</th>
+            <th>Status</th>
+            <th>Author(s)</th>
+            </tr>
+            {% for lesson in site.data.sitetext[site.locale].lessontab.lessons %}
+            <tr>
+                <td>{{ lesson.lesson-title }}</td>
+                <td><a href="{{ lesson.site }}">{{ lesson.site }}</a></td>
+                <td><a href="{{ lesson.repo }}">{{ lesson.repo }}</a></td>
+                <td>{{ lesson.notes }}</td>
+                <td>{{ lesson.status }}</td>
+                <td>{{ lesson.author }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+</section>

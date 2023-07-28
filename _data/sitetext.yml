@@ -232,7 +232,53 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
           - url: jg3243@drexel.edu
             icon: fab fa-envelope
-        
+
+  lessontab:
+    title: "Lessons"
+    section: lessontab
+    lessons:
+      - lesson-title: "Understanding CARE Principles for research data"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Ria Hamblett, Duncan Loxton, Sara Su"
+      - lesson-title: "Research Community Outreach with Open Science Team Agreements"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
+      - lesson-title: "Open science hardware: an introduction for librarians"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Julieta Arancio"
+      - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Irene Vazano, Jessica Formoso"
+      - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Lena Bohman, Daria Orlowka, Maria Hertz"
+      - lesson-title: "Open Qualitative Research"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Nathaniel Porter"
+      - lesson-title: "Reproducible Research Workflows"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Agata Bochynska"
 
   footer:
     legal: "Privacy Policy"
