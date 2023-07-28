@@ -17,7 +17,7 @@
             <ul class="list-inline social-buttons">
             {% for network in person.social %}
               <li class="list-inline-item">
-                <a href="{{ network.url }}">
+                <a href="mailto:{{ network.url }}">
                   <i class="{{ network.icon }}"></i>
                 </a>
               </li>
