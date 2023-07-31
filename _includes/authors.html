@@ -8,7 +8,8 @@
         </div>
       </div>
       <div class="row">
-      {% for person in site.data.sitetext[site.locale].authors.people %}
+      {% assign people = site.data.sitetext[site.locale].authors.people %} <!---| sort:"lastname" %}--->
+      {% for person in people %}
         <div class="col-sm-4">
           <div class="staff-member">
             <img class="mx-auto rounded-circle" src="{{ person.image }}" alt="">
