@@ -276,28 +276,28 @@ en: &DEFAULT_EN
             icon: fas fa-envelope 
       - name: "Jessica Formoso"
         role: 
-        image: assets/img/authors/default.jpeg
+        image: assets/img/authors/Jessica_Formoso.jpg
       - name: "Lena Bohman"
         role: 
-        image: assets/img/authors/default.jpeg
+        image: assets/img/authors/Lena_Bohman.jpg
         social: 
           - url: lena.g.bohman@hofstra.edu
             icon: fas fa-envelope 
       - name: "Daria Orlowka"
         role: 
-        image: assets/img/authors/default.jpeg
-      - name: "Maria Hertz"
+        image: assets/img/authors/Daria_Orlowska.jpg
+      - name: "Marla Hertz"
         role: 
-        image: assets/img/authors/default.jpeg
+        image: assets/img/authors/Marla_Hertz.jpeg
       - name: "Nathaniel Porter"
         role: 
-        image: assets/img/authors/default.jpeg
+        image: assets/img/authors/Nathaniel_Porter.jpeg
         social: 
           - url: ndporter@vt.edu
             icon: fas fa-envelope 
       - name: "Agata Bochynska"
         role: 
-        image: assets/img/authors/default.jpeg
+        image: assets/img/authors/Agata_Bochynska.jpeg
         social: 
           - url: agata.bochynska@ub.uio.no
             icon: fas fa-envelope 
@@ -335,7 +335,7 @@ en: &DEFAULT_EN
         repo:
         notes: 
         status:  
-        author: "Lena Bohman, Daria Orlowka, Maria Hertz"
+        author: "Lena Bohman, Daria Orlowka, Marla Hertz"
       - lesson-title: "Open Qualitative Research"
         site: 
         repo:
