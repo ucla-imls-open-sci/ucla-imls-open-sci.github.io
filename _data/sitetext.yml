@@ -295,6 +295,7 @@ en: &DEFAULT_EN
           - url: irene.vazano@gmail.com
             icon: fas fa-envelope 
       - name: "Jessica Formoso"
+<<<<<<< HEAD
         lastname: "Formoso"
         role: Researcher and Assistant Professor @ MetaDocencia | University of Buenos Aires
         image: assets/img/authors/JessicaFormoso.jpg
@@ -305,10 +306,18 @@ en: &DEFAULT_EN
         lastname: "Bohman"
         role: Data Management and Research Impact Librarian @ Zucker School of Medicine at Hofstra/Northwell
         image: assets/img/authors/LenaBohman.jpg
+=======
+        role: 
+        image: assets/img/authors/Jessica_Formoso.jpg
+      - name: "Lena Bohman"
+        role: 
+        image: assets/img/authors/Lena_Bohman.jpg
+>>>>>>> 40413e593f5dee26c38a419add9d1a85e11917ba
         social: 
           - url: lena.g.bohman@hofstra.edu
             icon: fas fa-envelope 
       - name: "Daria Orlowka"
+<<<<<<< HEAD
         lastname: "Orlowka"
         role: Data Librarian and Assistant Professor @ Western Michigan University
         image: assets/img/authors/DariaOrlowska.jpg
@@ -326,13 +335,28 @@ en: &DEFAULT_EN
         lastname: "Porter"
         role: Data Education Coordinator & Social Science Data Consultant, Assistant Professor @ Virginia Tech
         image: assets/img/authors/NathanielPorter.jpeg
+=======
+        role: 
+        image: assets/img/authors/Daria_Orlowska.jpg
+      - name: "Marla Hertz"
+        role: 
+        image: assets/img/authors/Marla_Hertz.jpeg
+      - name: "Nathaniel Porter"
+        role: 
+        image: assets/img/authors/Nathaniel_Porter.jpeg
+>>>>>>> 40413e593f5dee26c38a419add9d1a85e11917ba
         social: 
           - url: ndporter@vt.edu
             icon: fas fa-envelope 
       - name: "Agata Bochynska"
+<<<<<<< HEAD
         lastname: "Bochynska"
         role: Researcher and Research Librarian @ University of Oslo, Norway
         image: assets/img/authors/AgataBochynska.jpeg
+=======
+        role: 
+        image: assets/img/authors/Agata_Bochynska.jpeg
+>>>>>>> 40413e593f5dee26c38a419add9d1a85e11917ba
         social: 
           - url: agata.bochynska@ub.uio.no
             icon: fas fa-envelope 
@@ -370,7 +394,7 @@ en: &DEFAULT_EN
         repo:
         notes: 
         status:  
-        author: "Lena Bohman, Daria Orlowka, Maria Hertz"
+        author: "Lena Bohman, Daria Orlowka, Marla Hertz"
       - lesson-title: "Open Qualitative Research"
         site: 
         repo:
