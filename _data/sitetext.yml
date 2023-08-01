@@ -315,10 +315,10 @@ en: &DEFAULT_EN
         social: 
           - url: daria.orlowska@wmich.edu
             icon: fas fa-envelope 
-      - name: "Maria Hertz"
+      - name: "Marla Hertz"
         lastname: "Hertz"
         role: Research Data Management Librarian @ University of Alabama at Birmingham
-        image: assets/img/authors/MariaHertz.jpg
+        image: assets/img/authors/MarlaHertz.jpg
         social: 
           - url: mihertz@uab.edu
             icon: fas fa-envelope 
