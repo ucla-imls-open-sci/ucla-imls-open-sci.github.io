@@ -283,7 +283,7 @@ en: &DEFAULT_EN
       - name: "Julieta Arancio"
         lastname: "Arancio"
         role: 
-        image: assets/img/authors/default.jpeg
+        image: assets/img/authors/JulietaArancio.png
         social: 
           - url: jca88@drexel.edu
             icon: fas fa-envelope 
