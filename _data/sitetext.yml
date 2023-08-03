@@ -261,7 +261,7 @@ en: &DEFAULT_EN
             icon: fas fa-envelope
       - name: "Samantha Teplitzky"
         lastname: "Teplitzky"
-        role: Open Science Librarian @ UC Berkeley Library
+        role: Open Science Librarian @ University of California, Berkeley
         image: assets/img/authors/default.jpeg
         social: 
           - url: samteplitzky@berkeley.edu
@@ -275,8 +275,8 @@ en: &DEFAULT_EN
             icon: fas fa-envelope  
       - name: "Ariel Deardorff"
         lastname: "Deardorff"
-        role: 
-        image: assets/img/authors/default.jpeg
+        role: Director of Data Science and Open Scholarship @ University of California, San Francisco
+        image: assets/img/authors/ArielDeardorff.jpg
         social: 
           - url: Ariel.Deardorff@ucsf.edu
             icon: fas fa-envelope 
