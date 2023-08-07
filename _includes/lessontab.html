@@ -19,7 +19,7 @@
             {% for lesson in site.data.sitetext[site.locale].lessontab.lessons %}
             <tr>
                 <td>{{ lesson.lesson-title }}</td>
-                <td><a href="{{ lesson.site }}" target="_blank" class="fab fa-google">{{ lesson.site }}</a></td>
+                <td><a href="{{ lesson.site }}" target="_blank" class="fa fa-laptop">{{ lesson.site }}</a></td>
                 <td><a href="{{ lesson.repo }}" target="_blank" class="fab fa-github">{{ lesson.repo }}</a></td>
                 <td><a href="{{ lesson.notes }}" target="_blank" class="fa fa-plus-circle">{{ lesson.notes }}</a></td>
                 <td>{{ lesson.status }}</td>
