@@ -232,8 +232,157 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
           - url: jg3243@drexel.edu
             icon: fab fa-envelope
-        
+  
+  authors:
+    title: "Authors"
+    text: 
+    section: authors
+    people:
+      - name: "Ria Hamblett"
+        lastname: "Hamblett"
+        role: Senior Specialist, Data Librarian @ University of Technology Sydney
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: cria.hamblett@uts.edu.au
+            icon: fas fa-envelope    
+      - name: "Duncan Loxton"
+        lastname: "Loxton"
+        role: Senior Specialist, Data Curator @ University of Technology Sydney
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: duncan.loxton@uts.edu.au
+            icon: fas fa-envelope
+      - name: "Sarah Su"
+        lastname: "Su"
+        role: Senior Librarian, Education & Research Services @ University of Technology Sydney
+        image: assets/img/authors/default.jpeg
+        social: 
+          - url: sarah.su@uts.edu.au
+            icon: fas fa-envelope
+      - name: "Samantha Teplitzky"
+        lastname: "Teplitzky"
+        role: Open Science Librarian @ University of California, Berkeley
+        image: assets/img/authors/SamanthaTeplitzky.jpg
+        social: 
+          - url: samteplitzky@berkeley.edu
+            icon: fas fa-envelope   
+      - name: "Samantha Wilairat"
+        lastname: "Wilairat"
+        role: Research Communications Librarian @ Stanford University
+        image: assets/img/authors/SamanthaWilairat.jpg
+        social: 
+          - url: sam.wilairat@stanford.edu
+            icon: fas fa-envelope  
+      - name: "Ariel Deardorff"
+        lastname: "Deardorff"
+        role: Director of Data Science and Open Scholarship @ University of California, San Francisco
+        image: assets/img/authors/ArielDeardorff.jpg
+        social: 
+          - url: Ariel.Deardorff@ucsf.edu
+            icon: fas fa-envelope 
+      - name: "Julieta Arancio"
+        lastname: "Arancio"
+        role: 
+        image: assets/img/authors/JulietaArancio.png
+        social: 
+          - url: jca88@drexel.edu
+            icon: fas fa-envelope 
+      - name: "Irene Vazano"
+        lastname: "Vazano"
+        role: Information Technology Librarian @ MetaDocencia
+        image: assets/img/authors/IreneVazano.jpg
+        social: 
+          - url: irene.vazano@gmail.com
+            icon: fas fa-envelope 
+      - name: "Jessica Formoso"
+        lastname: "Formoso"
+        role: Researcher and Assistant Professor @ MetaDocencia | University of Buenos Aires
+        image: assets/img/authors/JessicaFormoso.jpg
+        social: 
+          - url: jesicaformoso@gmail.com
+            icon: fas fa-envelope 
+      - name: "Lena Bohman"
+        lastname: "Bohman"
+        role: Data Management and Research Impact Librarian @ Zucker School of Medicine at Hofstra/Northwell
+        image: assets/img/authors/LenaBohman.jpg
+        social: 
+          - url: lena.g.bohman@hofstra.edu
+            icon: fas fa-envelope 
+      - name: "Daria Orlowka"
+        lastname: "Orlowka"
+        role: Data Librarian and Assistant Professor @ Western Michigan University
+        image: assets/img/authors/DariaOrlowska.jpg
+        social: 
+          - url: daria.orlowska@wmich.edu
+            icon: fas fa-envelope 
+      - name: "Marla Hertz"
+        lastname: "Hertz"
+        role: Research Data Management Librarian @ University of Alabama at Birmingham
+        image: assets/img/authors/MarlaHertz.jpg
+        social: 
+          - url: mihertz@uab.edu
+            icon: fas fa-envelope 
+      - name: "Nathaniel Porter"
+        lastname: "Porter"
+        role: Data Education Coordinator & Social Science Data Consultant, Assistant Professor @ Virginia Tech
+        image: assets/img/authors/NathanielPorter.jpeg
+        social: 
+          - url: ndporter@vt.edu
+            icon: fas fa-envelope 
+      - name: "Agata Bochynska"
+        lastname: "Bochynska"
+        role: Researcher and Research Librarian @ University of Oslo, Norway
+        image: assets/img/authors/AgataBochynska.jpeg
+        social: 
+          - url: agata.bochynska@ub.uio.no
+            icon: fas fa-envelope 
 
+  lessontab:
+    title: "Lessons"
+    section: lessontab
+    lessons:
+      - lesson-title: "Understanding CARE Principles for research data"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Ria Hamblett, Duncan Loxton, Sara Su"
+      - lesson-title: "Research Community Outreach with Open Science Team Agreements"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
+      - lesson-title: "Open science hardware: an introduction for librarians"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Julieta Arancio"
+      - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Irene Vazano, Jessica Formoso"
+      - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Lena Bohman, Daria Orlowka, Marla Hertz"
+      - lesson-title: "Open Qualitative Research"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Nathaniel Porter"
+      - lesson-title: "Reproducible Research Workflows"
+        site: 
+        repo:
+        notes: 
+        status:  
+        author: "Agata Bochynska"
   footer:
     legal: "Privacy Policy"
 
