@@ -282,7 +282,7 @@ en: &DEFAULT_EN
             icon: fas fa-envelope 
       - name: "Julieta Arancio"
         lastname: "Arancio"
-        role: Guest researcher and Associate researcher @ Technical University Berlin, Germany
+        role: Guest/Associate Researcher @ Technical University Berlin, Germany
         image: assets/img/authors/JulietaArancio.png
         social: 
           - url: jca88@drexel.edu
