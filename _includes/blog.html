@@ -11,14 +11,14 @@
         <div class="row">
             <div class="col-lg-12">
                 <table class="table">
-                    {% assign sorted_posts =  site.data.sitetext[site.locale].blog.posts | sort: "date" | reverse %}
+                    {% assign sorted_posts =  site.posts | sort: "date" | reverse %}
                     {% for post in sorted_posts %}
                     <tr>
                         <td>
                             {{post.date | date: "%m-%d-%Y"}}
                         </td>
                         <td>
-                            <a href="{{ post.url }}">{{post.title}}</a>
+                            <a href="{{ post.url }}">{{post.title | truncate: 90}}</a>
                         </td>
                         <td>
                             {{post.author}}
