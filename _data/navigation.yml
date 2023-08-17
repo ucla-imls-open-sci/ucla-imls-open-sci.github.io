@@ -17,8 +17,12 @@ en: &DEFAULT_EN
       section: services
     - title: "Timeline"
       section: timeline
-    - title: "Apply"
-      section: button
+   # - title: "Apply"
+    # section: button
+    - title: "Authors"
+      section: authors
+    - title: "Lessons"
+      section: lessontab
     - title: "Committee"
       section: team
     - title: "Staff"
