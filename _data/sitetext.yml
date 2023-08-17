@@ -232,6 +232,11 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
           - url: jg3243@drexel.edu
             icon: fab fa-envelope
+
+  blog:
+    title: "Our Blog" 
+    section: blog
+    text: "These are blogs on what we've done"
   
   authors:
     title: "Authors"
@@ -336,6 +341,7 @@ en: &DEFAULT_EN
         social: 
           - url: agata.bochynska@ub.uio.no
             icon: fas fa-envelope 
+
 
   lessontab:
     title: "Lessons"
