@@ -67,8 +67,8 @@ en: &DEFAULT_EN
         desc: "We will announce the lessons selected for development."
         image: assets/img/portfolio/acceptance.png
         alt: 
-      - title: "Summer Seminar"
-        year: "July 31 - October 2, 2023"
+      - title: "Lesson Development Seminar"
+        year: "July 31 - October 19, 2023"
         desc: "A curriculum development workshop where lesson authors participate in a program to support lesson design."
         image: assets/img/portfolio/seminar.png
         alt:
@@ -313,8 +313,8 @@ en: &DEFAULT_EN
         social: 
           - url: lena.g.bohman@hofstra.edu
             icon: fas fa-envelope 
-      - name: "Daria Orlowka"
-        lastname: "Orlowka"
+      - name: "Daria Orlowska"
+        lastname: "Orlowska"
         role: Data Librarian and Assistant Professor @ Western Michigan University
         image: assets/img/authors/DariaOrlowska.jpg
         social: 
