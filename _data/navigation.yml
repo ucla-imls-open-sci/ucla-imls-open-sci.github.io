@@ -29,6 +29,8 @@ en: &DEFAULT_EN
       section: staff
     - title: "Blog"
       section: blog
+    - title: "Contact Us"
+      section: contact
 en-US:
   <<: *DEFAULT_EN
 en-CA:
