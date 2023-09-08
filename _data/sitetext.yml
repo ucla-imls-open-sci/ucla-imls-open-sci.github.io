@@ -389,6 +389,9 @@ en: &DEFAULT_EN
         notes: 
         status:  
         author: "Agata Bochynska"
+  contact:
+    title: "Contact Us"
+    section: contact
   footer:
     legal: "Privacy Policy"
 
