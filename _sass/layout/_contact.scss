@@ -4,9 +4,9 @@ section#contact {
   background-image: url("#{$contact-image}");
   background-repeat: no-repeat;
   background-position: center;
-/*.section-heading {
-    color: $white;
-  }*/
+h2.section-heading {
+    color: black;
+  }
   .form-group {
     margin-bottom: 25px;
     input,
