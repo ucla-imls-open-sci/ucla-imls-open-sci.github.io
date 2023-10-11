@@ -243,27 +243,6 @@ en: &DEFAULT_EN
     text: 
     section: authors
     people:
-      - name: "Ria Hamblett"
-        lastname: "Hamblett"
-        role: Senior Specialist, Data Librarian @ University of Technology Sydney
-        image: assets/img/authors/default.jpeg
-        social: 
-          - url: cria.hamblett@uts.edu.au
-            icon: fas fa-envelope    
-      - name: "Duncan Loxton"
-        lastname: "Loxton"
-        role: Senior Specialist, Data Curator @ University of Technology Sydney
-        image: assets/img/authors/default.jpeg
-        social: 
-          - url: duncan.loxton@uts.edu.au
-            icon: fas fa-envelope
-      - name: "Sarah Su"
-        lastname: "Su"
-        role: Senior Librarian, Education & Research Services @ University of Technology Sydney
-        image: assets/img/authors/default.jpeg
-        social: 
-          - url: sarah.su@uts.edu.au
-            icon: fas fa-envelope
       - name: "Samantha Teplitzky"
         lastname: "Teplitzky"
         role: Open Science Librarian @ University of California, Berkeley
@@ -347,45 +326,39 @@ en: &DEFAULT_EN
     title: "Lessons"
     section: lessontab
     lessons:
-      - lesson-title: "Understanding CARE Principles for research data"
-        site: 
-        repo:
-        notes: 
-        status:  
-        author: "Ria Hamblett, Duncan Loxton, Sara Su"
       - lesson-title: "Research Community Outreach with Open Science Team Agreements"
-        site: 
-        repo:
+        site: http://ucla-imls-open-sci.info/TeamAgreements/
+        repo: https://github.com/ucla-imls-open-sci/TeamAgreements
         notes: 
         status:  
         author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
       - lesson-title: "Open science hardware: an introduction for librarians"
         site: 
-        repo:
+        repo: 
         notes: 
         status:  
         author: "Julieta Arancio"
       - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
-        site: 
-        repo:
+        site: http://ucla-imls-open-sci.info/collaborative-science-for-librarians/
+        repo: https://github.com/ucla-imls-open-sci/collaborative-science-for-librarians
         notes: 
         status:  
         author: "Irene Vazano, Jessica Formoso"
       - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
-        site: 
-        repo:
+        site: http://ucla-imls-open-sci.info/dmp101/
+        repo: https://github.com/ucla-imls-open-sci/dmp101
         notes: 
         status:  
         author: "Lena Bohman, Daria Orlowka, Marla Hertz"
       - lesson-title: "Open Qualitative Research"
-        site: 
-        repo:
+        site: http://ucla-imls-open-sci.info/open-qualitative-research/
+        repo: https://github.com/ucla-imls-open-sci/open-qualitative-research
         notes: 
         status:  
         author: "Nathaniel Porter"
       - lesson-title: "Reproducible Research Workflows"
-        site: 
-        repo:
+        site: http://ucla-imls-open-sci.info/reproducible-workflows/
+        repo: https://github.com/ucla-imls-open-sci/reproducible-workflows
         notes: 
         status:  
         author: "Agata Bochynska"
