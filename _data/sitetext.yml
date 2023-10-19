@@ -332,12 +332,6 @@ en: &DEFAULT_EN
         notes: 
         status:  
         author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
-      - lesson-title: "Open science hardware: an introduction for librarians"
-        site: 
-        repo: 
-        notes: 
-        status:  
-        author: "Julieta Arancio"
       - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
         site: http://ucla-imls-open-sci.info/collaborative-science-for-librarians/
         repo: https://github.com/ucla-imls-open-sci/collaborative-science-for-librarians
@@ -362,6 +356,12 @@ en: &DEFAULT_EN
         notes: 
         status:  
         author: "Agata Bochynska"
+      - lesson-title: "Open science hardware: an introduction for librarians"
+        site: 
+        repo: 
+        notes: 
+        status:  
+        author: "Julieta Arancio"
   contact:
     title: "Contact Us"
     section: contact
