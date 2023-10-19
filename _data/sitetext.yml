@@ -330,37 +330,37 @@ en: &DEFAULT_EN
         site: http://ucla-imls-open-sci.info/TeamAgreements/
         repo: https://github.com/ucla-imls-open-sci/TeamAgreements
         notes: 
-        status:  
+        status: Alpha 
         author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
       - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
         site: http://ucla-imls-open-sci.info/collaborative-science-for-librarians/
         repo: https://github.com/ucla-imls-open-sci/collaborative-science-for-librarians
         notes: 
-        status:  
+        status: Alpha 
         author: "Irene Vazano, Jessica Formoso"
       - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
         site: http://ucla-imls-open-sci.info/dmp101/
         repo: https://github.com/ucla-imls-open-sci/dmp101
         notes: 
-        status:  
+        status: Alpha 
         author: "Lena Bohman, Daria Orlowka, Marla Hertz"
       - lesson-title: "Open Qualitative Research"
         site: http://ucla-imls-open-sci.info/open-qualitative-research/
         repo: https://github.com/ucla-imls-open-sci/open-qualitative-research
         notes: 
-        status:  
+        status: pre-Alpha 
         author: "Nathaniel Porter"
       - lesson-title: "Reproducible Research Workflows"
         site: http://ucla-imls-open-sci.info/reproducible-workflows/
         repo: https://github.com/ucla-imls-open-sci/reproducible-workflows
         notes: 
-        status:  
+        status: Alpha 
         author: "Agata Bochynska"
       - lesson-title: "Open science hardware: an introduction for librarians"
         site: 
         repo: 
         notes: 
-        status:  
+        status: pre-Alpha 
         author: "Julieta Arancio"
   contact:
     title: "Contact Us"
