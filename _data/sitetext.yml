@@ -354,7 +354,7 @@ en: &DEFAULT_EN
         site: http://ucla-imls-open-sci.info/reproducible-workflows/
         repo: https://github.com/ucla-imls-open-sci/reproducible-workflows
         notes: 
-        status: Alpha 
+        status: pre-Alpha 
         author: "Agata Bochynska"
       - lesson-title: "Open science hardware: an introduction for librarians"
         site: 
