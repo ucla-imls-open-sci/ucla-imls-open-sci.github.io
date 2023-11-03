@@ -5,14 +5,9 @@ author: Library Staff
 ---
 
 
-We are thrilled to announce the winners of the <a href="https://ucla-imls-open-sci.info/cfp">Lessons for Librarians in Open Science Principles and Methods</a> in 2023. It is a 2-year pioneering initiative led by the University of California, Los Angeles (UCLA) Library and funded by the Institute of Museum and Library Services through the Laura Bush 21st Century Librarian Program. We will have another call in late 2023, and winners coming in 2024. This year,  after a rigorous evaluation process, we have selected seven outstanding groups of applicants to develop and refine lessons that will empower librarians in the principles and practices of Open Science.
+We are thrilled to announce the winners of the <a href="https://ucla-imls-open-sci.info/cfp">Lessons for Librarians in Open Science Principles and Methods</a> in 2023. It is a 2-year pioneering initiative led by the University of California, Los Angeles (UCLA) Library and funded by the Institute of Museum and Library Services through the Laura Bush 21st Century Librarian Program. We will have another call in late 2023, and winners coming in 2024. This year,  after a rigorous evaluation process, we have selected six outstanding groups of applicants to develop and refine lessons that will empower librarians in the principles and practices of Open Science.
 
 **Congratulations to the Winning Groups:**
-
-- **Understanding CARE Principles for Research Data**
-    - Ria Hamblett; Senior Specialist, Data Librarian; University of Technology Sydney
-    - Sarah Su; Senior Librarian, Education & Research Services; University of Technology Sydney 
-    - Duncan Loxton; Senior Specialist, Data Curator; University of Technology Sydney 
 
 - **Research Community Outreach with Open Science Team Agreements**
     - Samantha Teplitzky; Open Science Librarian; University of California, Berkeley
