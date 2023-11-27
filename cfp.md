@@ -8,6 +8,7 @@ background: grey
 	<h2 class="section-heading">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods</h2>
 </div>
 
+*A Call for Proposals for year 2 of the project will be released on **2023-11-29**. Check back then.* 
 
 ### Program Overview 
 
