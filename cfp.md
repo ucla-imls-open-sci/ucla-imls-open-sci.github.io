@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Call for Proposals: Lessons for Librarians in Open Science Principles and Methods 2023 - 2024" 
+title: "Call for Proposals: Lessons for Librarians in Open Science Principles and Methods" 
 background: grey
 ---
 
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods</h2>
+	<h2 class="section-heading">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods 2023 - 2024</h2>
 </div>
 
 <!-- *A Call for Proposals for year 2 of the project will be released on **2023-11-29**. Check back then.* !-->
