@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Call for Proposals: Lessons for Librarians in Open Science Principles and Methods" 
+title: "Call for Proposals: Lessons for Librarians in Open Science Principles and Methods 2023 - 2024" 
 background: grey
 ---
 
@@ -8,7 +8,7 @@ background: grey
 	<h2 class="section-heading">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods</h2>
 </div>
 
-*A Call for Proposals for year 2 of the project will be released on **2023-11-29**. Check back then.* 
+<!-- *A Call for Proposals for year 2 of the project will be released on **2023-11-29**. Check back then.* !-->
 
 * TOC
 {:toc}
@@ -26,7 +26,7 @@ For the first year of this project, the UCLA Library Data Science Center announc
 * Reproducible Research Workflows
 * Open Science Hardware: an Introduction for Librarians
 
-We are happy to announce the call for proposals for the project's second year. We invite contributions that explore areas distinct from the six topics previously selected, yet still fall under the umbrella of open science.
+We are happy to announce the call for proposals for the project's second year (2023 - 2024). We invite contributions that explore areas distinct from the six topics previously selected, yet still fall under the umbrella of open science.
 
 ### Program Goals
 
@@ -37,7 +37,6 @@ This program will result in 14 open science course modules for librarians at any
 We are seeking lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be **90 minutes to 3 hours long**. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all. Proposals on the following topics are encouraged, but applicants should feel free to propose lessons that are related to open science: 
 
 * What is/Why do Open Science? ([FAIR](https://www.go-fair.org/fair-principles/), Guidance/Recommendations)
-* Paths to Open Science, Stories, Examples, Use Cases
 * Diverse, Equitable, Inclusive Communities (Fostering, Maintaining)
 * Writing Open Science (Peer Review Process, Audiences, Forms)
 * Linking Open Science, Search & Discovery Systems (Databases/Indexing, PIDs, Semantic Web)
@@ -59,8 +58,7 @@ We are seeking lesson proposals intended for use in synchronous instruction sett
 
 ### Proposal Details
 
-The proposal should include lesson justification, a brief statement on your intended lesson audience, learning objectives, and a description of the lesson content. The proposal should be 500-700 words, in Arial font, size 12, and with a line spacing of 1.5. References and other supporting materials can be added. All documents need to be in one pdf. Please submit your proposal here.
-[here](https://www.surveymonkey.com/r/83FXJCX). 
+The proposal should include lesson justification, a brief statement on your intended lesson audience, learning objectives, and a description of the lesson content. The proposal should be 500-700 words, in Arial font, size 12, and with a line spacing of 1.5. References and other supporting materials can be added. All documents need to be in one pdf. Please submit your proposal [here](https://www.surveymonkey.com/r/83FXJCX). 
 
 ### Dates 
 
@@ -68,7 +66,7 @@ The deadline for submission is January 31st, 2024. Awards will be announced by A
 
 ### Funding and Support
 
-We will provide each award recipient or group with $5,000 for developing a lesson plan based on guidelines from UCLA and IMLS (See **Eligibility for Financial Portion of Award** for more information). We will also offer summer workshops (2024) to teach the awarded recipients the necessary skills to build lessons. The UCLA Data Science Center will provide technical support for publishing the developed lessons.
+We will provide each award recipient or group with $5,000 for developing a lesson plan based on guidelines from UCLA and IMLS (See [**Eligibility for Financial Portion of Award**](#eligibility-for-financial-portion-of-award) for more information). We will also offer summer workshops (June to August 2024, tentative) to teach the awarded recipients the necessary skills to build lessons. The UCLA Data Science Center will provide technical support for publishing the developed lessons.
 
 
 #### Eligibility for Financial Portion of Award
