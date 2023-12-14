@@ -5,7 +5,7 @@ background: grey
 ---
 
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods 2023 - 2024</h2>
+	<h2 class="section-heading">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods 2024</h2>
 </div>
 
 <!-- *A Call for Proposals for year 2 of the project will be released on **2023-11-29**. Check back then.* !-->
@@ -26,11 +26,11 @@ For the first year of this project, the UCLA Library Data Science Center announc
 * Reproducible Research Workflows
 * Open Science Hardware: an Introduction for Librarians
 
-We are happy to announce the call for proposals for the project's second year (2023 - 2024). We invite contributions that explore areas distinct from the six topics previously selected, yet still fall under the umbrella of open science.
+We are happy to announce the call for proposals for the project's second year (2024). We invite contributions that explore areas distinct from the six topics previously selected, yet still fall under the umbrella of open science.
 
 ### Program Goals
 
-This program will result in 14 open science course modules for librarians at any career stage, with six lesson proposals selected in 2023 and eight lessons selected in 2024. These curricula will be published online in an unrestricted and freely available manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer workshops, and we will use feedback from lesson piloting to test the learning objectives with librarian learners.
+This program will result in 14 open science course modules for librarians at any career stage, with six lesson proposals selected in 2023 and **eight lessons** selected in 2024. These curricula will be published online in an unrestricted and freely available manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer workshops, and we will use feedback from lesson piloting to test the learning objectives with librarian learners.
 
 ### Lesson Proposal Parameters
 
