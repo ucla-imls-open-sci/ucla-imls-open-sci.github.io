@@ -13,8 +13,8 @@ en: &DEFAULT_EN
   header:
     title: Lessons for Librarians in
     text: Open Science 
-    # button: Apply Now!
-    # buttonlink: https://www.surveymonkey.com/r/63JTJSQ
+    button: Apply Now!
+    buttonlink: https://www.surveymonkey.com/r/83FXJCX
 
   about:
     title: "Call for Proposals"
@@ -40,7 +40,7 @@ en: &DEFAULT_EN
         desc: "This program will result in 14 open science course modules for librarians at any career stage, with seven lesson proposals selected each year of the grant. These curricula will be published online in an unrestricted and freely available manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer workshops, and we will use feedback from lesson piloting to test the learning objectives with librarian learners."
         icon: fas fa-bullseye # find more at https://fontawesome.com/icons
       - title: "Program Parameters"
-        desc: "We are seeking lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be 90 minutes to 3 hours long. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all."
+        desc: "We seek lesson proposals intended for synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be 90 minutes to 3 hours long. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all."
         icon: fas fa-edit
 
     another_title: "Read the [Full Call for Proposal](/cfp)"
@@ -77,11 +77,11 @@ en: &DEFAULT_EN
         align: right
     # end: "Submit <br> a Proposal <br> Now!"
 
- # button:
-   # title: "Ready to Apply?"
-   # text: "We will accept applications from one applicant or several applicants as a group. No specific professional qualifications are required. The deadline for submission is January 31st, 2023. Awards will be announced by April 30th, 2023."
-   # button: "Apply Now!" 
-   # buttonlink: https://www.surveymonkey.com/r/63JTJSQ
+ button:
+   title: "Ready to Apply?"
+   text: "We will accept applications from one or several applicants as a group. No specific professional qualifications are required. The deadline for submission is January 31st, 2023. Awards will be announced by April 30th, 2023."
+   button: "Apply Now!" 
+   buttonlink: https://www.surveymonkey.com/r/83FXJCX
     
     
   staff:
