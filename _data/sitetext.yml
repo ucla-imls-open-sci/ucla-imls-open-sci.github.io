@@ -369,6 +369,107 @@ en: &DEFAULT_EN
   footer:
     legal: "Privacy Policy"
 
+  committee:
+    years: 
+      - year: 2023-2024
+        people:
+        - name: "Chris Erdmann"
+          role: Associate Director for Open Science @ Michael J. Fox Foundation
+          image: assets/img/committee/c_erdmann.png
+          social: 
+            - url: christopher.c.erdmann@gmail.com
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/christopher-erdmann-1213a456/
+              icon: fab fa-linkedin-in
+
+        - name: "Cody Hennesy"
+          role: Journalism and Digital Media Librarian @ University of Minnesota
+          image: assets/img/committee/hennesy_2019_web-sml.png
+          social: 
+            - url: chennesy@umn.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/cody-hennesy-8a915a117/
+              icon: fab fa-linkedin-in
+
+        - name: "Elaine Westbrooks"
+          role: Carl A. Kroch University Librarian @ Cornell University Library
+          image: assets/img/committee/ElaineWestBrooks-sml.png
+          social: 
+            - url: elw25@cornell.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/elaine-w-13b1811/
+              icon: fab fa-linkedin-in
+
+        - name: "Caroline Coward"
+          role: Information Science Manager and Library Group Supervisor @ Jet Propulsion Lab, National Aeronautics and Space Administration
+          image: assets/img/committee/caroline-coward.png
+          social: 
+            - url: caroline.m.coward@jpl.nasa.gov
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/caroline-coward-nasa-jpl/
+              icon: fab fa-linkedin-in
+      
+        - name: "Yvonne Ivey"
+          role: Program Manager @ NAS TOPS
+          image: assets/img/committee/Yvonne.jpg
+          social: 
+            - url: ypivey@gmail.com
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/ypivey
+              icon: fab fa-linkedin-in
+        
+        - name: "Juliane Schneider"
+          role:  Research Librarian - Metadata @ Pacific Northwest National Laboratory 
+          image: assets/img/committee/juliane.jpg
+          social: 
+            - url: juliane.schneider@pnnl.gov
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/juliane-schneider-4a06535/
+              icon: fab fa-linkedin-in
+
+        - name: "Jenny Muilenburg"
+          role:  Research Data Services Librarian @ Association of Research Libraries
+          image: assets/img/committee/Jenny-Muilenburg-2015-web-sml.png
+          social: 
+            - url: jmuil@uw.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/jennifermuilenburg/
+              icon: fab fa-linkedin-in
+
+        - name: "Clifford Kravit"
+          role: IT Program Manager of Research Computing @ UCLA
+          image: assets/img/committee/Clifford-Kravit.png
+          social: 
+            - url: ckravit@g.ucla.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/clifford-kravit/
+              icon: fab fa-linkedin-in
+
+        - name: "Joy Guey"
+          role: Emerging Technologies Advocate @ UCLA
+          image: assets/img/committee/Joy.jpeg
+          social: 
+            - url: joy@ssc.ucla.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/joyguey/
+              icon: fab fa-linkedin-in
+          
+        - name: "Florio Arguillas"
+          role: Researcher,  Cornell Center for Social Sciences
+          image: assets/img/committee/florio.jpg
+          social: 
+            - url: https://linkedin.com/in/florio-arguillas-06391310
+              icon: fab fa-linkedin-in
+              
+        - name: "Jane Greenberg"
+          role: Alice B. Kroeger Professor and Director, Metadata Research Center & Drexel University 
+          image: assets/img/committee/Greenberg_Small.jpg
+          social: 
+            - url: https://www.linkedin.com/in/jane-greenberg-b57b24128/
+              icon: fab fa-linkedin-in
+            - url: jg3243@drexel.edu
+              icon: fab fa-envelope
+
 en-US:
   <<: *DEFAULT_EN
 en-CA:
