@@ -34,7 +34,7 @@ This program will result in 14 open science course modules for librarians at any
 
 ### Lesson Proposal Parameters
 
-We are seeking lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be **90 minutes to 3 hours long**. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all. Proposals on the following topics are encouraged, but applicants should feel free to propose lessons that are related to open science: 
+We're looking for lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be **90 minutes to 3 hours long**. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all. Proposals on the following topics are encouraged, but applicants should feel free to propose lessons that are related to open science: 
 
 * What is/Why do Open Science? ([FAIR](https://www.go-fair.org/fair-principles/), Guidance/Recommendations)
 * Diverse, Equitable, Inclusive Communities (Fostering, Maintaining)
@@ -64,6 +64,8 @@ The proposal should include lesson justification, a brief statement on your inte
 
 The deadline for submission is January 31st, 2024. Awards will be announced by April 30th, 2024.
 
+### [Apply Now](https://www.surveymonkey.com/r/83FXJCX)
+
 ### Funding and Support
 
 We will provide each award recipient or group with $5,000 for developing a lesson plan based on guidelines from UCLA and IMLS (See [**Eligibility for Financial Portion of Award**](#eligibility-for-financial-portion-of-award) for more information). We will also offer summer workshops (June to August 2024, tentative) to teach the awarded recipients the necessary skills to build lessons. The UCLA Data Science Center will provide technical support for publishing the developed lessons.
@@ -85,7 +87,7 @@ We are committed to equal opportunity regardless of race, color, ancestry, relig
 
 If you have any questions, please contact [datascience+imls@ucla.edu](mailto:datascience+imls@ucla.edu). 
 
-This project was made possible in part by the Institute of Museum and Library Services, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22). 
+This project was made possible by the Institute of Museum and Library Services, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22). 
 Este proyecto ha sido posible en parte por el Instituto de Servicios de Museos y Bibliotecas, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22).
 
 <img src="assets/img/imls_logo_2c.png" width="600" />
