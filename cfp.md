@@ -62,7 +62,7 @@ The proposal should include lesson justification, a brief statement on your inte
 
 ### Dates 
 
-The deadline for submission is January 31st, 2024. Awards will be announced by April 30th, 2024.
+The deadline for submission is February 28th, 2024. Awards will be announced by April 30th, 2024.
 
 ### [Apply Now](https://www.surveymonkey.com/r/83FXJCX)
 
