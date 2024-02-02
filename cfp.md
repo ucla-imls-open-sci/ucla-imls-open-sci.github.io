@@ -13,6 +13,8 @@ background: grey
 * TOC
 {:toc}
 
+### _NOTE: Proposal deadline has been extended to 2/29/2024._
+
 ### Program Overview 
 
 The University of California, Los Angeles (UCLA) Library, with funding from the Institute of Museum and Library Services (IMLS) as part of the Laura Bush 21st Century Librarian Program, aims to create 14 lessons that invite librarians to increase their aptitudes in the principles and practices of Open Science. Led by the UCLA Library Data Science Center, this project incentivized two sequential-year cohorts of authors to develop and refine lessons through summer workshops starting in 2022. This project seeks to support continued skills development for librarians in open science by creating a librarian-focused curriculum for open science. We will utilize the [Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/) materials to provide a framework for curriculum development. 
@@ -62,7 +64,7 @@ The proposal should include lesson justification, a brief statement on your inte
 
 ### Dates 
 
-The deadline for submission is February 29th, 2024. Awards will be announced by April 30th, 2024.
+The deadline for submission is **February 29th, 2024**. Awards will be announced by April 30th, 2024.
 
 ### [Apply Now](https://www.surveymonkey.com/r/83FXJCX)
 
