@@ -4,10 +4,11 @@ title: "New Deadline for Grant Opportunity: Open Science for Librarians 2024"
 author: Library Staff
 ---
 
+<!---
 <div class="col-lg-12 text-center">
 	<h2 class="section-heading">New Deadline for Grant Opportunity: Open Science for Librarians 2024</h2>
 </div>
-
+-->
 
 We have extended the application deadline to February 29th, 2024, for proposals in [Lessons for Librarians in Open Science Principles and Methods 2024](https://ucla-imls-open-sci.info/cfp). We changed the deadline to give all interested parties more time to prepare and submit their proposals.
 
