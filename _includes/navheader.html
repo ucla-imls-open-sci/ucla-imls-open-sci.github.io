@@ -13,22 +13,21 @@
     <div class="dropdown">
       <button class="dropbtn" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
-        
       </button>
-      <div class="dropdown-content" id="navbarResponsive">
-        
-        {% for link in site.data.navigation[site.locale].nav %}
-          
+      <div class="dropdown-content collapse navbar-nav" id="navbarResponsive" style="position: absolute;">
+        <ul class="navbar-nav text-uppercase ml-auto" style="padding-left: 0;">
+          {% for link in site.data.navigation[site.locale].nav %}
+          <li class="nav-item" style="padding: 0;">
             {%- if link.url -%}
-              <a class="nav-link js-scroll-trigger" href="{{ link.url }}">{{ link.title }}</a>
+              <a class="nav-link js-scroll-trigger" href="{{ link.url }}" style="padding: 1.1em .1em !important; margin: 0;">{{ link.title }}</a>
             {%- else if link.section -%}
-              <a class="nav-link js-scroll-trigger" href="#{{ link.section }}">{{ link.title }}</a>
+              <a class="nav-link js-scroll-trigger" href="#{{ link.section }}" style="padding: 1.1em .1em !important; margin: 0;">{{ link.title }}</a>
             {%- else -%}
-              <a class="nav-link js-scroll-trigger" href="#">{{ link.title }}</a>
+              <a class="nav-link js-scroll-trigger" href="#" style="padding: 1.1em .1em !important; margin: 0;">{{ link.title }}</a>
             {%- endif -%}
-          
-        {% endfor %}
-        
+          </li>  
+          {% endfor %}
+        </ul>
       </div>
     </div>
   </nav>
@@ -54,3 +53,14 @@
     </div>
   </header>
   <!-- End Header -->
+  <script>
+    // JavaScript code to close the dropdown when a link is clicked
+    document.querySelectorAll('.dropdown-content a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        // Close the dropdown by removing the 'show' class
+        document.getElementById('navbarResponsive').classList.remove('show');
+        // Optional: If you want to toggle the button text back to "Menu"
+        document.querySelector('.dropbtn').textContent = 'Menu';
+      });
+    });
+  </script>
