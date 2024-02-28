@@ -191,10 +191,24 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
         
       - name: "Florio Arguillas"
-        role: Researcher,  Cornell Center for Social Sciences
+        role: Assistant Director for Research Data Stewardship
         image: assets/img/committee/florio.jpg
         social: 
           - url: https://linkedin.com/in/florio-arguillas-06391310
+            icon: fab fa-linkedin-in
+
+      - name: "Elizabeth Bedford"
+        role: Scholarly Publishing Outreach Librarian at University of Washington Libraries
+        image: 
+        social: 
+          - url: https://www.linkedin.com/in/elizabeth-bedford-64543416/
+            icon: fab fa-linkedin-in
+
+      - name: "Thu-Mai Lewis"
+        role: Researcher,  Cornell Center for Social Sciences
+        image: 
+        social: 
+          - url: https://www.linkedin.com/in/thu-mai-lewis-77027716/ 
             icon: fab fa-linkedin-in
             
   blog:
