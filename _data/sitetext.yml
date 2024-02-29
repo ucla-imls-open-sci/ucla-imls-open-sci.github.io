@@ -206,7 +206,7 @@ en: &DEFAULT_EN
 
       - name: "Thu-Mai Lewis"
         role: Researcher,  Cornell Center for Social Sciences
-        image: 
+        image: assets/img/committee/ThuMai_Christian.png
         social: 
           - url: https://www.linkedin.com/in/thu-mai-lewis-77027716/ 
             icon: fab fa-linkedin-in
