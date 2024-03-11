@@ -63,7 +63,7 @@ en: &DEFAULT_EN
         image: assets/img/portfolio/deadline.png
         alt:
       - title: "Accepted Proposals Announced"
-        year: "April 30, 2024"
+        year: "April 30 - May 10th, 2024"
         desc: "We will announce the lessons selected for development."
         image: assets/img/portfolio/acceptance.png
         alt: 
