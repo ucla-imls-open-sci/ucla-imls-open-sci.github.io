@@ -210,7 +210,13 @@ en: &DEFAULT_EN
         social: 
           - url: https://www.linkedin.com/in/thu-mai-lewis-77027716/ 
             icon: fab fa-linkedin-in
-            
+      
+      - name: "Melanie Gainey"
+        role: "Open Science Program Director/Librarian at Carnegie Mellon University"
+        image: assets/img/committee/Melanie_Gainey.png
+        social:
+          - url: https://www.linkedin.com/in/melanie-gainey-aa1a1a133/
+            icon: fab fa-linkedin-in
   blog:
     title: "Our Blog" 
     section: blog
