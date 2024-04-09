@@ -219,7 +219,7 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
 
         - name: "Karen Ciccone"
-        role: "Lead Librarian for Public Science North Carolina State University Libraries"
+        role: "Lead Librarian for Public Science @ North Carolina State University Libraries"
         image: assets/img/committee/Karen_Ciccone.png
         social:
           - url: https://www.linkedin.com/in/karen-ciccone-a66b39232/
