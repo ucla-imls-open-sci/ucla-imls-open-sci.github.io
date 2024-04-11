@@ -199,7 +199,7 @@ en: &DEFAULT_EN
 
       - name: "Elizabeth Bedford"
         role: Scholarly Publishing Outreach Librarian at University of Washington Libraries
-        image: 
+        image: assets/img/committee/default.jpeg
         social: 
           - url: https://www.linkedin.com/in/elizabeth-bedford-64543416/
             icon: fab fa-linkedin-in
