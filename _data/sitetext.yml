@@ -218,7 +218,7 @@ en: &DEFAULT_EN
           - url: https://www.linkedin.com/in/melanie-gainey-aa1a1a133/
             icon: fab fa-linkedin-in
 
-        - name: "Karen Ciccone"
+      - name: "Karen Ciccone"
         role: "Lead Librarian for Public Science @ North Carolina State University Libraries"
         image: assets/img/committee/Karen_Ciccone.png
         social:
@@ -361,7 +361,7 @@ en: &DEFAULT_EN
 
   committee:
     years: 
-      - year: 2023-2024
+      - year: 2022-2023
         people:
         - name: "Chris Erdmann"
           role: Associate Director for Open Science @ Michael J. Fox Foundation
