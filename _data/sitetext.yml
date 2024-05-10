@@ -330,8 +330,8 @@ en: &DEFAULT_EN
         status: Alpha 
         author: "Irene Vazano, Jessica Formoso"
       - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
-        site: http://ucla-imls-open-sci.info/dmp101/
-        repo: https://github.com/ucla-imls-open-sci/dmp101
+        site: http://librarycarpentry.org/lc-dmp101/
+        repo: https://github.com/LibraryCarpentry/lc-dmp101
         notes: 
         status: Alpha 
         author: "Lena Bohman, Daria Orlowka, Marla Hertz"
