@@ -3,3 +3,4 @@ _site
 GEMfile.lock
 .jekyll-cache
 .jekyll-metadata
+.Rproj.user

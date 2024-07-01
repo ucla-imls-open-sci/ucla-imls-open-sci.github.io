@@ -5,28 +5,40 @@ background: grey
 ---
 
 <div class="col-lg-12 text-center">
-	<h2 class="section-heading">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods</h2>
+	<h2 class="section-heading">Call for Proposals: Lessons for Librarians in Open Science Principles and Methods 2024</h2>
 </div>
 
+<!-- *A Call for Proposals for year 2 of the project will be released on **2023-11-29**. Check back then.* !-->
+
+* TOC
+{:toc}
+
+### _NOTE: Proposal deadline has been extended to 2/29/2024._
 
 ### Program Overview 
 
-The University of California, Los Angeles (UCLA) Library, with funding from the Institute of Museum and Library Services as part of the Laura Bush 21st Century Librarian Program, aims to create 14 lessons that invite librarians to increase their aptitudes in the principles and practices of Open Science. Led by the UCLA Library Data Science Center, this project will incentivize two sequential one year cohorts of authors to develop and refine lessons through summer workshops. As part of this project, the UCLA Library Data Science Center is pleased to announce the call for proposals to develop lessons for librarians focused on open science methods and principles. 
+The University of California, Los Angeles (UCLA) Library, with funding from the Institute of Museum and Library Services (IMLS) as part of the Laura Bush 21st Century Librarian Program, aims to create 14 lessons that invite librarians to increase their aptitudes in the principles and practices of Open Science. Led by the UCLA Library Data Science Center, this project incentivized two sequential-year cohorts of authors to develop and refine lessons through summer workshops starting in 2022. This project seeks to support continued skills development for librarians in open science by creating a librarian-focused curriculum for open science. We will utilize the [Collaborative Lesson Development Training](https://carpentries.github.io/lesson-development-training/) materials to provide a framework for curriculum development. 
 
-This project seeks to support continued skills development for librarians in open science by creating a librarian-focused curriculum for open science. When librarians increase their aptitudes in the principles and practices of open science, they can provide instruction to researchers and better support faculty by advocating and teaching open and transparent techniques. In the summer workshops, we will utilize [Carpentries Curriculum Development guidelines](https://cdh.carpentries.org/) and the [Collaborative Lesson Development Training program](https://carpentries.github.io/lesson-development-training/) to provide a framework for curriculum development. 
+For the first year of this project, the UCLA Library Data Science Center announced a call for proposals in October 2022 and selected the top six lesson proposals in April 2023. The six proposals are: 
+
+* Research Community Outreach with Open Science Team Agreements
+* A Path to Open, Inclusive, and Collaborative Science for Librarians
+* Data Management (and Sharing) Plans for Librarians 101
+* Open Qualitative Research
+* Reproducible Research Workflows
+* Open Science Hardware: an Introduction for Librarians
+
+We are happy to announce the call for proposals for the project's second year (2024). We invite contributions that explore areas distinct from the six topics previously selected, yet still fall under the umbrella of open science.
 
 ### Program Goals
 
-This program will result in 14 open science course modules for librarians at any career stage, with seven lesson proposals selected each year of the grant. These curricula will be published online in an unrestricted and freely available manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer workshops, and we will use feedback from lesson piloting to test the learning objectives with librarian learners.
+This program will result in 14 open science course modules for librarians at any career stage, with six lesson proposals selected in 2023 and **eight lessons** selected in 2024. These curricula will be published online in an unrestricted and freely available manner for reuse and remixing. These lesson modules will be developed and supported through two virtual summer workshops, and we will use feedback from lesson piloting to test the learning objectives with librarian learners.
 
 ### Lesson Proposal Parameters
 
-We are seeking lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be 90 minutes to 3 hours long. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all.
-
-Proposals on the following topics are encouraged, but applicants should feel free to propose lessons that are related to open science: 
+We're looking for lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be **90 minutes to 3 hours long**. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all. Proposals on the following topics are encouraged, but applicants should feel free to propose lessons that are related to open science: 
 
 * What is/Why do Open Science? ([FAIR](https://www.go-fair.org/fair-principles/), Guidance/Recommendations)
-* Paths to Open Science, Stories, Examples, Use Cases
 * Diverse, Equitable, Inclusive Communities (Fostering, Maintaining)
 * Writing Open Science (Peer Review Process, Audiences, Forms)
 * Linking Open Science, Search & Discovery Systems (Databases/Indexing, PIDs, Semantic Web)
@@ -42,25 +54,31 @@ Proposals on the following topics are encouraged, but applicants should feel fre
 
 ### Eligibility
 
-We will accept applications from one applicant or several applicants as a group. No specific professional qualifications are required.
+* We will accept applications from one applicant or several applicants as a group. No specific professional qualifications are required. 
+* All applicants should work in the United States.
+* We accept applications from all academic institutions. Unfortunately, Academic Employees (i.e., Faculty, Librarians) from the University of California are excluded from applying. Students and staff of the University of California will be evaluated on a case by case basis.
 
 ### Proposal Details
 
-The proposal should include lesson justification, a brief statement on your intended lesson audience, learning objectives, and a description of the lesson content. The proposal should be 500-700 words, in Arial font, size 12, and with a line spacing of 1.5. References and other supporting materials can be added. All documents need to be in one pdf. Please submit your proposal [here](https://www.surveymonkey.com/r/63JTJSQ). 
+The proposal should include lesson justification, a brief statement on your intended lesson audience, learning objectives, and a description of the lesson content. The proposal should be 500-700 words, in Arial font, size 12, and with a line spacing of 1.5. References and other supporting materials can be added. All documents need to be in one pdf. Please submit your proposal [here](https://www.surveymonkey.com/r/83FXJCX). 
 
 ### Dates 
 
-The deadline for submission is January 31st, 2023. Awards will be announced by April 30th, 2023. 
+The deadline for submission is **February 29th, 2024**. Awards will be announced by April 30th - May 10th, 2024.
+
+### [Apply Now](https://www.surveymonkey.com/r/83FXJCX)
 
 ### Funding and Support
 
-We will provide each award recipient or group with $5,000 for developing a lesson (how the recipient(s) receive the award depends on each institution). We will also offer two rounds of summer workshops (2023 and 2024) to teach the awarded recipients the necessary skills to build lessons. The UCLA Data Science Center will provide technical support for publishing the developed lessons.
+We will provide each award recipient or group with $5,000 for developing a lesson plan based on guidelines from UCLA and IMLS (See [**Eligibility for Financial Portion of Award**](#eligibility-for-financial-portion-of-award) for more information). We will also offer summer workshops (June to August 2024, tentative) to teach the awarded recipients the necessary skills to build lessons. The UCLA Data Science Center will provide technical support for publishing the developed lessons.
+
 
 #### Eligibility for Financial Portion of Award
 
-* University of California applicants need to reach out to the program officers [here](mailto:datascience+imls@ucla.edu) for rules regarding UC compensation. 
-* Compensation restrictions may apply depending on an individual’s employment status and employer. 
-
+* We accept applications from all academic institutions. Unfortunately, Academic Employees (i.e., Faculty, Librarians) from the University of California are excluded from applying. Students and staff of the University of California will be evaluated on a case by case basis (please email [datascience+imls@ucla.edu](mailto:datascience+imls@ucla.edu)) to confirm the financial eligibility before applying).
+* Recipients (not the institutions) have to accept the developing fund ($5000) as an honoraria, otherwise they will not be eligible for this award. 
+* All applications must adhere to UCLA Library guidelines on reimbursement.
+ 
 ### Proposal Review and Review Criteria
 
 Lessons for Librarians in Open Science Principles and Methods Review Committee will evaluate the proposals based on quality, originality, and potential impact.
@@ -71,7 +89,7 @@ We are committed to equal opportunity regardless of race, color, ancestry, relig
 
 If you have any questions, please contact [datascience+imls@ucla.edu](mailto:datascience+imls@ucla.edu). 
 
-This project was made possible in part by the Institute of Museum and Library Services, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22). 
+This project was made possible by the Institute of Museum and Library Services, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22). 
 Este proyecto ha sido posible en parte por el Instituto de Servicios de Museos y Bibliotecas, [RE-252335-OLS-22](https://www.imls.gov/grants/awarded/re-252335-ols-22).
 
-<img src="assets/img/imls_logo_2c.png" />
+<img src="assets/img/imls_logo_2c.png" width="600" />

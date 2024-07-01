@@ -13,15 +13,15 @@ en: &DEFAULT_EN
   header:
     title: Lessons for Librarians in
     text: Open Science 
-    # button: Apply Now!
-    # buttonlink: https://www.surveymonkey.com/r/63JTJSQ
+    button: Apply Now!
+    buttonlink: https://www.surveymonkey.com/r/83FXJCX
 
   about:
     title: "Call for Proposals"
     text: "Institute of Museum and Library Services, UCLA Library Data Science Center"
     body: "The University of California, Los Angeles (UCLA) Library, with funding from the Institute of Museum and Library Services as part of the Laura Bush 21st Century Librarian Program, aims to create 14 lessons that invite librarians to increase their aptitudes in the principles and practices of Open Science.
           Led by the UCLA Library Data Science Center, this project will incentivize two sequential one year cohorts of authors to develop and refine lessons through summer workshops.
-          As part of this project, the UCLA Library Data Science Center is pleased to announce the call for proposals to develop lessons for librarians focused on open science methods and principles. 
+          As part of this project, the UCLA Library Data Science Center is pleased to announce the call for proposals to develop lessons for librarians focused on open science methods and principles. **NOW DUE 2/29/2024**
           **[Read the Full Call for Proposals](/cfp)**"
     section: about
     button:
@@ -53,34 +53,44 @@ en: &DEFAULT_EN
     #start_align: "left"
     events:
       - title: "Call for Proposals"
-        year: "December 13, 2022"
+        year: "December 4th, 2023"
         desc: "Please submit your Open Science for Librarians lesson proposals! Read the full **[Call for Proposals](/cfp)**."
         image: assets/img/portfolio/call.png
         alt:
-      - title: "Proposal Deadline"
-        year: "January 31, 2023"
-        desc: "Lesson proposals are due. **[Please submit your lesson idea](https://www.surveymonkey.com/r/63JTJSQ)!**"
+      - title: "Proposal Deadline -- EXTENDED!"
+        year: "February 29th, 2024"
+        desc: "Lesson proposals are due. **[Please submit your lesson idea](https://www.surveymonkey.com/r/83FXJCX)!**"
         image: assets/img/portfolio/deadline.png
         alt:
       - title: "Accepted Proposals Announced"
-        year: "Early July, 2023"
+        year: "April 30 - May 10th, 2024"
         desc: "We will announce the lessons selected for development."
         image: assets/img/portfolio/acceptance.png
         alt: 
-      - title: "Summer Seminar"
-        year: "July 31 - October 2, 2023"
+      - title: "Collaborative Lesson Development Workshop"
+        year: "June  - August, 2024"
         desc: "A curriculum development workshop where lesson authors participate in a program to support lesson design."
         image: assets/img/portfolio/seminar.png
         alt:
+      - title: "Lesson Refinement and Piloting"
+        year: "September  - December, 2024"
+        desc: "Further lesson development and alpha piloting of lesson."
+        image: assets/img/portfolio/seminar.png
+        alt:
+      - title: "Beta piloting and Carpentries Incubator"
+        year: "January  - March, 2025"
+        desc: "Piloting by others outside of the core-author team and ingesting into the Carpentries Incubator."
+        image: assets/img/portfolio/seminar.png
+        alt:     
         # you can enforce the alignment
         align: right
     # end: "Submit <br> a Proposal <br> Now!"
 
- # button:
-   # title: "Ready to Apply?"
-   # text: "We will accept applications from one applicant or several applicants as a group. No specific professional qualifications are required. The deadline for submission is January 31st, 2023. Awards will be announced by April 30th, 2023."
-   # button: "Apply Now!" 
-   # buttonlink: https://www.surveymonkey.com/r/63JTJSQ
+  button:
+    title: "Ready to Apply?"
+    text: "We will accept applications from one or several applicants as a group. No specific professional qualifications are required. The deadline for submission is January 31st, 2023. Awards will be announced by April 30th, 2023."
+    button: "Apply Now!" 
+    buttonlink: https://www.surveymonkey.com/r/83FXJCX
     
     
   staff:
@@ -137,7 +147,7 @@ en: &DEFAULT_EN
     section: team
     people:
       - name: "Chris Erdmann"
-        role: Associate Director for Open Science @ Michael J. Fox Foundation
+        role: Head of Open Science, SciLifeLab Data Centre
         image: assets/img/committee/c_erdmann.png
         social: 
           - url: christopher.c.erdmann@gmail.com
@@ -146,34 +156,16 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
 
       - name: "Cody Hennesy"
-        role: Journalism and Digital Media Librarian @ University of Minnesota
+        role: Researcher, Cornell Center for Social Sciences
         image: assets/img/committee/hennesy_2019_web-sml.png
         social: 
           - url: chennesy@umn.edu
             icon: fas fa-envelope
           - url: https://www.linkedin.com/in/cody-hennesy-8a915a117/
             icon: fab fa-linkedin-in
-
-      - name: "Elaine Westbrooks"
-        role: Carl A. Kroch University Librarian @ Cornell University Library
-        image: assets/img/committee/ElaineWestBrooks-sml.png
-        social: 
-          - url: elw25@cornell.edu
-            icon: fas fa-envelope
-          - url: https://www.linkedin.com/in/elaine-w-13b1811/
-            icon: fab fa-linkedin-in
-
-      - name: "Caroline Coward"
-        role: Information Science Manager and Library Group Supervisor @ Jet Propulsion Lab, National Aeronautics and Space Administration
-        image: assets/img/committee/caroline-coward.png
-        social: 
-          - url: caroline.m.coward@jpl.nasa.gov
-            icon: fas fa-envelope
-          - url: https://www.linkedin.com/in/caroline-coward-nasa-jpl/
-            icon: fab fa-linkedin-in
      
       - name: "Yvonne Ivey"
-        role: Program Manager @ NAS TOPS
+        role: Program Manager @ NASA TOPS
         image: assets/img/committee/Yvonne.jpg
         social: 
           - url: ypivey@gmail.com
@@ -188,15 +180,6 @@ en: &DEFAULT_EN
           - url: juliane.schneider@pnnl.gov
             icon: fas fa-envelope
           - url: https://www.linkedin.com/in/juliane-schneider-4a06535/
-            icon: fab fa-linkedin-in
-
-      - name: "Jenny Muilenburg"
-        role:  Research Data Services Librarian @ Association of Research Libraries
-        image: assets/img/committee/Jenny-Muilenburg-2015-web-sml.png
-        social: 
-          - url: jmuil@uw.edu
-            icon: fas fa-envelope
-          - url: https://www.linkedin.com/in/jennifermuilenburg/
             icon: fab fa-linkedin-in
 
       - name: "Clifford Kravit"
@@ -218,24 +201,274 @@ en: &DEFAULT_EN
             icon: fab fa-linkedin-in
         
       - name: "Florio Arguillas"
-        role: Researcher,  Cornell Center for Social Sciences
+        role: Assistant Director for Research Data Stewardship
         image: assets/img/committee/florio.jpg
         social: 
           - url: https://linkedin.com/in/florio-arguillas-06391310
             icon: fab fa-linkedin-in
-            
-      - name: "Jane Greenberg"
-        role: Alice B. Kroeger Professor and Director, Metadata Research Center & Drexel University 
-        image: assets/img/committee/Greenberg_Small.jpg
-        social: 
-          - url: https://www.linkedin.com/in/jane-greenberg-b57b24128/
-            icon: fab fa-linkedin-in
-          - url: jg3243@drexel.edu
-            icon: fab fa-envelope
-        
 
+      - name: "Elizabeth Bedford"
+        role: Scholarly Publishing Outreach Librarian at University of Washington Libraries
+        image: assets/img/committee/default.jpeg
+        social: 
+          - url: https://www.linkedin.com/in/elizabeth-bedford-64543416/
+            icon: fab fa-linkedin-in
+
+      - name: "Thu-Mai Lewis"
+        role: Assistant Director for Research Data Stewardship @ UNC-Chapel Hill
+        image: assets/img/committee/ThuMai_Christian.png
+        social: 
+          - url: https://www.linkedin.com/in/thu-mai-lewis-77027716/ 
+            icon: fab fa-linkedin-in
+      
+      - name: "Melanie Gainey"
+        role: "Open Science Program Director/Librarian at Carnegie Mellon University"
+        image: assets/img/committee/Melanie_Gainey.png
+        social:
+          - url: https://www.linkedin.com/in/melanie-gainey-aa1a1a133/
+            icon: fab fa-linkedin-in
+
+      - name: "Karen Ciccone"
+        role: "Lead Librarian for Public Science @ North Carolina State University Libraries"
+        image: assets/img/committee/Karen_Ciccone.png
+        social:
+          - url: https://www.linkedin.com/in/karen-ciccone-a66b39232/
+            icon: fab fa-linkedin-in
+  blog:
+    title: "Our Blog" 
+    section: blog
+    text: "These are blogs on what we've done"
+  
+  authors:
+    title: "Authors"
+    text: 
+    section: authors
+    people:
+      - name: "Samantha Teplitzky"
+        lastname: "Teplitzky"
+        role: Open Science Librarian @ University of California, Berkeley
+        image: assets/img/authors/SamanthaTeplitzky.jpg
+        social: 
+          - url: samteplitzky@berkeley.edu
+            icon: fas fa-envelope   
+      - name: "Samantha Wilairat"
+        lastname: "Wilairat"
+        role: Research Communications Librarian @ Stanford University
+        image: assets/img/authors/SamanthaWilairat.jpg
+        social: 
+          - url: sam.wilairat@stanford.edu
+            icon: fas fa-envelope  
+      - name: "Ariel Deardorff"
+        lastname: "Deardorff"
+        role: Director of Data Science and Open Scholarship @ University of California, San Francisco
+        image: assets/img/authors/ArielDeardorff.jpg
+        social: 
+          - url: Ariel.Deardorff@ucsf.edu
+            icon: fas fa-envelope 
+      - name: "Julieta Arancio"
+        lastname: "Arancio"
+        role: Guest/Associate Researcher @ Technical University Berlin, Germany
+        image: assets/img/authors/JulietaArancio.png
+        social: 
+          - url: jca88@drexel.edu
+            icon: fas fa-envelope 
+      - name: "Irene Vazano"
+        lastname: "Vazano"
+        role: Information Technology Librarian @ MetaDocencia
+        image: assets/img/authors/IreneVazano.jpg
+        social: 
+          - url: irene.vazano@gmail.com
+            icon: fas fa-envelope 
+      - name: "Jessica Formoso"
+        lastname: "Formoso"
+        role: Researcher and Assistant Professor @ MetaDocencia | University of Buenos Aires
+        image: assets/img/authors/JessicaFormoso.jpg
+        social: 
+          - url: jesicaformoso@gmail.com
+            icon: fas fa-envelope 
+      - name: "Lena Bohman"
+        lastname: "Bohman"
+        role: Data Management and Research Impact Librarian @ Zucker School of Medicine at Hofstra/Northwell
+        image: assets/img/authors/LenaBohman.jpg
+        social: 
+          - url: lena.g.bohman@hofstra.edu
+            icon: fas fa-envelope 
+      - name: "Daria Orlowska"
+        lastname: "Orlowska"
+        role: Data Librarian and Assistant Professor @ Western Michigan University
+        image: assets/img/authors/DariaOrlowska.jpg
+        social: 
+          - url: daria.orlowska@wmich.edu
+            icon: fas fa-envelope 
+      - name: "Marla Hertz"
+        lastname: "Hertz"
+        role: Research Data Management Librarian @ University of Alabama at Birmingham
+        image: assets/img/authors/MarlaHertz.jpg
+        social: 
+          - url: mihertz@uab.edu
+            icon: fas fa-envelope 
+      - name: "Nathaniel Porter"
+        lastname: "Porter"
+        role: Data Education Coordinator & Social Science Data Consultant, Assistant Professor @ Virginia Tech
+        image: assets/img/authors/NathanielPorter.jpeg
+        social: 
+          - url: ndporter@vt.edu
+            icon: fas fa-envelope 
+      - name: "Agata Bochynska"
+        lastname: "Bochynska"
+        role: Researcher and Research Librarian @ University of Oslo, Norway
+        image: assets/img/authors/AgataBochynska.jpeg
+        social: 
+          - url: agata.bochynska@ub.uio.no
+            icon: fas fa-envelope 
+
+
+  lessontab:
+    title: "Lessons"
+    section: lessontab
+    lessons:
+      - lesson-title: "Research Community Outreach with Open Science Team Agreements"
+        site: http://ucla-imls-open-sci.info/TeamAgreements/
+        repo: https://github.com/ucla-imls-open-sci/TeamAgreements
+        notes: 
+        status: Alpha 
+        author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
+      - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
+        site: http://ucla-imls-open-sci.info/collaborative-science-for-librarians/
+        repo: https://github.com/ucla-imls-open-sci/collaborative-science-for-librarians
+        notes: 
+        status: Alpha 
+        author: "Irene Vazano, Jessica Formoso"
+      - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
+        site: http://librarycarpentry.org/lc-dmp101/
+        repo: https://github.com/LibraryCarpentry/lc-dmp101
+        notes: 
+        status: Alpha 
+        author: "Lena Bohman, Daria Orlowka, Marla Hertz"
+      - lesson-title: "Open Qualitative Research"
+        site: http://ucla-imls-open-sci.info/open-qualitative-research/
+        repo: https://github.com/ucla-imls-open-sci/open-qualitative-research
+        notes: 
+        status: pre-Alpha 
+        author: "Nathaniel Porter"
+      - lesson-title: "Reproducible Research Workflows"
+        site: http://ucla-imls-open-sci.info/reproducible-workflows/
+        repo: https://github.com/ucla-imls-open-sci/reproducible-workflows
+        notes: 
+        status: pre-Alpha 
+        author: "Agata Bochynska"
+      - lesson-title: "Open science hardware: an introduction for librarians"
+        site: 
+        repo: 
+        notes: 
+        status: pre-Alpha 
+        author: "Julieta Arancio"
+  contact:
+    title: "Contact Us"
+    section: contact
   footer:
     legal: "Privacy Policy"
+
+  committee:
+    years: 
+      - year: 2022-2023
+        people:
+        - name: "Chris Erdmann"
+          role: Associate Director for Open Science @ Michael J. Fox Foundation
+          image: assets/img/committee/c_erdmann.png
+          social: 
+            - url: christopher.c.erdmann@gmail.com
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/christopher-erdmann-1213a456/
+              icon: fab fa-linkedin-in
+
+        - name: "Cody Hennesy"
+          role: Journalism and Digital Media Librarian @ University of Minnesota
+          image: assets/img/committee/hennesy_2019_web-sml.png
+          social: 
+            - url: chennesy@umn.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/cody-hennesy-8a915a117/
+              icon: fab fa-linkedin-in
+
+        - name: "Elaine Westbrooks"
+          role: Carl A. Kroch University Librarian @ Cornell University Library
+          image: assets/img/committee/ElaineWestBrooks-sml.png
+          social: 
+            - url: elw25@cornell.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/elaine-w-13b1811/
+              icon: fab fa-linkedin-in
+
+        - name: "Caroline Coward"
+          role: Information Science Manager and Library Group Supervisor @ Jet Propulsion Lab, National Aeronautics and Space Administration
+          image: assets/img/committee/caroline-coward.png
+          social: 
+            - url: caroline.m.coward@jpl.nasa.gov
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/caroline-coward-nasa-jpl/
+              icon: fab fa-linkedin-in
+      
+        - name: "Yvonne Ivey"
+          role: Program Manager @ NAS TOPS
+          image: assets/img/committee/Yvonne.jpg
+          social: 
+            - url: ypivey@gmail.com
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/ypivey
+              icon: fab fa-linkedin-in
+        
+        - name: "Juliane Schneider"
+          role:  Research Librarian - Metadata @ Pacific Northwest National Laboratory 
+          image: assets/img/committee/juliane.jpg
+          social: 
+            - url: juliane.schneider@pnnl.gov
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/juliane-schneider-4a06535/
+              icon: fab fa-linkedin-in
+
+        - name: "Jenny Muilenburg"
+          role:  Research Data Services Librarian @ Association of Research Libraries
+          image: assets/img/committee/Jenny-Muilenburg-2015-web-sml.png
+          social: 
+            - url: jmuil@uw.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/jennifermuilenburg/
+              icon: fab fa-linkedin-in
+
+        - name: "Clifford Kravit"
+          role: IT Program Manager of Research Computing @ UCLA
+          image: assets/img/committee/Clifford-Kravit.png
+          social: 
+            - url: ckravit@g.ucla.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/clifford-kravit/
+              icon: fab fa-linkedin-in
+
+        - name: "Joy Guey"
+          role: Emerging Technologies Advocate @ UCLA
+          image: assets/img/committee/Joy.jpeg
+          social: 
+            - url: joy@ssc.ucla.edu
+              icon: fas fa-envelope
+            - url: https://www.linkedin.com/in/joyguey/
+              icon: fab fa-linkedin-in
+          
+        - name: "Florio Arguillas"
+          role: Researcher,  Cornell Center for Social Sciences
+          image: assets/img/committee/florio.jpg
+          social: 
+            - url: https://linkedin.com/in/florio-arguillas-06391310
+              icon: fab fa-linkedin-in
+              
+        - name: "Jane Greenberg"
+          role: Alice B. Kroeger Professor and Director, Metadata Research Center & Drexel University 
+          image: assets/img/committee/Greenberg_Small.jpg
+          social: 
+            - url: https://www.linkedin.com/in/jane-greenberg-b57b24128/
+              icon: fab fa-linkedin-in
+            - url: jg3243@drexel.edu
+              icon: fab fa-envelope
 
 en-US:
   <<: *DEFAULT_EN
@@ -245,4 +478,3 @@ en-GB:
   <<: *DEFAULT_EN
 en-AU:
   <<: *DEFAULT_EN
-
