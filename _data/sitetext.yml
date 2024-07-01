@@ -53,7 +53,7 @@ en: &DEFAULT_EN
     #start_align: "left"
     events:
       - title: "Call for Proposals"
-        year: "November 29, 2023"
+        year: "December 4th, 2023"
         desc: "Please submit your Open Science for Librarians lesson proposals! Read the full **[Call for Proposals](/cfp)**."
         image: assets/img/portfolio/call.png
         alt:
@@ -67,11 +67,21 @@ en: &DEFAULT_EN
         desc: "We will announce the lessons selected for development."
         image: assets/img/portfolio/acceptance.png
         alt: 
-      - title: "Lesson Development Seminar"
+      - title: "Collaborative Lesson Development Workshop"
         year: "June  - August, 2024"
         desc: "A curriculum development workshop where lesson authors participate in a program to support lesson design."
         image: assets/img/portfolio/seminar.png
         alt:
+      - title: "Lesson Refinement and Piloting"
+        year: "September  - December, 2024"
+        desc: "Further lesson development and alpha piloting of lesson."
+        image: assets/img/portfolio/seminar.png
+        alt:
+      - title: "Beta piloting and Carpentries Incubator"
+        year: "January  - March, 2025"
+        desc: "Piloting by others outside of the core-author team and ingesting into the Carpentries Incubator."
+        image: assets/img/portfolio/seminar.png
+        alt:     
         # you can enforce the alignment
         align: right
     # end: "Submit <br> a Proposal <br> Now!"
