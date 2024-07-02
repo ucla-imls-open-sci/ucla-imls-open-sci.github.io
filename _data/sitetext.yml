@@ -103,13 +103,11 @@ en: &DEFAULT_EN
             icon: fab fa-twitter
           - url: https://www.linkedin.com/in/zhiyuan-yao-8b7b13101/
             icon: fab fa-linkedin-in
-      - name: "Emily Gong"
+      - name: "Eric Huang"
         role: "Lesson Infrastructure Developer"
-        image: assets/img/staff/EmilyGong.jpeg
+        image: assets/img/staff/EricHuang.jpeg
         social:
-          - url: https://twitter.com/Emily24459272
-            icon: fab fa-twitter
-          - url: https://www.linkedin.com/in/emily-gong-11b5a719b/
+          - url: https://www.linkedin.com/in/zikang-huang/
             icon: fab fa-linkedin-in
       - name: "Lawrence Lee"
         role: "Lesson Infrastructure Developer"
@@ -119,17 +117,11 @@ en: &DEFAULT_EN
             icon: fab fa-twitter
           - url: https://www.linkedin.com/in/lawrencetlee/
             icon: fab fa-linkedin-in
-      - name: "Loretta Hu"
+      - name: "Madeline Kim"
         role: "Lesson Infrastructure Developer"
-        image: assets/img/staff/LorettaHu.jpeg
+        image: assets/img/staff/MadelineKim.jpeg
         social:
-          - url: https://www.linkedin.com/in/loretta-hu/
-            icon: fab fa-linkedin-in
-      - name: "Hyerin Lee"
-        role: "Lesson Infrastructure Developer"
-        image: assets/img/staff/HyerinLee.jpeg
-        social:
-          - url: https://www.linkedin.com/in/hyerin-lee/
+          - url: https://www.linkedin.com/in/madeline-kim-14-x2025/
             icon: fab fa-linkedin-in
   team:
     title: "Committee"
