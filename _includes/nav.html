@@ -9,7 +9,7 @@
       {%- if site.logo -%}
       <img
         height="{{ site.logo.height | default: 52 }}"
-        src="{{ site.logo.path }}"
+        src="{{ site.baseurl }}/{{ site.logo.path }}"
       />
       {%- else -%} {{ site.title }} {%- endif -%}
     </a>
@@ -30,7 +30,7 @@
         {%- for link in site.data.navigation[site.locale].nav -%}
         <li class="nav-item">
           {%- if link.url -%}
-          <a class="nav-link js-scroll-trigger" href="{{ link.url }}"
+          <a class="nav-link js-scroll-trigger" href="{{ site.baseurl }}/{{ link.url }}"
             >{{ link.title }}</a
           >
           {%- elsif link.section -%}

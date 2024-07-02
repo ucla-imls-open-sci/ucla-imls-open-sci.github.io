@@ -21,10 +21,16 @@ en: &DEFAULT_EN
     # section: button
     - title: "Authors"
       section: authors
+    - title: "Lessons"
+      section: lessontab
     - title: "Committee"
       section: team
     - title: "Staff"
       section: staff
+    - title: "Blog"
+      section: blog
+    - title: "Contact Us"
+      section: contact
 en-US:
   <<: *DEFAULT_EN
 en-CA:
