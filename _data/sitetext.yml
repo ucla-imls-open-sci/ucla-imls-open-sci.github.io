@@ -235,84 +235,113 @@ en: &DEFAULT_EN
     title: "Authors"
     text: 
     section: authors
-    people:
-      - name: "Samantha Teplitzky"
-        lastname: "Teplitzky"
-        role: Open Science Librarian @ University of California, Berkeley
-        image: assets/img/authors/SamanthaTeplitzky.jpg
-        social: 
-          - url: samteplitzky@berkeley.edu
-            icon: fas fa-envelope   
-      - name: "Samantha Wilairat"
-        lastname: "Wilairat"
-        role: Research Communications Librarian @ Stanford University
-        image: assets/img/authors/SamanthaWilairat.jpg
-        social: 
-          - url: sam.wilairat@stanford.edu
-            icon: fas fa-envelope  
-      - name: "Ariel Deardorff"
-        lastname: "Deardorff"
-        role: Director of Data Science and Open Scholarship @ University of California, San Francisco
-        image: assets/img/authors/ArielDeardorff.jpg
-        social: 
-          - url: Ariel.Deardorff@ucsf.edu
-            icon: fas fa-envelope 
-      - name: "Julieta Arancio"
-        lastname: "Arancio"
-        role: Guest/Associate Researcher @ Technical University Berlin, Germany
-        image: assets/img/authors/JulietaArancio.png
-        social: 
-          - url: jca88@drexel.edu
-            icon: fas fa-envelope 
-      - name: "Irene Vazano"
-        lastname: "Vazano"
-        role: Information Technology Librarian @ MetaDocencia
-        image: assets/img/authors/IreneVazano.jpg
-        social: 
-          - url: irene.vazano@gmail.com
-            icon: fas fa-envelope 
-      - name: "Jessica Formoso"
-        lastname: "Formoso"
-        role: Researcher and Assistant Professor @ MetaDocencia | University of Buenos Aires
-        image: assets/img/authors/JessicaFormoso.jpg
-        social: 
-          - url: jesicaformoso@gmail.com
-            icon: fas fa-envelope 
-      - name: "Lena Bohman"
-        lastname: "Bohman"
-        role: Data Management and Research Impact Librarian @ Zucker School of Medicine at Hofstra/Northwell
-        image: assets/img/authors/LenaBohman.jpg
-        social: 
-          - url: lena.g.bohman@hofstra.edu
-            icon: fas fa-envelope 
-      - name: "Daria Orlowska"
-        lastname: "Orlowska"
-        role: Data Librarian and Assistant Professor @ Western Michigan University
-        image: assets/img/authors/DariaOrlowska.jpg
-        social: 
-          - url: daria.orlowska@wmich.edu
-            icon: fas fa-envelope 
-      - name: "Marla Hertz"
-        lastname: "Hertz"
-        role: Research Data Management Librarian @ University of Alabama at Birmingham
-        image: assets/img/authors/MarlaHertz.jpg
-        social: 
-          - url: mihertz@uab.edu
-            icon: fas fa-envelope 
-      - name: "Nathaniel Porter"
-        lastname: "Porter"
-        role: Data Education Coordinator & Social Science Data Consultant, Assistant Professor @ Virginia Tech
-        image: assets/img/authors/NathanielPorter.jpeg
-        social: 
-          - url: ndporter@vt.edu
-            icon: fas fa-envelope 
-      - name: "Agata Bochynska"
-        lastname: "Bochynska"
-        role: Researcher and Research Librarian @ University of Oslo, Norway
-        image: assets/img/authors/AgataBochynska.jpeg
-        social: 
-          - url: agata.bochynska@ub.uio.no
-            icon: fas fa-envelope 
+    people: 
+      - name: "Daniel Kerchner"
+        lastname: "Kerchner"
+        role: Senior Software Developer and Librarian, George Washington University
+        image: assets/img/authors/23-24/Daniel_Kerchner.jpg
+        social:
+          - url: kerchner@gwu.edu
+            icon: fas fa-envelope
+      - name: Eric Silberberg
+        lastname: Silberberg
+        role: Librarian for Instructional Design and Education, Queens College
+        image: assets/img/authors/23-24/Eric Silberberg.JPG
+        social:
+          - url: eric.silberberg@qc.cuny.edu
+            icon: fas fa-envelope
+      - name: Jesus Alonso-Regalado
+        lastname: Alonso-Regalado
+        role: Historical Librarian, Latin American Studies, and Romance Languages, University at Albany (SUNY)
+        image: assets/img/authors/23-24/Alonso-Regalado.jpg
+      - name: Cate Kellett
+        lastname: Kellet
+        role: Head of Cataloging and Metadata Services, Yale University
+        image: assets/img/authors/23-24/Cate Kellett.jpg
+      - name: Kathryn Miller
+        lastname: Miller
+        role: Publishing Librarian, National Institute of Standards and Technology
+        image: assets/img/authors/23-24/Kathryn Miller.jpg
+        social:
+          - url: kathrynmiller621@gmail.com
+            icon: fas fa-envelope
+      - name: Andrea Medina-Smith
+        lastname: Medina-Smith
+        role: Data Librarian
+        image: assets/img/authors/23-24/andrea_medina_smith_cropped.jpg
+        social:
+          - url: andrea.medinasmith@gmail.com
+            icon: fas fa-envelope
+      - name: Camille Thomas
+        lastname: Thomas
+        role: Scholarly Communications Librarian, Florida State University
+        image: assets/img/authors/23-24/Camille Thomas_1.jpg
+        social:
+          - url: cthomas5@fsu.edu
+            icon: fas fa-envelope
+      - name: Fernando Rios
+        lastname: Rios
+        role: Research Data Management Specialist, University of Arizona
+        image: assets/img/committee/default.jpeg
+        social:
+          - url: frios@arizona.edu
+            icon: fas fa-envelope
+      - name: Jeffrey Oliver
+        lastname: Oliver
+        role: Data Science Specialist, University of Arizona
+        image: assets/img/committee/default.jpeg
+        social:
+          - url: jcoliver@arizona.edu
+            icon: fas fa-envelope
+      - name: Levi Dolan
+        lastname: Dolan
+        role: Data Services Librarian, Ruth Lilly Medical Library, Indiana University School of Medicine
+        image: assets/img/authors/23-24/LeviDolan.jpg
+        social:
+          - url: dolanl@iu.edu
+            icon: fas fa-envelope
+      - name: Mirian Ramirez
+        lastname: Ramirez
+        role: Research Metrics Librarian, Ruth Lilly Medical Library, Indiana University School of Medicine
+        image: assets/img/committee/default.jpeg
+        social:
+          - url: mirirami@iu.edu
+            icon: fas fa-envelope
+      - name: Hannah Craven
+        lastname: Craven
+        role: Scholarly Communications Librarian, Ruth Lilly Medical Library, Indiana University School of Medicine
+        image: assets/img/authors/23-24/HannahCraven.jpg
+        social:
+          - url: hancrave@iu.edu
+            icon: fas fa-envelope
+      - name: Katie Frey
+        lastname: Frey
+        role: Harvard Smithsonian Center for Astrophysics
+        image: assets/img/authors/23-24/Katie_Frey.jpg
+        social:
+          - url: katieefrey@gmail.com
+            icon: fas fa-envelope
+      - name: Jennifer Lynn Bartlett
+        lastname: Bartlett
+        role: NASA ADS Project Scientist for Astrophysics Center for Astrophysics
+        image: assets/img/authors/23-24/JenniferBartlett, J 002-square.jpg
+        social:
+          - url: jennifer.bartlett@cfa.harvard.edu
+            icon: fas fa-envelope
+      - name: Stephanie Jarmak
+        lastname: Jarmak
+        role:
+        image:
+        social:
+          - url:
+            icon: 
+      - name: Aditya Ranganath
+        lastname: Ranganath
+        role: Open Scientific Communication with Data Dashboards, University of Colorado Boulder
+        image:
+        social:
+          - url: aditya.ranganath@colorado.edu
+            icon: fas fa-envelope
 
 
   lessontab:
