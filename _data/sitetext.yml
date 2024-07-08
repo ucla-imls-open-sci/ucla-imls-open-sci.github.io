@@ -268,7 +268,7 @@ en: &DEFAULT_EN
         image: assets/img/authors/23-24/Cate Kellett.jpg
       - name: Kathryn Miller
         lastname: Miller
-        role: Publishing Librarian, National Institute of Standards and Technology
+        role: Publishing Librarian
         image: assets/img/authors/23-24/Kathryn Miller.jpg
         social:
           - url: kathrynmiller621@gmail.com
