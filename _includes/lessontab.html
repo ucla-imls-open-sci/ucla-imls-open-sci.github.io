@@ -16,8 +16,10 @@
                 <th>Instructor Notes</th>
                 <th>Status</th>
                 <th>Author(s)</th>
+                <th>Year</th>
             </tr>
-            {% for lesson in site.data.sitetext[site.locale].lessontab.lessons %}
+            {% for year in site.data.sitetext[site.locale].lessontab.years %}
+            {% for lesson in year.lessons %}
             <tr>
                 <td>{{ lesson.lesson-title }}</td>
                 <td><a href="{{ lesson.site }}" target="_blank" class="fa fa-laptop"></a></td>
@@ -25,36 +27,10 @@
                 <td><a href="{{ lesson.notes }}" target="_blank" class="fa fa-plus-circle"></a></td>
                 <td>{{ lesson.status }}</td>
                 <td>{{ lesson.author }}</td>
+                <td> {{ year.year }} </td>
             </tr>
             {% endfor %}
+            {% endfor %}
         </table>
-    </div>
-    <div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading text-uppercase"> Our Previous Lessons </h2>
-                    <!-- <h3 class="section-subheading text-muted"></h3> -->
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <table class="table">
-                        {% for year in site.data.sitetext[site.locale].committee.years %}
-                        <tr>
-                            <td>
-                                {{year.year}}
-                            </td>
-                            <td>
-                                <a href="/{{year.year}}-lessons.html">{{year.year}} Lessons</a>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </table>
-                </div>
-            </div>
-        </div>
     </div>
 </section>

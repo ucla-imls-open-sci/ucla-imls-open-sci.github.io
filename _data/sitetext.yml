@@ -342,62 +342,61 @@ en: &DEFAULT_EN
         social:
           - url: aditya.ranganath@colorado.edu
             icon: fas fa-envelope
-
-
-  lessontab:
-    title: "Lessons"
-    section: lessontab
-    lessons:
-      - lesson-title: "Open and Reproducible Research Cloud Workflows: A Firsthand Experience for Librarians"
-        site: 
-        repo: 
-        notes: 
-        status: pre-Alpha 
-        author: "Daniel Kerchner"
-      - lesson-title: Collaborative Multilingual Search and Discovery Systems
-        site: 
-        repo: 
-        notes: 
-        status: pre-Alpha 
-        author: "Eric Silberberg, Jesus Alonso-Regalado, Cate Kellett"
-      - lesson-title: "Authoring Open Science"
-        site: 
-        repo: 
-        notes: 
-        status: pre-Alpha 
-        author: "Kathryn Miller, Andrea Medina-Smith"
-      - lesson-title: "Building an Open Science Community of Practice"
-        site: 
-        repo: 
-        notes: 
-        status: pre-Alpha 
-        author: "Camille Thomas"
-      - lesson-title: "A gentle, hands-on introduction to containers and virtual machines"
-        site: 
-        repo: 
-        notes: 
-        status: pre-Alpha 
-        author: "Fernando Rios, Jeffrey Oliver"
-      - lesson-title: "Open Science Discovery Engines: Empowering Librarian Use Through a Case Study Exploration of the NASA Science Explorer"
-        site: 
-        repo: 
-        notes: 
-        status: pre-Alpha 
-        author: "Katie Frey, Jennifer Lynn Bartlett, Stephanie Jarmak"
-      - lesson-title: "Creating Data Dashboards for Open Science Using the R Programming Language"
-        site: 
-        repo: 
-        notes: 
-        status: pre-Alpha 
-        author: "Aditya Ranganath"
+            
   contact:
     title: "Contact Us"
     section: contact
   footer:
     legal: "Privacy Policy"
 
-  lessons:
-    years: 
+  lessontab:
+    title: "Lessons"
+    section: lessontab
+    years:
+      - year: 2023-2024
+        lessons:
+        - lesson-title: "Open and Reproducible Research Cloud Workflows: A Firsthand Experience for Librarians"
+          site: 
+          repo: 
+          notes: 
+          status: pre-Alpha 
+          author: "Daniel Kerchner"
+        - lesson-title: Collaborative Multilingual Search and Discovery Systems
+          site: 
+          repo: 
+          notes: 
+          status: pre-Alpha 
+          author: "Eric Silberberg, Jesus Alonso-Regalado, Cate Kellett"
+        - lesson-title: "Authoring Open Science"
+          site: 
+          repo: 
+          notes: 
+          status: pre-Alpha 
+          author: "Kathryn Miller, Andrea Medina-Smith"
+        - lesson-title: "Building an Open Science Community of Practice"
+          site: 
+          repo: 
+          notes: 
+          status: pre-Alpha 
+          author: "Camille Thomas"
+        - lesson-title: "A gentle, hands-on introduction to containers and virtual machines"
+          site: 
+          repo: 
+          notes: 
+          status: pre-Alpha 
+          author: "Fernando Rios, Jeffrey Oliver"
+        - lesson-title: "Open Science Discovery Engines: Empowering Librarian Use Through a Case Study Exploration of the NASA Science Explorer"
+          site: 
+          repo: 
+          notes: 
+          status: pre-Alpha 
+          author: "Katie Frey, Jennifer Lynn Bartlett, Stephanie Jarmak"
+        - lesson-title: "Creating Data Dashboards for Open Science Using the R Programming Language"
+          site: 
+          repo: 
+          notes: 
+          status: pre-Alpha 
+          author: "Aditya Ranganath"
       - year: 2022-2023
         lessons:
         - lesson-title: "Research Community Outreach with Open Science Team Agreements"
