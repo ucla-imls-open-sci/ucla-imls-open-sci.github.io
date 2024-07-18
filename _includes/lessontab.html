@@ -1,20 +1,21 @@
-<section class="page-section bg-light" id="{{ site.data.sitetext[site.locale].lessontab.section | default: "lessontab" }}">
+<section class="page-section bg-light" id="{{ site.data.sitetext[site.locale].lessontab.section | default: 'lessontab'
+    }}">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].lessontab.title }}</h2>
-              <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].lessontab.text }}</h3>
+                <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].lessontab.text }}</h3>
             </div>
-          </div>
+        </div>
 
-            <table class="table table-striped">
+        <table class="table table-striped">
             <tr>
-            <th>Lesson</th>
-            <th>Site</th>
-            <th>Repository</th>
-            <th>Instructor Notes</th>
-            <th>Status</th>
-            <th>Author(s)</th>
+                <th>Lesson</th>
+                <th>Site</th>
+                <th>Repository</th>
+                <th>Instructor Notes</th>
+                <th>Status</th>
+                <th>Author(s)</th>
             </tr>
             {% for lesson in site.data.sitetext[site.locale].lessontab.lessons %}
             <tr>
@@ -28,6 +29,32 @@
             {% endfor %}
         </table>
     </div>
-    
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading text-uppercase"> Our Previous Lessons </h2>
+                    <!-- <h3 class="section-subheading text-muted"></h3> -->
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <table class="table">
+                        {% for year in site.data.sitetext[site.locale].committee.years %}
+                        <tr>
+                            <td>
+                                {{year.year}}
+                            </td>
+                            <td>
+                                <a href="/{{year.year}}-lessons.html">{{year.year}} Lessons</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-

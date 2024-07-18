@@ -13,20 +13,20 @@ en: &DEFAULT_EN
   header:
     title: Lessons for Librarians in
     text: Open Science 
-    button: Apply Now!
-    buttonlink: https://www.surveymonkey.com/r/83FXJCX
+    # button: Apply Now!
+    # buttonlink: https://www.surveymonkey.com/r/83FXJCX
 
   about:
     title: "Call for Proposals"
     text: "Institute of Museum and Library Services, UCLA Library Data Science Center"
     body: "The University of California, Los Angeles (UCLA) Library, with funding from the Institute of Museum and Library Services as part of the Laura Bush 21st Century Librarian Program, aims to create 14 lessons that invite librarians to increase their aptitudes in the principles and practices of Open Science.
           Led by the UCLA Library Data Science Center, this project will incentivize two sequential one year cohorts of authors to develop and refine lessons through summer workshops.
-          As part of this project, the UCLA Library Data Science Center is pleased to announce the call for proposals to develop lessons for librarians focused on open science methods and principles. **NOW DUE 2/29/2024**
-          **[Read the Full Call for Proposals](/cfp)**"
+          As part of this project, the UCLA Library Data Science Center is pleased to announce the call for proposals to develop lessons for librarians focused on open science methods and principles.
+          **[Read the Full Call for Proposals](/#blog)**"
     section: about
     button:
       text: Read the Full Call!
-      buttonlink: https://ucla-imls-open-sci.info/cfp
+      buttonlink: https://ucla-imls-open-sci.info/#blogs
 
   services:
     title: "Program"
@@ -43,7 +43,7 @@ en: &DEFAULT_EN
         desc: "We are seeking lesson proposals intended for use in synchronous instruction settings. Lesson proposals should support both in-person and virtual environments. The completed lesson is expected to be 90 minutes to 3 hours long. We prefer submissions that use open resources, such as open-source tools and software, and resources that are broadly accessible to all."
         icon: fas fa-edit
 
-    another_title: "Read the [Full Call for Proposal](/cfp)"
+    another_title: "Read the [Full Call for Proposal](/#blog)"
 
   timeline:
     title: "Timeline"
@@ -348,47 +348,95 @@ en: &DEFAULT_EN
     title: "Lessons"
     section: lessontab
     lessons:
-      - lesson-title: "Research Community Outreach with Open Science Team Agreements"
-        site: http://ucla-imls-open-sci.info/TeamAgreements/
-        repo: https://github.com/ucla-imls-open-sci/TeamAgreements
-        notes: 
-        status: Alpha 
-        author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
-      - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
-        site: http://ucla-imls-open-sci.info/collaborative-science-for-librarians/
-        repo: https://github.com/ucla-imls-open-sci/collaborative-science-for-librarians
-        notes: 
-        status: Alpha 
-        author: "Irene Vazano, Jessica Formoso"
-      - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
-        site: http://librarycarpentry.org/lc-dmp101/
-        repo: https://github.com/LibraryCarpentry/lc-dmp101
-        notes: 
-        status: Alpha 
-        author: "Lena Bohman, Daria Orlowka, Marla Hertz"
-      - lesson-title: "Open Qualitative Research"
-        site: http://ucla-imls-open-sci.info/open-qualitative-research/
-        repo: https://github.com/ucla-imls-open-sci/open-qualitative-research
-        notes: 
-        status: pre-Alpha 
-        author: "Nathaniel Porter"
-      - lesson-title: "Reproducible Research Workflows"
-        site: http://ucla-imls-open-sci.info/reproducible-workflows/
-        repo: https://github.com/ucla-imls-open-sci/reproducible-workflows
-        notes: 
-        status: pre-Alpha 
-        author: "Agata Bochynska"
-      - lesson-title: "Open science hardware: an introduction for librarians"
+      - lesson-title: "Open and Reproducible Research Cloud Workflows: A Firsthand Experience for Librarians"
         site: 
         repo: 
         notes: 
         status: pre-Alpha 
-        author: "Julieta Arancio"
+        author: "Daniel Kerchner"
+      - lesson-title: Collaborative Multilingual Search and Discovery Systems
+        site: 
+        repo: 
+        notes: 
+        status: pre-Alpha 
+        author: "Eric Silberberg, Jesus Alonso-Regalado, Cate Kellett"
+      - lesson-title: "Authoring Open Science"
+        site: 
+        repo: 
+        notes: 
+        status: pre-Alpha 
+        author: "Kathryn Miller, Andrea Medina-Smith"
+      - lesson-title: "Building an Open Science Community of Practice"
+        site: 
+        repo: 
+        notes: 
+        status: pre-Alpha 
+        author: "Camille Thomas"
+      - lesson-title: "A gentle, hands-on introduction to containers and virtual machines"
+        site: 
+        repo: 
+        notes: 
+        status: pre-Alpha 
+        author: "Fernando Rios, Jeffrey Oliver"
+      - lesson-title: "Open Science Discovery Engines: Empowering Librarian Use Through a Case Study Exploration of the NASA Science Explorer"
+        site: 
+        repo: 
+        notes: 
+        status: pre-Alpha 
+        author: "Katie Frey, Jennifer Lynn Bartlett, Stephanie Jarmak"
+      - lesson-title: "Creating Data Dashboards for Open Science Using the R Programming Language"
+        site: 
+        repo: 
+        notes: 
+        status: pre-Alpha 
+        author: "Aditya Ranganath"
   contact:
     title: "Contact Us"
     section: contact
   footer:
     legal: "Privacy Policy"
+
+  lessons:
+    years: 
+      - year: 2022-2023
+        lessons:
+        - lesson-title: "Research Community Outreach with Open Science Team Agreements"
+          site: http://ucla-imls-open-sci.info/TeamAgreements/
+          repo: https://github.com/ucla-imls-open-sci/TeamAgreements
+          notes: 
+          status: Alpha 
+          author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
+        - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
+          site: http://ucla-imls-open-sci.info/collaborative-science-for-librarians/
+          repo: https://github.com/ucla-imls-open-sci/collaborative-science-for-librarians
+          notes: 
+          status: Alpha 
+          author: "Irene Vazano, Jessica Formoso"
+        - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
+          site: http://librarycarpentry.org/lc-dmp101/
+          repo: https://github.com/LibraryCarpentry/lc-dmp101
+          notes: 
+          status: Alpha 
+          author: "Lena Bohman, Daria Orlowka, Marla Hertz"
+        - lesson-title: "Open Qualitative Research"
+          site: http://ucla-imls-open-sci.info/open-qualitative-research/
+          repo: https://github.com/ucla-imls-open-sci/open-qualitative-research
+          notes: 
+          status: pre-Alpha 
+          author: "Nathaniel Porter"
+        - lesson-title: "Reproducible Research Workflows"
+          site: http://ucla-imls-open-sci.info/reproducible-workflows/
+          repo: https://github.com/ucla-imls-open-sci/reproducible-workflows
+          notes: 
+          status: pre-Alpha 
+          author: "Agata Bochynska"
+        - lesson-title: "Open science hardware: an introduction for librarians"
+          site: 
+          repo: 
+          notes: 
+          status: pre-Alpha 
+          author: "Julieta Arancio"
+
 
   committee:
     years: 

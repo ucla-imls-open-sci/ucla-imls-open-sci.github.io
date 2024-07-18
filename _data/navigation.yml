@@ -11,12 +11,12 @@
 # -----------------
 en: &DEFAULT_EN
   nav:
-    - title: "Call for Proposals"
-      section: about
-    - title: "Program"
-      section: services
-    - title: "Timeline"
-      section: timeline
+    # - title: "Call for Proposals"
+    #   section: about
+    # - title: "Program"
+    #   section: services
+    # - title: "Timeline"
+    #   section: timeline
    # - title: "Apply"
     # section: button
     - title: "Authors"
