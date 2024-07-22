@@ -430,8 +430,8 @@ en: &DEFAULT_EN
           status: pre-Alpha 
           author: "Agata Bochynska"
         - lesson-title: "Open science hardware: an introduction for librarians"
-          site: 
-          repo: 
+          site: http://ucla-imls-open-sci.info/lc-open-hw/
+          repo: https://github.com/ucla-imls-open-sci/lc-open-hw
           notes: 
           status: pre-Alpha 
           author: "Julieta Arancio"
