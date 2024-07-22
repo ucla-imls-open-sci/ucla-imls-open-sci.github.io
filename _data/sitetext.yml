@@ -282,14 +282,14 @@ en: &DEFAULT_EN
       - name: Fernando Rios
         lastname: Rios
         role: Research Data Management Specialist, University of Arizona
-        image: assets/img/committee/default.jpeg
+        image: assets/img/authors/23-24/Fernando_Rios 2.jpg
         social:
           - url: frios@arizona.edu
             icon: fas fa-envelope
       - name: Jeffrey Oliver
         lastname: Oliver
         role: Data Science Specialist, University of Arizona
-        image: assets/img/committee/default.jpeg
+        image: assets/img/authors/23-24/Jeff_Oliver 2.jpg
         social:
           - url: jcoliver@arizona.edu
             icon: fas fa-envelope
