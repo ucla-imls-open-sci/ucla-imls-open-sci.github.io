@@ -338,7 +338,7 @@ en: &DEFAULT_EN
       - name: Aditya Ranganath
         lastname: Ranganath
         role: Data Librarian, University of Colorado Boulder
-        image:
+        image: assets/img/authors/23-24/adi.png
         social:
           - url: aditya.ranganath@colorado.edu
             icon: fas fa-envelope
