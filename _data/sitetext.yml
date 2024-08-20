@@ -316,10 +316,10 @@ en: &DEFAULT_EN
             icon: fas fa-envelope
       - name: Katie Frey
         lastname: Frey
-        role: Harvard Smithsonian Center for Astrophysics
+        role: Data Curator for Programmatic Access, Stanford University
         image: assets/img/authors/23-24/Katie_Frey.jpg
         social:
-          - url: katieefrey@gmail.com
+          - url: katie.frey@stanford.edu
             icon: fas fa-envelope
       - name: Jennifer Lynn Bartlett
         lastname: Bartlett
@@ -337,7 +337,7 @@ en: &DEFAULT_EN
             icon: 
       - name: Aditya Ranganath
         lastname: Ranganath
-        role: Open Scientific Communication with Data Dashboards, University of Colorado Boulder
+        role: Data Librarian, University of Colorado Boulder
         image:
         social:
           - url: aditya.ranganath@colorado.edu
