@@ -323,18 +323,18 @@ en: &DEFAULT_EN
             icon: fas fa-envelope
       - name: Jennifer Lynn Bartlett
         lastname: Bartlett
-        role: NASA ADS Project Scientist for Astrophysics Center for Astrophysics
+        role: NASA ADS Project Scientist for Astrophysics, Center for Astrophysics
         image: assets/img/authors/23-24/JenniferBartlett, J 002-square.jpg
         social:
           - url: jennifer.bartlett@cfa.harvard.edu
             icon: fas fa-envelope
       - name: Stephanie Jarmak
         lastname: Jarmak
-        role:
+        role: NASA ADS Project Scientist for Planetary Science, Center for Astrophysics
         image:
         social:
-          - url:
-            icon: 
+          - url: stephanie.jarmak@cfa.harvard.edu
+            icon: fas fa-envelope
       - name: Aditya Ranganath
         lastname: Ranganath
         role: Data Librarian, University of Colorado Boulder
