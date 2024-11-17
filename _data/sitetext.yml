@@ -349,19 +349,19 @@ en: &DEFAULT_EN
   footer:
     legal: "Privacy Policy"
 
-  lessontab:
-    title: "Lessons"
-    section: lessontab
-    years:
-      - year: 2023-2024
-        lessons:
+lessontab:
+  title: "Lessons"
+  section: lessontab
+  years:
+    - year: 2023-2024
+      lessons:
         - lesson-title: "Open and Reproducible Research Cloud Workflows: A Firsthand Experience for Librarians"
           site: 
           repo: 
           notes: 
           status: pre-Alpha 
           author: "Daniel Kerchner"
-        - lesson-title: Collaborative Multilingual Search and Discovery Systems
+        - lesson-title: "Collaborative Multilingual Search and Discovery Systems"
           site: 
           repo: 
           notes: 
@@ -397,45 +397,44 @@ en: &DEFAULT_EN
           notes: 
           status: pre-Alpha 
           author: "Aditya Ranganath"
-      - year: 2022-2023
-        lessons:
+    - year: 2022-2023
+      lessons:
         - lesson-title: "Research Community Outreach with Open Science Team Agreements"
-          site: http://ucla-imls-open-sci.info/TeamAgreements/
-          repo: https://github.com/ucla-imls-open-sci/TeamAgreements
+          site: https://librarycarpentry.github.io/lc-team-agreements/
+          repo: https://github.com/LibraryCarpentry/lc-team-agreements
           notes: 
           status: Alpha 
-          author: "Samantha Teplitzky, Sam Wilairat, Ariel Deardorff"
+          author: "Samantha Teplitzky, Ariel Deardorff, Samantha Wilairat"
         - lesson-title: "A Path to Open, Inclusive, and Collaborative Science for Librarians"
-          site: http://ucla-imls-open-sci.info/collaborative-science-for-librarians/
-          repo: https://github.com/ucla-imls-open-sci/collaborative-science-for-librarians
+          site: https://librarycarpentry.github.io/lc-collaborative-science/
+          repo: https://github.com/LibraryCarpentry/lc-collaborative-science
           notes: 
           status: Alpha 
           author: "Irene Vazano, Jessica Formoso"
         - lesson-title: "Data Management (and Sharing) Plans for Librarians 101"
-          site: http://librarycarpentry.org/lc-dmp101/
+          site: https://librarycarpentry.org/lc-dmp101/
           repo: https://github.com/LibraryCarpentry/lc-dmp101
           notes: 
           status: Alpha 
-          author: "Lena Bohman, Daria Orlowka, Marla Hertz"
+          author: "Lena Bohman, Marla Hertz, Daria Orlowska"
         - lesson-title: "Open Qualitative Research"
-          site: http://ucla-imls-open-sci.info/open-qualitative-research/
+          site: https://ucla-imls-open-sci.info/open-qualitative-research/
           repo: https://github.com/ucla-imls-open-sci/open-qualitative-research
           notes: 
           status: pre-Alpha 
           author: "Nathaniel Porter"
         - lesson-title: "Reproducible Research Workflows"
-          site: http://ucla-imls-open-sci.info/reproducible-workflows/
-          repo: https://github.com/ucla-imls-open-sci/reproducible-workflows
+          site: https://librarycarpentry.github.io/lc-reproducible-research/
+          repo: https://github.com/LibraryCarpentry/lc-reproducible-research
           notes: 
           status: pre-Alpha 
           author: "Agata Bochynska"
         - lesson-title: "Open science hardware: an introduction for librarians"
-          site: http://ucla-imls-open-sci.info/lc-open-hw/
+          site: https://ucla-imls-open-sci.info/lc-open-hw/
           repo: https://github.com/ucla-imls-open-sci/lc-open-hw
           notes: 
           status: pre-Alpha 
           author: "Julieta Arancio"
-
 
   committee:
     years: 
