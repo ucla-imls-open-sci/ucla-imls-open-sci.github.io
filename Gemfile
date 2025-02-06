@@ -17,3 +17,5 @@ end
 
 gem "jekyll-agency"
 
+
+gem "jekyll-redirect-from", "~> 0.16.0"
