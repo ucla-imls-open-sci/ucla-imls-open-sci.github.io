@@ -9,15 +9,17 @@
         </div>
 
         <table class="table table-striped">
-            <tr>
-                <th>Lesson</th>
-                <th>Site</th>
-                <th>Repository</th>
-                <th>Instructor Notes</th>
-                <th>Status</th>
-                <th>Author(s)</th>
-                <th>Year</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Lesson</th>
+                    <th>Site</th>
+                    <th>Repository</th>
+                    <th>Instructor Notes</th>
+                    <th>Status</th>
+                    <th>Author(s)</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
             {% for year in site.data.sitetext[site.locale].lessontab.years %}
             {% for lesson in year.lessons %}
             <tr>
