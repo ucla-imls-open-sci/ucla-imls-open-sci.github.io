@@ -14,7 +14,7 @@
 #theme: jekyll-agency
 remote_theme: raviriley/agency-jekyll-theme
 
-url    : "https://ucla-datasquad.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url    : "https://ucla-imls-open-sci.info" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 
 title      : Open Science for Librarians
