@@ -397,6 +397,12 @@ en: &DEFAULT_EN
             notes: 
             status: pre-Alpha 
             author: "Aditya Ranganath"
+          - lesson-title: "Leveraging Open Research and Contributor IDs (ORCID) for Librarians"
+            site: https://firbolg.github.io/LC_ORCID/
+            repo: https://github.com/firbolg/LC_ORCID
+            notes: 
+            status: pre-Alpha 
+            author: "Levi Dolan, Mirian Ramirez, Hannah Craven"
       - year: 2022-2023
         lessons:
           - lesson-title: "Research Community Outreach with Open Science Team Agreements"
