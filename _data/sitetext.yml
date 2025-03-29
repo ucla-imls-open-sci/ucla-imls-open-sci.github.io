@@ -424,8 +424,8 @@ en: &DEFAULT_EN
             status: Alpha 
             author: "Lena Bohman, Marla Hertz, Daria Orlowska"
           - lesson-title: "Open Qualitative Research"
-            site: https://ucla-imls-open-sci.info/open-qualitative-research/
-            repo: https://github.com/ucla-imls-open-sci/open-qualitative-research
+            site: https://librarycarpentry.github.io/lc-open-qualitative-research
+            repo: https://github.com/LibraryCarpentry/lc-open-qualitative-research
             notes: 
             status: pre-Alpha 
             author: "Nathaniel Porter"
@@ -436,7 +436,7 @@ en: &DEFAULT_EN
             status: pre-Alpha 
             author: "Agata Bochynska"
           - lesson-title: "Open science hardware: an introduction for librarians"
-            site: https://ucla-imls-open-sci.info/lc-open-hw/
+            site: 
             repo: https://github.com/ucla-imls-open-sci/lc-open-hw
             notes: 
             status: pre-Alpha 
