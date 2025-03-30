@@ -20,8 +20,11 @@
         </tr>
       </thead>
       <tbody>
+        {% for lesson in site.data.sitetext[site.locale].lessons_sorted %}
+<!--
         {% for year in site.data.sitetext[site.locale].lessontab.years %}
         {% for lesson in year.lessons %}
+-->
         <tr>
           <td>{{ lesson.lesson-title }}</td>
 
