@@ -1,9 +1,9 @@
-<section class="page-section bg-light" id="{{ site.data.sitetext[site.locale].lessontab.section | default: 'lessontab' }}">
+<section class="page-section bg-light" id="lessontab">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="section-heading text-uppercase">{{ site.data.sitetext[site.locale].lessontab.title }}</h2>
-        <h3 class="section-subheading text-muted">{{ site.data.sitetext[site.locale].lessontab.text }}</h3>
+        <h2 class="section-heading text-uppercase">Lessons</h2>
+        <h3 class="section-subheading text-muted">A librarian-focused curriculum for open science</h3>
       </div>
     </div>
 
@@ -13,20 +13,22 @@
           <th>Lesson</th>
           <th>Site</th>
           <th>Repository</th>
-          <th>Instructor Notes</th>
           <th>Status</th>
           <th>Author(s)</th>
-          <th>Year</th>
+          <th>Level</th>
+          <th>Keywords</th>
         </tr>
       </thead>
       <tbody>
-        {% for lesson in site.data.sitetext[site.locale].lessontab.lessons_sorted %}
+        {% assign lessons = site.data.lesson.lessons %}
+        {% assign sorted_lessons = lessons | sort: "status" | reverse %}
+        {% for lesson in sorted_lessons %}
         <tr>
-          <td>{{ lesson.lesson-title }}</td>
+          <td>{{ lesson.name }}</td>
 
           <td>
-            {% if lesson.site %}
-              <a href="{{ lesson.site }}" target="_blank" class="fa fa-laptop" title="Lesson Site"></a>
+            {% if lesson.url %}
+              <a href="{{ lesson.url }}" target="_blank" class="fa fa-laptop" title="Lesson Site"></a>
             {% else %}
               <span class="text-muted">—</span>
             {% endif %}
@@ -40,17 +42,16 @@
             {% endif %}
           </td>
 
+          <td>{{ lesson.status }}</td>
+          <td>{{ lesson.authors | join: ", " }}</td>
+          <td>{{ lesson.educationalLevel }}</td>
           <td>
-            {% if lesson.notes %}
-              <a href="{{ lesson.notes }}" target="_blank" class="fa fa-plus-circle" title="Instructor Notes"></a>
+            {% if lesson.keywords %}
+              {{ lesson.keywords | join: ", " }}
             {% else %}
               <span class="text-muted">—</span>
             {% endif %}
           </td>
-
-          <td>{{ lesson.status }}</td>
-          <td>{{ lesson.author }}</td>
-          <td>{{ lesson.year }}</td>
         </tr>
         {% endfor %}
       </tbody>
