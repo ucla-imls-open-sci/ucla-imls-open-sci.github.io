@@ -1,0 +1,204 @@
+lessons:
+- name: 'Open and Reproducible Research Cloud Workflows: A Firsthand Experience for
+    Librarians'
+  authors:
+  - Daniel Kerchner
+  status: pre-Alpha
+  educationalLevel: Intermediate
+  keywords:
+  - reproducibility
+  - cloud
+  - workflow
+  learningResourceType: lesson
+  teaches:
+  - Open science workflows
+  - Computational reproducibility
+  url: https://kerchner.github.io/lc-open-reproducible-research-cloud/
+  repo: https://github.com/kerchner/lc-open-reproducible-research-cloud
+- name: Collaborative Multilingual Search and Discovery Systems
+  authors:
+  - Eric Silberberg
+  - Jesus Alonso-Regalado
+  - Cate Kellett
+  status: pre-Alpha
+  educationalLevel: Intermediate
+  keywords:
+  - search
+  - multilingual
+  - discovery
+  learningResourceType: lesson
+  teaches: []
+  url: ''
+  repo: ''
+- name: Authoring Open Science
+  authors:
+  - Kathryn Miller
+  - Andrea Medina-Smith
+  status: pre-Alpha
+  educationalLevel: Introductory
+  keywords:
+  - open science
+  - writing
+  - metadata
+  learningResourceType: lesson
+  teaches:
+  - Open science communication
+  url: ''
+  repo: ''
+- name: Building an Open Science Community of Practice
+  authors:
+  - Camille Thomas
+  status: pre-Alpha
+  educationalLevel: Introductory
+  keywords:
+  - community
+  - open science
+  learningResourceType: lesson
+  teaches:
+  - Community building
+  url: ''
+  repo: ''
+- name: A gentle, hands-on introduction to containers and virtual machines
+  authors:
+  - Fernando Rios
+  - Jeffrey Oliver
+  status: pre-Alpha
+  educationalLevel: Intermediate
+  keywords:
+  - containers
+  - virtual machines
+  - infrastructure
+  learningResourceType: lesson
+  teaches:
+  - Using containers
+  - Virtual machines
+  url: https://ual-re.github.io/lc-containers_vms/
+  repo: https://github.com/UAL-RE/lc-containers_vms
+- name: 'Open Science Discovery Engines: Empowering Librarian Use Through a Case Study
+    Exploration of the NASA Science Explorer'
+  authors:
+  - Katie Frey
+  - Jennifer Lynn Bartlett
+  - Stephanie Jarmak
+  status: pre-Alpha
+  educationalLevel: Introductory
+  keywords:
+  - discovery
+  - NASA
+  - case study
+  learningResourceType: lesson
+  teaches: []
+  url: http://ucla-imls-open-sci.info/lc-scix-open-science/
+  repo: https://github.com/ucla-imls-open-sci/lc-scix-open-science
+- name: Creating Data Dashboards for Open Science Using the R Programming Language
+  authors:
+  - Aditya Ranganath
+  status: pre-Alpha
+  educationalLevel: Intermediate
+  keywords:
+  - dashboards
+  - R
+  - data visualization
+  learningResourceType: lesson
+  teaches:
+  - Creating dashboards
+  - Using R for visualization
+  url: ''
+  repo: ''
+- name: Leveraging Open Research and Contributor IDs (ORCID) for Librarians
+  authors:
+  - Levi Dolan
+  - Mirian Ramirez
+  - Hannah Craven
+  status: pre-Alpha
+  educationalLevel: Introductory
+  keywords:
+  - ORCID
+  - identifiers
+  - researcher profiles
+  learningResourceType: lesson
+  teaches:
+  - ORCID setup
+  - Author disambiguation
+  url: https://firbolg.github.io/LC_ORCID/
+  repo: https://github.com/firbolg/LC_ORCID
+- name: Research Community Outreach with Open Science Team Agreements
+  authors:
+  - Samantha Teplitzky
+  - Ariel Deardorff
+  - Samantha Wilairat
+  status: Alpha
+  educationalLevel: Introductory
+  keywords:
+  - team agreements
+  - community
+  - open science
+  learningResourceType: lesson
+  teaches: []
+  url: https://librarycarpentry.github.io/lc-team-agreements/
+  repo: https://github.com/LibraryCarpentry/lc-team-agreements
+- name: A Path to Open, Inclusive, and Collaborative Science for Librarians
+  authors:
+  - Irene Vazano
+  - Jessica Formoso
+  status: Alpha
+  educationalLevel: Introductory
+  keywords:
+  - collaboration
+  - open science
+  - inclusion
+  learningResourceType: lesson
+  teaches: []
+  url: https://librarycarpentry.github.io/lc-collaborative-science/
+  repo: https://github.com/LibraryCarpentry/lc-collaborative-science
+- name: Data Management (and Sharing) Plans for Librarians 101
+  authors:
+  - Lena Bohman
+  - Marla Hertz
+  - Daria Orlowska
+  status: Alpha
+  educationalLevel: Introductory
+  keywords:
+  - data management
+  - sharing plans
+  - DMP
+  learningResourceType: lesson
+  teaches: []
+  url: https://librarycarpentry.org/lc-dmp101/
+  repo: https://github.com/LibraryCarpentry/lc-dmp101
+- name: Open Qualitative Research
+  authors:
+  - Nathaniel Porter
+  status: pre-Alpha
+  educationalLevel: Introductory
+  keywords:
+  - qualitative research
+  - open science
+  learningResourceType: lesson
+  teaches: []
+  url: https://librarycarpentry.github.io/lc-open-qualitative-research
+  repo: https://github.com/LibraryCarpentry/lc-open-qualitative-research
+- name: Reproducible Research Workflows
+  authors:
+  - Agata Bochynska
+  status: pre-Alpha
+  educationalLevel: Intermediate
+  keywords:
+  - reproducibility
+  - workflow
+  learningResourceType: lesson
+  teaches: []
+  url: https://librarycarpentry.github.io/lc-reproducible-research/
+  repo: https://github.com/LibraryCarpentry/lc-reproducible-research
+- name: 'Open science hardware: an introduction for librarians'
+  authors:
+  - Julieta Arancio
+  status: pre-Alpha
+  educationalLevel: Introductory
+  keywords:
+  - hardware
+  - open science
+  learningResourceType: lesson
+  teaches: []
+  url: ''
+  repo: https://github.com/ucla-imls-open-sci/lc-open-hw
