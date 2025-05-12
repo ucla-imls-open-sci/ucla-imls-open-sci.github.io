@@ -3,7 +3,7 @@ lessons:
     Librarians'
   authors:
   - Daniel Kerchner
-  status: pre-Alpha
+  status: alpha
   educationalLevel: Intermediate
   keywords:
   - reproducibility
@@ -20,7 +20,7 @@ lessons:
   - Eric Silberberg
   - Jesus Alonso-Regalado
   - Cate Kellett
-  status: pre-Alpha
+  status: alpha
   educationalLevel: Intermediate
   keywords:
   - search
@@ -28,13 +28,13 @@ lessons:
   - discovery
   learningResourceType: lesson
   teaches: []
-  url: ''
-  repo: ''
+  url: 'http://ucla-imls-open-sci.info/lc-multilingual-search-discovery-system/'
+  repo: 'https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system'
 - name: Authoring Open Science
   authors:
   - Kathryn Miller
   - Andrea Medina-Smith
-  status: pre-Alpha
+  status: alpha
   educationalLevel: Introductory
   keywords:
   - open science
@@ -43,8 +43,8 @@ lessons:
   learningResourceType: lesson
   teaches:
   - Open science communication
-  url: ''
-  repo: ''
+  url: 'https://ucla-imls-open-sci.info/lc-authoring-open-science/'
+  repo: 'https://github.com/ucla-imls-open-sci/lc-authoring-open-science'
 - name: Building an Open Science Community of Practice
   authors:
   - Camille Thomas
@@ -93,7 +93,7 @@ lessons:
 - name: Creating Data Dashboards for Open Science Using the R Programming Language
   authors:
   - Aditya Ranganath
-  status: pre-Alpha
+  status: alpha
   educationalLevel: Intermediate
   keywords:
   - dashboards
@@ -103,8 +103,8 @@ lessons:
   teaches:
   - Creating dashboards
   - Using R for visualization
-  url: ''
-  repo: ''
+  url: 'https://aranganath24.github.io/data-dashboard-carpentries/'
+  repo: 'https://github.com/aranganath24/data-dashboard-carpentries'
 - name: Leveraging Open Research and Contributor IDs (ORCID) for Librarians
   authors:
   - Levi Dolan
