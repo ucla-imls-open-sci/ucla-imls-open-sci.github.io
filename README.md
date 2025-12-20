@@ -1,43 +1,61 @@
-# Astro Starter Kit: Minimal
+# Open Science for Librarians
 
-```sh
-npm create astro@latest -- --template minimal
-```
+This is the official website for the "Lessons for Librarians in Open Science Principles and Methods" project, funded by the Institute of Museum and Library Services (IMLS).
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Project Overview
 
-## 🚀 Project Structure
+This site serves as a curriculum hub for librarians, providing access to:
+*   Peer-reviewed open science lesson plans.
+*   Instructor guides and resources.
+*   Profiles of the lesson authors and contributors.
+*   Foundational open science frameworks and references.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Tech Stack
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+This site has been migrated from Jekyll to **Astro** (v5). It uses:
+*   **Framework**: Astro
+*   **Styling**: SCSS (Bootstrap-based Agency theme)
+*   **Content**: YAML data files and Markdown
+*   **Deployment**: GitHub Actions -> GitHub Pages
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Development
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+### Prerequisites
+*   Node.js (v18 or higher recommended)
+*   npm
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Quick Start
 
-## 🧞 Commands
+1.  Install dependencies:
+    ```bash
+    npm install
+    ```
 
-All commands are run from the root of the project, from a terminal:
+2.  Start the local development server:
+    ```bash
+    npm run dev
+    ```
+    Access the site at http://localhost:4321.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+3.  Build for production:
+    ```bash
+    npm run build
+    ```
+    The output will be generated in the `dist/` directory.
 
-## 👀 Want to learn more?
+## Managing Content
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+For detailed instructions on how to add lessons, update authors, or write blog posts, please refer to the **[GUIDE.md](GUIDE.md)** file in this repository.
+
+### Key Data Files
+*   `src/data/lessons.yml`: The master list of all curriculum modules and external resources.
+*   `src/data/sitetext.yml`: Author profiles, staff list, and general site text.
+*   `src/content/blog/`: Markdown files for blog posts.
+
+## Deployment
+
+This repository is configured with a GitHub Action (`.github/workflows/deploy.yml`) that automatically builds and deploys the site to GitHub Pages whenever changes are pushed to the `main` branch.
+
+## License
+
+This project content is available under a Creative Commons Attribution 4.0 International License (CC-BY 4.0).
