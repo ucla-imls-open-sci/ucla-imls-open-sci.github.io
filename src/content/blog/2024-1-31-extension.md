@@ -1,5 +1,6 @@
 ---
 title: "New Deadline for Grant Opportunity: Open Science for Librarians 2024" 
+date: 2024-01-31
 author: Library Staff
 ---
 

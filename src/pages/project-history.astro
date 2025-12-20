@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Services from '../components/Services.astro';
 import Timeline from '../components/Timeline.astro';
+import Citation from '../components/Citation.astro';
 import siteTextData from '../data/sitetext.yml';
 import { siteConfig } from '../site_config';
 
@@ -104,12 +105,19 @@ const committee = t.committee; // Years/Archive
         </div>
       </div>
 
+      <!-- Citation -->
+      <div class="row mt-5 border-top pt-5 justify-content-center">
+        <div class="col-lg-10">
+            <Citation />
+        </div>
+      </div>
+
       <!-- Acknowledgements -->
       <div class="row mt-5 border-top pt-5">
         <div class="col-lg-8 mx-auto text-center">
             <h3 class="section-subheading text-muted mb-4">Acknowledgements</h3>
             <p class="mb-3">
-                This project was made possible by the <strong>Institute of Museum and Library Services (IMLS)</strong> (Grant RE-252335-OLS-22).
+                This project was made possible in part by the <strong>Institute of Museum and Library Services (IMLS)</strong> (Grant RE-252335-OLS-22).
             </p>
             <p class="text-muted small">
                 We gratefully acknowledge the support of <strong>Virginia Steel</strong> (University Librarian, UCLA) as Principal Investigator, and <strong>Todd Grappone</strong> and <strong>Elizabeth McAulay</strong> as Co-Principal Investigators. We also thank the UCLA Library Grants Team for their administrative guidance.

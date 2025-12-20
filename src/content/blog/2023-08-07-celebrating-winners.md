@@ -1,5 +1,6 @@
 ---
 title: Celebrating the Winners of Lessons for Librarians in Open Science Principles and Methods in 2023
+date: 2023-08-07
 author: Library Staff
 ---
 

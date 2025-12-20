@@ -1,0 +1,97 @@
+---
+import fs from 'node:fs';
+import yaml from 'js-yaml';
+
+const cffContent = fs.readFileSync('CITATION.cff', 'utf8');
+const cff = yaml.load(cffContent);
+
+// Data Prep
+const dateReleased = new Date(cff['date-released']);
+const year = dateReleased.getFullYear();
+const month = dateReleased.getMonth() + 1;
+
+// APA Format
+const apaAuthors = cff.authors.map(a => `${a['family-names']}, ${a['given-names'][0]}.`).join(', ');
+const apaCitation = `${apaAuthors} (${year}). ${cff.title} (Version ${cff.version}). [Curriculum]. ${cff.url}`;
+
+// BibTeX Format
+const bibAuthors = cff.authors.map(a => `${a['family-names']}, ${a['given-names']}`).join(' and ');
+const bibtexCitation = `@misc{ucla_imls_open_sci_${year},
+  author = {${bibAuthors}},
+  title = {${cff.title}},
+  month = {${month}},
+  year = {${year}},
+  publisher = {GitHub},
+  version = {${cff.version}},
+  url = {${cff.url}}
+}`;
+---
+
+<div class="card border-0 shadow-sm mb-5 overflow-hidden">
+  <div class="card-header bg-dark text-white py-3">
+    <h5 class="mb-0"><i class="fas fa-quote-left mr-2"></i> Cite this Curriculum</h5>
+  </div>
+  <div class="card-body bg-white">
+    <p class="small text-muted mb-4">
+      If you use these materials in your own teaching or research, please cite the project using the formats below. 
+      The metadata is derived from our <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CITATION.cff" target="_blank" class="font-weight-bold">CITATION.cff</a> file.
+    </p>
+
+    <!-- APA style -->
+    <div class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-light border text-uppercase">APA Style</span>
+            <button class="btn btn-link btn-sm text-primary copy-btn" data-copy={apaCitation}>
+                <i class="far fa-copy mr-1"></i> Copy
+            </button>
+        </div>
+        <div class="p-3 border rounded bg-light">
+            <p class="mb-0 small" style="line-height: 1.6;">{apaCitation}</p>
+        </div>
+    </div>
+
+    <!-- BibTeX style -->
+    <div class="mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+            <span class="badge badge-light border text-uppercase">BibTeX</span>
+            <button class="btn btn-link btn-sm text-primary copy-btn" data-copy={bibtexCitation}>
+                <i class="far fa-copy mr-1"></i> Copy
+            </button>
+        </div>
+        <pre class="mb-0 p-3 border rounded bg-light text-dark" style="font-size: 0.8rem; white-space: pre-wrap;"><code>{bibtexCitation}</code></pre>
+    </div>
+
+    <div class="text-right">
+        <a href="/CITATION.cff" download class="btn btn-outline-dark btn-sm">
+            <i class="fas fa-file-download mr-1"></i> Download CITATION.cff
+        </a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Simple copy to clipboard logic
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.getAttribute('data-copy');
+      if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML = '<i class="fas fa-check mr-1 text-success"></i> Copied!';
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+          }, 2000);
+        });
+      }
+    });
+  });
+</script>
+
+<style>
+  pre {
+    margin-bottom: 0;
+  }
+  .card-header {
+      border-bottom: none;
+  }
+</style>
