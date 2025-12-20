@@ -1,0 +1,43 @@
+---
+import { siteConfig } from '../site_config';
+import siteTextData from '../data/sitetext.yml';
+import { marked } from 'marked';
+
+const t = (siteTextData as any)[siteConfig.locale];
+const staff = t.staff;
+---
+<section class="page-section bg-light" id={staff.section || "staff"}>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{staff.title}</h2>
+        {staff.text && <h3 class="section-subheading text-muted">{staff.text}</h3>}
+      </div>
+    </div>
+    <div class="row">
+      {staff.people.map((person: any) => (
+        <div class="col-sm-4">
+          <div class="staff-member">
+            <img class="mx-auto rounded-circle" src={person.image} alt={person.name} />
+            <h4>{person.name}</h4>
+            <p class="text-muted">{person.role}</p>
+            <ul class="list-inline social-buttons">
+              {person.social && person.social.map((network: any) => (
+                <li class="list-inline-item">
+                  <a href={network.url} target="_blank" rel="noopener noreferrer" aria-label={`Social link for ${person.name}`}>
+                    <i class={network.icon}></i>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        {staff.subtext && <div class="large text-muted" set:html={marked.parse(staff.subtext || "")} />}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+---
+import { siteConfig } from '../site_config';
+import siteTextData from '../data/sitetext.yml';
+import { marked } from 'marked';
+
+const t = (siteTextData as any)[siteConfig.locale];
+const header = t.header;
+---
+<!-- Header -->
+<header class="masthead">
+  <div class="container">
+    <div class="intro-text">
+      {header.title && <div class="intro-lead-in" set:html={marked.parseInline(header.title)} />}
+      {header.text && <div class="intro-heading text-uppercase" set:html={marked.parseInline(header.text)} />}
+      {header.button && (
+        <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href={header.buttonlink}>
+          {header.button}
+        </a>
+      )}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,54 @@
+---
+import { siteConfig } from '../site_config';
+import siteTextData from '../data/sitetext.yml';
+import { marked } from 'marked';
+
+const t = (siteTextData as any)[siteConfig.locale];
+const timeline = t.timeline;
+let align = timeline.start_align || 'left';
+---
+<section class="bg-light page-section" id={timeline.section || "about"}>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">{timeline.title || "About"}</h2>
+        <h3 class="section-subheading text-muted">{timeline.text}</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <ul class="timeline">
+          {timeline.events.map((event: any, index: number) => {
+             // Simple alternation logic
+             const inverted = index % 2 !== 0;
+             return (
+               <li class={inverted ? "timeline-inverted" : ""}>
+                  <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src={event.image} alt={event.alt || ""} />
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      {/* eslint-disable-next-line jsx-a11y/heading-has-content */}
+                      <h4 set:html={marked.parseInline(event.year.toString())}></h4>
+                      <h4 class="subheading">{event.title}</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <div class="text-muted" set:html={marked.parse(event.desc || "")}></div>
+                    </div>
+                  </div>
+               </li>
+             );
+          })}
+          
+          {timeline.end && (
+            <li class="timeline-inverted">
+              <div class="timeline-image">
+                <h4><span set:html={marked.parse(timeline.end)}></span></h4>
+              </div>
+            </li>
+          )}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

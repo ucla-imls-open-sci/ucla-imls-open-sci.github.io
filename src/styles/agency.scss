@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+// Core variables and mixins
+@import "_sass/base/variables.scss";
+@import "_sass/base/mixins.scss";
+
+// Custom colors
+$primary: #ffd100 !default;
+$primary-text: #6d5a00 !default; // Very dark gold for strict WCAG AA compliance
+$white: #fff !default;
+$black: #000 !default;
+
+// Custom Images
+$header-image: "/assets/img/background-image-blue.png";
+$contact-image: "/assets/img/contact.png";
+
+// Global CSS
+@import "_sass/base/page.scss";
+@import "_sass/base/a11y-overrides.scss";
+
+// Components
+@import "_sass/components/buttons.scss";
+@import "_sass/components/navbar.scss";
+@import "_sass/components/client-scroll.scss";
+
+// Layout
+@import "_sass/layout/masthead.scss";
+@import "_sass/layout/services.scss";
+@import "_sass/layout/portfolio.scss";
+@import "_sass/layout/timeline.scss";
+@import "_sass/layout/team.scss";
+@import "_sass/layout/staff.scss";
+@import "_sass/layout/contact.scss";
+@import "_sass/layout/footer.scss";

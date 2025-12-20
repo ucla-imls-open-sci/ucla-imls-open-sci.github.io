@@ -1,0 +1,49 @@
+---
+import { getCollection } from 'astro:content';
+import { siteConfig } from '../site_config';
+import siteTextData from '../data/sitetext.yml';
+
+const t = (siteTextData as any)[siteConfig.locale];
+const blog = t.blog;
+
+const posts = await getCollection('blog');
+const sortedPosts = posts.sort((a, b) => {
+    // Check if dates exist before comparing
+    const dateA = a.data.date ? new Date(a.data.date).valueOf() : 0;
+    const dateB = b.data.date ? new Date(b.data.date).valueOf() : 0;
+    return dateB - dateA;
+});
+---
+<section class="page-section" id={blog.section || "blog"}>
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">{blog.title || "Our Blog"}</h2>
+            <h3 class="section-subheading text-muted">{blog.text || ""}</h3>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <table class="table">
+                    <tbody>
+                    {sortedPosts.map(post => (
+                    <tr>
+                        <td>
+                            {post.data.date ? new Date(post.data.date).toLocaleDateString() : ''}
+                        </td>
+                        <td>
+                            <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+                        </td>
+                        <td>
+                            {post.data.author}
+                        </td>
+                    </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

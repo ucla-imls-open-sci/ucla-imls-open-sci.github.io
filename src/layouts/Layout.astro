@@ -1,0 +1,41 @@
+---
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import SEO from '../components/SEO.astro';
+import { siteConfig } from '../site_config';
+import '../styles/agency.scss';
+
+const { title, description } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang={siteConfig.locale.slice(0, 2)}>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/png" href="/assets/img/Logo.png">
+    
+    <SEO title={title} description={description} />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap & FontAwesome -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body id="page-top">
+    <Navbar />
+    <slot />
+    <Footer />
+
+    <!-- Scripts -->
+    <script is:inline src="/assets/js/jquery.min.js"></script>
+    <script is:inline src="/assets/js/bootstrap.bundle.min.js"></script>
+    <script is:inline src="/assets/js/jquery.easing.min.js"></script>
+    <!-- <script is:inline src="/assets/js/contact_me.js"></script> --> <!-- Commenting out contact form logic for now as it may need backend -->
+    <script is:inline src="/assets/js/agency.min.js"></script>
+  </body>
+</html>

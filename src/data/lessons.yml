@@ -1,0 +1,430 @@
+lessons:
+- name: 'Open and Reproducible Research Cloud Workflows: A Firsthand Experience for Librarians'
+  duration: "7h 50m"
+  authors:
+  - Daniel Kerchner
+  status: alpha
+  educationalLevel: Intermediate
+  why_teach: "Cloud computing is becoming essential for modern research. By teaching this lesson, you empower librarians to move beyond theory and gain hands-on confidence with the actual tools (SSH, RStudio Server) their researchers use daily."
+  abstract: "This lesson provides librarians with firsthand experience in open and reproducible research workflows using cloud computing. It aims to shift librarians' perspectives by engaging them directly in a reproducible research workflow using command-line tools and cloud resources."
+  keywords:
+  - reproducibility
+  - cloud
+  - workflow
+  - shell
+  - ssh
+  - rstudio
+  learningResourceType: lesson
+  teaches:
+  - Explain the concept and benefits of cloud computing in open research.
+  - Log in to a remote computer using SSH and execute basic shell commands.
+  - Use SCP to transfer files between local and remote computers.
+  - Clone a public GitHub repository onto a remote computer.
+  - Run R code to analyze data within a remote RStudio server session.
+  - Identify opportunities for librarians to employ skills for open and reproducible research.
+  url: https://kerchner.github.io/lc-open-reproducible-research-cloud/
+  repo: https://github.com/kerchner/lc-open-reproducible-research-cloud
+- name: Collaborative Multilingual Search and Discovery Systems
+  duration: "3h 00m"
+  authors:
+  - Eric Silberberg
+  - Jesus Alonso-Regalado
+  - Cate Kellett
+  status: alpha
+  educationalLevel: Intermediate
+  abstract: "Guides users through creating a lightweight, open-source search and discovery system for multilingual research materials using the Google Sheets API and JavaScript. Addresses challenges in making research collections publicly available and ethically represented."
+  keywords:
+  - search
+  - multilingual
+  - discovery
+  - google sheets api
+  - javascript
+  learningResourceType: lesson
+  teaches:
+  - Understand how description standards ensure ethical representation of data and multilingual access.
+  - Create a JavaScript-based website search system retrieving data from Google Sheets.
+  - Consider linguistic and cultural diversity in disseminating research findings.
+  url: 'http://ucla-imls-open-sci.info/lc-multilingual-search-discovery-system/'
+  repo: 'https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system'
+- name: Authoring Open Science
+  duration: "3h 00m"
+  authors:
+  - Kathryn Miller
+  - Andrea Medina-Smith
+  status: alpha
+  educationalLevel: Introductory
+  abstract: "Focuses on integrating open science values—trust, transparency, and reproducibility—into the authoring and reviewing processes. Covers open authoring tools, contributor roles, ethics of authorship, and open peer review."
+  keywords:
+  - open science
+  - writing
+  - metadata
+  - open peer review
+  - ethics
+  learningResourceType: lesson
+  teaches:
+  - Describe tools and platforms for creating and sharing open research outputs.
+  - Articulate the benefits and challenges of open peer review.
+  - Distinguish between open authoring and traditional publishing approaches.
+  - Understand the importance of clear contributor attribution.
+  url: 'https://ucla-imls-open-sci.info/lc-authoring-open-science/'
+  repo: 'https://github.com/ucla-imls-open-sci/lc-authoring-open-science'
+- name: Building an Open Science Community of Practice
+  duration: "90m"
+  authors:
+  - Camille Thomas
+  status: pre-Alpha
+  educationalLevel: Introductory
+  keywords:
+  - community
+  - open science
+  learningResourceType: lesson
+  teaches:
+  - Community building
+  url: ''
+  repo: ''
+- name: A gentle, hands-on introduction to containers and virtual machines
+  duration: "3h 00m"
+  authors:
+  - Fernando Rios
+  - Jeffrey Oliver
+  status: pre-Alpha
+  educationalLevel: Intermediate
+  keywords:
+  - containers
+  - virtual machines
+  - infrastructure
+  learningResourceType: lesson
+  teaches:
+  - Using containers
+  - Virtual machines
+  url: https://ual-re.github.io/lc-containers_vms/
+  repo: https://github.com/UAL-RE/lc-containers_vms
+- name: 'Open Science Discovery Engines: Empowering Librarian Use Through a Case Study Exploration of the NASA Science Explorer'
+  duration: "4h 15m"
+  authors:
+  - Katie Frey
+  - Jennifer Lynn Bartlett
+  - Stephanie Jarmak
+  status: pre-Alpha
+  educationalLevel: Introductory
+  abstract: "Describes how the Science Explorer (SciX) integrates into the open science ecosystem and supports the FAIR principles. Introduces search features for interdisciplinary queries and demonstrates how authors can claim papers using ORCID."
+  keywords:
+  - discovery
+  - NASA
+  - SciX
+  - FAIR
+  - ORCID
+  learningResourceType: lesson
+  teaches:
+  - Describe how SciX supports FAIR principles.
+  - Utilize SciX search features for discipline-specific and interdisciplinary queries.
+  - Employ SciX's second-order operators to explore research trends.
+  - Claim papers within SciX using ORCID.
+  url: http://ucla-imls-open-sci.info/lc-scix-open-science/
+  repo: https://github.com/ucla-imls-open-sci/lc-scix-open-science
+- name: Creating Data Dashboards for Open Science Using the R Programming Language
+  duration: "3h 36m"
+  authors:
+  - Aditya Ranganath
+  status: alpha
+  educationalLevel: Intermediate
+  abstract: "An introduction to Shiny, a package for writing and publishing web applications in R. Enables researchers to develop interactive web applications and data dashboards without extensive web development experience."
+  keywords:
+  - dashboards
+  - R
+  - shiny
+  - data visualization
+  - web applications
+  learningResourceType: lesson
+  teaches:
+  - Understand the importance of web applications and dashboards for applied research.
+  - Learn the basic syntax and vocabulary of the Shiny package.
+  - Develop interactive Shiny applications that respond to user inputs.
+  - Create data dashboards using the shinydashboard package.
+  - Publish Shiny applications.
+  url: 'https://aranganath24.github.io/data-dashboard-carpentries/'
+  repo: 'https://github.com/aranganath24/data-dashboard-carpentries'
+- name: Leveraging Open Research and Contributor IDs (ORCID) for Librarians
+  duration: "3h 00m"
+  authors:
+  - Levi Dolan
+  - Mirian Ramirez
+  - Hannah Craven
+  status: pre-Alpha
+  educationalLevel: Introductory
+  abstract: "Guides learners through creating an ORCID, understanding its significance, and connecting it to major systems that update ORCID records."
+  keywords:
+  - ORCID
+  - identifiers
+  - researcher profiles
+  - metadata
+  learningResourceType: lesson
+  teaches:
+  - Create an ORCID profile.
+  - Understand the importance of using an ORCID.
+  - Connect ORCID to major systems for updating records.
+  url: https://firbolg.github.io/LC_ORCID/
+  repo: https://github.com/firbolg/LC_ORCID
+- name: Research Community Outreach with Open Science Team Agreements
+  duration: "2h 15m"
+  authors:
+  - Samantha Teplitzky
+  - Ariel Deardorff
+  - Samantha Wilairat
+  status: Alpha
+  educationalLevel: Introductory
+  abstract: "Introduces the Open Science Team Agreement template as a practical tool for researchers and librarians to advocate for open science practices and plan research outreach activities."
+  keywords:
+  - team agreements
+  - community
+  - open science
+  - outreach
+  learningResourceType: lesson
+  teaches:
+  - Summarize the benefits of an open science team agreement.
+  - Modify the open science team agreement for an example research group.
+  - Design an outreach plan for a specific research audience.
+  url: https://librarycarpentry.github.io/lc-team-agreements/
+  repo: https://github.com/LibraryCarpentry/lc-team-agreements
+- name: A Path to Open, Inclusive, and Collaborative Science for Librarians
+  authors:
+  - Irene Vazano
+  - Jessica Formoso
+  status: Alpha
+  educationalLevel: Introductory
+  abstract: "Designed to empower participants with the knowledge and skills needed for effective open science practices, with an emphasis on collaboration and inclusivity. Focuses on overcoming language, socioeconomic, and geographical barriers."
+  keywords:
+  - collaboration
+  - open science
+  - inclusion
+  - FAIR
+  - CARE
+  learningResourceType: lesson
+  teaches:
+  - Understand open science's motivations and challenges for non-native English speaking communities.
+  - Explain the FAIR and CARE principles.
+  - Assess the accessibility of digital resources and virtual events.
+  - Apply best practices for a more inclusive research network.
+  url: https://librarycarpentry.github.io/lc-collaborative-science/
+  repo: https://github.com/LibraryCarpentry/lc-collaborative-science
+- name: Data Management (and Sharing) Plans for Librarians 101
+  authors:
+  - Lena Bohman
+  - Marla Hertz
+  - Daria Orlowska
+  status: Alpha
+  educationalLevel: Introductory
+  abstract: "Walks through providing data management plan services in your library. Covers DMPs, relevant resources, data interviews, using the DMPTool, and suggestions on implementing DMP services."
+  keywords:
+  - data management
+  - sharing plans
+  - DMP
+  - DMPTool
+  learningResourceType: lesson
+  teaches:
+  - Provide an overview of Data Management Plans (DMP).
+  - Find DMP resources.
+  - Answer research DMP questions.
+  - Determine data services to integrate into workflows.
+  url: https://librarycarpentry.org/lc-dmp101/
+  repo: https://github.com/LibraryCarpentry/lc-dmp101
+- name: Open Qualitative Research
+  authors:
+  - Nathaniel Porter
+  status: pre-Alpha
+  educationalLevel: Introductory
+  abstract: "Familiarizes learners with the application of open science principles to qualitative research. Focuses on documents or transcribed text in a variety of data formats and working with secondary qualitative data."
+  keywords:
+  - qualitative research
+  - open science
+  - taguette
+  - QDR
+  learningResourceType: lesson
+  teaches:
+  - Work with secondary qualitative data from the Qualitative Data Repository (QDR).
+  - Use the free software Taguette for qualitative analysis.
+  - Discuss options and limitations for open research with proprietary qualitative analysis packages.
+  - Understand options for sharing source data and coded analysis projects.
+  url: https://librarycarpentry.github.io/lc-open-qualitative-research
+  repo: https://github.com/LibraryCarpentry/lc-open-qualitative-research
+- name: Reproducible Research Workflows
+  authors:
+  - Agata Bochynska
+  status: pre-Alpha
+  educationalLevel: Intermediate
+  abstract: "Focuses on helping librarians understand the concept of reproducibility and learn about both theoretical and practical aspects of reproducible research workflows across different disciplines."
+  keywords:
+  - reproducibility
+  - workflow
+  - open science
+  - tools
+  learningResourceType: lesson
+  teaches:
+  - Explain what research reproducibility is and list benefits/challenges.
+  - Explain how different disciplines define reproducibility differently.
+  - Provide examples of reproducible research workflows.
+  - List and use tools for increasing research reproducibility.
+  - Provide examples of how libraries can support research reproducibility.
+  url: https://librarycarpentry.github.io/lc-reproducible-research/
+  repo: https://github.com/LibraryCarpentry/lc-reproducible-research
+- name: 'Open science hardware: an introduction for librarians'
+  authors:
+  - Julieta Arancio
+  status: pre-Alpha
+  educationalLevel: Introductory
+  abstract: "Introduces librarians to the fundamentals of open science hardware (OSH) and equips them with the knowledge and tools to support researchers engaging with OSH as both developers and users."
+  keywords:
+  - hardware
+  - open science
+  - licensing
+  - OSH
+  learningResourceType: lesson
+  teaches:
+  - Explain what open science hardware is and its benefits.
+  - Understand the main components of open science hardware projects.
+  - Compare available open hardware licenses.
+  - Identify sources of open science hardware designs online.
+  - Connect researchers to relevant OSH communities.
+  url: https://github.com/ucla-imls-open-sci/lc-open-hw/
+  repo: https://github.com/ucla-imls-open-sci/lc-open-hw
+
+# --------------------
+# Open Science Basics (Added)
+# --------------------
+
+- name: "Open Science Basics (FOSTER Open Science)"
+  duration: "3–6h (modular, self-paced)"
+  authors:
+  - FOSTER Open Science Community
+  status: mature
+  educationalLevel: Introductory
+  type: external
+  why_teach: "This course provides one of the clearest and most reusable introductions to Open Science concepts available. It gives librarians shared vocabulary and conceptual grounding for instruction, consultation, and infrastructure discussions."
+  abstract: "A modular, self-paced introduction to Open Science covering open access, open data, open methods, reproducibility, research integrity, and citizen science. Designed for researchers and research support professionals, with openly licensed learning objects."
+  keywords:
+  - open science
+  - open access
+  - open data
+  - reproducibility
+  - research integrity
+  learningResourceType: course
+  teaches:
+  - Define Open Science and its core components.
+  - Explain benefits and challenges of open research practices.
+  - Identify roles for libraries and support units in Open Science.
+  - Recognize how openness applies across the research lifecycle.
+  url: https://www.fosteropenscience.eu
+  repo: https://github.com/FOSTEROpenScience
+
+- name: "NASA TOPS: Open Science 101"
+  duration: "6–8h (self-paced)"
+  authors:
+  - NASA Transform to Open Science (TOPS)
+  status: mature
+  educationalLevel: Introductory
+  type: external
+  why_teach: "NASA TOPS offers a structured, authoritative introduction to Open Science principles that librarians can reference or complete to build shared understanding with researchers."
+  abstract: "An introductory curriculum developed by NASA as part of the Transform to Open Science initiative. Covers openness, transparency, reproducibility, and data sharing, with an optional certification pathway."
+  keywords:
+  - open science
+  - certification
+  - reproducibility
+  - data sharing
+  - research culture
+  learningResourceType: course
+  teaches:
+  - Define core Open Science principles.
+  - Explain the benefits of open and reproducible research.
+  - Recognize how Open Science practices apply across disciplines.
+  url: https://science.nasa.gov/open-science/training/
+  repo: null
+
+- name: "The ACRL Open Science Cookbook"
+  duration: "Self-paced reference"
+  authors:
+  - Association of College and Research Libraries
+  status: mature
+  educationalLevel: Introductory
+  type: external
+  why_teach: "This resource provides librarians with concrete, practice-oriented examples of how Open Science principles appear in real library services, consultations, and programs."
+  abstract: "A curated collection of short case studies and practical guidance designed to help librarians support Open Science across research workflows."
+  keywords:
+  - open science
+  - librarians
+  - scholarly communication
+  - research support
+  learningResourceType: reference
+  teaches:
+  - Recognize common Open Science support scenarios in libraries.
+  - Identify practical approaches to supporting open research practices.
+  - Connect Open Science principles to everyday library work.
+  url: https://www.ala.org/news/2025/06/new-acrl-open-science-cookbook
+  repo: null
+
+- name: "UNESCO Recommendation on Open Science"
+  duration: "1–2h (reading/reference)"
+  authors:
+  - UNESCO
+  status: mature
+  educationalLevel: Introductory
+  type: external
+  why_teach: "This framework establishes a shared, internationally recognized definition of Open Science that librarians can use to ground institutional policy, instruction, and advocacy."
+  abstract: "A global policy framework defining Open Science as an inclusive approach encompassing open knowledge, infrastructure, and societal engagement, with strong emphasis on equity and global participation."
+  keywords:
+  - open science
+  - policy
+  - governance
+  - equity
+  - global scholarship
+  learningResourceType: framework
+  teaches:
+  - Articulate a global definition of Open Science.
+  - Recognize institutional and policy implications of Open Science.
+  - Situate library work within international Open Science efforts.
+  url: https://www.unesco.org/en/open-science/about
+  repo: null
+
+- name: "The FAIR Principles"
+  duration: "30–60m (conceptual overview)"
+  authors:
+  - Wilkinson et al.
+  status: mature
+  educationalLevel: Introductory
+  type: external
+  why_teach: "FAIR provides the dominant conceptual framework for research data management and is essential for librarians supporting data stewardship and machine-actionable research outputs."
+  abstract: "A set of guiding principles for making research data Findable, Accessible, Interoperable, and Reusable, with emphasis on machine-actionability."
+  keywords:
+  - FAIR
+  - research data management
+  - metadata
+  - interoperability
+  learningResourceType: framework
+  teaches:
+  - Explain the FAIR principles.
+  - Describe why machine-actionability matters.
+  - Connect FAIR to data curation and repository practices.
+  url: https://www.go-fair.org/fair-principles/
+  repo: null
+
+- name: "CARE Principles for Indigenous Data Governance"
+  duration: "30–60m (conceptual overview)"
+  authors:
+  - Global Indigenous Data Alliance
+  status: mature
+  educationalLevel: Introductory
+  type: external
+  why_teach: "CARE complements FAIR by centering people, power, and purpose, helping librarians critically engage with ethical and equitable data governance."
+  abstract: "A framework for Indigenous data governance emphasizing Collective Benefit, Authority to Control, Responsibility, and Ethics."
+  keywords:
+  - CARE
+  - indigenous data governance
+  - ethics
+  - equity
+  - data sovereignty
+  learningResourceType: framework
+  teaches:
+  - Explain the CARE principles.
+  - Contrast CARE with FAIR.
+  - Recognize ethical dimensions of data governance.
+  url: https://www.gida-global.org/care
+  repo: null

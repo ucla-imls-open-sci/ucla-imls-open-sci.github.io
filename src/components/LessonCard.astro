@@ -1,0 +1,133 @@
+---
+import { slugify } from '../utils/slugs';
+
+const { lesson, authorMap } = Astro.props;
+const lessonSlug = slugify(lesson.name);
+const isExternal = lesson.type === 'external';
+
+// Helper to get status color
+const getStatusColor = (status: string) => {
+  const s = status?.toLowerCase() || '';
+  if (isExternal) return 'badge-info'; // Blue for external
+  if (s.includes('beta')) return 'badge-success'; // Green
+  if (s.includes('alpha') && !s.includes('pre')) return 'badge-warning'; // Yellow
+  return 'badge-secondary'; // Gray for pre-alpha or others
+};
+
+const statusColor = getStatusColor(lesson.status);
+const cardLink = `/lessons/${lessonSlug}`;
+const cardTarget = "_self";
+
+// Icon helper for external resources
+const getResourceIcon = (type: string) => {
+    const t = type?.toLowerCase() || '';
+    if (t.includes('book') || t.includes('reference')) return 'fa-book';
+    if (t.includes('course') || t.includes('certification')) return 'fa-graduation-cap';
+    if (t.includes('policy') || t.includes('framework')) return 'fa-scroll';
+    return 'fa-external-link-alt';
+};
+const resourceIcon = getResourceIcon(lesson.learningResourceType);
+
+// Pre-calculate author images to simplify template
+const authorImages = !isExternal && lesson.authors ? lesson.authors.map((authorName: string) => {
+    const cleanName = authorName.trim();
+    const rawImage = authorMap[cleanName] || '/assets/img/committee/default.jpeg';
+    return {
+        name: authorName,
+        src: rawImage.startsWith('/') ? rawImage : `/${rawImage}`
+    };
+}) : [];
+---
+
+<div class="col-md-6 col-lg-4 mb-4 lesson-item" 
+     data-keywords={lesson.keywords ? lesson.keywords.join(' ').toLowerCase() : ''} 
+     data-status={lesson.status}
+     data-themes={lesson.themes ? lesson.themes.join(',') : ''}>
+  <div class={`card h-100 shadow-sm ${isExternal ? 'border-left-info' : 'border-0'}`}>
+    <div class="card-body d-flex flex-column">
+      <div class="d-flex justify-content-between align-items-start mb-2">
+        <span class={`badge ${statusColor} text-uppercase`} style="font-size: 0.7rem;">
+            {isExternal ? (lesson.learningResourceType || 'Resource') : lesson.status}
+        </span>
+        <div class="d-flex">
+            {lesson.repo && !isExternal && (
+                <a href={lesson.repo} target="_blank" class="text-muted ml-2" aria-label={`GitHub Repo for ${lesson.name}`}>
+                    <i class="fab fa-github fa-lg"></i>
+                </a>
+            )}
+            {isExternal && (
+                <i class={`fas ${resourceIcon} text-muted ml-2`}></i>
+            )}
+        </div>
+      </div>
+      
+      <h5 class="card-title mb-3">
+        <a href={cardLink} target={cardTarget} class="text-dark text-decoration-none stretched-link">
+            {lesson.name}
+        </a>
+      </h5>
+
+      <div class="mb-3">
+        {lesson.keywords && lesson.keywords.slice(0, 4).map((keyword: string) => (
+            <span class="badge badge-light mr-1 border fw-normal">{keyword}</span>
+        ))}
+        {lesson.keywords && lesson.keywords.length > 4 && (
+            <span class="badge badge-light border fw-normal">+{lesson.keywords.length - 4}</span>
+        )}
+      </div>
+
+      <div class="mt-auto pt-3 border-top d-flex align-items-center">
+        {isExternal ? (
+            <small class="text-muted">
+                <i class={`fas ${resourceIcon} mr-1`}></i> {lesson.learningResourceType || 'Reference'}
+            </small>
+        ) : (
+            <div class="d-flex w-100 align-items-center">
+                <div class="avatars d-flex mr-2">
+                    {authorImages.map((img: any) => (
+                        <img 
+                            src={img.src} 
+                            alt={img.name} 
+                            title={img.name}
+                            class="rounded-circle border border-white" 
+                            style="width: 32px; height: 32px; margin-right: -10px; object-fit: cover;" 
+                        />
+                    ))}
+                </div>
+                <div class="ml-auto">
+                    <img src="/assets/img/imls_logo_2c.png" alt="IMLS" style="height: 15px;" title="Supported by IMLS" />
+                </div>
+            </div>
+        )}
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.badge-warning {
+    color: #212529;
+    background-color: #ffc107;
+}
+.badge-success {
+    color: #fff;
+    background-color: #28a745;
+}
+.badge-secondary {
+    color: #fff;
+    background-color: #6c757d;
+}
+.badge-info {
+    color: #fff;
+    background-color: #17a2b8;
+}
+.border-left-info {
+    border-left: 5px solid #17a2b8 !important;
+}
+.lesson-item {
+    transition: transform 0.2s;
+}
+.lesson-item:hover {
+    transform: translateY(-2px);
+}
+</style>

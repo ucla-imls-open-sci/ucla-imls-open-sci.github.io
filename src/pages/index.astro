@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Masthead from '../components/Masthead.astro';
+import Pathways from '../components/Pathways.astro';
+import Lessons from '../components/Lessons.astro';
+import Authors from '../components/Authors.astro';
+import Blog from '../components/Blog.astro';
+import About from '../components/About.astro'; // Keep generic About snippet? Or move it? "About" component is just the text block. I'll keep it for context or move it. The prompt said move services/timeline/team/staff. I'll keep Authors and Blog.
+---
+
+<Layout title="Home">
+  <Masthead />
+  <Pathways />
+  <Lessons />
+  <Authors />
+  <Blog />
+</Layout>

@@ -1,0 +1,173 @@
+---
+import lessonsData from '../data/lessons.yml';
+import siteTextData from '../data/sitetext.yml';
+import { siteConfig } from '../site_config';
+import LessonCard from './LessonCard.astro';
+
+const lessons = (lessonsData as any).lessons || [];
+const t = (siteTextData as any)[siteConfig.locale];
+const authorProfiles = t.authors.people || [];
+
+// 1. Build Author Map (Name -> Image URL)
+const authorMap: Record<string, string> = {};
+authorProfiles.forEach((person: any) => {
+    authorMap[person.name.trim()] = person.image;
+    authorMap[`${person.name} ${person.lastname}`] = person.image; 
+});
+
+// 2. Define Themes & Mappings
+const themeMapping: Record<string, string[]> = {
+    "Basics": ["framework", "policy", "certification", "handbook", "definitions", "research integrity"],
+    "Data Management": ["data management", "dmp", "sharing plans", "metadata", "qualitative research", "fair", "care"],
+    "Technical Skills": ["cloud", "containers", "virtual machines", "infrastructure", "r", "dashboards", "hardware", "data visualization"],
+    "Community": ["community", "collaboration", "inclusion", "team agreements", "equity"],
+    "Reproducibility": ["reproducibility", "workflow", "workflows"],
+    "Discovery": ["search", "discovery", "multilingual", "nasa", "identifiers", "orcid", "researcher profiles"],
+    "Communication": ["writing", "open science communication", "case study", "case studies"]
+};
+
+// Helper to find themes for a lesson
+const getLessonThemes = (lessonKeywords: string[]) => {
+    if (!lessonKeywords) return [];
+    const lowerKeywords = lessonKeywords.map(k => k.toLowerCase());
+    const themes = new Set<string>();
+    
+    for (const [theme, mapping] of Object.entries(themeMapping)) {
+        if (mapping.some(m => lowerKeywords.some(k => k.includes(m)))) {
+            themes.add(theme);
+        }
+    }
+    return Array.from(themes);
+};
+
+// Pre-calculate themes for each lesson for the data attribute
+const lessonsWithThemes = lessons.map((l: any) => ({
+    ...l,
+    themes: getLessonThemes(l.keywords)
+}));
+
+const themes = Object.keys(themeMapping);
+---
+
+<section class="page-section bg-light" id="lessontab">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase">Explore Resources</h2>
+        <h3 class="section-subheading text-muted">Curriculum lessons and essential external references.</h3>
+      </div>
+    </div>
+
+    <!-- Filter Buttons & Search -->
+    <div class="row mb-4">
+        <div class="col-lg-12 text-center">
+            <div class="mb-4">
+                <button class="btn btn-outline-primary btn-sm m-1 active filter-btn" data-filter="all">All</button>
+                {themes.map(theme => (
+                    <button class="btn btn-outline-secondary btn-sm m-1 filter-btn" data-filter={theme}>
+                        {theme}
+                    </button>
+                ))}
+            </div>
+            
+            <div class="col-md-6 mx-auto mb-3">
+                <div class="input-group shadow-sm">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-white border-right-0"><i class="fas fa-search text-muted"></i></span>
+                    </div>
+                    <input type="text" id="lesson-search" class="form-control border-left-0" placeholder="Search lessons by title, author, or keyword..." aria-label="Search lessons" />
+                </div>
+            </div>
+
+            <!-- Legend -->
+            <div class="d-flex justify-content-center align-items-center text-muted small">
+                <span class="mr-4 d-flex align-items-center">
+                    <img src="/assets/img/imls_logo_2c.png" alt="" style="height: 14px;" class="mr-2" /> 
+                    IMLS Curriculum
+                </span>
+                <span class="d-flex align-items-center">
+                    <i class="fas fa-external-link-alt text-info mr-2"></i> 
+                    Recommended Reference
+                </span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Lesson Grid -->
+    <div class="row" id="lesson-grid">
+        {lessonsWithThemes.map((lesson: any) => (
+            <LessonCard lesson={lesson} authorMap={authorMap} />
+        ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const lessonItems = document.querySelectorAll('.lesson-item');
+  const searchInput = document.getElementById('lesson-search') as HTMLInputElement;
+
+  let activeFilter = 'all';
+  let searchQuery = '';
+
+  function updateDisplay() {
+      lessonItems.forEach((item) => {
+        const el = item as HTMLElement;
+        const themes = el.getAttribute('data-themes') || '';
+        const keywords = el.getAttribute('data-keywords') || '';
+        const textContent = el.innerText.toLowerCase();
+        
+        const matchesFilter = activeFilter === 'all' || themes.split(',').includes(activeFilter);
+        const matchesSearch = textContent.includes(searchQuery) || keywords.includes(searchQuery);
+
+        if (matchesFilter && matchesSearch) {
+          el.style.display = 'block';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+  }
+
+  function applyFilter(filterValue: string) {
+      activeFilter = filterValue;
+      
+      // Update UI buttons
+      filterButtons.forEach(b => {
+          const btnFilter = b.getAttribute('data-filter');
+          if (btnFilter === filterValue) {
+              b.classList.add('active', 'btn-outline-primary');
+              b.classList.remove('btn-outline-secondary');
+          } else {
+              b.classList.remove('active', 'btn-outline-primary');
+              b.classList.add('btn-outline-secondary');
+          }
+      });
+
+      updateDisplay();
+  }
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filterValue = btn.getAttribute('data-filter') || 'all';
+      applyFilter(filterValue);
+      
+      const url = new URL(window.location.href);
+      url.searchParams.set('filter', filterValue);
+      window.history.pushState({}, '', url);
+    });
+  });
+
+  searchInput?.addEventListener('input', (e) => {
+      searchQuery = (e.target as HTMLInputElement).value.toLowerCase();
+      updateDisplay();
+  });
+
+  // Handle initial load from URL
+  window.addEventListener('load', () => {
+      const params = new URLSearchParams(window.location.search);
+      const initialFilter = params.get('filter');
+      if (initialFilter) {
+          applyFilter(initialFilter);
+      }
+  });
+</script>

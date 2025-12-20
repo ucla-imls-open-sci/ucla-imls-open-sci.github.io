@@ -1,0 +1,13 @@
+---
+import Layout from './Layout.astro';
+const { frontmatter, title } = Astro.props;
+const pageTitle = frontmatter ? frontmatter.title : title;
+---
+<Layout title={pageTitle}>
+  <!-- mimicking the padding-top from head.html for 'page' layout -->
+  <section id="page-content" style="padding-top: 150px; padding-bottom: 50px;">
+     <div class="container" id="pagecontainer">
+        <slot />
+     </div>
+  </section>
+</Layout>

@@ -1,0 +1,110 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import lessonsData from '../../data/lessons.yml';
+import siteTextData from '../../data/sitetext.yml';
+import { siteConfig } from '../../site_config';
+import { slugify } from '../../utils/slugs';
+import LessonCard from '../../components/LessonCard.astro';
+
+export async function getStaticPaths() {
+  const t = (siteTextData as any)['en-US']; // Defaulting to en-US for paths
+  const authorProfiles = t.authors.people || [];
+  
+  return authorProfiles.map((author: any) => ({
+    params: { slug: slugify(author.name) },
+    props: { author },
+  }));
+}
+
+const { author } = Astro.props;
+const lessons = (lessonsData as any).lessons || [];
+
+// Find lessons contributed by this author
+const authorLessons = lessons.filter((l: any) => 
+    l.authors && l.authors.some((name: string) => 
+        name.trim() === author.name.trim() || 
+        name.trim() === `${author.name} ${author.lastname}`.trim()
+    )
+);
+
+// Map for LessonCard
+const authorMap: Record<string, string> = {};
+const t = (siteTextData as any)[siteConfig.locale];
+t.authors.people.forEach((p: any) => {
+    authorMap[p.name.trim()] = p.image;
+    authorMap[`${p.name} ${p.lastname}`.trim()] = p.image;
+});
+
+const rawImage = author.image || '/assets/img/committee/default.jpeg';
+const image = rawImage.startsWith('/') ? rawImage : `/${rawImage}`;
+---
+
+<Layout title={author.name} description={`Profile of ${author.name}, contributor to Open Science for Librarians.`}>
+  <section class="page-section bg-light" style="padding-top: 150px;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-4 text-center mb-4 mb-md-0">
+          <img 
+            src={image} 
+            alt={author.name} 
+            class="rounded-circle img-fluid shadow" 
+            style="width: 250px; height: 250px; object-fit: cover; border: 8px solid #fff;"
+          />
+        </div>
+        <div class="col-md-8">
+          <h1 class="display-4 font-weight-bold">{author.name}</h1>
+          <p class="lead text-primary">{author.role}</p>
+          {author.orcid && (
+            <p class="text-muted mb-3">
+                <a href={`https://orcid.org/${author.orcid}`} target="_blank" rel="noopener noreferrer" class="text-muted text-decoration-none">
+                    <i class="fab fa-orcid text-success mr-1"></i> https://orcid.org/{author.orcid}
+                </a>
+            </p>
+          )}
+          <hr class="my-4" />
+          <div class="social-links">
+            {author.social && author.social.map((network: any) => (
+                <a href={network.url.includes('@') ? `mailto:${network.url}` : network.url} class="btn btn-dark btn-social mx-1" aria-label={`Social link for ${author.name}`}>
+                    <i class={network.icon}></i>
+                </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="section-heading text-uppercase">Lessons by {author.name}</h2>
+          <h3 class="section-subheading text-muted">Contributed curriculum materials.</h3>
+        </div>
+      </div>
+      <div class="row">
+        {authorLessons.length > 0 ? (
+            authorLessons.map((lesson: any) => (
+                <LessonCard lesson={lesson} authorMap={authorMap} />
+            ))
+        ) : (
+            <div class="col-12 text-center text-muted">
+                <p>No lessons found for this author yet.</p>
+            </div>
+        )}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+.btn-social {
+  height: 2.5rem;
+  width: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 100%;
+}
+</style>
