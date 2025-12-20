@@ -1,6 +1,6 @@
 ---
 title: "New Site Launch: A Hub for Open Science Education"
-date: 2024-03-20
+date: 2025-12-18
 author: "Tim Dennis"
 description: "We are thrilled to announce the launch of our redesigned website, now featuring a fully searchable curriculum, author profiles, and curated pathways for librarians."
 ---
