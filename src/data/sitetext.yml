@@ -97,6 +97,18 @@ en: &DEFAULT_EN
     title: "Staff"
     section: staff
     people:
+      - name: "Todd Grappone"
+        role: "Associate University Librarian, Digital Initiatives and IT, UCLA"
+        image: /assets/img/committee/default.jpeg
+        social:
+          - url: https://orcid.org/0000-0003-2218-7200
+            icon: fab fa-orcid
+      - name: "Elizabeth McAulay"
+        role: "Director of the Digital Library, UCLA"
+        image: /assets/img/committee/default.jpeg
+        social:
+          - url: https://orcid.org/0000-0002-8679-9727
+            icon: fab fa-orcid
       - name: "Tim Dennis"
         role: "Program Director"
         image: /assets/img/staff/timdennis.jpeg
@@ -431,6 +443,12 @@ en: &DEFAULT_EN
         image: /assets/img/authors/22-23/JulietaArancio.png
         social:
           - url: https://orcid.org/0000-0002-8624-4182
+            icon: fab fa-orcid
+      - name: Sebastian Karcher
+        role: Director, Qualitative Data Repository, Syracuse University
+        image: /assets/img/authors/SebastianKarcher.png
+        social:
+          - url: https://orcid.org/0000-0001-8249-7388
             icon: fab fa-orcid
             
   contact:

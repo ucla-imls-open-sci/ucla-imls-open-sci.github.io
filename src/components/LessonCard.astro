@@ -76,29 +76,28 @@ const authorImages = !isExternal && lesson.authors ? lesson.authors.map((authorN
         )}
       </div>
 
-      <div class="mt-auto pt-3 border-top d-flex align-items-center">
+      <div class="mt-auto pt-3 border-top d-flex align-items-center justify-content-between">
         {isExternal ? (
             <small class="text-muted">
                 <i class={`fas ${resourceIcon} mr-1`}></i> {lesson.learningResourceType || 'Reference'}
             </small>
         ) : (
-            <div class="d-flex w-100 align-items-center">
-                <div class="avatars d-flex mr-2">
-                    {authorImages.map((img: any) => (
-                        <img 
-                            src={img.src} 
-                            alt={img.name} 
-                            title={img.name}
-                            class="rounded-circle border border-white" 
-                            style="width: 32px; height: 32px; margin-right: -10px; object-fit: cover;" 
-                        />
-                    ))}
-                </div>
-                <div class="ml-auto">
-                    <img src="/assets/img/imls_logo_2c.png" alt="IMLS" style="height: 15px;" title="Supported by IMLS" />
-                </div>
+            <div class="avatars d-flex">
+                {authorImages.map((img: any) => (
+                    <img 
+                        src={img.src} 
+                        alt={img.name} 
+                        title={img.name}
+                        class="rounded-circle border border-white" 
+                        style="width: 32px; height: 32px; margin-right: -10px; object-fit: cover;" 
+                    />
+                ))}
             </div>
         )}
+        <div class="d-flex align-items-center">
+            <img src="/assets/img/clients/Uxd_Wht_A_Library_300.png" alt="UCLA" style="height: 25px; margin-right: 10px; filter: brightness(0);" />
+            <img src="/assets/img/IMLS_blue.png" alt="IMLS" style="height: 25px;" title="Supported by IMLS" />
+        </div>
       </div>
     </div>
   </div>

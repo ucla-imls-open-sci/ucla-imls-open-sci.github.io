@@ -44,22 +44,29 @@ const getStatusColor = (status: string) => {
   return 'badge-secondary';
 };
 const statusColor = getStatusColor(lesson.status);
+const isExternal = lesson.type === 'external';
 ---
 
 <Layout title={lesson.name} description={`A lesson on ${lesson.name} for librarians.`}>
   <!-- Hero Section -->
-  <header class="masthead" style="background-image: url('/assets/img/background-image-blue.png'); background-size: cover; height: 50vh; min-height: 400px;">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-10 align-self-end">
-          <h1 class="text-white font-weight-bold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6);">{lesson.name}</h1>
+  <header class="masthead" style="background-image: url('/assets/img/background-image-blue.png'); background-size: cover; min-height: 450px; padding-top: 6rem; padding-bottom: 3rem;">
+    <div class="container">
+      <div class="row align-items-center justify-content-center text-center">
+        <div class="col-lg-10">
+          <h1 class="text-white font-weight-bold" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.6); font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.2;">{lesson.name}</h1>
           <hr class="divider my-4" style="border-color: #ffd100; border-width: 3px; max-width: 50px;" />
         </div>
-        <div class="col-lg-8 align-self-baseline">
+        <div class="col-lg-8">
           <div class="text-white-75 font-weight-light mb-5" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">
             <span class="mr-3">Level: <strong>{lesson.educationalLevel}</strong></span>
             
-            <!-- Tooltip Container -->
+            {lesson.library_carpentry_adopted && (
+                <span class="badge badge-success text-uppercase ml-1" title="Adopted by Library Carpentry">
+                    <i class="fas fa-check-circle mr-1"></i> Library Carpentry Adopted
+                </span>
+            )}
+            
+            {/* Tooltip Container */}
             <span class="position-relative d-inline-block" style="cursor: help;">
                 Status: 
                 <span class={`badge ${statusColor} text-uppercase ml-1`}>{lesson.status}</span>
@@ -68,10 +75,18 @@ const statusColor = getStatusColor(lesson.status);
                     <small>{statusDesc}</small>
                 </div>
             </span>
+            
+            {lesson.status_note && (
+                <div class="mt-2 small text-white-50">
+                    <i class="fas fa-info-circle mr-1"></i> {lesson.status_note}
+                </div>
+            )}
           </div>
           
           {lesson.url && (
-              <a class="btn btn-primary btn-xl js-scroll-trigger" href={lesson.url} target="_blank">Start Lesson</a>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href={lesson.url} target="_blank">
+                  {isExternal ? 'Visit Resource' : 'Start Lesson'}
+              </a>
           )}
         </div>
       </div>
@@ -84,10 +99,9 @@ const statusColor = getStatusColor(lesson.status);
       <div class="row">
         <!-- Main Content -->
         <div class="col-lg-8">
-          <h3 class="mt-4">About this Lesson</h3>
+          <h3 class="mt-4">About this {isExternal ? 'Resource' : 'Lesson'}</h3>
           <p class="lead">
-            This lesson is designed for <strong>{lesson.educationalLevel?.toLowerCase() || 'all'}</strong> learners. 
-            It focuses on open science principles and practical skills for librarians.
+            {lesson.abstract}
           </p>
           
           {lesson.teaches && lesson.teaches.length > 0 && (
@@ -109,6 +123,57 @@ const statusColor = getStatusColor(lesson.status);
                 ))}
             </div>
           </div>
+
+          <!-- Workshop History -->
+          {lesson.pilots && lesson.pilots.length > 0 && (
+            <div class="mt-5">
+                <h4><i class="fas fa-history mr-2 text-muted"></i>Workshop History</h4>
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm mt-3">
+                        <thead class="thead-light">
+                            <tr>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Format</th>
+                                <th>Instructor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {lesson.pilots.map((pilot: any) => (
+                                <tr>
+                                    <td>{new Date(pilot.date).toLocaleDateString()}</td>
+                                    <td>{pilot.location}</td>
+                                    <td><span class="badge badge-light border">{pilot.type}</span></td>
+                                    <td>{pilot.instructor}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+          )}
+
+          <!-- Recognition & Impact -->
+          {lesson.recognition && lesson.recognition.length > 0 && (
+            <div class="mt-5">
+                <h4><i class="fas fa-award mr-2 text-muted"></i>Recognition & Impact</h4>
+                <div class="row">
+                    {lesson.recognition.map((item: any) => (
+                        <div class="col-md-6 mb-3">
+                            <div class="card h-100 border-0 bg-light shadow-sm">
+                                <div class="card-body">
+                                    <h6 class="font-weight-bold mb-1">{item.title}</h6>
+                                    <p class="small text-muted mb-2">{item.desc}</p>
+                                    {item.url && (
+                                        <a href={item.url} target="_blank" class="btn btn-link btn-sm p-0 text-primary">Read More</a>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+          )}
           
           <!-- Call to Action / Engagement -->
           <div class="card mt-5 border-left-primary shadow-sm bg-light">

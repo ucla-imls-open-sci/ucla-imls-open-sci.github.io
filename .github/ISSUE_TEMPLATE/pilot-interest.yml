@@ -1,0 +1,96 @@
+name: Pilot a Lesson (Beta Workshop Interest)
+description: Express interest in piloting an IMLS UCLA Open Science lesson
+title: "[Pilot Interest]: <Lesson title>"
+labels: ["pilot", "community", "beta"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest in piloting an Open Science lesson for librarians.
+        This issue helps lesson authors and the project team coordinate beta pilot workshops.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Your name
+      placeholder: Jane Doe
+    validations:
+      required: true
+
+  - type: input
+    id: affiliation
+    attributes:
+      label: Affiliation
+      description: Institution or organization
+      placeholder: University Library, Research Center, etc.
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Contact email
+      description: Best email for follow-up
+      placeholder: name@example.edu
+    validations:
+      required: true
+
+  - type: dropdown
+    id: lesson
+    attributes:
+      label: Lesson(s) you are interested in piloting
+      multiple: true
+      options:
+        - A Path to Open, Inclusive, and Collaborative Science for Librarians
+        - Data Management (and Sharing) Plans for Librarians 101
+        - Open Qualitative Research
+        - Authoring Open Science
+        - Containers and Virtual Machines
+        - ORCID for Librarians
+        - Open Science Team Agreements
+        - Open Science Discovery Engines
+        - Data Dashboards with R
+        - Open Research Cloud Workflows
+        - Open Science Hardware
+        - Collaborative Multilingual Search and Discovery Systems
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Preferred workshop format
+      options:
+        - In person
+        - Virtual
+        - Hybrid
+        - Not sure yet
+    validations:
+      required: true
+
+  - type: textarea
+    id: audience
+    attributes:
+      label: Intended audience
+      description: Who would attend this workshop?
+      placeholder: Academic librarians, graduate students, research support staff, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: timing
+    attributes:
+      label: Tentative timing
+      description: Approximate timeframe for the pilot
+      placeholder: Fall 2025, Spring 2026, etc.
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes or questions
+      description: Anything else you’d like us to know
+    validations:
+      required: false

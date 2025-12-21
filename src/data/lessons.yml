@@ -14,6 +14,11 @@ lessons:
   - shell
   - ssh
   - rstudio
+  pilots:
+  - date: 2023-08-15
+    location: "UCLA Data Science Center"
+    instructor: "Daniel Kerchner"
+    type: "Hybrid"
   learningResourceType: lesson
   teaches:
   - Explain the concept and benefits of cloud computing in open research.
@@ -33,6 +38,7 @@ lessons:
   status: alpha
   educationalLevel: Intermediate
   abstract: "Guides users through creating a lightweight, open-source search and discovery system for multilingual research materials using the Google Sheets API and JavaScript. Addresses challenges in making research collections publicly available and ethically represented."
+  status_note: "Planning a hybrid pilot for March 2026 (2-month asynchronous cohort)."
   keywords:
   - search
   - multilingual
@@ -114,6 +120,15 @@ lessons:
   - SciX
   - FAIR
   - ORCID
+  pilots:
+  - date: 2024-09-15
+    location: "Internal"
+    instructor: "Jennifer Lynn Bartlett"
+    type: "Small Test Run"
+    note: "Initial test run; classroom alpha pending."
+  recognition:
+  - title: "Governance Roadmap"
+    desc: "Scheduled for presentation to the Library Carpentry Curriculum Advisory Committee."
   learningResourceType: lesson
   teaches:
   - Describe how SciX supports FAIR principles.
@@ -158,6 +173,17 @@ lessons:
   - identifiers
   - researcher profiles
   - metadata
+  pilots:
+  - date: 2025-01-28
+    location: "Internal (Authors)"
+    instructor: "Levi Dolan"
+    type: "Alpha Teach-through"
+    note: "Completed teach-through; incorporating feedback."
+  recognition:
+  - title: "CAC Presentation"
+    desc: "Presented to the Library Carpentry Curriculum Advisory Committee on August 5, 2025."
+  - title: "Incubator Proposal"
+    desc: "In process of being added to the Carpentries Incubator."
   learningResourceType: lesson
   teaches:
   - Create an ORCID profile.
@@ -193,12 +219,16 @@ lessons:
   status: Alpha
   educationalLevel: Introductory
   abstract: "Designed to empower participants with the knowledge and skills needed for effective open science practices, with an emphasis on collaboration and inclusivity. Focuses on overcoming language, socioeconomic, and geographical barriers."
+  status_note: "Explicitly noted as not yet taught as of April 2025."
   keywords:
   - collaboration
   - open science
   - inclusion
   - FAIR
   - CARE
+  recognition:
+  - title: "CAC Presentation"
+    desc: "Presented to the Library Carpentry Curriculum Advisory Committee on April 3, 2025."
   learningResourceType: lesson
   teaches:
   - Understand open science's motivations and challenges for non-native English speaking communities.
@@ -212,7 +242,8 @@ lessons:
   - Lena Bohman
   - Marla Hertz
   - Daria Orlowska
-  status: Alpha
+  status: Beta
+  library_carpentry_adopted: true
   educationalLevel: Introductory
   abstract: "Walks through providing data management plan services in your library. Covers DMPs, relevant resources, data interviews, using the DMPTool, and suggestions on implementing DMP services."
   keywords:
@@ -220,6 +251,22 @@ lessons:
   - sharing plans
   - DMP
   - DMPTool
+  pilots:
+  - date: 2024-03-14
+    location: "Internal (UCLA/Authors)"
+    instructor: "Authors"
+    type: "Internal Alpha Pilot"
+    note: "Initial internal run; went smoothly."
+  recognition:
+  - title: "Library Carpentry Adoption"
+    desc: "Formally adopted as an official Library Carpentry lesson."
+    url: "https://carpentries.org/blog/2024/06/library-carpentry-dmp-lesson-approved/"
+  - title: "CAC Presentation"
+    desc: "Presented to the Library Carpentry Curriculum Advisory Committee on March 14, 2024."
+  - title: "Selected for NIH MITRE Grant"
+    desc: "Selected for the RDM pathways project."
+  - title: "International Proposal"
+    desc: "Included in a UK-based Data Steward training proposal."
   learningResourceType: lesson
   teaches:
   - Provide an overview of Data Management Plans (DMP).
@@ -228,10 +275,10 @@ lessons:
   - Determine data services to integrate into workflows.
   url: https://librarycarpentry.org/lc-dmp101/
   repo: https://github.com/LibraryCarpentry/lc-dmp101
-- name: Open Qualitative Research
+- name: Open Qualitative Research (Taguette)
   authors:
   - Nathaniel Porter
-  status: pre-Alpha
+  status: Alpha
   educationalLevel: Introductory
   abstract: "Familiarizes learners with the application of open science principles to qualitative research. Focuses on documents or transcribed text in a variety of data formats and working with secondary qualitative data."
   keywords:
@@ -239,6 +286,16 @@ lessons:
   - open science
   - taguette
   - QDR
+  pilots:
+  - date: 2025-04-03
+    location: "Co-taught Workshop"
+    instructor: "Sebastian Karcher"
+    type: "Co-taught Pilot"
+  - date: 2025-04-01
+    location: "External Pilot"
+    instructor: "Authors"
+    type: "Pilot"
+    note: "Taught twice using data from QDR."
   learningResourceType: lesson
   teaches:
   - Work with secondary qualitative data from the Qualitative Data Repository (QDR).
@@ -247,6 +304,42 @@ lessons:
   - Understand options for sharing source data and coded analysis projects.
   url: https://librarycarpentry.github.io/lc-open-qualitative-research
   repo: https://github.com/LibraryCarpentry/lc-open-qualitative-research
+  recognition:
+  - title: "JeSLIB Article Accepted"
+    desc: "A peer-reviewed article describing this curriculum was accepted for publication in the Journal of eScience Librarianship (JeSLIB)."
+- name: Open Qualitative Research (QualCoder)
+  authors:
+  - Nathaniel Porter
+  - Sebastian Karcher
+  status: Beta
+  educationalLevel: Introductory
+  duration: "4h 00m"
+  abstract: "Familiarizes learners with the application of open science principles to qualitative research. Focuses on documents or transcribed text in a variety of data formats. Learners practice working with secondary qualitative data from the Qualitative Data Repository (QDR) in the free software QualCoder."
+  why_teach: "QualCoder is a free, open-source alternative to expensive proprietary tools like NVivo. Teaching this empowers researchers with accessible tools for reproducible qualitative analysis."
+  keywords:
+  - qualitative research
+  - open science
+  - qualcoder
+  - QDR
+  - coding
+  pilots:
+  - date: 2024-05-28
+    location: "IASSIST 2025 Conference"
+    instructor: "Sebastian Karcher"
+    type: "In-person"
+  recognition:
+  - title: "JeSLIB Article Accepted"
+    desc: "A peer-reviewed article describing this curriculum was accepted for publication in the Journal of eScience Librarianship (JeSLIB)."
+  - title: "CAC Presentation"
+    desc: "Presented to the Library Carpentry Curriculum Advisory Committee on April 3, 2025."
+  learningResourceType: lesson
+  teaches:
+  - Work with secondary qualitative data from the Qualitative Data Repository (QDR).
+  - Use the free software QualCoder for qualitative analysis.
+  - Discuss options and limitations for open research with proprietary qualitative analysis packages.
+  - Understand options for sharing source data and coded analysis projects.
+  url: https://librarycarpentry.github.io/open-qualitative-research-qualcoder/
+  repo: https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder
 - name: Reproducible Research Workflows
   authors:
   - Agata Bochynska
@@ -289,7 +382,7 @@ lessons:
   repo: https://github.com/ucla-imls-open-sci/lc-open-hw
 
 # --------------------
-# Open Science Basics (Added)
+# Open Science Basics (Added + Expanded)
 # --------------------
 
 - name: "Open Science Basics (FOSTER Open Science)"
@@ -313,8 +406,8 @@ lessons:
   - Explain benefits and challenges of open research practices.
   - Identify roles for libraries and support units in Open Science.
   - Recognize how openness applies across the research lifecycle.
-  url: https://www.fosteropenscience.eu
-  repo: https://github.com/FOSTEROpenScience
+  url: https://open-science-training-handbook.gitbook.io/book
+  repo: https://github.com/Open-Science-Training-Handbook/book
 
 - name: "NASA TOPS: Open Science 101"
   duration: "6–8h (self-paced)"
@@ -360,6 +453,30 @@ lessons:
   - Connect Open Science principles to everyday library work.
   url: https://www.ala.org/news/2025/06/new-acrl-open-science-cookbook
   repo: null
+
+- name: "Open Science 101 (Open Life Science)"
+  duration: "4–8h (cohort-based or self-study)"
+  authors:
+  - Open Life Science Community
+  status: mature
+  educationalLevel: Introductory
+  type: external
+  why_teach: "This resource emphasizes the social, ethical, and community dimensions of Open Science, helping librarians understand not just how open practices work, but why they matter."
+  abstract: "Introductory Open Science training materials developed by Open Life Science. Covers Open Science principles, equity and inclusion, community practices, and sustainable research workflows."
+  keywords:
+  - open science
+  - equity
+  - inclusion
+  - community
+  - research culture
+  learningResourceType: course
+  teaches:
+  - Explain Open Science values and practices.
+  - Identify barriers to participation in open research.
+  - Support inclusive and sustainable open workflows.
+  - Advocate for Open Science within institutions.
+  url: https://openlifesci.org
+  repo: https://github.com/open-life-science
 
 - name: "UNESCO Recommendation on Open Science"
   duration: "1–2h (reading/reference)"
