@@ -150,6 +150,11 @@ lessons:
   - shiny
   - data visualization
   - web applications
+  pilots:
+  - date: 2025-05-12
+    location: "CRDDS, CU Boulder"
+    instructor: "Aditya Ranganath"
+    type: "Virtual Workshop"
   learningResourceType: lesson
   teaches:
   - Understand the importance of web applications and dashboards for applied research.
@@ -323,6 +328,10 @@ lessons:
   - QDR
   - coding
   pilots:
+  - date: 2025-05-20
+    location: "Virginia Tech Libraries"
+    instructor: "Nathaniel Porter"
+    type: "Workshop"
   - date: 2024-05-28
     location: "IASSIST 2025 Conference"
     instructor: "Sebastian Karcher"

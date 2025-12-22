@@ -2,6 +2,7 @@ name: Pilot a Lesson (Beta Workshop Interest)
 description: Express interest in piloting an IMLS UCLA Open Science lesson
 title: "[Pilot Interest]: <Lesson title>"
 labels: ["pilot", "community", "beta"]
+assignees: ["jt14den"]
 body:
   - type: markdown
     attributes:

@@ -1,0 +1,83 @@
+name: Sync Lessons to Org Profile
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/data/lessons.yml'
+  workflow_dispatch:
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Website Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Generate Markdown Table
+        run: python scripts/generate_readme_table.py > lesson_table.md
+
+      - name: Checkout Target Profile Repo
+        uses: actions/checkout@v4
+        with:
+          repository: ucla-imls-open-sci/.github
+          token: ${{ secrets.ORG_README_TOKEN }}
+          path: target-repo
+
+      - name: Inject Table into README
+        run: |
+          # Read the generated table
+          TABLE_CONTENT=$(cat lesson_table.md)
+          
+          # Define the target file (Adjust if it is profile/README.md)
+          TARGET_FILE="target-repo/profile/README.md"
+          
+          # Check if file exists, fallback to root README if not
+          if [ ! -f "$TARGET_FILE" ]; then
+            TARGET_FILE="target-repo/README.md"
+          fi
+
+          if [ ! -f "$TARGET_FILE" ]; then
+            echo "Error: Could not find README.md in target repo"
+            exit 1
+          fi
+
+          # Use perl to replace content between markers
+          # We escape newlines for the replacement
+          
+          # 1. Create a temp file combining the parts
+          # Everything BEFORE the start marker
+          sed -n '1,/<!-- START_LESSON_TABLE -->/p' "$TARGET_FILE" > new_readme.md
+          
+          # The new content
+          cat lesson_table.md >> new_readme.md
+          
+          # Everything AFTER the end marker
+          sed -n '/<!-- END_LESSON_TABLE -->/,$p' "$TARGET_FILE" >> new_readme.md
+          
+          # Replace original
+          mv new_readme.md "$TARGET_FILE"
+
+      - name: Commit and Push Changes
+        working-directory: target-repo
+        run: |
+          git config user.name "Lesson Sync Bot"
+          git config user.email "actions@github.com"
+          
+          # Check if there are changes
+          if git diff --quiet; then
+            echo "No changes to commit"
+          else
+            git add .
+            git commit -m "Update lesson table from source of truth"
+            git push
+          fi
