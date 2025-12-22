@@ -80,14 +80,18 @@ lessons:
   - Camille Thomas
   status: pre-Alpha
   educationalLevel: Introductory
+  abstract: "This lesson explores the principles and practices of building and sustaining an open science community of practice within a library or institutional context."
   keywords:
   - community
   - open science
+  - community of practice
   learningResourceType: lesson
   teaches:
-  - Community building
-  url: ''
-  repo: ''
+  - Define a community of practice in an open science context.
+  - Identify key elements for sustaining a community.
+  - Develop strategies for community outreach and engagement.
+  url: 'https://ucla-imls-open-sci.info/lc-open-science-community-of-practice/'
+  repo: 'https://github.com/ucla-imls-open-sci/lc-open-science-community-of-practice'
 - name: A gentle, hands-on introduction to containers and virtual machines
   duration: "3h 00m"
   authors:
