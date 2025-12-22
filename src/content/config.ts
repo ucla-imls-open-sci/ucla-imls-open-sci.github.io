@@ -1,15 +1,15 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
-const blogCollection = defineCollection({
+const blog = defineCollection({
+  // Use the modern glob loader for Astro 5
+  loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/blog" }),
   schema: z.object({
     title: z.string(),
     date: z.date().optional(),
     author: z.string().optional(),
-    layout: z.string().optional(),
-    // Add other fields if necessary
+    description: z.string().optional(),
   }),
 });
 
-export const collections = {
-  'blog': blogCollection,
-};
+export const collections = { blog };

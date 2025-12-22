@@ -99,15 +99,9 @@ en: &DEFAULT_EN
     people:
       - name: "Todd Grappone"
         role: "Associate University Librarian, Digital Initiatives and IT, UCLA"
-        image: /assets/img/committee/default.jpeg
+        image: /assets/img/staff/ToddGrappone.jpg
         social:
           - url: https://orcid.org/0000-0003-2218-7200
-            icon: fab fa-orcid
-      - name: "Elizabeth McAulay"
-        role: "Director of the Digital Library, UCLA"
-        image: /assets/img/committee/default.jpeg
-        social:
-          - url: https://orcid.org/0000-0002-8679-9727
             icon: fab fa-orcid
       - name: "Tim Dennis"
         role: "Program Director"
