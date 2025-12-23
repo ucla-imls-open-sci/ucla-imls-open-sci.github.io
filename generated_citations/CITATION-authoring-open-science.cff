@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this lesson, please cite it as below."
+type: dataset
+title: "Authoring Open Science"
+authors:
+  - family-names: Miller
+    given-names: Kathryn
+  - family-names: Medina-Smith
+    given-names: Andrea
+abstract: "Focuses on integrating open science values—trust, transparency, and reproducibility—into the authoring and reviewing processes. Covers open authoring tools, contributor roles, ethics of authorship, and open peer review."
+keywords:
+  - open science
+  - writing
+  - metadata
+  - open peer review
+  - ethics
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-12-23
+repository-code: "https://github.com/ucla-imls-open-sci/lc-authoring-open-science"
+url: "https://ucla-imls-open-sci.info/lc-authoring-open-science/"

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this lesson, please cite it as below."
+type: dataset
+title: "Open Qualitative Research (Taguette)"
+authors:
+  - family-names: Porter
+    given-names: Nathaniel
+abstract: "Familiarizes learners with the application of open science principles to qualitative research. Focuses on documents or transcribed text in a variety of data formats and working with secondary qualitative data."
+keywords:
+  - qualitative research
+  - open science
+  - taguette
+  - QDR
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-12-23
+repository-code: "https://github.com/LibraryCarpentry/lc-open-qualitative-research"
+url: "https://librarycarpentry.github.io/lc-open-qualitative-research"

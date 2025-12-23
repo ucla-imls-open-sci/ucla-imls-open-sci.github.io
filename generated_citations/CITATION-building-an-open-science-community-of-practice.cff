@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this lesson, please cite it as below."
+type: dataset
+title: "Building an Open Science Community of Practice"
+authors:
+  - family-names: Thomas
+    given-names: Camille
+abstract: "This lesson explores the principles and practices of building and sustaining an open science community of practice within a library or institutional context."
+keywords:
+  - community
+  - open science
+  - community of practice
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-12-23
+repository-code: "https://github.com/ucla-imls-open-sci/lc-open-science-community-of-practice"
+url: "https://ucla-imls-open-sci.info/lc-open-science-community-of-practice/"

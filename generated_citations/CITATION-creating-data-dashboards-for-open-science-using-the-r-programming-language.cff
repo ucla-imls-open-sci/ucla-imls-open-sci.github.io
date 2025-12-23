@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this lesson, please cite it as below."
+type: dataset
+title: "Creating Data Dashboards for Open Science Using the R Programming Language"
+authors:
+  - family-names: Ranganath
+    given-names: Aditya
+abstract: "An introduction to Shiny, a package for writing and publishing web applications in R. Enables researchers to develop interactive web applications and data dashboards without extensive web development experience."
+keywords:
+  - dashboards
+  - R
+  - shiny
+  - data visualization
+  - web applications
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-12-23
+repository-code: "https://github.com/aranganath24/data-dashboard-carpentries"
+url: "https://aranganath24.github.io/data-dashboard-carpentries/"

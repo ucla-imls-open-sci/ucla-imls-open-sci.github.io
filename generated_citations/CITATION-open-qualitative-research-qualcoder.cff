@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this lesson, please cite it as below."
+type: dataset
+title: "Open Qualitative Research (QualCoder)"
+authors:
+  - family-names: Porter
+    given-names: Nathaniel
+  - family-names: Karcher
+    given-names: Sebastian
+abstract: "Familiarizes learners with the application of open science principles to qualitative research. Focuses on documents or transcribed text in a variety of data formats. Learners practice working with secondary qualitative data from the Qualitative Data Repository (QDR) in the free software QualCoder."
+keywords:
+  - qualitative research
+  - open science
+  - qualcoder
+  - QDR
+  - coding
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-12-23
+repository-code: "https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder"
+url: "https://librarycarpentry.github.io/open-qualitative-research-qualcoder/"

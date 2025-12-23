@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this lesson, please cite it as below."
+type: dataset
+title: "Open and Reproducible Research Cloud Workflows: A Firsthand Experience for Librarians"
+authors:
+  - family-names: Kerchner
+    given-names: Daniel
+abstract: "This lesson provides librarians with firsthand experience in open and reproducible research workflows using cloud computing. It aims to shift librarians' perspectives by engaging them directly in a reproducible research workflow using command-line tools and cloud resources."
+keywords:
+  - reproducibility
+  - cloud
+  - workflow
+  - shell
+  - ssh
+  - rstudio
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-12-23
+repository-code: "https://github.com/kerchner/lc-open-reproducible-research-cloud"
+url: "https://kerchner.github.io/lc-open-reproducible-research-cloud/"
