@@ -1,16 +1,19 @@
 cff-version: 1.2.0
 title: "Lessons for Librarians in Open Science Principles and Methods"
 message: "If you use this curriculum or software, please cite it using the metadata from this file."
-type: dataset
+type: software
 authors:
   - family-names: Dennis
     given-names: Tim
-    orcid: "https://orcid.org/0000-0002-1461-7561"
+    orcid: "https://orcid.org/0000-0001-6632-3812"
     affiliation: "University of California, Los Angeles"
-    email: "timdennis@ucla.edu"
+  - family-names: McAulay
+    given-names: Elizabeth
+    orcid: "https://orcid.org/0000-0002-8679-9727"
+    affiliation: "University of California, Los Angeles"
   - family-names: Yao
     given-names: Zhiyuan
-    orcid: "https://orcid.org/0000-0002-0304-3829"
+    orcid: "https://orcid.org/0000-0002-7601-8704"
     affiliation: "University of California, Los Angeles"
   - family-names: Erdmann
     given-names: Christopher
@@ -21,7 +24,7 @@ authors:
     orcid: "https://orcid.org/0000-0003-2218-7200"
     affiliation: "University of California, Santa Barbara"
   - family-names: Huang
-    given-names: Zikang (Eric)
+    given-names: Zikang
     orcid: "https://orcid.org/0009-0007-9906-6067"
     affiliation: "University of California, Los Angeles"
   - family-names: Lee
@@ -32,7 +35,7 @@ authors:
     given-names: Madeline
     orcid: "https://orcid.org/0000-0002-2213-201X"
     affiliation: "University of California, Los Angeles"
-abstract: "A comprehensive, open-source curriculum for librarians covering Open Science principles, data management, reproducibility, and community building. Funded by the Institute of Museum and Library Services (IMLS)."
+abstract: "A comprehensive, open-source curriculum hub for librarians covering Open Science principles, data management, reproducibility, and community building. Funded by the Institute of Museum and Library Services (IMLS). Contributor Roles (CRediT): Tim Dennis (Conceptualization, Funding acquisition - Lead Grant Writer, Project administration, Software, Supervision); Elizabeth McAulay (Conceptualization, Writing – original draft - Preliminary Proposal); Zhiyuan Yao (Project administration, Data curation, Validation, Funding acquisition - Grant Writing Support); Christopher Erdmann (Conceptualization); Todd Grappone (Conceptualization, Funding acquisition - Grant Writing Support); Zikang Huang, Lawrence Lee, Madeline Kim (Software, Resources)."
 keywords:
   - open science
   - librarians
@@ -41,8 +44,8 @@ keywords:
   - reproducibility
   - IMLS
 license: CC-BY-4.0
-version: 1.0.0
-date-released: 2024-03-20
+version: 1.0.1
+date-released: 2025-12-23
 repository-code: "https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io"
 url: "https://ucla-imls-open-sci.info"
 identifiers:
