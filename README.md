@@ -1,5 +1,7 @@
 # Open Science for Librarians
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18055759.svg)](https://doi.org/10.5281/zenodo.18055759)
+
 This is the official website for the "Lessons for Librarians in Open Science Principles and Methods" project, funded by the Institute of Museum and Library Services (IMLS).
 
 ## Project Overview
