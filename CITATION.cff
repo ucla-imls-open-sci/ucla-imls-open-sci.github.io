@@ -35,7 +35,7 @@ authors:
     given-names: Madeline
     orcid: "https://orcid.org/0000-0002-2213-201X"
     affiliation: "University of California, Los Angeles"
-abstract: "A comprehensive, open-source curriculum hub for librarians covering Open Science principles, data management, reproducibility, and community building. Funded by the Institute of Museum and Library Services (IMLS). Contributor Roles (CRediT): Tim Dennis (Conceptualization, Funding acquisition - Lead Grant Writer, Project administration, Software, Supervision); Elizabeth McAulay (Conceptualization, Writing – original draft - Preliminary Proposal); Zhiyuan Yao (Project administration, Data curation, Validation, Funding acquisition - Grant Writing Support); Christopher Erdmann (Conceptualization); Todd Grappone (Conceptualization, Funding acquisition - Grant Writing Support); Zikang Huang, Lawrence Lee, Madeline Kim (Software, Resources)."
+abstract: "A comprehensive, open-source curriculum hub for librarians covering Open Science principles, data management, reproducibility, and community building. Funded by the Institute of Museum and Library Services (IMLS). Team: Tim Dennis, Elizabeth McAulay, Zhiyuan Yao, Christopher Erdmann, Todd Grappone, Zikang Huang, Lawrence Lee, Madeline Kim."
 keywords:
   - open science
   - librarians
@@ -44,11 +44,7 @@ keywords:
   - reproducibility
   - IMLS
 license: CC-BY-4.0
-version: 1.0.1
-date-released: 2025-12-23
+version: 1.0.2
+date-released: "2025-12-23"
 repository-code: "https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io"
 url: "https://ucla-imls-open-sci.info"
-identifiers:
-  - description: "IMLS Grant Number"
-    type: other
-    value: "RE-252335-OLS-22"
