@@ -12,7 +12,7 @@ export async function GET(context) {
       title: post.data.title,
       pubDate: post.data.date,
       description: post.data.description || '', // Ensure you have description in frontmatter or derive it
-      link: `/blog/${post.slug}/`,
+      link: `/blog/${post.id}`,
     })),
     customData: `<language>${siteConfig.locale}</language>`,
   });
