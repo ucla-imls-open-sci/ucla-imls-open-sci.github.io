@@ -15,7 +15,7 @@ en: &DEFAULT_EN
       url: "/basics"
     - title: "Lessons"
       section: lessontab
-    - title: "Authors"
+    - title: "Team"
       section: authors
     - title: "Blog"
       section: blog

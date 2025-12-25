@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this lesson, please cite it as below."
+type: dataset
+title: "Leveraging Open Research and Contributor IDs (ORCID) for Librarians"
+authors:
+  - family-names: Dolan
+    given-names: Levi
+  - family-names: Ramirez
+    given-names: Mirian
+  - family-names: Craven
+    given-names: Hannah
+abstract: "Guides learners through creating an ORCID, understanding its significance, and connecting it to major systems that update ORCID records."
+keywords:
+  - ORCID
+  - identifiers
+  - researcher profiles
+  - metadata
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-12-23
+repository-code: "https://github.com/firbolg/LC_ORCID"
+url: "https://firbolg.github.io/LC_ORCID/"

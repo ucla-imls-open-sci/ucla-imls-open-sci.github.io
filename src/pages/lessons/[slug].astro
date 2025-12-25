@@ -45,6 +45,33 @@ const getStatusColor = (status: string) => {
 };
 const statusColor = getStatusColor(lesson.status);
 const isExternal = lesson.type === 'external';
+
+// Citation Helper
+const generateCitation = (l: any) => {
+    const year = new Date().getFullYear(); // Or use a 'date' field if added later
+    const authorList = l.authors ? l.authors.map((a: string) => {
+        const parts = a.split(' ');
+        const last = parts[parts.length - 1];
+        const first = parts[0][0];
+        return `${last}, ${first}.`;
+    }).join(', ') : 'UCLA IMLS Open Science';
+    
+    const apa = `${authorList} (${year}). ${l.name}. UCLA IMLS Open Science. ${siteConfig.url}/lessons/${slugify(l.name)}`;
+    
+    const bibtexAuthor = l.authors ? l.authors.join(' and ') : 'UCLA IMLS Open Science';
+    const bibtexId = slugify(l.name).replace(/-/g, '_');
+    const bibtex = `@misc{${bibtexId}_${year},
+  author = {${bibtexAuthor}},
+  title = {${l.name}},
+  year = {${year}},
+  publisher = {UCLA IMLS Open Science},
+  url = {${siteConfig.url}/lessons/${slugify(l.name)}}
+}`;
+
+    return { apa, bibtex };
+};
+
+const citation = generateCitation(lesson);
 ---
 
 <Layout title={lesson.name} description={`A lesson on ${lesson.name} for librarians.`}>
@@ -253,13 +280,40 @@ const isExternal = lesson.type === 'external';
             </div>
           </div>
 
+          <!-- Citation Card -->
+          {!isExternal && (
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-light font-weight-bold">Cite this Lesson</div>
+                <div class="card-body">
+                    <p class="small text-muted mb-2">APA Format:</p>
+                    <div class="bg-light p-2 rounded mb-3 border text-break small">
+                        {citation.apa}
+                    </div>
+                    <button class="btn btn-outline-primary btn-sm btn-block copy-btn" data-copy={citation.apa}>
+                        <i class="far fa-copy mr-1"></i> Copy Citation
+                    </button>
+                    
+                    <hr class="my-3" />
+                    
+                    <p class="small text-muted mb-2">BibTeX:</p>
+                    <details>
+                        <summary class="small text-primary cursor-pointer mb-2">Show BibTeX</summary>
+                        <pre class="bg-light p-2 rounded border small text-break mb-2" style="font-size: 0.75rem;"><code>{citation.bibtex}</code></pre>
+                        <button class="btn btn-outline-dark btn-sm btn-block copy-btn" data-copy={citation.bibtex}>
+                            <i class="far fa-copy mr-1"></i> Copy BibTeX
+                        </button>
+                    </details>
+                </div>
+            </div>
+          )}
+
           <!-- Resources Card -->
           <div class="card border-0 shadow-sm mb-4">
             <div class="card-header bg-white font-weight-bold">Resources</div>
             <div class="list-group list-group-flush">
                 {lesson.url && (
                     <a href={lesson.url} target="_blank" class="list-group-item list-group-item-action">
-                        <i class="fas fa-laptop mr-2 text-primary"></i> Lesson Website
+                        <i class={`fas ${isExternal ? 'fa-external-link-alt' : 'fa-laptop'} mr-2 text-primary`}></i> {isExternal ? 'Visit Resource' : 'Lesson Website'}
                     </a>
                 )}
                 {lesson.repo && (
@@ -314,6 +368,24 @@ const isExternal = lesson.type === 'external';
   </section>
 </Layout>
 
+<script>
+  // Simple copy to clipboard logic
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const text = btn.getAttribute('data-copy');
+      if (text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML = '<i class="fas fa-check mr-1 text-success"></i> Copied!';
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+          }, 2000);
+        });
+      }
+    });
+  });
+</script>
+
 <style>
 /* Simple CSS Tooltip */
 .custom-tooltip {
@@ -355,5 +427,9 @@ const isExternal = lesson.type === 'external';
 
 .border-left-primary {
     border-left: 5px solid #ffd100;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 </style>

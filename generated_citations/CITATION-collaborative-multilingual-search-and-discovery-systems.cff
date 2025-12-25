@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this lesson, please cite it as below."
+type: dataset
+title: "Collaborative Multilingual Search and Discovery Systems"
+authors:
+  - family-names: Silberberg
+    given-names: Eric
+  - family-names: Alonso-Regalado
+    given-names: Jesus
+  - family-names: Kellett
+    given-names: Cate
+abstract: "Guides users through creating a lightweight, open-source search and discovery system for multilingual research materials using the Google Sheets API and JavaScript. Addresses challenges in making research collections publicly available and ethically represented."
+keywords:
+  - search
+  - multilingual
+  - discovery
+  - google sheets api
+  - javascript
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2025-12-23
+repository-code: "https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system"
+url: "http://ucla-imls-open-sci.info/lc-multilingual-search-discovery-system/"
