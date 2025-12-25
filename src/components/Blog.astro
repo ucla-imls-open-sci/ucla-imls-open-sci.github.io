@@ -32,7 +32,7 @@ const sortedPosts = posts.sort((a, b) => {
                                 {post.data.date ? new Date(post.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : ''}
                             </small>
                             <h4 class="card-title mb-3">
-                                <a href={`/blog/${post.slug}`} class="text-dark text-decoration-none stretched-link">
+                                <a href={`/blog/${post.id}`} class="text-dark text-decoration-none stretched-link">
                                     {post.data.title}
                                 </a>
                             </h4>

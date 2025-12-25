@@ -1,35 +1,190 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('blog');
   return blogEntries.map(entry => ({
-    params: { slug: entry.slug }, props: { entry },
+    params: { slug: entry.id }, props: { entry },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
+
+// Fetch recent posts for the sidebar
+const allPosts = await getCollection('blog');
+const recentPosts = allPosts
+    .filter(p => p.id !== entry.id) // Exclude current post
+    .sort((a, b) => {
+        const dateA = a.data.date ? new Date(a.data.date).valueOf() : 0;
+        const dateB = b.data.date ? new Date(b.data.date).valueOf() : 0;
+        return dateB - dateA;
+    })
+    .slice(0, 5); // Show top 5
 ---
-<Layout title={entry.data.title}>
-  <!-- Adding extra padding-top to account for fixed navbar if page-section doesn't cover it enough, 
-       but page-section usually has 100px padding. -->
-  <section class="page-section" id="blog-post" style="padding-top: 150px;">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-            <h1>{entry.data.title}</h1>
-            <p class="text-muted">
-                {entry.data.date ? new Date(entry.data.date).toLocaleDateString() : ''} 
-                {entry.data.author ? ` - ${entry.data.author}` : ''}
-            </p>
-            <hr />
-            <div class="content">
-                <Content />
+
+<Layout title={entry.data.title} description={entry.data.description}>
+  <!-- Hero Section -->
+  <header class="masthead" style="background-image: url('/assets/img/background-image-blue.png'); background-size: cover; background-position: center; min-height: 250px; padding-top: 6rem; padding-bottom: 3rem;">
+    <div class="overlay" style="background: rgba(33, 37, 41, 0.7); position: absolute; top: 0; left: 0; height: 100%; width: 100%;"></div>
+    <div class="container position-relative">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center text-white">
+            <div class="mb-2">
+                <span class="badge badge-warning text-uppercase px-2 py-1">Project Update</span>
+            </div>
+            <h1 class="font-weight-bold mb-3" style="font-size: clamp(1.8rem, 3.5vw, 2.8rem); line-height: 1.2; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                {entry.data.title}
+            </h1>
+            <div class="text-white-75 font-weight-light" style="font-size: 1rem;">
+                {entry.data.date && (
+                    <span class="mr-3">
+                        <i class="far fa-calendar-alt mr-2"></i>
+                        {new Date(entry.data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    </span>
+                )}
+                {entry.data.author && (
+                    <span>
+                        <i class="far fa-user mr-2"></i>
+                        {entry.data.author}
+                    </span>
+                )}
             </div>
         </div>
       </div>
     </div>
+  </header>
+
+  <!-- Content Section -->
+  <section class="page-section" id="blog-content" style="padding-top: 4rem;">
+    <div class="container">
+      <div class="row">
+        
+        <!-- Main Post Content -->
+        <div class="col-lg-8">
+            <div class="bg-white p-4 p-md-5 shadow-sm rounded mb-5">
+                <div class="content prose">
+                    <Content />
+                </div>
+                
+                <hr class="my-5" />
+                
+                <div class="d-flex justify-content-between align-items-center">
+                    <a href="/blog" class="btn btn-outline-primary rounded-pill px-4">
+                        <i class="fas fa-arrow-left mr-2"></i> Back to Updates
+                    </a>
+                    <!-- Social Share (Static for now) -->
+                    <div>
+                        <span class="text-muted mr-2 small">Share:</span>
+                        <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(entry.data.title)}&url=https://ucla-imls-open-sci.info/blog/${entry.id}`} target="_blank" class="text-secondary mx-1"><i class="fab fa-twitter"></i></a>
+                        <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://ucla-imls-open-sci.info/blog/${entry.id}`} target="_blank" class="text-secondary mx-1"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <div class="sticky-top" style="top: 100px;">
+                <!-- Recent Updates Widget -->
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-light font-weight-bold text-uppercase small py-3">
+                        Recent Updates
+                    </div>
+                    <div class="list-group list-group-flush">
+                        {recentPosts.map(post => (
+                            <a href={`/blog/${post.id}`} class="list-group-item list-group-item-action p-3">
+                                <div class="d-flex w-100 justify-content-between mb-1">
+                                    <small class="text-muted">
+                                        {post.data.date ? new Date(post.data.date).toLocaleDateString(undefined, { month: 'short', day: 'numeric', year: 'numeric' }) : ''}
+                                    </small>
+                                </div>
+                                <h6 class="mb-1 text-dark font-weight-bold" style="font-size: 0.95rem;">{post.data.title}</h6>
+                            </a>
+                        ))}
+                        {recentPosts.length === 0 && (
+                            <div class="p-3 text-muted small">No other recent posts.</div>
+                        )}
+                    </div>
+                    <div class="card-footer bg-white border-top-0 pb-3">
+                        <a href="/blog" class="btn btn-link btn-sm btn-block text-primary font-weight-bold">View All Posts <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Info Widget -->
+                <div class="card border-0 shadow-sm bg-primary text-white">
+                    <div class="card-body">
+                        <h5 class="card-title h6 text-uppercase">About This Project</h5>
+                        <p class="card-text small mb-3">
+                            Open Science for Librarians is a pathway to open, inclusive, and collaborative science, supported by UCLA and IMLS.
+                        </p>
+                        <a href="/project-history" class="btn btn-sm btn-light text-primary shadow-sm">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 </Layout>
+
+<style>
+/* Header Overlay */
+header.masthead {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Improve Typography for Content */
+.content {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+}
+
+.content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+.content a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+.content blockquote {
+    border-left: 4px solid #ffd100;
+    padding-left: 1rem;
+    font-style: italic;
+    color: #6c757d;
+    background: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.content ul, .content ol {
+    margin-bottom: 1.5rem;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+</style>
