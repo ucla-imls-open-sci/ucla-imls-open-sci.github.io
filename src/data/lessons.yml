@@ -313,6 +313,7 @@ lessons:
   - Understand options for sharing source data and coded analysis projects.
   url: https://librarycarpentry.github.io/lc-open-qualitative-research
   repo: https://github.com/LibraryCarpentry/lc-open-qualitative-research
+  library_carpentry_adopted: true
   recognition:
   - title: "JeSLIB Article Accepted"
     desc: "A peer-reviewed article describing this curriculum was accepted for publication in the Journal of eScience Librarianship (JeSLIB)."
@@ -321,6 +322,7 @@ lessons:
   - Nathaniel Porter
   - Sebastian Karcher
   status: Beta
+  library_carpentry_adopted: true
   educationalLevel: Introductory
   duration: "4h 00m"
   abstract: "Familiarizes learners with the application of open science principles to qualitative research. Focuses on documents or transcribed text in a variety of data formats. Learners practice working with secondary qualitative data from the Qualitative Data Repository (QDR) in the free software QualCoder."

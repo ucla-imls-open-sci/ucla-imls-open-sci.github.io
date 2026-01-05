@@ -12,6 +12,10 @@ This site serves as a curriculum hub for librarians, providing access to:
 *   Profiles of the lesson authors and contributors.
 *   Foundational open science frameworks and references.
 
+## Call for Pilots
+
+We are currently looking for community members to pilot these lessons. If you are interested in teaching or field-testing any of these materials, please [open an issue on our Pilot Interest tracker](https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/issues/new?template=pilot-interest.yml).
+
 ## Tech Stack
 
 This site has been migrated from Jekyll to **Astro** (v5). It uses:

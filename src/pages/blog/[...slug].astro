@@ -77,7 +77,7 @@ const recentPosts = allPosts
                     <!-- Social Share (Static for now) -->
                     <div>
                         <span class="text-muted mr-2 small">Share:</span>
-                        <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(entry.data.title)}&url=https://ucla-imls-open-sci.info/blog/${entry.id}`} target="_blank" class="text-secondary mx-1"><i class="fab fa-twitter"></i></a>
+                        <a href={`https://bsky.app/intent/compose?text=${encodeURIComponent(entry.data.title + " " + "https://ucla-imls-open-sci.info/blog/" + entry.id)}`} target="_blank" class="text-secondary mx-1"><i class="fas fa-cloud"></i></a>
                         <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://ucla-imls-open-sci.info/blog/${entry.id}`} target="_blank" class="text-secondary mx-1"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>

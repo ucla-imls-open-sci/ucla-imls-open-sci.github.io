@@ -110,8 +110,6 @@ en:
       image: /assets/img/staff/timdennis.jpeg
       orcid: 0000-0001-6632-3812
       social:
-      - url: https://twitter.com/jt14den
-        icon: fab fa-twitter
       - url: https://linkedin.com/in/jtimdennis/
         icon: fab fa-linkedin-in
       - url: https://orcid.org/0000-0001-6632-3812
@@ -121,8 +119,6 @@ en:
       image: /assets/img/staff/zhiyuan_500x500.jpeg
       orcid: 0000-0002-7601-8704
       social:
-      - url: https://twitter.com/zhiyuangis
-        icon: fab fa-twitter
       - url: https://www.linkedin.com/in/zhiyuan-yao-8b7b13101/
         icon: fab fa-linkedin-in
       - url: https://orcid.org/0000-0002-7601-8704
@@ -137,8 +133,6 @@ en:
       role: Lesson Infrastructure Developer
       image: /assets/img/staff/LawrenceLee.jpg
       social:
-      - url: https://twitter.com/lawrence_tlee
-        icon: fab fa-twitter
       - url: https://www.linkedin.com/in/lawrencetlee/
         icon: fab fa-linkedin-in
     - name: Madeline Kim

@@ -1,0 +1,163 @@
+---
+import lessonsData from '../data/lessons.yml';
+
+const lessons = (lessonsData as any).lessons.filter((l: any) => l.type !== 'external');
+
+// Helper to determine status
+const getStatus = (lesson: any, milestone: string) => {
+    // 1. CAC Review
+    if (milestone === 'cac') {
+        const cacRec = lesson.recognition?.find((r: any) => 
+            r.title.includes('CAC') || 
+            r.desc.includes('Curriculum Advisory Committee') ||
+            r.title.includes('Governance Roadmap')
+        );
+        
+        if (cacRec) {
+            if (cacRec.desc.toLowerCase().includes('scheduled')) {
+                return { status: 'scheduled', label: 'Scheduled' };
+            }
+            return { status: 'completed', label: 'Presented', title: cacRec.desc };
+        }
+        return { status: 'pending', label: '' };
+    }
+
+    // 2. Alpha Pilot
+    if (milestone === 'alpha') {
+        if (lesson.status === 'Beta' || lesson.status === 'Stable' || lesson.library_carpentry_adopted) return { status: 'completed', label: 'Completed' };
+        
+        const alphaPilot = lesson.pilots?.find((p: any) => p.type.toLowerCase().includes('alpha') || p.note?.toLowerCase().includes('alpha'));
+        if (alphaPilot) return { status: 'completed', label: 'Completed' };
+        
+        if (lesson.status.toLowerCase() === 'alpha') return { status: 'in-progress', label: 'In Progress' };
+        
+        return { status: 'pending', label: '' };
+    }
+
+    // 3. Beta Pilot
+    if (milestone === 'beta') {
+        if (lesson.status === 'Stable' || lesson.library_carpentry_adopted) return { status: 'completed', label: 'Completed' };
+        
+        const betaPilot = lesson.pilots?.find((p: any) => p.type.toLowerCase().includes('beta'));
+        if (betaPilot) return { status: 'completed', label: 'Completed' };
+
+        if (lesson.status === 'Beta') return { status: 'in-progress', label: 'In Progress' };
+        
+        return { status: 'pending', label: '' };
+    }
+
+    // 4. Impact / Recognition (Actual outcomes: Pubs, Grants, etc)
+    if (milestone === 'impact') {
+        const impactKeywords = ['JeSLIB', 'Article', 'Publication', 'Grant', 'International', 'Proposal', 'Conference'];
+        const achievement = lesson.recognition?.find((r: any) => 
+            impactKeywords.some(key => r.title.includes(key)) && 
+            !r.desc.toLowerCase().includes('scheduled') &&
+            !r.title.includes('CAC')
+        );
+        
+        if (achievement) {
+            let label = 'Recognized';
+            if (achievement.title.includes('JeSLIB') || achievement.title.includes('Article')) label = 'Published';
+            if (achievement.title.includes('Grant')) label = 'Grant/Award';
+            return { status: 'completed', label: label, title: achievement.title };
+        }
+
+        return { status: 'pending', label: '' };
+    }
+
+    // 5. Adoption
+    if (milestone === 'adoption') {
+        if (lesson.library_carpentry_adopted) return { status: 'completed', label: 'Adopted' };
+        
+        const incubator = lesson.recognition?.find((r: any) => r.title.includes('Incubator') || r.desc.includes('Incubator'));
+        if (incubator) return { status: 'in-progress', label: 'Incubator' };
+        
+        return { status: 'pending', label: '' };
+    }
+
+    return { status: 'pending', label: '' };
+};
+
+const getIcon = (state: any) => {
+    if (state.status === 'completed') return '<i class="fas fa-check-circle text-success"></i>';
+    if (state.status === 'in-progress') return '<i class="fas fa-spinner fa-spin text-primary"></i>';
+    if (state.status === 'scheduled') return '<i class="far fa-calendar-alt text-warning"></i>';
+    return '<i class="far fa-circle text-muted" style="opacity: 0.3;"></i>';
+};
+---
+
+<section class="page-section bg-white" id="milestones">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading text-uppercase">Lesson Status Dashboard</h2>
+                <h3 class="section-subheading text-muted">Tracking the lifecycle of our curriculum from development to adoption.</h3>
+            </div>
+        </div>
+
+        <div class="table-responsive shadow-sm">
+            <table class="table table-hover table-bordered mb-0">
+                <thead class="thead-light">
+                    <tr>
+                        <th style="width: 35%;">Lesson</th>
+                        <th class="text-center">CAC Review</th>
+                        <th class="text-center">Alpha Pilot</th>
+                        <th class="text-center">Beta Pilot</th>
+                        <th class="text-center">Impact / Recognition</th>
+                        <th class="text-center">Adoption</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {lessons.map((lesson: any) => {
+                        const cac = getStatus(lesson, 'cac');
+                        const alpha = getStatus(lesson, 'alpha');
+                        const beta = getStatus(lesson, 'beta');
+                        const impact = getStatus(lesson, 'impact');
+                        const adoption = getStatus(lesson, 'adoption');
+
+                        return (
+                            <tr>
+                                <td class="align-middle">
+                                    <a href={`/lessons/${lesson.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} class="font-weight-bold text-dark">
+                                        {lesson.name}
+                                    </a>
+                                </td>
+                                <td class="text-center align-middle" title={cac.title || cac.label}>
+                                    <span set:html={getIcon(cac)} />
+                                    {cac.label && <div class="small text-muted mt-1">{cac.label}</div>}
+                                </td>
+                                <td class="text-center align-middle">
+                                    <span set:html={getIcon(alpha)} />
+                                    {alpha.label && <div class="small text-muted mt-1">{alpha.label}</div>}
+                                </td>
+                                <td class="text-center align-middle">
+                                    <span set:html={getIcon(beta)} />
+                                    {beta.label && <div class="small text-muted mt-1">{beta.label}</div>}
+                                </td>
+                                <td class="text-center align-middle" title={impact.title}>
+                                    <span set:html={getIcon(impact)} />
+                                    {impact.label && <div class="small text-muted mt-1">{impact.label}</div>}
+                                </td>
+                                <td class="text-center align-middle">
+                                    <span set:html={getIcon(adoption)} />
+                                    {adoption.label && <div class="small text-muted mt-1">{adoption.label}</div>}
+                                </td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="col-lg-12 text-center small text-muted">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><i class="fas fa-check-circle text-success"></i> Completed / Published</li>
+                    <li class="list-inline-item"><i class="fas fa-spinner text-primary"></i> In Progress</li>
+                    <li class="list-inline-item"><i class="far fa-calendar-alt text-warning"></i> Scheduled</li>
+                    <li class="list-inline-item"><i class="far fa-circle text-muted"></i> Pending</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
