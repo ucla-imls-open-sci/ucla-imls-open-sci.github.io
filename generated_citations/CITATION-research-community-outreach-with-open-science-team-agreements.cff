@@ -7,6 +7,7 @@ authors:
     given-names: Samantha
   - family-names: Deardorff
     given-names: Ariel
+    orcid: "https://orcid.org/0000-0001-8930-6089"
   - family-names: Wilairat
     given-names: Samantha
 abstract: "Introduces the Open Science Team Agreement template as a practical tool for researchers and librarians to advocate for open science practices and plan research outreach activities."
@@ -17,6 +18,6 @@ keywords:
   - outreach
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2025-12-23
+date-released: 2026-01-06
 repository-code: "https://github.com/LibraryCarpentry/lc-team-agreements"
 url: "https://librarycarpentry.github.io/lc-team-agreements/"

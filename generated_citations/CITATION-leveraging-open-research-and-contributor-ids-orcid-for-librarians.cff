@@ -7,6 +7,7 @@ authors:
     given-names: Levi
   - family-names: Ramirez
     given-names: Mirian
+    orcid: "https://orcid.org/0000-0002-6233-7480"
   - family-names: Craven
     given-names: Hannah
 abstract: "Guides learners through creating an ORCID, understanding its significance, and connecting it to major systems that update ORCID records."
@@ -17,6 +18,6 @@ keywords:
   - metadata
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2025-12-23
+date-released: 2026-01-06
 repository-code: "https://github.com/firbolg/LC_ORCID"
 url: "https://firbolg.github.io/LC_ORCID/"

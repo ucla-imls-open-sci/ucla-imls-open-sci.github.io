@@ -272,6 +272,23 @@ const citation = generateCitation(lesson);
                         <i class="fas fa-layer-group mr-2 text-muted" style="width: 20px;"></i>
                         <strong>Level:</strong> {lesson.educationalLevel}
                     </li>
+                    {lesson.prerequisites && lesson.prerequisites.length > 0 && (
+                        <li class="mb-2">
+                            <i class="fas fa-clipboard-list mr-2 text-muted" style="width: 20px;"></i>
+                            <strong>Prerequisites:</strong>
+                            <ul class="pl-4 mt-1 mb-0" style="font-size: 0.9rem;">
+                                {lesson.prerequisites.map((req: any) => (
+                                    <li>
+                                        {req.url ? (
+                                            <a href={req.url} target="_blank" class="text-primary">{req.name}</a>
+                                        ) : (
+                                            req.name
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                    )}
                     <li class="mb-2">
                         <i class="fas fa-balance-scale mr-2 text-muted" style="width: 20px;"></i>
                         <strong>License:</strong> CC-BY 4.0

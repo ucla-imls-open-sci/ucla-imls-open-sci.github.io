@@ -330,6 +330,7 @@ en:
       lastname: Rios
       role: Research Data Management Specialist, University of Arizona
       image: /assets/img/authors/23-24/Fernando_Rios 2.jpg
+      orcid: 0000-0001-6262-3260
       social:
       - url: https://orcid.org/0000-0001-6262-3260
         icon: fab fa-orcid
@@ -337,6 +338,7 @@ en:
       lastname: Oliver
       role: Data Science Specialist, University of Arizona
       image: /assets/img/authors/23-24/Jeff_Oliver 2.jpg
+      orcid: 0000-0003-2160-1086
       social:
       - url: https://orcid.org/0000-0003-2160-1086
         icon: fab fa-orcid

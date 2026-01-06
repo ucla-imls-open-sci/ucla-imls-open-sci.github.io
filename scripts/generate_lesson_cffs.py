@@ -113,7 +113,7 @@ def main():
             sh.write(f"cp '{cff_full_path}' CITATION.cff\n")
             sh.write("git add CITATION.cff\n")
             sh.write("git commit -m 'Docs: Add CITATION.cff file'\n")
-            sh.write(f"git push -u origin add-citation-cff\n")
+            sh.write(f"git push -f -u origin add-citation-cff\n")
             sh.write(f"gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo {repo_url}\n")
             
             sh.write("cd ..\n")

@@ -97,18 +97,30 @@ lessons:
   authors:
   - Fernando Rios
   - Jeffrey Oliver
-  status: pre-Alpha
+  status: Beta
+  status_note: "Ready for community piloting. Accepted for presentation at the RDAP Summit 2026."
   educationalLevel: Intermediate
   keywords:
   - containers
   - virtual machines
   - infrastructure
+  pilots:
+  - date: 2025-06-05
+    location: "University of Arizona"
+    instructor: "Fernando Rios"
+    type: "Alpha Pilot"
+    note: "Initial test session."
+  - date: 2026-03-11
+    location: "RDAP Summit 2026"
+    instructor: "External Instructors"
+    type: "Beta Pilot"
+    note: "Accepted workshop for the RDAP Summit."
   learningResourceType: lesson
   teaches:
   - Using containers
   - Virtual machines
-  url: https://ual-re.github.io/lc-containers_vms/
-  repo: https://github.com/UAL-RE/lc-containers_vms
+  url: https://librarycarpentry.github.io/lc-containers_vms/
+  repo: https://github.com/LibraryCarpentry/lc-containers_vms
 - name: 'Open Science Discovery Engines: Empowering Librarian Use Through a Case Study Exploration of the NASA Science Explorer'
   duration: "4h 15m"
   authors:
@@ -154,6 +166,9 @@ lessons:
   - shiny
   - data visualization
   - web applications
+  prerequisites:
+  - name: "Introduction to R (Library Carpentry)"
+    url: "https://librarycarpentry.org/lc-r/"
   pilots:
   - date: 2025-05-12
     location: "CRDDS, CU Boulder"

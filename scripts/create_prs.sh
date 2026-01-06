@@ -4,7 +4,7 @@
 mkdir -p _temp_repos
 cd _temp_repos
 
-rm -rf lc-open-reproducible-research-cloud; echo 'Processing lc-open-reproducible-research-cloud...'
+echo 'Processing lc-open-reproducible-research-cloud...
 gh repo fork https://github.com/kerchner/lc-open-reproducible-research-cloud --clone --default-branch-only
 cd lc-open-reproducible-research-cloud || exit
 git checkout -b add-citation-cff
@@ -17,7 +17,7 @@ cd ..
 rm -rf lc-open-reproducible-research-cloud
 echo '--------------------------------'
 
-rm -rf lc-multilingual-search-discovery-system; echo 'Processing lc-multilingual-search-discovery-system...'
+echo 'Processing lc-multilingual-search-discovery-system...
 gh repo fork https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system --clone --default-branch-only
 cd lc-multilingual-search-discovery-system || exit
 git checkout -b add-citation-cff
@@ -30,7 +30,7 @@ cd ..
 rm -rf lc-multilingual-search-discovery-system
 echo '--------------------------------'
 
-rm -rf lc-authoring-open-science; echo 'Processing lc-authoring-open-science...'
+echo 'Processing lc-authoring-open-science...
 gh repo fork https://github.com/ucla-imls-open-sci/lc-authoring-open-science --clone --default-branch-only
 cd lc-authoring-open-science || exit
 git checkout -b add-citation-cff
@@ -43,7 +43,7 @@ cd ..
 rm -rf lc-authoring-open-science
 echo '--------------------------------'
 
-rm -rf lc-open-science-community-of-practice; echo 'Processing lc-open-science-community-of-practice...'
+echo 'Processing lc-open-science-community-of-practice...
 gh repo fork https://github.com/ucla-imls-open-sci/lc-open-science-community-of-practice --clone --default-branch-only
 cd lc-open-science-community-of-practice || exit
 git checkout -b add-citation-cff
@@ -56,20 +56,20 @@ cd ..
 rm -rf lc-open-science-community-of-practice
 echo '--------------------------------'
 
-rm -rf lc-containers_vms; echo 'Processing lc-containers_vms...'
-gh repo fork https://github.com/UAL-RE/lc-containers_vms --clone --default-branch-only
+echo 'Processing lc-containers_vms...
+gh repo fork https://github.com/LibraryCarpentry/lc-containers_vms --clone --default-branch-only
 cd lc-containers_vms || exit
 git checkout -b add-citation-cff
 cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-a-gentle-hands-on-introduction-to-containers-and-virtual-machines.cff' CITATION.cff
 git add CITATION.cff
 git commit -m 'Docs: Add CITATION.cff file'
 git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/UAL-RE/lc-containers_vms
+gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/LibraryCarpentry/lc-containers_vms
 cd ..
 rm -rf lc-containers_vms
 echo '--------------------------------'
 
-rm -rf lc-scix-open-science; echo 'Processing lc-scix-open-science...'
+echo 'Processing lc-scix-open-science...
 gh repo fork https://github.com/ucla-imls-open-sci/lc-scix-open-science --clone --default-branch-only
 cd lc-scix-open-science || exit
 git checkout -b add-citation-cff
@@ -82,7 +82,7 @@ cd ..
 rm -rf lc-scix-open-science
 echo '--------------------------------'
 
-rm -rf data-dashboard-carpentries; echo 'Processing data-dashboard-carpentries...'
+echo 'Processing data-dashboard-carpentries...
 gh repo fork https://github.com/aranganath24/data-dashboard-carpentries --clone --default-branch-only
 cd data-dashboard-carpentries || exit
 git checkout -b add-citation-cff
@@ -95,7 +95,7 @@ cd ..
 rm -rf data-dashboard-carpentries
 echo '--------------------------------'
 
-rm -rf LC_ORCID; echo 'Processing LC_ORCID...'
+echo 'Processing LC_ORCID...
 gh repo fork https://github.com/firbolg/LC_ORCID --clone --default-branch-only
 cd LC_ORCID || exit
 git checkout -b add-citation-cff
@@ -108,7 +108,7 @@ cd ..
 rm -rf LC_ORCID
 echo '--------------------------------'
 
-rm -rf lc-team-agreements; echo 'Processing lc-team-agreements...'
+echo 'Processing lc-team-agreements...
 gh repo fork https://github.com/LibraryCarpentry/lc-team-agreements --clone --default-branch-only
 cd lc-team-agreements || exit
 git checkout -b add-citation-cff
@@ -121,7 +121,7 @@ cd ..
 rm -rf lc-team-agreements
 echo '--------------------------------'
 
-rm -rf lc-collaborative-science; echo 'Processing lc-collaborative-science...'
+echo 'Processing lc-collaborative-science...
 gh repo fork https://github.com/LibraryCarpentry/lc-collaborative-science --clone --default-branch-only
 cd lc-collaborative-science || exit
 git checkout -b add-citation-cff
@@ -134,7 +134,7 @@ cd ..
 rm -rf lc-collaborative-science
 echo '--------------------------------'
 
-rm -rf lc-dmp101; echo 'Processing lc-dmp101...'
+echo 'Processing lc-dmp101...
 gh repo fork https://github.com/LibraryCarpentry/lc-dmp101 --clone --default-branch-only
 cd lc-dmp101 || exit
 git checkout -b add-citation-cff
@@ -147,7 +147,7 @@ cd ..
 rm -rf lc-dmp101
 echo '--------------------------------'
 
-rm -rf lc-open-qualitative-research; echo 'Processing lc-open-qualitative-research...'
+echo 'Processing lc-open-qualitative-research...
 gh repo fork https://github.com/LibraryCarpentry/lc-open-qualitative-research --clone --default-branch-only
 cd lc-open-qualitative-research || exit
 git checkout -b add-citation-cff
@@ -160,8 +160,8 @@ cd ..
 rm -rf lc-open-qualitative-research
 echo '--------------------------------'
 
-rm -rf open-qualitative-research-qualcoder; echo 'Processing open-qualitative-research-qualcoder...'
-gh repo fork https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder --fork-name open-qualitative-research-qualcoder --clone --default-branch-only
+echo 'Processing open-qualitative-research-qualcoder...
+gh repo fork https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder --clone --default-branch-only
 cd open-qualitative-research-qualcoder || exit
 git checkout -b add-citation-cff
 cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-open-qualitative-research-qualcoder.cff' CITATION.cff
@@ -173,7 +173,7 @@ cd ..
 rm -rf open-qualitative-research-qualcoder
 echo '--------------------------------'
 
-rm -rf lc-reproducible-research; echo 'Processing lc-reproducible-research...'
+echo 'Processing lc-reproducible-research...
 gh repo fork https://github.com/LibraryCarpentry/lc-reproducible-research --clone --default-branch-only
 cd lc-reproducible-research || exit
 git checkout -b add-citation-cff
@@ -186,7 +186,7 @@ cd ..
 rm -rf lc-reproducible-research
 echo '--------------------------------'
 
-rm -rf lc-open-hw; echo 'Processing lc-open-hw...'
+echo 'Processing lc-open-hw...
 gh repo fork https://github.com/ucla-imls-open-sci/lc-open-hw --clone --default-branch-only
 cd lc-open-hw || exit
 git checkout -b add-citation-cff
