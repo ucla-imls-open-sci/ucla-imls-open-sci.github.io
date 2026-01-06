@@ -12,18 +12,21 @@ const month = dateReleased.getMonth() + 1;
 
 // APA Format
 const apaAuthors = cff.authors.map(a => `${a['family-names']}, ${a['given-names'][0]}.`).join(', ');
-const apaCitation = `${apaAuthors} (${year}). ${cff.title} (Version ${cff.version}). [Curriculum]. ${cff.url}`;
+const doiUrl = cff.doi ? `https://doi.org/${cff.doi}` : cff.url;
+const publisher = "Zenodo";
+const apaCitation = `${apaAuthors} (${year}). ${cff.title} (Version ${cff.version}). [Curriculum]. ${publisher}. ${doiUrl}`;
 
 // BibTeX Format
 const bibAuthors = cff.authors.map(a => `${a['family-names']}, ${a['given-names']}`).join(' and ');
-const bibtexCitation = `@misc{ucla_imls_open_sci_${year},
+const bibtexCitation = `@software{ucla_imls_open_sci_${year},
   author = {${bibAuthors}},
   title = {${cff.title}},
   month = {${month}},
   year = {${year}},
-  publisher = {GitHub},
+  publisher = {${publisher}},
   version = {${cff.version}},
-  url = {${cff.url}}
+  doi = {${cff.doi}},
+  url = {${doiUrl}}
 }`;
 ---
 
