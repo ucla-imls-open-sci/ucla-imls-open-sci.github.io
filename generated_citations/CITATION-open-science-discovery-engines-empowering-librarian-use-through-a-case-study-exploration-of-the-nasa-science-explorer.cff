@@ -3,19 +3,45 @@ message: "If you use this lesson, please cite it as below."
 type: dataset
 title: "Open Science Discovery Engines: Empowering Librarian Use Through a Case Study Exploration of the NASA Science Explorer"
 authors:
-  - family-names: Frey
-    given-names: Katie
   - family-names: Bartlett
     given-names: Jennifer Lynn
+    orcid: "https://orcid.org/0000-0001-7394-4545"
+  - family-names: Dennis
+    given-names: Tim
+    orcid: "https://orcid.org/0000-0001-6632-3812"
+  - family-names: Frey
+    given-names: Katie
+    orcid: "https://orcid.org/0000-0001-9891-4465"
+  - family-names: Huang
+    given-names: Zikang Eric
   - family-names: Jarmak
     given-names: Stephanie
-abstract: "Describes how the Science Explorer (SciX) integrates into the open science ecosystem and supports the FAIR principles. Introduces search features for interdisciplinary queries and demonstrates how authors can claim papers using ORCID."
+    orcid: "https://orcid.org/0000-0002-6982-7191"
+  - family-names: Kim
+    given-names: Madeline
+  - family-names: Lee
+    given-names: Lawrence
+    orcid: "https://orcid.org/0009-0001-5263-4924"
+  - family-names: Marcano
+    given-names: Manuel Pichardo
+    orcid: "https://orcid.org/0000-0003-4436-831X"
+  - family-names: Myers
+    given-names: Brit
+    orcid: "https://orcid.org/0000-0002-0798-8029"
+  - family-names: Wilkins
+    given-names: Olivia Harper
+    orcid: "https://orcid.org/0000-0001-7794-7639"
+abstract: "The module begins by describing how the Science Explorer (SciX) fits as part of the open science ecosystem and establishing how it supports the FAIR principles: Findable, Accessible, Interoperable, Reusable. You will be introduced to search features through examples highlighting the strengths of SciX for discipline-specific and interdisciplinary queries. You will also learn how to use SciX’s suite of second order operators to explore research trends and reviews, along with methods of finding similar papers and papers others studying the same topic have found useful. Lastly, you will learn how authors can claim papers within SciX with their ORCiD."
 keywords:
   - discovery
   - NASA
   - SciX
   - FAIR
   - ORCID
+  - open science
+  - astrophysics
+  - planetary science
+  - earth science
 license: CC-BY-4.0
 version: 1.0.0
 date-released: 2026-01-07

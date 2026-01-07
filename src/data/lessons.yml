@@ -128,18 +128,29 @@ lessons:
 - name: 'Open Science Discovery Engines: Empowering Librarian Use Through a Case Study Exploration of the NASA Science Explorer'
   duration: "4h 15m"
   authors:
-  - Katie Frey
   - Jennifer Lynn Bartlett
+  - Tim Dennis
+  - Katie Frey
+  - Zikang Eric Huang
   - Stephanie Jarmak
+  - Madeline Kim
+  - Lawrence Lee
+  - Manuel Pichardo Marcano
+  - Brit Myers
+  - Olivia Harper Wilkins
   status: pre-Alpha
   educationalLevel: Introductory
-  abstract: "Describes how the Science Explorer (SciX) integrates into the open science ecosystem and supports the FAIR principles. Introduces search features for interdisciplinary queries and demonstrates how authors can claim papers using ORCID."
+  abstract: "The module begins by describing how the Science Explorer (SciX) fits as part of the open science ecosystem and establishing how it supports the FAIR principles: Findable, Accessible, Interoperable, Reusable. You will be introduced to search features through examples highlighting the strengths of SciX for discipline-specific and interdisciplinary queries. You will also learn how to use SciX’s suite of second order operators to explore research trends and reviews, along with methods of finding similar papers and papers others studying the same topic have found useful. Lastly, you will learn how authors can claim papers within SciX with their ORCiD."
   keywords:
   - discovery
   - NASA
   - SciX
   - FAIR
   - ORCID
+  - open science
+  - astrophysics
+  - planetary science
+  - earth science
   pilots:
   - date: 2024-09-15
     location: "Internal"

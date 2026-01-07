@@ -369,6 +369,7 @@ en:
       lastname: Frey
       role: Data Curator for Programmatic Access, Stanford University
       image: /assets/img/authors/23-24/Katie_Frey.jpg
+      orcid: 0000-0001-9891-4465
       social:
       - url: https://orcid.org/0000-0001-9891-4465
         icon: fab fa-orcid
@@ -376,6 +377,7 @@ en:
       lastname: Bartlett
       role: NASA ADS Project Scientist for Astrophysics, Center for Astrophysics
       image: /assets/img/authors/23-24/JenniferBartlett, J 002-square.jpg
+      orcid: 0000-0001-7394-4545
       social:
       - url: https://orcid.org/0000-0001-7394-4545
         icon: fab fa-orcid
@@ -383,6 +385,7 @@ en:
       lastname: Jarmak
       role: NASA ADS Project Scientist for Planetary Science, Center for Astrophysics
       image: /assets/img/authors/23-24/StephanieJarmak.png
+      orcid: 0000-0002-6982-7191
       social:
       - url: https://orcid.org/0000-0002-6982-7191
         icon: fab fa-orcid
@@ -465,6 +468,56 @@ en:
       image: /assets/img/authors/SebastianKarcher.jpg
       social:
       - url: https://orcid.org/0000-0001-8249-7388
+        icon: fab fa-orcid
+    - name: Tim Dennis
+      lastname: Dennis
+      role: Program Director, UCLA Library Data Science Center
+      image: /assets/img/staff/timdennis.jpeg
+      orcid: 0000-0001-6632-3812
+      social:
+      - url: https://orcid.org/0000-0001-6632-3812
+        icon: fab fa-orcid
+    - name: Zikang Eric Huang
+      lastname: Huang
+      role: Lesson Infrastructure Developer, New York University
+      image: /assets/img/staff/EricHuang.jpeg
+      social: []
+    - name: Lawrence Lee
+      lastname: Lee
+      role: Lesson Infrastructure Developer, Amazon Web Services
+      image: /assets/img/staff/LawrenceLee.jpg
+      orcid: 0009-0001-5263-4924
+      social:
+      - url: https://orcid.org/0009-0001-5263-4924
+        icon: fab fa-orcid
+    - name: Madeline Kim
+      lastname: Kim
+      role: Lesson Infrastructure Developer, Epic Systems
+      image: /assets/img/staff/MadelineKim.jpeg
+      social: []
+    - name: Manuel Pichardo Marcano
+      lastname: Pichardo Marcano
+      role: Instituto de Astronomía-Universidad Nacional Autónoma de México
+      image: /assets/img/committee/default.jpeg
+      orcid: 0000-0003-4436-831X
+      social:
+      - url: https://orcid.org/0000-0003-4436-831X
+        icon: fab fa-orcid
+    - name: Brit Myers
+      lastname: Myers
+      role: Arctic Research Consortium of the United States
+      image: /assets/img/committee/default.jpeg
+      orcid: 0000-0002-0798-8029
+      social:
+      - url: https://orcid.org/0000-0002-0798-8029
+        icon: fab fa-orcid
+    - name: Olivia Harper Wilkins
+      lastname: Wilkins
+      role: Dickinson College
+      image: /assets/img/committee/default.jpeg
+      orcid: 0000-0001-7794-7639
+      social:
+      - url: https://orcid.org/0000-0001-7794-7639
         icon: fab fa-orcid
   contact: &id010
     title: Contact Us
