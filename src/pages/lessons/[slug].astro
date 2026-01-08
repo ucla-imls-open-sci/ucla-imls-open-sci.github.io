@@ -56,17 +56,25 @@ const generateCitation = (l: any) => {
         return `${last}, ${first}.`;
     }).join(', ') : 'UCLA IMLS Open Science';
     
-    const apa = `${authorList} (${year}). ${l.name}. UCLA IMLS Open Science. ${siteConfig.url}/lessons/${slugify(l.name)}`;
+    let apa = `${authorList} (${year}). ${l.name}. UCLA IMLS Open Science. ${siteConfig.url}/lessons/${slugify(l.name)}`;
+    if (l.doi) {
+        apa += ` https://doi.org/${l.doi}`;
+    }
     
     const bibtexAuthor = l.authors ? l.authors.join(' and ') : 'UCLA IMLS Open Science';
     const bibtexId = slugify(l.name).replace(/-/g, '_');
-    const bibtex = `@misc{${bibtexId}_${year},
+    let bibtex = `@misc{${bibtexId}_${year},
   author = {${bibtexAuthor}},
   title = {${l.name}},
   year = {${year}},
   publisher = {UCLA IMLS Open Science},
-  url = {${siteConfig.url}/lessons/${slugify(l.name)}}
-}`;
+  url = {${siteConfig.url}/lessons/${slugify(l.name)}}`;
+    
+    if (l.doi) {
+        bibtex += `,\n  doi = {${l.doi}}`;
+    }
+    
+    bibtex += `\n}`;
 
     return { apa, bibtex };
 };
@@ -302,6 +310,14 @@ const citation = generateCitation(lesson);
             <div class="card border-0 shadow-sm mb-4">
                 <div class="card-header bg-light font-weight-bold">Cite this Lesson</div>
                 <div class="card-body">
+                    {lesson.doi && (
+                        <div class="mb-3">
+                            <p class="small text-muted mb-1"><strong>DOI:</strong></p>
+                            <a href={`https://doi.org/${lesson.doi}`} target="_blank" class="badge badge-info p-2" style="font-size: 0.9rem;">
+                                <i class="fas fa-fingerprint mr-1"></i> {lesson.doi}
+                            </a>
+                        </div>
+                    )}
                     <p class="small text-muted mb-2">APA Format:</p>
                     <div class="bg-light p-2 rounded mb-3 border text-break small">
                         {citation.apa}
