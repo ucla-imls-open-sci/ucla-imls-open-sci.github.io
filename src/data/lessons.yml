@@ -168,6 +168,8 @@ lessons:
   - Claim papers within SciX using ORCID.
   url: http://ucla-imls-open-sci.info/lc-scix-open-science/
   repo: https://github.com/ucla-imls-open-sci/lc-scix-open-science
+  doi: 10.5281/zenodo.18187546
+  version: 0.1.1
 - name: Creating Data Dashboards for Open Science Using the R Programming Language
   duration: "3h 36m"
   authors:

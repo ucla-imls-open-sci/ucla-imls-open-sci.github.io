@@ -52,9 +52,15 @@ def generate_cff(lesson, author_db):
             cff += f"  - {kw}\n"
             
     cff += "license: CC-BY-4.0\n"
-    cff += "version: 1.0.0\n"
+    cff += f"version: {lesson.get('version', '1.0.0')}\n"
     cff += f"date-released: {datetime.date.today().isoformat()}\n"
     
+    if lesson.get('doi'):
+        cff += "identifiers:\n"
+        cff += "  - type: doi\n"
+        cff += f"    value: {lesson['doi']}\n"
+        cff += "    description: \"The Zenodo DOI for the lesson.\"\n"
+
     if lesson.get('repo'):
         cff += f"repository-code: \"{lesson['repo']}\"\n"
         

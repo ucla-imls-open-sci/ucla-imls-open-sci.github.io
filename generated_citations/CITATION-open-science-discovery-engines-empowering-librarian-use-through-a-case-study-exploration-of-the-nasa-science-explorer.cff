@@ -43,7 +43,11 @@ keywords:
   - planetary science
   - earth science
 license: CC-BY-4.0
-version: 1.0.0
-date-released: 2026-01-07
+version: 0.1.1
+date-released: 2026-01-08
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.18187546
+    description: "The Zenodo DOI for the lesson."
 repository-code: "https://github.com/ucla-imls-open-sci/lc-scix-open-science"
 url: "http://ucla-imls-open-sci.info/lc-scix-open-science/"
