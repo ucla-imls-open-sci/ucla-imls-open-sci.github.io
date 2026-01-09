@@ -20,28 +20,84 @@ def generate_cff(lesson, author_db):
         parts = author_name.split(' ')
         family = parts[-1]
         given = " ".join(parts[:-1])
-        
+
         cff += f"  - family-names: {family}\n"
         cff += f"    given-names: {given}\n"
-        
+
         # Lookup ORCID
         # Try exact match or fuzzy match
         clean_name = author_name.strip()
         found_author = None
-        
+
         # Check primary list
         for p in author_db:
             if p['name'].strip() == clean_name:
                 found_author = p
                 break
-        
+
         if found_author and found_author.get('orcid'):
-             # Ensure ORCID is a full URL or just ID? CFF spec usually prefers URL or just ID. 
+             # Ensure ORCID is a full URL or just ID? CFF spec usually prefers URL or just ID.
              # sitetext has full URL. CFF spec allows 'orcid: https://orcid.org/...'
              orcid = found_author['orcid']
              if not orcid.startswith('http'):
                  orcid = f"https://orcid.org/{orcid}"
              cff += f"    orcid: \"{orcid}\"\n"
+
+    # Add contributors if present (infrastructure/technical)
+    if lesson.get('contributors') or lesson.get('content_contributors'):
+        cff += "contributors:\n"
+
+        # Infrastructure contributors
+        for contributor_name in lesson.get('contributors', []):
+            parts = contributor_name.split(' ')
+            family = parts[-1]
+            given = " ".join(parts[:-1])
+
+            cff += f"  - family-names: {family}\n"
+            cff += f"    given-names: {given}\n"
+            cff += f"    type: person\n"
+            cff += f"    role: infrastructure\n"
+
+            # Lookup ORCID for contributors too
+            clean_name = contributor_name.strip()
+            found_contributor = None
+
+            for p in author_db:
+                if p['name'].strip() == clean_name:
+                    found_contributor = p
+                    break
+
+            if found_contributor and found_contributor.get('orcid'):
+                orcid = found_contributor['orcid']
+                if not orcid.startswith('http'):
+                    orcid = f"https://orcid.org/{orcid}"
+                cff += f"    orcid: \"{orcid}\"\n"
+
+        # Content contributors
+        for contributor_name in lesson.get('content_contributors', []):
+            parts = contributor_name.split(' ')
+            family = parts[-1]
+            given = " ".join(parts[:-1])
+
+            cff += f"  - family-names: {family}\n"
+            cff += f"    given-names: {given}\n"
+            cff += f"    type: person\n"
+            cff += f"    role: contributor\n"
+
+            # Lookup ORCID
+            clean_name = contributor_name.strip()
+            found_contributor = None
+
+            for p in author_db:
+                if p['name'].strip() == clean_name:
+                    found_contributor = p
+                    break
+
+            if found_contributor and found_contributor.get('orcid'):
+                orcid = found_contributor['orcid']
+                if not orcid.startswith('http'):
+                    orcid = f"https://orcid.org/{orcid}"
+                cff += f"    orcid: \"{orcid}\"\n"
     
     if lesson.get('abstract'):
         cff += f"abstract: \"{lesson['abstract']}\"\n"
