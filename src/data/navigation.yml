@@ -16,7 +16,7 @@ en: &DEFAULT_EN
     - title: "Lessons"
       section: lessontab
     - title: "Pilot a Lesson"
-      url: "https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CONTRIBUTING.md#pilot-our-lessons"
+      url: "/pilot"
     - title: "Team"
       section: authors
     - title: "Blog"

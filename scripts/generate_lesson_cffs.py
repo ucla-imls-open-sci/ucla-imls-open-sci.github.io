@@ -1,188 +1,109 @@
 import yaml
 import os
 import re
-import datetime
+from datetime import date
+
+# Configuration
+LESSONS_FILE = 'src/data/lessons.yml'
+OUTPUT_DIR = 'generated_citations'
 
 def slugify(text):
-    text = str(text).lower().strip()
-    text = re.sub(r'\s+', '-', text)
-    text = re.sub(r'[^\w\-]+', '', text)
-    return re.sub(r'\-\-+', '-', text)
+    text = text.lower()
+    text = re.sub(r'[^a-z0-9]+', '-', text)
+    return text.strip('-')
 
-def generate_cff(lesson, author_db):
-    cff = "cff-version: 1.2.0\n"
-    cff += "message: \"If you use this lesson, please cite it as below.\"\n"
-    cff += "type: dataset\n" 
-    cff += f"title: \"{lesson['name']}\"\n"
-    
-    cff += "authors:\n"
-    for author_name in lesson.get('authors', []):
-        parts = author_name.split(' ')
-        family = parts[-1]
-        given = " ".join(parts[:-1])
+def load_lessons():
+    with open(LESSONS_FILE, 'r') as f:
+        data = yaml.safe_load(f)
+    return data.get('lessons', [])
 
-        cff += f"  - family-names: {family}\n"
-        cff += f"    given-names: {given}\n"
+def generate_cff(lesson):
+    # Extract data
+    title = lesson.get('name', 'Untitled Lesson')
+    abstract = lesson.get('abstract', '')
+    version = lesson.get('version', '1.0.0')
+    date_released = date.today().isoformat()
+    repository_code = lesson.get('repo', '')
+    url = lesson.get('url', '')
+    keywords = lesson.get('keywords', [])
+    license_name = "CC-BY-4.0" # Defaulting to CC-BY-4.0 as per project norm
 
-        # Lookup ORCID
-        # Try exact match or fuzzy match
-        clean_name = author_name.strip()
-        found_author = None
+    # Authors
+    authors = []
+    if 'authors' in lesson:
+        for author_name in lesson['authors']:
+            # diverse formats handling (simple string vs dict if expanded later)
+            if isinstance(author_name, str):
+                parts = author_name.split()
+                if len(parts) > 1:
+                    family_names = parts[-1]
+                    given_names = " ".join(parts[:-1])
+                else:
+                    family_names = author_name
+                    given_names = ""
+                authors.append({
+                    'family-names': family_names,
+                    'given-names': given_names
+                })
+            # Add ORCID lookup here if we had the author map available easily
+            # For now, simplistic name splitting
 
-        # Check primary list
-        for p in author_db:
-            if p['name'].strip() == clean_name:
-                found_author = p
-                break
+    cff_data = {
+        'cff-version': '1.2.0',
+        'message': 'If you use this software, please cite it as below.',
+        'type': 'software', # 'dataset' or 'software' are common for lessons
+        'title': title,
+        'abstract': abstract,
+        'version': version,
+        'date-released': date_released,
+        'license': license_name,
+        'repository-code': repository_code,
+        'url': url,
+        'keywords': keywords,
+        'authors': authors
+    }
 
-        if found_author and found_author.get('orcid'):
-             # Ensure ORCID is a full URL or just ID? CFF spec usually prefers URL or just ID.
-             # sitetext has full URL. CFF spec allows 'orcid: https://orcid.org/...'
-             orcid = found_author['orcid']
-             if not orcid.startswith('http'):
-                 orcid = f"https://orcid.org/{orcid}"
-             cff += f"    orcid: \"{orcid}\"\n"
+    # Filter empty fields
+    cff_data = {k: v for k, v in cff_data.items() if v}
 
-    # Add contributors if present (infrastructure/technical)
-    if lesson.get('contributors') or lesson.get('content_contributors'):
-        cff += "contributors:\n"
+    return cff_data
 
-        # Infrastructure contributors
-        for contributor_name in lesson.get('contributors', []):
-            parts = contributor_name.split(' ')
-            family = parts[-1]
-            given = " ".join(parts[:-1])
-
-            cff += f"  - family-names: {family}\n"
-            cff += f"    given-names: {given}\n"
-            cff += f"    type: person\n"
-            cff += f"    role: infrastructure\n"
-
-            # Lookup ORCID for contributors too
-            clean_name = contributor_name.strip()
-            found_contributor = None
-
-            for p in author_db:
-                if p['name'].strip() == clean_name:
-                    found_contributor = p
-                    break
-
-            if found_contributor and found_contributor.get('orcid'):
-                orcid = found_contributor['orcid']
-                if not orcid.startswith('http'):
-                    orcid = f"https://orcid.org/{orcid}"
-                cff += f"    orcid: \"{orcid}\"\n"
-
-        # Content contributors
-        for contributor_name in lesson.get('content_contributors', []):
-            parts = contributor_name.split(' ')
-            family = parts[-1]
-            given = " ".join(parts[:-1])
-
-            cff += f"  - family-names: {family}\n"
-            cff += f"    given-names: {given}\n"
-            cff += f"    type: person\n"
-            cff += f"    role: contributor\n"
-
-            # Lookup ORCID
-            clean_name = contributor_name.strip()
-            found_contributor = None
-
-            for p in author_db:
-                if p['name'].strip() == clean_name:
-                    found_contributor = p
-                    break
-
-            if found_contributor and found_contributor.get('orcid'):
-                orcid = found_contributor['orcid']
-                if not orcid.startswith('http'):
-                    orcid = f"https://orcid.org/{orcid}"
-                cff += f"    orcid: \"{orcid}\"\n"
-    
-    if lesson.get('abstract'):
-        cff += f"abstract: \"{lesson['abstract']}\"\n"
-    
-    if lesson.get('keywords'):
-        cff += "keywords:\n"
-        for kw in lesson['keywords']:
-            cff += f"  - {kw}\n"
-            
-    cff += "license: CC-BY-4.0\n"
-    cff += f"version: {lesson.get('version', '1.0.0')}\n"
-    cff += f"date-released: {datetime.date.today().isoformat()}\n"
-    
-    if lesson.get('doi'):
-        cff += "identifiers:\n"
-        cff += "  - type: doi\n"
-        cff += f"    value: {lesson['doi']}\n"
-        cff += "    description: \"The Zenodo DOI for the lesson.\"\n"
-
-    if lesson.get('repo'):
-        cff += f"repository-code: \"{lesson['repo']}\"\n"
-        
-    if lesson.get('url'):
-        cff += f"url: \"{lesson['url']}\"\n"
-
-    return cff
+def save_cff(cff_data, filename):
+    with open(filename, 'w') as f:
+        yaml.dump(cff_data, f, sort_keys=False, allow_unicode=True)
 
 def main():
-    with open('src/data/lessons.yml', 'r') as f:
-        data = yaml.safe_load(f)
-        
-    # Load Author Database
-    with open('src/data/sitetext.yml', 'r') as f:
-        site_data = yaml.safe_load(f)
-        # Assuming structure: en -> authors -> people
-        # Need to handle the complex YAML structure of sitetext.yml
-        # It has anchors and locale keys. Let's try to grab 'en' or the first key that has authors.
-        # Based on previous reads, it has 'en' key.
-        author_db = []
-        if 'en' in site_data and 'authors' in site_data['en'] and 'people' in site_data['en']['authors']:
-             author_db = site_data['en']['authors']['people']
+    if not os.path.exists(OUTPUT_DIR):
+        os.makedirs(OUTPUT_DIR)
 
-    os.makedirs('generated_citations', exist_ok=True)
-    abs_path = os.path.abspath('generated_citations')
-    
-    # Open the shell script for writing
-    with open('scripts/create_prs.sh', 'w') as sh:
-        sh.write("#!/bin/bash\n")
-        sh.write("# Auto-generated script to create CFF PRs\n\n")
-        sh.write("mkdir -p _temp_repos\n")
-        sh.write("cd _temp_repos\n\n")
-        
-        for lesson in data['lessons']:
-            if lesson.get('type') == 'external' or not lesson.get('repo'):
-                continue
-                
-            cff_content = generate_cff(lesson, author_db)
-            cff_filename = f"CITATION-{slugify(lesson['name'])}.cff"
-            cff_full_path = os.path.join(abs_path, cff_filename)
-            
-            # Write CFF file
-            with open(cff_full_path, 'w') as f:
-                f.write(cff_content)
-            
-            repo_url = lesson['repo']
-            repo_name = repo_url.split('/')[-1]
-            
-            # Write shell commands
-            sh.write(f"echo 'Processing {repo_name}...\n")
-            # Fork and clone (gh handles auth and forking logic automatically)
-            sh.write(f"gh repo fork {repo_url} --clone --default-branch-only\n")
-            
-            sh.write(f"cd {repo_name} || exit\n") 
-            sh.write("git checkout -b add-citation-cff\n")
-            sh.write(f"cp '{cff_full_path}' CITATION.cff\n")
-            sh.write("git add CITATION.cff\n")
-            sh.write("git commit -m 'Docs: Add CITATION.cff file'\n")
-            sh.write(f"git push -f -u origin add-citation-cff\n")
-            sh.write(f"gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo {repo_url}\n")
-            
-            sh.write("cd ..\n")
-            sh.write(f"rm -rf {repo_name}\n")
-            sh.write("echo '--------------------------------'\n\n")
+    lessons = load_lessons()
+    count = 0
 
-    print("Generated CFF files and scripts/create_prs.sh")
+    for lesson in lessons:
+        # Only generate for internal lessons (skip external resources)
+        if lesson.get('type') == 'external':
+            continue
+            
+        # We need a way to map lesson to repo name to name the file correctly
+        # for the bash script to pick up.
+        # Strategy: Use the repo name from the 'repo' URL if available.
+        repo_url = lesson.get('repo', '')
+        if repo_url:
+            repo_name = repo_url.rstrip('/').split('/')[-1]
+        else:
+            # Fallback to slugified name if no repo (though these likely won't get PR'd)
+            repo_name = slugify(lesson.get('name', 'unknown'))
+
+        cff_data = generate_cff(lesson)
+        
+        # Filename format: CITATION-<repo_name>.cff
+        filename = os.path.join(OUTPUT_DIR, f"CITATION-{repo_name}.cff")
+        
+        save_cff(cff_data, filename)
+        print(f"Generated {filename}")
+        count += 1
+
+    print(f"Successfully generated {count} CITATION.cff files.")
 
 if __name__ == "__main__":
     main()

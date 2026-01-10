@@ -1,0 +1,1463 @@
+---
+import Layout from '../layouts/Layout.astro';
+import lessonsData from '../data/lessons.yml';
+import { slugify } from '../utils/slugs';
+
+const lessons = (lessonsData as any).lessons || [];
+
+// Filter lessons seeking pilots
+const alphaLessons = lessons.filter((l: any) => {
+  const status = l.status?.toLowerCase() || '';
+  return status.includes('alpha') && !status.includes('pre') && l.type !== 'external';
+});
+
+const betaLessons = lessons.filter((l: any) => {
+  const status = l.status?.toLowerCase() || '';
+  return status.includes('beta') && l.type !== 'external';
+});
+
+const allSeekingPilots = [...alphaLessons, ...betaLessons];
+---
+
+<Layout title="Pilot a Lesson - Open Science for Librarians">
+  <!-- Hero Section -->
+  <header class="pilot-hero">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-10">
+          <h1 class="hero-title">Pilot a Lesson</h1>
+          <p class="hero-subtitle">
+            Help shape the future of open science education for librarians
+          </p>
+          <p class="hero-description">
+            Our lessons need instructors to test them in diverse contexts.
+            Get recognized as a contributor and join our community of practice.
+          </p>
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-number">{allSeekingPilots.length}</div>
+              <div class="stat-label">Lessons Seeking Pilots</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">{alphaLessons.length}</div>
+              <div class="stat-label">Alpha (First Pilots)</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">{betaLessons.length}</div>
+              <div class="stat-label">Beta (Broader Testing)</div>
+            </div>
+          </div>
+          <div class="hero-cta">
+            <a href="#lessons" class="btn btn-hero-primary">
+              <i class="fas fa-list mr-2"></i>View Lessons
+            </a>
+            <a href="#how-to-start" class="btn btn-hero-secondary">
+              <i class="fas fa-play-circle mr-2"></i>How to Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- What is Lesson Piloting -->
+  <section class="section-what-is">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="section-title">What is Lesson Piloting?</h2>
+          <div class="content-block">
+            <p class="lead">
+              Lesson piloting is the process of <strong>teaching a lesson under development to a real audience</strong>
+              and providing feedback to help refine it. It's a crucial part of The Carpentries lesson development process.
+            </p>
+            <p>
+              When you pilot a lesson, you're not just helping us test curriculum—you're actively shaping how
+              librarians worldwide will learn about open science. Your feedback directly influences the lesson's
+              final form, making it more effective for diverse audiences and teaching contexts.
+            </p>
+            <div class="callout-box">
+              <i class="fas fa-info-circle mr-2"></i>
+              <strong>Two Types of Piloting:</strong>
+              <strong>Alpha</strong> lessons need their first external pilots to test in new contexts.
+              <strong>Beta</strong> lessons have been piloted once or twice and need broader testing across
+              diverse settings before wider adoption.
+            </div>
+            <p class="text-center mt-4">
+              <a href="https://carpentries.github.io/lesson-development-training/preparing.html"
+                 target="_blank" rel="noopener" class="external-link">
+                Learn more about the Carpentries lesson development process
+                <i class="fas fa-external-link-alt ml-1"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Pilot -->
+  <section class="section-why-pilot">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-5">
+        <div class="col-lg-10">
+          <h2 class="section-title">Why Pilot a Lesson?</h2>
+          <p class="section-subtitle">
+            Piloting isn't just helping us—it's a valuable professional development opportunity for you
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">🏆</div>
+            <h4>Get Recognized</h4>
+            <p>
+              Be acknowledged as a contributor in lesson metadata and citations.
+              Your name will be associated with cutting-edge open science curriculum.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">📚</div>
+            <h4>Early Access</h4>
+            <p>
+              Be among the first to teach new open science curriculum before it's widely available.
+              Stay ahead of trends in library services.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">🤝</div>
+            <h4>Join Our Community</h4>
+            <p>
+              Connect with open science educators across libraries worldwide.
+              Share experiences and learn from peers in our community of practice.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">💡</div>
+            <h4>Shape Development</h4>
+            <p>
+              Your feedback directly influences the final lesson.
+              Help ensure lessons work for diverse audiences and institutional contexts.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">🎓</div>
+            <h4>Professional Development</h4>
+            <p>
+              Expand your skills in teaching open science methods and tools.
+              Deepen your own understanding by teaching others.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="benefit-card">
+            <div class="benefit-icon">🌍</div>
+            <h4>Make an Impact</h4>
+            <p>
+              Help librarians worldwide support open science in their communities.
+              Contribute to the global open science movement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's Involved -->
+  <section class="section-whats-involved">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="section-title text-center">What's Involved?</h2>
+          <p class="section-subtitle text-center mb-5">
+            The pilot process is straightforward. Here's what to expect:
+          </p>
+
+          <div class="process-steps">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Choose a Lesson</h4>
+                <p>
+                  Browse our Alpha or Beta lessons below and select one that matches your interests,
+                  expertise, and audience. You can pilot all or part of a lesson.
+                </p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Review Materials</h4>
+                <p>
+                  Read through the lesson content, instructor notes, and setup instructions.
+                  We'll provide you with teaching guides and feedback templates.
+                </p>
+                <p class="time-estimate"><i class="far fa-clock mr-1"></i> ~2-4 hours preparation</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Teach the Lesson</h4>
+                <p>
+                  Deliver the lesson to your learners in-person, hybrid, or virtual.
+                  Don't worry about perfection—we want honest feedback on what works and what doesn't.
+                </p>
+                <p class="time-estimate"><i class="far fa-clock mr-1"></i> Varies by lesson (1.5-4 hours typically)</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>Collect Feedback</h4>
+                <p>
+                  Use our templates to gather feedback from learners and observers during the workshop.
+                  Note what worked well, what was confusing, and timing issues.
+                </p>
+                <p class="time-estimate"><i class="far fa-clock mr-1"></i> ~30 minutes</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <h4>Share Your Experience</h4>
+                <p>
+                  Submit a brief pilot report sharing your experience, feedback, and suggestions.
+                  You can use our web form or GitHub issue template.
+                </p>
+                <p class="time-estimate"><i class="far fa-clock mr-1"></i> ~30-60 minutes</p>
+              </div>
+            </div>
+
+            <div class="process-step">
+              <div class="step-number">6</div>
+              <div class="step-content">
+                <h4>Join Community Debrief (Optional)</h4>
+                <p>
+                  Participate in optional community debrief sessions to discuss your experience
+                  with lesson authors and other pilots. Share insights and learn from others.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-box mt-5">
+            <h5><i class="fas fa-hands-helping mr-2"></i>Support We Provide</h5>
+            <ul class="support-list">
+              <li>Detailed instructor guides for each lesson</li>
+              <li>Feedback collection templates (learner surveys, observation notes)</li>
+              <li>Access to lesson authors for questions and clarifications</li>
+              <li>Community of practice connections with other pilots</li>
+              <li>Recognition and acknowledgment in lesson metadata</li>
+              <li>Pilot report template to make sharing feedback easy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lessons Seeking Pilots -->
+  <section class="section-lessons" id="lessons">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-10">
+          <h2 class="section-title">Lessons Seeking Pilots</h2>
+          <p class="section-subtitle">
+            {allSeekingPilots.length} lessons are ready for piloting. Choose one that interests you!
+          </p>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="row justify-content-center mb-4">
+        <div class="col-lg-10">
+          <ul class="nav nav-pills justify-content-center lesson-tabs" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" id="all-tab" data-toggle="tab" href="#all" role="tab">
+                All ({allSeekingPilots.length})
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="alpha-tab" data-toggle="tab" href="#alpha" role="tab">
+                🟡 Alpha - First Pilots ({alphaLessons.length})
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="beta-tab" data-toggle="tab" href="#beta" role="tab">
+                🔵 Beta - More Pilots ({betaLessons.length})
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="tab-content">
+        <!-- All Lessons -->
+        <div class="tab-pane fade show active" id="all" role="tabpanel">
+          <div class="lesson-table-container">
+            <table class="table lesson-table">
+              <thead>
+                <tr>
+                  <th>Lesson</th>
+                  <th>Status</th>
+                  <th>Level</th>
+                  <th>Duration</th>
+                  <th>Topics</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {allSeekingPilots.map((lesson: any) => {
+                  const status = lesson.status?.toLowerCase() || '';
+                  const isAlpha = status.includes('alpha') && !status.includes('pre');
+                  return (
+                    <tr>
+                      <td>
+                        <a href={`/lessons/${slugify(lesson.name)}`} class="lesson-link">
+                          {lesson.name}
+                        </a>
+                      </td>
+                      <td>
+                        <span class={`badge ${isAlpha ? 'badge-warning' : 'badge-info'}`}>
+                          {isAlpha ? '🟡 Alpha' : '🔵 Beta'}
+                        </span>
+                      </td>
+                      <td>{lesson.educationalLevel || 'N/A'}</td>
+                      <td>{lesson.duration || 'TBD'}</td>
+                      <td>
+                        <div class="topic-tags">
+                          {lesson.keywords?.slice(0, 3).map((kw: string) => (
+                            <span class="topic-tag">{kw}</span>
+                          ))}
+                          {lesson.keywords?.length > 3 && (
+                            <span class="topic-tag">+{lesson.keywords.length - 3}</span>
+                          )}
+                        </div>
+                      </td>
+                      <td>
+                        <a href="#pilot-form" class="btn btn-sm btn-pilot-action">
+                          Pilot This
+                        </a>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Alpha Lessons Only -->
+        <div class="tab-pane fade" id="alpha" role="tabpanel">
+          <div class="alert alert-info mb-4">
+            <i class="fas fa-info-circle mr-2"></i>
+            <strong>Alpha lessons</strong> have been taught by the original authors and are ready for their
+            <strong>first external pilots</strong>. Your feedback will help shape the lesson's development significantly.
+          </div>
+          <div class="lesson-table-container">
+            <table class="table lesson-table">
+              <thead>
+                <tr>
+                  <th>Lesson</th>
+                  <th>Level</th>
+                  <th>Duration</th>
+                  <th>Topics</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {alphaLessons.map((lesson: any) => (
+                  <tr>
+                    <td>
+                      <a href={`/lessons/${slugify(lesson.name)}`} class="lesson-link">
+                        {lesson.name}
+                      </a>
+                    </td>
+                    <td>{lesson.educationalLevel || 'N/A'}</td>
+                    <td>{lesson.duration || 'TBD'}</td>
+                    <td>
+                      <div class="topic-tags">
+                        {lesson.keywords?.slice(0, 3).map((kw: string) => (
+                          <span class="topic-tag">{kw}</span>
+                        ))}
+                        {lesson.keywords?.length > 3 && (
+                          <span class="topic-tag">+{lesson.keywords.length - 3}</span>
+                        )}
+                      </div>
+                    </td>
+                    <td>
+                      <a href="#pilot-form" class="btn btn-sm btn-pilot-action">
+                        Pilot This
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Beta Lessons Only -->
+        <div class="tab-pane fade" id="beta" role="tabpanel">
+          <div class="alert alert-info mb-4">
+            <i class="fas fa-info-circle mr-2"></i>
+            <strong>Beta lessons</strong> have been successfully piloted by external instructors and are working well.
+            We're seeking <strong>additional pilots</strong> to test them in diverse contexts before broader adoption.
+          </div>
+          <div class="lesson-table-container">
+            <table class="table lesson-table">
+              <thead>
+                <tr>
+                  <th>Lesson</th>
+                  <th>Level</th>
+                  <th>Duration</th>
+                  <th>Topics</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {betaLessons.map((lesson: any) => (
+                  <tr>
+                    <td>
+                      <a href={`/lessons/${slugify(lesson.name)}`} class="lesson-link">
+                        {lesson.name}
+                      </a>
+                    </td>
+                    <td>{lesson.educationalLevel || 'N/A'}</td>
+                    <td>{lesson.duration || 'TBD'}</td>
+                    <td>
+                      <div class="topic-tags">
+                        {lesson.keywords?.slice(0, 3).map((kw: string) => (
+                          <span class="topic-tag">{kw}</span>
+                        ))}
+                        {lesson.keywords?.length > 3 && (
+                          <span class="topic-tag">+{lesson.keywords.length - 3}</span>
+                        )}
+                      </div>
+                    </td>
+                    <td>
+                      <a href="#pilot-form" class="btn btn-sm btn-pilot-action">
+                        Pilot This
+                      </a>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How to Get Started -->
+  <section class="section-get-started" id="how-to-start">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="section-title text-center">How to Get Started</h2>
+          <div class="get-started-steps">
+            <div class="gs-step">
+              <div class="gs-icon">1️⃣</div>
+              <div class="gs-content">
+                <h4>Choose a Lesson</h4>
+                <p>
+                  Browse the lessons above and select one that interests you and fits your audience.
+                  Consider your learners' backgrounds and your own comfort with the topic.
+                </p>
+              </div>
+            </div>
+            <div class="gs-step">
+              <div class="gs-icon">2️⃣</div>
+              <div class="gs-content">
+                <h4>Express Your Interest</h4>
+                <p>
+                  Click the button below to open a <strong>Pilot Interest Issue</strong> on our GitHub repository. 
+                  This is the best way for us to track requests and coordinate with lesson authors.
+                </p>
+              </div>
+            </div>
+            <div class="gs-step">
+              <div class="gs-icon">3️⃣</div>
+              <div class="gs-content">
+                <h4>We'll Get in Touch</h4>
+                <p>
+                  We'll reply to your issue, send you the instructor guide and feedback templates, 
+                  and answer any questions. We're here to support you throughout the process!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pilot Interest CTA -->
+  <section class="section-pilot-form" id="pilot-form">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="form-container text-center">
+            <h2 class="section-title">Ready to Begin?</h2>
+            <p class="lead mb-4">
+              We use GitHub Issues to manage our pilot program. It keeps our development transparent 
+              and ensures you get credit for your contribution in our project history.
+            </p>
+            
+            <div class="github-cta-box p-4 mb-4 bg-light rounded border">
+              <i class="fab fa-github fa-3x mb-3 text-dark"></i>
+              <h5>Pilot Interest Template</h5>
+              <p class="text-muted small">
+                Requires a GitHub account. If you don't have one, it's a great first step in 
+                engaging with open science tools!
+              </p>
+              <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/issues/new?template=pilot-interest.yml" 
+                 target="_blank" 
+                 class="btn btn-hero-primary btn-lg px-5">
+                <i class="fas fa-plus-circle mr-2"></i>Open Pilot Interest Issue
+              </a>
+            </div>
+
+            <p class="text-muted">
+              <strong>Don't have a GitHub account?</strong><br/>
+              Email us at <a href="mailto:tdennis@library.ucla.edu">tdennis@library.ucla.edu</a> 
+              and we'll help you get started.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section-faq" id="faq">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="section-title text-center">Frequently Asked Questions</h2>
+
+          <div class="faq-accordion" id="faqAccordion">
+            <!-- Question 1 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq1">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                Do I need to teach the entire lesson?
+              </div>
+              <div id="faq1" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    No! You can pilot all or part of a lesson. Some instructors pilot a single episode or section
+                    that fits their workshop schedule. Any amount of piloting is valuable—even teaching one episode
+                    provides useful feedback about pacing, clarity, and learner comprehension.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq2">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                What if I'm not an expert in the topic?
+              </div>
+              <div id="faq2" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    That's perfectly fine! In fact, instructors who are learning alongside their students often provide
+                    valuable feedback about which concepts are confusing or need better explanation. The lesson materials
+                    include instructor guides to help you prepare.
+                  </p>
+                  <p>
+                    If you're comfortable teaching the basics of a topic to your typical library audience, you're
+                    qualified to pilot. The authors are available to answer questions as you prepare.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq3">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                What if I find problems or errors?
+              </div>
+              <div id="faq3" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    Perfect! Finding problems is exactly what piloting is for. We <em>expect</em> there to be issues—that's
+                    why we need pilots. Your honest feedback about what doesn't work is just as valuable (if not more valuable)
+                    than feedback about what does work.
+                  </p>
+                  <p>
+                    Simply note any issues you encounter (confusing explanations, technical problems, timing issues, etc.)
+                    in your pilot report. The lesson authors will use your feedback to improve the lesson.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq4">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                Can I modify the lesson for my audience?
+              </div>
+              <div id="faq4" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    Yes, but with caveats. Minor adaptations (changing examples to fit your context, adjusting pacing,
+                    skipping optional exercises) are fine and expected. However, please try to teach the lesson as written
+                    as much as possible—we need to test the actual content.
+                  </p>
+                  <p>
+                    If you make significant modifications, please note them in your pilot report. Sometimes your adaptations
+                    will reveal ways to improve the lesson for everyone!
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq5">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                How long does the pilot process take?
+              </div>
+              <div id="faq5" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    <strong>Preparation:</strong> 2-4 hours to review materials and prepare<br/>
+                    <strong>Teaching:</strong> Varies by lesson (typically 1.5-4 hours)<br/>
+                    <strong>Feedback collection:</strong> 30 minutes during/after workshop<br/>
+                    <strong>Reporting:</strong> 30-60 minutes to write up your experience
+                  </p>
+                  <p>
+                    Total time commitment is usually 4-9 hours depending on the lesson length and how much you already
+                    know about the topic.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq6">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                Will I get credit for piloting?
+              </div>
+              <div id="faq6" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    Absolutely! Pilots are recognized in several ways:
+                  </p>
+                  <ul>
+                    <li>Acknowledged as a contributor in lesson metadata and pilot history</li>
+                    <li>Listed in lesson citations (for substantial contributions)</li>
+                    <li>Recognized on our website and in project reports</li>
+                    <li>Invited to join our community of practice</li>
+                  </ul>
+                  <p>
+                    Your contribution to open science education is valued and will be formally acknowledged.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq7">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                What if I can't use GitHub?
+              </div>
+              <div id="faq7" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    No problem! You can use the web form on this page to express interest and submit your pilot report.
+                    We'll handle the GitHub side of things. While we encourage learning GitHub (it's a useful skill for
+                    open science!), it's not required for piloting.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq8">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                Can I pilot multiple lessons?
+              </div>
+              <div id="faq8" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    Yes! If you have the time and interest, you're welcome to pilot multiple lessons. Some instructors
+                    pilot one episode from several different lessons to explore various topics. Others pilot complete
+                    lessons over time as they integrate them into their workshop series.
+                  </p>
+                  <p>
+                    Just let us know which lessons you're interested in when you express interest.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq9">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                What's the difference between Alpha and Beta piloting?
+              </div>
+              <div id="faq9" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    <strong>Alpha lessons</strong> are being taught by the original authors and are ready for their
+                    <strong>first external pilots</strong>. These lessons may have more rough edges, and your feedback
+                    will significantly shape their development. You'll be among the very first to teach this content.
+                  </p>
+                  <p>
+                    <strong>Beta lessons</strong> have already been piloted by one or more external instructors and are
+                    working well. We're seeking <strong>additional pilots</strong> to test them in diverse contexts
+                    (different institutions, audiences, teaching modalities) before broader adoption. These lessons are
+                    more polished but still benefit from broader validation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="faq-item">
+              <div class="faq-question" data-toggle="collapse" data-target="#faq10">
+                <i class="fas fa-chevron-right faq-icon"></i>
+                How soon do I need to teach the lesson after expressing interest?
+              </div>
+              <div id="faq10" class="collapse" data-parent="#faqAccordion">
+                <div class="faq-answer">
+                  <p>
+                    There's no strict deadline! Some pilots teach within a few weeks, others plan workshops several
+                    months out. When you express interest, let us know your approximate timeline. We'll work with your
+                    schedule.
+                  </p>
+                  <p>
+                    That said, timely feedback is more useful to lesson authors. If you can pilot within 1-3 months of
+                    expressing interest, that's ideal, but we're flexible.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (Placeholder for future) -->
+  <section class="section-testimonials" id="testimonials">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <h2 class="section-title">What Pilots Are Saying</h2>
+          <p class="text-muted">
+            Pilot testimonials will be added here as we receive feedback from instructors.
+            Be among the first to contribute!
+          </p>
+          <!-- Testimonials will be added here once we have them -->
+          <div class="placeholder-testimonial">
+            <i class="fas fa-quote-left fa-3x text-muted mb-3"></i>
+            <p class="text-muted">
+              Your testimonial could be here! After you pilot a lesson, we'd love to feature
+              your experience to inspire other instructors.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Still Have Questions -->
+  <section class="section-contact">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h2 class="section-title">Still Have Questions?</h2>
+          <p class="lead">
+            We're here to help! Don't hesitate to reach out if you need more information
+            or have questions about piloting.
+          </p>
+          <div class="contact-options">
+            <div class="contact-option">
+              <i class="fas fa-envelope fa-2x mb-2"></i>
+              <p>
+                Email us at<br/>
+                <a href="mailto:tdennis@library.ucla.edu">tdennis@library.ucla.edu</a>
+              </p>
+            </div>
+            <div class="contact-option">
+              <i class="fab fa-github fa-2x mb-2"></i>
+              <p>
+                Open an issue<br/>
+                <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/issues/new" target="_blank">
+                  on our GitHub repo
+                </a>
+              </p>
+            </div>
+            <div class="contact-option">
+              <i class="fas fa-book fa-2x mb-2"></i>
+              <p>
+                Read our<br/>
+                <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CONTRIBUTING.md" target="_blank">
+                  Contributing Guide
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="final-cta mt-5">
+            <a href="#pilot-form" class="btn btn-hero-primary btn-lg">
+              <i class="fas fa-rocket mr-2"></i>I'm Ready to Pilot!
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // FAQ accordion toggle
+  document.querySelectorAll('.faq-question').forEach((question) => {
+    question.addEventListener('click', function() {
+      const icon = this.querySelector('.faq-icon');
+      icon?.classList.toggle('rotate');
+    });
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href') || '');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+<style>
+/* Hero Section */
+.pilot-hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 6rem 0 4rem;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.pilot-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+  opacity: 0.95;
+  position: relative;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 150px;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.btn-hero-primary {
+  background: #ffc107;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 12px rgba(255, 193, 7, 0.4);
+}
+
+.btn-hero-primary:hover {
+  background: #ffcd39;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 193, 7, 0.6);
+  text-decoration: none;
+}
+
+.btn-hero-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.btn-hero-secondary:hover {
+  background: white;
+  color: #667eea;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+/* Section Styling */
+.section-what-is,
+.section-whats-involved,
+.section-get-started,
+.section-faq,
+.section-testimonials,
+.section-contact {
+  padding: 4rem 0;
+}
+
+.section-why-pilot {
+  padding: 4rem 0;
+  background: #f8f9fa;
+}
+
+.section-lessons {
+  padding: 4rem 0;
+  background: white;
+}
+
+.section-pilot-form {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.content-block {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.callout-box {
+  background: #e7f3ff;
+  border-left: 4px solid #0dcaf0;
+  padding: 1.5rem;
+  border-radius: 4px;
+  margin: 2rem 0;
+}
+
+.callout-box h5 {
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.support-list {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.support-list li {
+  margin-bottom: 0.5rem;
+}
+
+.external-link {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.external-link:hover {
+  text-decoration: underline;
+}
+
+/* Benefit Cards */
+.benefit-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #212529;
+}
+
+.benefit-card p {
+  color: #6c757d;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Process Steps */
+.process-steps {
+  margin-top: 2rem;
+}
+
+.process-step {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.step-content h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  color: #212529;
+}
+
+.step-content p {
+  margin-bottom: 0.5rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.time-estimate {
+  font-size: 0.9rem;
+  color: #0dcaf0;
+  font-weight: 500;
+}
+
+/* Lessons Table */
+.lesson-tabs {
+  margin-bottom: 2rem;
+}
+
+.lesson-tabs .nav-link {
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  transition: all 0.3s;
+}
+
+.lesson-tabs .nav-link.active {
+  background: #667eea;
+  color: white;
+}
+
+.lesson-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.lesson-table {
+  margin: 0;
+}
+
+.lesson-table thead {
+  background: #f8f9fa;
+}
+
+.lesson-table th {
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 2px solid #dee2e6;
+  padding: 1rem;
+}
+
+.lesson-table td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.lesson-link {
+  color: #212529;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lesson-link:hover {
+  color: #667eea;
+  text-decoration: underline;
+}
+
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.topic-tag {
+  background: #e9ecef;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: #495057;
+}
+
+.btn-pilot-action {
+  background: #ffc107;
+  border: none;
+  color: #000;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.btn-pilot-action:hover {
+  background: #ffcd39;
+  color: #000;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+/* Get Started Steps */
+.get-started-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.gs-step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.gs-icon {
+  font-size: 3rem;
+  flex-shrink: 0;
+}
+
+.gs-content h4 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+}
+
+.gs-content p {
+  margin: 0;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* Form Styling */
+.form-container {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.pilot-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.pilot-form label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+.pilot-form .required {
+  color: #dc3545;
+}
+
+.pilot-form .form-control {
+  border-radius: 8px;
+  border: 2px solid #dee2e6;
+  padding: 0.75rem;
+  font-size: 1rem;
+}
+
+.pilot-form .form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.btn-form-submit {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 3rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.btn-form-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+/* FAQ */
+.faq-accordion {
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.faq-question {
+  padding: 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #212529;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #f8f9fa;
+}
+
+.faq-icon {
+  color: #667eea;
+  transition: transform 0.3s;
+}
+
+.faq-icon.rotate {
+  transform: rotate(90deg);
+}
+
+.faq-answer {
+  padding: 0 1.5rem 1.5rem 4rem;
+  color: #6c757d;
+  line-height: 1.8;
+}
+
+.faq-answer p {
+  margin-bottom: 1rem;
+}
+
+.faq-answer ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Testimonials */
+.placeholder-testimonial {
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+/* Contact Options */
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 0;
+  flex-wrap: wrap;
+}
+
+.contact-option {
+  text-align: center;
+}
+
+.contact-option i {
+  color: #667eea;
+  margin-bottom: 1rem;
+}
+
+.contact-option a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-option a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pilot-hero {
+    padding: 4rem 0 2rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
+  .stat-card {
+    min-width: 120px;
+    padding: 1rem 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .process-step,
+  .gs-step {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .lesson-table-container {
+    overflow-x: auto;
+  }
+
+  .form-container {
+    padding: 2rem 1.5rem;
+  }
+
+  .faq-answer {
+    padding-left: 1.5rem;
+  }
+
+  .contact-options {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+/* Badge styles */
+.badge-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.badge-info {
+  background-color: #0dcaf0;
+  color: #000;
+}
+</style>
+</Layout>

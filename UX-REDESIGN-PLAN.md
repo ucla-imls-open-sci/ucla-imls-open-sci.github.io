@@ -954,6 +954,30 @@ This redesign plan focuses on making lesson piloting opportunities **visible, cl
 
 ---
 
-**Document Version**: 1.0
+## Evaluation & Fixes (Jan 9, 2026)
+
+### Verification of Phase 1 & 2
+An evaluation of the implemented features against this plan confirmed the successful deployment of key components:
+
+1.  **Homepage Enhancements**:
+    *   ✅ **Pilot Banner**: Active on homepage, correctly counts "Seeking Pilot" lessons, and includes dismissal functionality.
+    *   ✅ **Status Legend**: Visually explains Alpha/Beta/Adopted statuses clearly.
+    *   ✅ **Filtering**: `Lessons.astro` includes a dedicated "Seeking Pilots" filter button that dynamically updates the count.
+
+2.  **Navigation**:
+    *   ✅ **"Pilot a Lesson" Link**: Added to the main navbar.
+    *   🛠️ **Fix Applied**: The link initially pointed to the external GitHub `CONTRIBUTING.md`. It has been updated in `src/data/navigation.yml` to point to the new internal `/pilot` page.
+
+3.  **Lesson Pages**:
+    *   ✅ **Status Banners**: `LessonStatusBanner.astro` correctly renders context-aware calls-to-action (e.g., "Ready for External Piloting").
+    *   ✅ **Visual Cues**: Lesson cards feature "SEEKING PILOTS" ribbons and distinct border colors.
+
+4.  **New Landing Page (`/pilot`)**:
+    *   ✅ **Content**: Comprehensive guide, FAQ, and lesson listing implemented in `src/pages/pilot.astro`.
+    *   ⚠️ **Critical Issue**: The page currently uses a Netlify-style form submission script (`data-netlify="true"`). Since the site is deployed via **GitHub Pages**, this form **will not work**. It must be migrated to an external service like Formspree or Google Forms.
+
+---
+
+**Document Version**: 1.1
 **Last Updated**: January 9, 2026
 **Author**: Claude Code with Tim Dennis

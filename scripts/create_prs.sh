@@ -1,201 +1,93 @@
 #!/bin/bash
-# Auto-generated script to create CFF PRs
 
-mkdir -p _temp_repos
-cd _temp_repos
+# Configuration
+GITHUB_ORG="ucla-imls-open-sci"
+GENERATED_DIR="generated_citations"
 
-echo 'Processing lc-open-reproducible-research-cloud...
-gh repo fork https://github.com/kerchner/lc-open-reproducible-research-cloud --clone --default-branch-only
-cd lc-open-reproducible-research-cloud || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-open-and-reproducible-research-cloud-workflows-a-firsthand-experience-for-librarians.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/kerchner/lc-open-reproducible-research-cloud
-cd ..
-rm -rf lc-open-reproducible-research-cloud
-echo '--------------------------------'
+# Check if gh cli is installed
+if ! command -v gh &> /dev/null;
+    then
+    echo "Error: GitHub CLI (gh) is not installed."
+    exit 1
+fi
 
-echo 'Processing lc-multilingual-search-discovery-system...
-gh repo fork https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system --clone --default-branch-only
-cd lc-multilingual-search-discovery-system || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-collaborative-multilingual-search-and-discovery-systems.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system
-cd ..
-rm -rf lc-multilingual-search-discovery-system
-echo '--------------------------------'
+# Ensure we are logged in
+if ! gh auth status &> /dev/null;
+    then
+    echo "Error: You are not logged in to GitHub CLI. Run 'gh auth login' first."
+    exit 1
+fi
 
-echo 'Processing lc-authoring-open-science...
-gh repo fork https://github.com/ucla-imls-open-sci/lc-authoring-open-science --clone --default-branch-only
-cd lc-authoring-open-science || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-authoring-open-science.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/ucla-imls-open-sci/lc-authoring-open-science
-cd ..
-rm -rf lc-authoring-open-science
-echo '--------------------------------'
+echo "Starting CITATION.cff PR creation process..."
 
-echo 'Processing lc-open-science-community-of-practice...
-gh repo fork https://github.com/ucla-imls-open-sci/lc-open-science-community-of-practice --clone --default-branch-only
-cd lc-open-science-community-of-practice || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-building-an-open-science-community-of-practice.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/ucla-imls-open-sci/lc-open-science-community-of-practice
-cd ..
-rm -rf lc-open-science-community-of-practice
-echo '--------------------------------'
+# Iterate through generated CFF files
+for cff_file in "$GENERATED_DIR"/*.cff; do
+    [ -e "$cff_file" ] || continue
 
-echo 'Processing lc-containers_vms...
-gh repo fork https://github.com/LibraryCarpentry/lc-containers_vms --clone --default-branch-only
-cd lc-containers_vms || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-a-gentle-hands-on-introduction-to-containers-and-virtual-machines.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/LibraryCarpentry/lc-containers_vms
-cd ..
-rm -rf lc-containers_vms
-echo '--------------------------------'
+    # Extract repo name from filename (assuming format CITATION-repo-name.cff)
+    # This matches the output format of our python script
+    filename=$(basename "$cff_file")
+    repo_name_with_prefix="${filename%.cff}"
+    repo_name="${repo_name_with_prefix#CITATION-}"
 
-echo 'Processing lc-scix-open-science...
-gh repo fork https://github.com/ucla-imls-open-sci/lc-scix-open-science --clone --default-branch-only
-cd lc-scix-open-science || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-open-science-discovery-engines-empowering-librarian-use-through-a-case-study-exploration-of-the-nasa-science-explorer.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/ucla-imls-open-sci/lc-scix-open-science
-cd ..
-rm -rf lc-scix-open-science
-echo '--------------------------------'
+    # Special handling for known repos if naming doesn't match exactly
+    # Ideally, generate_lesson_cffs.py should output exact repo names
+    # For now, let's assume the python script does a good job of slugifying to match repo names
+    # or we can maintain a mapping here if needed.
 
-echo 'Processing data-dashboard-carpentries...
-gh repo fork https://github.com/aranganath24/data-dashboard-carpentries --clone --default-branch-only
-cd data-dashboard-carpentries || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-creating-data-dashboards-for-open-science-using-the-r-programming-language.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/aranganath24/data-dashboard-carpentries
-cd ..
-rm -rf data-dashboard-carpentries
-echo '--------------------------------'
+    echo "Processing $repo_name..."
 
-echo 'Processing LC_ORCID...
-gh repo fork https://github.com/firbolg/LC_ORCID --clone --default-branch-only
-cd LC_ORCID || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-leveraging-open-research-and-contributor-ids-orcid-for-librarians.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/firbolg/LC_ORCID
-cd ..
-rm -rf LC_ORCID
-echo '--------------------------------'
+    # Check if repo exists
+    if ! gh repo view "$GITHUB_ORG/$repo_name" &> /dev/null;
+        then
+        echo "  Warning: Repository $GITHUB_ORG/$repo_name not found. Skipping."
+        continue
+    fi
 
-echo 'Processing lc-team-agreements...
-gh repo fork https://github.com/LibraryCarpentry/lc-team-agreements --clone --default-branch-only
-cd lc-team-agreements || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-research-community-outreach-with-open-science-team-agreements.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/LibraryCarpentry/lc-team-agreements
-cd ..
-rm -rf lc-team-agreements
-echo '--------------------------------'
+    # Clone the repo to a temp directory
+    temp_repo_dir="_temp_repos/$repo_name"
+    if [ -d "$temp_repo_dir" ]; then
+        rm -rf "$temp_repo_dir"
+    fi
+    
+    echo "  Cloning $GITHUB_ORG/$repo_name..."
+    gh repo clone "$GITHUB_ORG/$repo_name" "$temp_repo_dir" -- -q
 
-echo 'Processing lc-collaborative-science...
-gh repo fork https://github.com/LibraryCarpentry/lc-collaborative-science --clone --default-branch-only
-cd lc-collaborative-science || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-a-path-to-open-inclusive-and-collaborative-science-for-librarians.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/LibraryCarpentry/lc-collaborative-science
-cd ..
-rm -rf lc-collaborative-science
-echo '--------------------------------'
+    # Copy the new CFF file
+    cp "$cff_file" "$temp_repo_dir/CITATION.cff"
 
-echo 'Processing lc-dmp101...
-gh repo fork https://github.com/LibraryCarpentry/lc-dmp101 --clone --default-branch-only
-cd lc-dmp101 || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-data-management-and-sharing-plans-for-librarians-101.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/LibraryCarpentry/lc-dmp101
-cd ..
-rm -rf lc-dmp101
-echo '--------------------------------'
+    # Navigate to temp repo
+    pushd "$temp_repo_dir" > /dev/null
 
-echo 'Processing lc-open-qualitative-research...
-gh repo fork https://github.com/LibraryCarpentry/lc-open-qualitative-research --clone --default-branch-only
-cd lc-open-qualitative-research || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-open-qualitative-research-taguette.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/LibraryCarpentry/lc-open-qualitative-research
-cd ..
-rm -rf lc-open-qualitative-research
-echo '--------------------------------'
+    # Check for changes
+    if git diff --quiet CITATION.cff;
+        then
+        echo "  No changes detected in CITATION.cff. Skipping."
+    else
+        # Create branch
+        branch_name="update-citation-cff-$(date +%Y%m%d)"
+        git checkout -b "$branch_name"
 
-echo 'Processing open-qualitative-research-qualcoder...
-gh repo fork https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder --clone --default-branch-only
-cd open-qualitative-research-qualcoder || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-open-qualitative-research-qualcoder.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder
-cd ..
-rm -rf open-qualitative-research-qualcoder
-echo '--------------------------------'
+        # Commit changes
+        git add CITATION.cff
+        git commit -m "chore: update CITATION.cff with latest metadata"
 
-echo 'Processing lc-reproducible-research...
-gh repo fork https://github.com/LibraryCarpentry/lc-reproducible-research --clone --default-branch-only
-cd lc-reproducible-research || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-reproducible-research-workflows.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/LibraryCarpentry/lc-reproducible-research
-cd ..
-rm -rf lc-reproducible-research
-echo '--------------------------------'
+        # Push branch
+        git push origin "$branch_name"
 
-echo 'Processing lc-open-hw...
-gh repo fork https://github.com/ucla-imls-open-sci/lc-open-hw --clone --default-branch-only
-cd lc-open-hw || exit
-git checkout -b add-citation-cff
-cp '/Users/timdennis/websites/ucla-imls-open-sci.github.io/generated_citations/CITATION-open-science-hardware-an-introduction-for-librarians.cff' CITATION.cff
-git add CITATION.cff
-git commit -m 'Docs: Add CITATION.cff file'
-git push -f -u origin add-citation-cff
-gh pr create --title 'Docs: Add CITATION.cff' --body 'This PR adds a CITATION.cff file to make the lesson citable, generated from the IMLS Open Science project metadata.' --repo https://github.com/ucla-imls-open-sci/lc-open-hw
-cd ..
-rm -rf lc-open-hw
-echo '--------------------------------'
+        # Create Pull Request
+        gh pr create \
+            --title "chore: update CITATION.cff metadata" \
+            --body "This PR updates the CITATION.cff file with the latest metadata from the central website configuration. This ensures accurate citations for this lesson." \
+            --base main \
+            --head "$branch_name"
 
+        echo "  Pull Request created successfully!"
+    fi
+
+    # Cleanup
+    popd > /dev/null
+    rm -rf "$temp_repo_dir"
+done
+
+echo "All PRs processed."
