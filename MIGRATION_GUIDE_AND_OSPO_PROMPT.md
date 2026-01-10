@@ -18,11 +18,14 @@ This document contains the technical log of the **UCLA IMLS Open Science** migra
 *   **Scaffolding**: Replaced flat lists with **Curated Pathways** ("Start Here," "Browse Curriculum," "Find Tools") to guide users by intent.
 *   **Real-Time Discovery**: Implemented a JavaScript-based search bar and thematic filtering system (e.g., "Data Management," "Technical Skills") that works instantly without page reloads.
 *   **Unified Resource Grid**: Integrated external resources (NASA TOPS, ACRL Cookbook) alongside internal lessons, visually distinguished by color and icons.
+*   **Pilot Recruitment Funnel**: Built a dedicated `/pilot` landing page and a homepage banner system to recruit instructors, utilizing a transparent GitHub Issue-based workflow.
+*   **UCLA Dark Mode**: Implemented a high-performance dark theme using official UCLA Brand colors (`#003B5C` and `#FFD100`), including persistence and FOUC prevention.
 
 ### 3. Academic & Professional Recognition
-*   **Credit Infrastructure**: Implemented `CITATION.cff` parsing to auto-generate APA and BibTeX citations for the project.
+*   **Credit Infrastructure**: Implemented `CITATION.cff` parsing to auto-generate APA and BibTeX citations.
 *   **Author Profiles**: Created dedicated portfolio pages for every contributor, fetching their photos and linking their ORCIDs.
-*   **Governance Tracking**: Added metadata to track Lesson Lifecycle (Alpha/Beta/Stable), Pilot History (where/when taught), and Governance Milestones (LC Adoption).
+*   **Governance Tracking**: Added metadata to track Lesson Lifecycle (Alpha/Beta/Stable), Pilot History, and Governance Milestones (LC Adoption).
+*   **Automation Suite**: Created Python and Bash scripts to automate the generation and submission of `CITATION.cff` files to lesson repositories.
 
 ### 4. Compliance & Infrastructure
 *   **Accessibility**: Audited and fixed contrast ratios, missing labels, and heading structures to meet **WCAG 2.1 AA** standards.
