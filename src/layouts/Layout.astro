@@ -25,6 +25,28 @@ const { title, description } = Astro.props;
     <!-- Bootstrap & FontAwesome -->
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Theme Script (Prevent FOUC) -->
+    <script is:inline>
+      (function() {
+        try {
+          const localTheme = localStorage.getItem('theme');
+          const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+          
+          // Determine theme: localStorage > system preference > default (light)
+          let theme = localTheme;
+          if (!theme && supportDarkMode) {
+             theme = 'dark';
+          }
+          
+          if (theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+          }
+        } catch (e) {
+          console.error("Theme init failed", e);
+        }
+      })();
+    </script>
   </head>
   <body id="page-top">
     <Navbar />

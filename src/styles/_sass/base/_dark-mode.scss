@@ -1,0 +1,489 @@
+// Dark Mode Implementation
+// We use CSS variables for easy swapping and specific overrides for Bootstrap classes
+
+// 1. Define Color Variables
+:root {
+  --bg-body: #ffffff;
+  --bg-card: #ffffff;
+  --bg-light: #f8f9fa;
+  --bg-dark: #212529;
+  --text-main: #212529;
+  --text-muted: #6c757d;
+  --border-color: #dee2e6;
+  --card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  
+  // UCLA Colors (Default / Light Mode)
+  --ucla-blue: #2774AE;
+  --ucla-gold: #FFD100;
+  --ucla-darkest-blue: #003B5C;
+  --ucla-darker-blue: #005587;
+  --ucla-lighter-blue: #8BB8E8;
+}
+
+// 2. Define Dark Mode Values
+[data-theme="dark"] {
+  // Using UCLA Brand Colors for Dark Mode
+  --bg-body: #003B5C;         // UCLA Darkest Blue
+  --bg-card: #005587;         // UCLA Darker Blue (lighter than body for depth)
+  --bg-light: #002a42;        // Even darker blue for "light" backgrounds to create contrast
+  --bg-dark: #000000;         // Black
+  
+  --text-main: #ffffff;       // White text for best contrast on dark blue
+  --text-muted: #dadada;      // Light grey for muted text
+  --border-color: #2774AE;    // UCLA Blue for borders
+  --card-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+
+  // 3. Global Resets for Dark Mode
+  body {
+    background-color: var(--bg-body);
+    color: var(--text-main);
+  }
+
+  // Headings
+  h1, h2, h3, h4, h5, h6, 
+  .h1, .h2, .h3, .h4, .h5, .h6,
+  .section-heading, .section-subheading {
+    color: var(--text-main) !important;
+  }
+  
+  // Paragraphs & Text
+  p, li, .lead {
+    color: var(--text-main);
+  }
+  
+  .text-muted, .section-subheading {
+    color: var(--text-muted) !important;
+  }
+  
+  // Keep links clearly visible
+  a:not(.btn) {
+    color: var(--ucla-gold);
+    &:hover {
+      color: #ffe066;
+      text-decoration: underline;
+    }
+  }
+  
+  // Backgrounds
+  .bg-light {
+    background-color: var(--bg-light) !important;
+  }
+  
+  .bg-white {
+    background-color: var(--bg-card) !important;
+  }
+  
+  // Cards & Containers
+  .card, .modal-content {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+  }
+  
+  .card-header, .card-footer {
+    background-color: var(--bg-light);
+    border-color: var(--border-color);
+  }
+  
+  // Tables
+  .table {
+    color: var(--text-main);
+    
+    th, td {
+      border-color: var(--border-color);
+    }
+    
+    thead th {
+      border-bottom-color: var(--border-color);
+      color: var(--text-main);
+    }
+  }
+  
+  .table-hover tbody tr:hover {
+    color: var(--text-main);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  // Lists and Borders
+  .list-group-item {
+    background-color: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-main);
+  }
+  
+  // Navbar overrides
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,0.9);
+    
+    &:hover, &:focus {
+      color: var(--ucla-gold);
+    }
+  }
+
+  // Masthead (Hero) Overrides
+  header.masthead {
+    position: relative;
+    
+    // Add a dark overlay to dim the blue background image
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); // 50% black overlay
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro-text {
+      .intro-lead-in {
+        color: white !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      }
+      .intro-heading {
+        color: white !important;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+      }
+    }
+  }
+  
+  // Inputs
+  .form-control {
+    background-color: var(--bg-light);
+    border-color: var(--border-color);
+    color: var(--text-main);
+    
+    &:focus {
+      background-color: var(--bg-light);
+      color: var(--text-main);
+      border-color: var(--ucla-gold);
+      box-shadow: 0 0 0 0.2rem rgba(255, 209, 0, 0.25);
+    }
+  }
+  
+  // Project specific overrides
+  .lesson-item .card {
+    background-color: var(--bg-card);
+  }
+  
+  // Ensure card body text is readable
+  .card-body {
+    color: var(--text-main);
+    
+    .text-muted {
+      color: var(--text-muted) !important;
+    }
+    
+    // Links inside cards (like lesson titles)
+    a.text-dark {
+      color: var(--text-main) !important; 
+      &:hover {
+        color: var(--ucla-gold) !important;
+      }
+    }
+  }
+  
+  // Team Member Cards
+  .team-member {
+    background-color: transparent !important;
+    h4 { color: var(--text-main) !important; }
+    p.text-muted { color: var(--text-muted) !important; }
+  }
+
+  // Pathway & Blog Cards
+  .pathway-card, .blog-card {
+      background-color: var(--bg-card) !important;
+      
+      h4.service-heading, .card-title {
+          color: var(--ucla-gold) !important;
+      }
+
+      .text-muted, .card-text {
+          color: var(--text-muted) !important;
+      }
+
+      a.text-dark {
+          color: var(--text-main) !important;
+          &:hover { color: var(--ucla-gold) !important; }
+      }
+  }
+
+  a.text-dark {
+      color: var(--text-main) !important;
+      &:hover { color: var(--ucla-gold) !important; }
+  }
+  
+  // Fix gradients/backgrounds
+  section.page-section.bg-light {
+    background-color: var(--bg-body) !important; // Make main sections dark
+  }
+
+  // Status Legend
+  .status-legend {
+    background-color: var(--bg-light) !important;
+    border-color: var(--border-color) !important;
+    
+    .legend-title {
+      color: var(--text-main);
+    }
+    
+    .legend-item {
+      background-color: var(--bg-card) !important;
+      .legend-description {
+         color: var(--text-muted);
+      }
+    }
+  }
+
+  // Table & Dashboard Overrides
+  .table-responsive {
+      background-color: var(--bg-body) !important;
+      
+      &.shadow-sm {
+          box-shadow: var(--card-shadow) !important;
+      }
+  }
+
+  .table {
+      background-color: var(--bg-card);
+      color: var(--text-main) !important;
+
+      thead.thead-light th {
+          background-color: var(--bg-light) !important;
+          color: var(--ucla-gold) !important;
+          border-color: var(--border-color) !important;
+      }
+
+      td {
+          border-color: var(--border-color) !important;
+          color: var(--text-main) !important;
+          
+          a.text-dark {
+              color: var(--text-main) !important;
+              &:hover { color: var(--ucla-gold) !important; }
+          }
+
+          .text-muted {
+              color: var(--text-muted) !important;
+          }
+      }
+  }
+
+  // Badge and Tag cleanup for readability
+  .badge-light {
+      background-color: var(--bg-light) !important;
+      color: var(--text-main) !important;
+      border-color: var(--border-color) !important;
+  }
+
+  .topic-tag {
+      background-color: var(--bg-light) !important;
+      color: var(--text-main) !important;
+  }
+
+  .contact-option {
+      p, a { color: var(--text-main) !important; }
+      i { color: var(--ucla-gold) !important; }
+  }
+
+  .form-container {
+      background-color: var(--bg-card) !important;
+      
+      h2.section-title, p {
+          color: var(--text-main) !important;
+      }
+      
+      .text-muted {
+          color: var(--text-muted) !important;
+      }
+  }
+
+  // Horizontal rules
+  hr {
+      border-top-color: var(--border-color);
+  }
+
+  // Footer Overrides
+  footer.footer {
+      background-color: var(--bg-body) !important; // Override inline style
+      color: var(--text-main);
+      border-top: 1px solid var(--border-color);
+
+      .copyright, .quicklinks a {
+          color: var(--text-main) !important;
+      }
+
+      .text-muted {
+          color: var(--text-muted) !important;
+      }
+  }
+  
+  // Pilot Banner
+  .pilot-banner {
+    // Darker gold/brown gradient for dark mode to maintain "Yellow=Alpha" semantics but reducing glare
+    background: linear-gradient(135deg, #003B5C 0%, #002a42 100%) !important; // UCLA Darkest Blue Gradient
+    border-color: var(--ucla-gold) !important;
+    border-top: 3px solid var(--ucla-gold) !important;
+    border-bottom: 3px solid var(--ucla-gold) !important;
+    
+    .pilot-banner-content {
+      background: rgba(0, 59, 92, 0.95) !important; // UCLA Darkest Blue with opacity
+      border: 1px solid var(--ucla-gold) !important;
+      
+      .pilot-banner-title { color: var(--ucla-gold) !important; }
+      .pilot-banner-text { color: var(--text-main) !important; }
+    }
+
+    .stat-number { color: var(--ucla-gold) !important; }
+    .stat-label { color: var(--text-muted) !important; }
+    .stat-divider { color: var(--border-color) !important; }
+  }
+  
+  // Pilot Page Specifics
+  .pilot-hero {
+      background: linear-gradient(135deg, #003B5C 0%, #002a42 100%) !important;
+      
+      .stat-card {
+          background: rgba(255, 255, 255, 0.05) !important;
+          border-color: rgba(255, 255, 255, 0.1) !important;
+      }
+  }
+
+  .section-pilot-form {
+      background: var(--bg-light) !important; // Override the light gradient
+  }
+
+  .callout-box {
+      background-color: var(--bg-light) !important;
+      border-left-color: var(--ucla-blue) !important;
+      color: var(--text-main) !important;
+      
+      strong, h5 {
+          color: var(--ucla-gold) !important;
+      }
+  }
+
+  .github-cta-box {
+      background-color: var(--bg-card) !important;
+      border-color: var(--border-color) !important;
+      color: var(--text-main) !important;
+  }
+
+  // Lesson Status Banners (on individual lesson pages)
+  .lesson-status-banner {
+      background: var(--bg-body) !important;
+      border-color: var(--border-color) !important;
+
+      .banner-content {
+          background: rgba(0, 59, 92, 0.9) !important; // UCLA Darkest Blue
+          color: var(--text-main) !important;
+          border: 1px solid var(--border-color);
+      }
+
+      .banner-title { color: var(--ucla-gold) !important; }
+      .banner-text { color: var(--text-main) !important; }
+      .detail-section h5 { color: var(--ucla-gold) !important; }
+      .detail-section li { 
+          color: var(--text-main) !important;
+          &::before { color: var(--ucla-gold) !important; }
+      }
+      
+      &.banner-alpha { background: linear-gradient(135deg, #003B5C 0%, #002a42 100%) !important; border-color: var(--ucla-gold) !important; }
+      &.banner-beta { background: linear-gradient(135deg, #003B5C 0%, #002a42 100%) !important; border-color: var(--ucla-blue) !important; }
+      &.banner-adopted { background: linear-gradient(135deg, #004d26 0%, #002a15 100%) !important; border-color: #198754 !important; }
+  }
+
+  // Ensure all section backgrounds on pilot page are dark
+  .section-what-is, .section-whats-involved, .section-get-started, 
+  .section-faq, .section-testimonials, .section-contact,
+  .section-why-pilot, .section-lessons {
+      background-color: var(--bg-body) !important;
+  }
+  
+  .benefit-card {
+      background-color: var(--bg-card) !important;
+      h4 { color: var(--ucla-gold) !important; }
+      p { color: var(--text-muted) !important; }
+  }
+  
+  .process-step, .gs-step, .faq-item {
+      background-color: var(--bg-card) !important;
+      border-color: var(--border-color) !important;
+      
+      .step-content h4, .gs-content h4, .faq-question {
+          color: var(--ucla-gold) !important;
+      }
+
+      p, .faq-answer {
+          color: var(--text-main) !important;
+      }
+  }
+  
+  .faq-question {
+      color: var(--text-main);
+      &:hover { background-color: var(--bg-light); }
+  }
+}
+
+// Toggle Button Styles
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 48px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 3px;
+  content: "";
+  height: 18px;
+  left: 3px;
+  position: absolute;
+  transition: .4s;
+  width: 18px;
+  border-radius: 50%;
+  
+  // Icon content (Sun)
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='5'/%3E%3Cline x1='12' y1='1' x2='12' y2='3'/%3E%3Cline x1='12' y1='21' x2='12' y2='23'/%3E%3Cline x1='4.22' y1='4.22' x2='5.64' y2='5.64'/%3E%3Cline x1='18.36' y1='18.36' x2='19.78' y2='19.78'/%3E%3Cline x1='1' y1='12' x2='3' y2='12'/%3E%3Cline x1='21' y1='12' x2='23' y2='12'/%3E%3Cline x1='4.22' y1='19.78' x2='5.64' y2='18.36'/%3E%3Cline x1='18.36' y1='5.64' x2='19.78' y2='4.22'/%3E%3C/svg%3E");
+  background-size: 12px 12px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: var(--ucla-gold); // UCLA Gold for active state
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+  // Icon content (Moon)
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'/%3E%3C/svg%3E");
+}

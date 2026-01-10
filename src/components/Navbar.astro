@@ -39,7 +39,44 @@ const navLinks = (navData as any)[siteConfig.locale]?.nav || [];
             )}
           </li>
         ))}
+        <!-- Dark Mode Toggle -->
+        <li class="nav-item d-flex align-items-center">
+          <div class="theme-switch-wrapper ml-3">
+            <label class="theme-switch" for="checkbox" style="margin-bottom: 0;">
+              <input type="checkbox" id="checkbox" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<script>
+  function initToggle() {
+    const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+    if (!toggleSwitch) return;
+
+    // Sync toggle with current document state
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'dark') {
+        (toggleSwitch as HTMLInputElement).checked = true;
+    }
+
+    // Handle clicks
+    toggleSwitch.addEventListener('change', (e) => {
+        const isChecked = (e.target as HTMLInputElement).checked;
+        const newTheme = isChecked ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+    });
+  }
+
+  // Run on load
+  initToggle();
+
+  // Run on Astro navigation
+  document.addEventListener('astro:after-swap', initToggle);
+</script>
