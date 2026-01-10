@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import LessonStatusBanner from '../../components/LessonStatusBanner.astro';
 import lessonsData from '../../data/lessons.yml';
 import siteTextData from '../../data/sitetext.yml';
 import { siteConfig } from '../../site_config';
@@ -141,6 +142,15 @@ const citation = generateCitation(lesson);
       </div>
     </div>
   </header>
+
+  <!-- Status Banner -->
+  {!isExternal && (
+    <LessonStatusBanner
+      status={lesson.status}
+      isAdopted={lesson.library_carpentry_adopted}
+      statusNote={lesson.status_note}
+    />
+  )}
 
   <!-- Lesson Details -->
   <section class="page-section" id="details">

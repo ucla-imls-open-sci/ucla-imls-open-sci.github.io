@@ -61,10 +61,28 @@ const themes = Object.keys(themeMapping);
     <!-- Filter Buttons & Search -->
     <div class="row mb-4">
         <div class="col-lg-12 text-center">
+            <!-- Status Filters (Priority) -->
+            <div class="mb-3">
+                <label class="d-block text-muted small mb-2 font-weight-bold">Filter by Status:</label>
+                <button class="btn btn-outline-primary btn-sm m-1 active filter-btn" data-filter="all" data-type="status">
+                    📚 All Lessons
+                </button>
+                <button class="btn btn-outline-warning btn-sm m-1 filter-btn status-seeking" data-filter="seeking-pilots" data-type="status">
+                    🎯 Seeking Pilots <span class="badge badge-light ml-1" id="seeking-count">10</span>
+                </button>
+                <button class="btn btn-outline-success btn-sm m-1 filter-btn" data-filter="ready" data-type="status">
+                    ✅ Ready to Teach
+                </button>
+                <button class="btn btn-outline-secondary btn-sm m-1 filter-btn" data-filter="in-development" data-type="status">
+                    🔨 In Development
+                </button>
+            </div>
+
+            <!-- Theme Filters -->
             <div class="mb-4">
-                <button class="btn btn-outline-primary btn-sm m-1 active filter-btn" data-filter="all">All</button>
+                <label class="d-block text-muted small mb-2 font-weight-bold">Filter by Topic:</label>
                 {themes.map(theme => (
-                    <button class="btn btn-outline-secondary btn-sm m-1 filter-btn" data-filter={theme}>
+                    <button class="btn btn-outline-secondary btn-sm m-1 filter-btn" data-filter={theme} data-type="theme">
                         {theme}
                     </button>
                 ))}
@@ -109,16 +127,44 @@ const themes = Object.keys(themeMapping);
   const searchInput = document.getElementById('lesson-search') as HTMLInputElement;
 
   let activeFilter = 'all';
+  let activeFilterType = 'status';
   let searchQuery = '';
+
+  function matchesStatusFilter(status: string, filter: string): boolean {
+    if (filter === 'all') return true;
+
+    const s = status?.toLowerCase() || '';
+
+    if (filter === 'seeking-pilots') {
+      // Alpha (not pre-alpha) or Beta
+      return (s.includes('alpha') && !s.includes('pre')) || s.includes('beta');
+    } else if (filter === 'ready') {
+      // Stable, mature, or adopted
+      return s.includes('stable') || s.includes('mature') || s.includes('adopted');
+    } else if (filter === 'in-development') {
+      // Pre-alpha
+      return s.includes('pre-alpha') || s.includes('pre alpha');
+    }
+
+    return false;
+  }
 
   function updateDisplay() {
       lessonItems.forEach((item) => {
         const el = item as HTMLElement;
         const themes = el.getAttribute('data-themes') || '';
         const keywords = el.getAttribute('data-keywords') || '';
+        const status = el.getAttribute('data-status') || '';
         const textContent = el.innerText.toLowerCase();
-        
-        const matchesFilter = activeFilter === 'all' || themes.split(',').includes(activeFilter);
+
+        // Determine if item matches filter
+        let matchesFilter = false;
+        if (activeFilterType === 'status') {
+          matchesFilter = matchesStatusFilter(status, activeFilter);
+        } else if (activeFilterType === 'theme') {
+          matchesFilter = themes.split(',').includes(activeFilter);
+        }
+
         const matchesSearch = textContent.includes(searchQuery) || keywords.includes(searchQuery);
 
         if (matchesFilter && matchesSearch) {
@@ -127,20 +173,52 @@ const themes = Object.keys(themeMapping);
           el.style.display = 'none';
         }
       });
+
+      // Update seeking pilots count
+      updateSeekingCount();
   }
 
-  function applyFilter(filterValue: string) {
+  function updateSeekingCount() {
+    const seekingLessons = Array.from(lessonItems).filter((item) => {
+      const el = item as HTMLElement;
+      const status = el.getAttribute('data-status') || '';
+      return matchesStatusFilter(status, 'seeking-pilots');
+    });
+
+    const countBadge = document.getElementById('seeking-count');
+    if (countBadge) {
+      countBadge.textContent = seekingLessons.length.toString();
+    }
+  }
+
+  function applyFilter(filterValue: string, filterType: string) {
       activeFilter = filterValue;
-      
+      activeFilterType = filterType;
+
       // Update UI buttons
       filterButtons.forEach(b => {
           const btnFilter = b.getAttribute('data-filter');
-          if (btnFilter === filterValue) {
-              b.classList.add('active', 'btn-outline-primary');
-              b.classList.remove('btn-outline-secondary');
+          const btnType = b.getAttribute('data-type');
+          const isActive = btnFilter === filterValue && btnType === filterType;
+
+          if (isActive) {
+              b.classList.add('active');
+              // Keep original color classes
+              if (b.classList.contains('btn-outline-warning')) {
+                // Status seeking button
+              } else if (b.classList.contains('btn-outline-success')) {
+                // Ready button
+              } else {
+                b.classList.add('btn-outline-primary');
+                b.classList.remove('btn-outline-secondary');
+              }
           } else {
-              b.classList.remove('active', 'btn-outline-primary');
-              b.classList.add('btn-outline-secondary');
+              b.classList.remove('active');
+              if (!b.classList.contains('btn-outline-warning') &&
+                  !b.classList.contains('btn-outline-success')) {
+                b.classList.remove('btn-outline-primary');
+                b.classList.add('btn-outline-secondary');
+              }
           }
       });
 
@@ -150,10 +228,12 @@ const themes = Object.keys(themeMapping);
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       const filterValue = btn.getAttribute('data-filter') || 'all';
-      applyFilter(filterValue);
-      
+      const filterType = btn.getAttribute('data-type') || 'status';
+      applyFilter(filterValue, filterType);
+
       const url = new URL(window.location.href);
       url.searchParams.set('filter', filterValue);
+      url.searchParams.set('type', filterType);
       window.history.pushState({}, '', url);
     });
   });
@@ -163,12 +243,37 @@ const themes = Object.keys(themeMapping);
       updateDisplay();
   });
 
-  // Handle initial load from URL
+  // Handle initial load from URL and update count
   window.addEventListener('load', () => {
       const params = new URLSearchParams(window.location.search);
       const initialFilter = params.get('filter');
+      const initialType = params.get('type') || 'status';
       if (initialFilter) {
-          applyFilter(initialFilter);
+          applyFilter(initialFilter, initialType);
+      } else {
+          updateSeekingCount();
       }
   });
 </script>
+
+<style>
+.status-seeking.active {
+  background-color: #ffc107;
+  color: #000;
+  border-color: #ffc107;
+}
+
+.filter-btn.active {
+  font-weight: 600;
+}
+
+.btn-outline-warning:hover {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.btn-outline-success:hover {
+  background-color: #198754;
+  color: #fff;
+}
+</style>
