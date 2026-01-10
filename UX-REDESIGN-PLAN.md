@@ -978,6 +978,37 @@ An evaluation of the implemented features against this plan confirmed the succes
 
 ---
 
-**Document Version**: 1.1
+## Phase 2 Completion & Retrospective (Jan 9, 2026)
+
+### Key Achievements
+We have successfully transitioned the site from a static repository of links to a dynamic, pilot-recruitment platform.
+
+1.  **Pilot Workflow Finalized**:
+    *   **Decision**: Replaced the non-functional Netlify form with a **GitHub Issue Template** strategy.
+    *   **Rationale**: Aligning with the open-source ethos of the project, we chose transparency over obscurity. Requiring a GitHub account is a feature, not a bug, as it onboards librarians into the ecosystem they will be teaching.
+    *   **Implementation**: The `/pilot` page now features a prominent CTA that links directly to a pre-configured `pilot-interest.yml` issue template.
+
+2.  **UCLA Dark Mode (Bonus Feature)**:
+    *   **Implementation**: Built a custom dark mode engine using CSS variables and official UCLA Brand colors (`#003B5C` Darkest Blue and `#FFD100` Gold).
+    *   **Technical Detail**: Added a persistent toggle in the navbar with `localStorage` memory and a script to prevent "Flash of Unstyled Content" (FOUC).
+    *   **UX Impact**: Significantly improves accessibility and perceived professionalism. The site now feels like a modern application rather than a static page.
+
+3.  **Automation Suite**:
+    *   **`generate_lesson_cffs.py`**: Automatically generates CITATION.cff files for all lessons based on the central `lessons.yml` database.
+    *   **`create_prs.sh`**: A robust bash script that uses the GitHub CLI to clone, branch, and PR these citation files back to the individual lesson repositories.
+
+### Status Assessment
+*   **Phase 1 (Quick Wins)**: ✅ **COMPLETE**
+*   **Phase 2 (Core Experience)**: ✅ **COMPLETE**
+*   **Phase 3 (Dedicated Page)**: ✅ **COMPLETE**
+
+### Next Steps (Phase 4 & Beyond)
+*   **Analytics**: Monitor click-through rates on the "Pilot This Lesson" buttons to validate the new design.
+*   **Mobile Optimization**: While responsive, the large data tables (dashboard) could be optimized further for small screens (e.g., card view).
+*   **Search**: Consider making the search bar "sticky" or adding more advanced filtering as the curriculum grows.
+
+---
+
+**Document Version**: 1.2
 **Last Updated**: January 9, 2026
 **Author**: Claude Code with Tim Dennis
