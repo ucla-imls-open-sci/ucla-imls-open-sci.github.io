@@ -1,0 +1,146 @@
+---
+// Status Legend Component
+// Explains the lesson development stages to users
+---
+
+<div class="status-legend">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="legend-content">
+          <h4 class="legend-title">
+            <i class="fas fa-info-circle mr-2"></i>
+            Lesson Development Stages
+          </h4>
+          <div class="legend-items">
+            <div class="legend-item">
+              <span class="badge badge-warning">🟡 Alpha - Seeking Pilots</span>
+              <span class="legend-description">Ready for first external pilots to test in new contexts</span>
+            </div>
+            <div class="legend-item">
+              <span class="badge badge-info">🔵 Beta - Seeking Pilots</span>
+              <span class="legend-description">Already piloted, seeking broader testing in diverse settings</span>
+            </div>
+            <div class="legend-item">
+              <span class="badge badge-success">✅ Adopted</span>
+              <span class="legend-description">Official Library Carpentry lesson, ready to teach</span>
+            </div>
+            <div class="legend-item">
+              <span class="badge badge-secondary">Pre-Alpha</span>
+              <span class="legend-description">In development, not yet ready for piloting</span>
+            </div>
+          </div>
+          <p class="legend-footer">
+            <a href="https://carpentries.github.io/lesson-development-training/lesson-design.html" target="_blank" rel="noopener">
+              Learn more about the Carpentries lesson lifecycle <i class="fas fa-external-link-alt ml-1"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.status-legend {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+
+.legend-content {
+  text-align: center;
+}
+
+.legend-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1.25rem;
+}
+
+.legend-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.legend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.legend-item .badge {
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  white-space: nowrap;
+}
+
+.legend-description {
+  font-size: 0.875rem;
+  color: #6c757d;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.legend-footer {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.legend-footer a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.legend-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Badge Styles - match the main badge colors */
+.badge-warning {
+  color: #212529;
+  background-color: #ffc107;
+}
+
+.badge-info {
+  color: #000;
+  background-color: #0dcaf0;
+}
+
+.badge-success {
+  color: #fff;
+  background-color: #198754;
+}
+
+.badge-secondary {
+  color: #fff;
+  background-color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legend-items {
+    grid-template-columns: 1fr;
+  }
+
+  .legend-title {
+    font-size: 1.1rem;
+  }
+
+  .legend-description {
+    font-size: 0.8rem;
+  }
+}
+</style>

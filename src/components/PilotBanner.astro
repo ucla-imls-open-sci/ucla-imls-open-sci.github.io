@@ -1,0 +1,237 @@
+---
+import lessonsData from '../data/lessons.yml';
+
+// Count lessons seeking pilots
+const lessons = (lessonsData as any).lessons || [];
+const alphaLessons = lessons.filter((l: any) => {
+  const status = l.status?.toLowerCase() || '';
+  return status.includes('alpha') && !status.includes('pre') && l.type !== 'external';
+});
+const betaLessons = lessons.filter((l: any) => {
+  const status = l.status?.toLowerCase() || '';
+  return status.includes('beta') && l.type !== 'external';
+});
+const totalSeekingPilots = alphaLessons.length + betaLessons.length;
+---
+
+{totalSeekingPilots > 0 && (
+  <section class="pilot-banner" id="pilot-banner">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 text-center">
+          <div class="pilot-banner-content">
+            <h2 class="pilot-banner-title">
+              🎯 Help Shape Open Science Education
+            </h2>
+            <p class="pilot-banner-text">
+              <strong>{totalSeekingPilots} lessons are actively seeking instructors</strong> to pilot them in diverse contexts.
+              These lessons have been developed and tested by authors. We need librarians like you to teach them
+              and provide feedback. Be among the first to deliver cutting-edge open science curriculum and
+              get recognized for your contribution.
+            </p>
+            <div class="pilot-banner-stats">
+              <span class="stat-item">
+                <span class="stat-number">{alphaLessons.length}</span>
+                <span class="stat-label">🟡 Alpha (First Pilots)</span>
+              </span>
+              <span class="stat-divider">•</span>
+              <span class="stat-item">
+                <span class="stat-number">{betaLessons.length}</span>
+                <span class="stat-label">🔵 Beta (Broader Testing)</span>
+              </span>
+            </div>
+            <div class="pilot-banner-actions">
+              <a href="#lessons" class="btn btn-pilot-primary">View Lessons Seeking Pilots</a>
+              <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CONTRIBUTING.md#pilot-our-lessons" target="_blank" class="btn btn-pilot-secondary">Learn About Piloting</a>
+            </div>
+            <button class="pilot-banner-close" aria-label="Close banner" onclick="document.getElementById('pilot-banner').style.display='none'; localStorage.setItem('pilotBannerDismissed', 'true');">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+)}
+
+<style>
+.pilot-banner {
+  background: linear-gradient(135deg, #fff3cd 0%, #ffe69c 100%);
+  border-top: 3px solid #ffc107;
+  border-bottom: 3px solid #ffc107;
+  padding: 2.5rem 0;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.pilot-banner-content {
+  position: relative;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pilot-banner-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 1rem;
+}
+
+.pilot-banner-text {
+  font-size: 1.1rem;
+  color: #495057;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pilot-banner-stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffc107;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+  font-weight: 500;
+}
+
+.stat-divider {
+  font-size: 1.5rem;
+  color: #dee2e6;
+  margin: 0 0.5rem;
+}
+
+.pilot-banner-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-pilot-primary {
+  background-color: #ffc107;
+  border: 2px solid #ffc107;
+  color: #000;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-pilot-primary:hover {
+  background-color: #ffcd39;
+  border-color: #ffcd39;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+  text-decoration: none;
+}
+
+.btn-pilot-secondary {
+  background-color: transparent;
+  border: 2px solid #0dcaf0;
+  color: #0dcaf0;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-pilot-secondary:hover {
+  background-color: #0dcaf0;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(13, 202, 240, 0.3);
+  text-decoration: none;
+}
+
+.pilot-banner-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 1.25rem;
+  color: #6c757d;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.pilot-banner-close:hover {
+  color: #212529;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pilot-banner {
+    padding: 1.5rem 0;
+  }
+
+  .pilot-banner-title {
+    font-size: 1.5rem;
+  }
+
+  .pilot-banner-text {
+    font-size: 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.5rem;
+  }
+
+  .pilot-banner-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-pilot-primary,
+  .btn-pilot-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Hide if dismissed */
+.pilot-banner[style*="display: none"] {
+  display: none !important;
+}
+</style>
+
+<script>
+  // Check if banner was previously dismissed
+  if (typeof window !== 'undefined' && localStorage.getItem('pilotBannerDismissed') === 'true') {
+    const banner = document.getElementById('pilot-banner');
+    if (banner) {
+      banner.style.display = 'none';
+    }
+  }
+</script>

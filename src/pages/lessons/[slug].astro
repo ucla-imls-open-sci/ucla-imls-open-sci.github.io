@@ -39,11 +39,25 @@ const statusDesc = statusDefinitions[currentStatus] || "Current development stag
 // Status Color Helper
 const getStatusColor = (status: string) => {
   const s = status?.toLowerCase() || '';
-  if (s.includes('beta')) return 'badge-success'; 
-  if (s.includes('alpha') && !s.includes('pre')) return 'badge-warning'; 
-  return 'badge-secondary';
+  if (s.includes('beta')) return 'badge-info'; // Blue for beta (seeking more pilots)
+  if (s.includes('alpha') && !s.includes('pre')) return 'badge-warning'; // Yellow for alpha
+  if (s.includes('stable') || s.includes('mature')) return 'badge-success'; // Green for stable/mature
+  return 'badge-secondary'; // Gray for pre-alpha
 };
+
+// Status Text Helper
+const getStatusText = (status: string, isAdopted: boolean) => {
+  const s = status?.toLowerCase() || '';
+  if (isAdopted) return '✅ Adopted';
+  if (s.includes('beta')) return '🔵 Beta - Seeking Pilots';
+  if (s.includes('alpha') && !s.includes('pre')) return '🟡 Alpha - Seeking Pilots';
+  if (s.includes('pre-alpha') || s.includes('pre alpha')) return 'Pre-Alpha';
+  if (s.includes('stable') || s.includes('mature')) return 'Stable';
+  return status || 'Unknown';
+};
+
 const statusColor = getStatusColor(lesson.status);
+const statusText = getStatusText(lesson.status, lesson.library_carpentry_adopted);
 const isExternal = lesson.type === 'external';
 
 // Citation Helper
@@ -103,10 +117,10 @@ const citation = generateCitation(lesson);
             
             {/* Tooltip Container */}
             <span class="position-relative d-inline-block" style="cursor: help;">
-                Status: 
-                <span class={`badge ${statusColor} text-uppercase ml-1`}>{lesson.status}</span>
+                Status:
+                <span class={`badge ${statusColor} ml-1`}>{statusText}</span>
                 <div class="custom-tooltip shadow-lg">
-                    <p class="mb-1"><strong>The Carpentries {lesson.status} Stage</strong></p>
+                    <p class="mb-1"><strong>The Carpentries {currentStatus} Stage</strong></p>
                     <small>{statusDesc}</small>
                 </div>
             </span>
@@ -464,5 +478,23 @@ const citation = generateCitation(lesson);
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+/* Status Badge Colors */
+.badge-warning {
+    color: #212529;
+    background-color: #ffc107;
+}
+.badge-info {
+    color: #000;
+    background-color: #0dcaf0;
+}
+.badge-success {
+    color: #fff;
+    background-color: #198754;
+}
+.badge-secondary {
+    color: #fff;
+    background-color: #6c757d;
 }
 </style>
