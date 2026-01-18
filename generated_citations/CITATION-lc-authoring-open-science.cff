@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: Authoring Open Science
+abstract: Focuses on integrating open science values—trust, transparency, and reproducibility—into
+  the authoring and reviewing processes. Covers open authoring tools, contributor
+  roles, ethics of authorship, and open peer review.
+version: 1.0.0
+date-released: '2026-01-18'
+license: CC-BY-4.0
+repository-code: https://github.com/ucla-imls-open-sci/lc-authoring-open-science
+url: https://ucla-imls-open-sci.info/lc-authoring-open-science/
+keywords:
+- open science
+- writing
+- metadata
+- open peer review
+- ethics
+authors:
+- family-names: Miller
+  given-names: Kathryn
+- family-names: Medina-Smith
+  given-names: Andrea

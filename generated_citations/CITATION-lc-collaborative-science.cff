@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: A Path to Open, Inclusive, and Collaborative Science for Librarians
+abstract: Designed to empower participants with the knowledge and skills needed for
+  effective open science practices, with an emphasis on collaboration and inclusivity.
+  Focuses on overcoming language, socioeconomic, and geographical barriers.
+version: 1.0.0
+date-released: '2026-01-18'
+license: CC-BY-4.0
+repository-code: https://github.com/LibraryCarpentry/lc-collaborative-science
+url: https://librarycarpentry.github.io/lc-collaborative-science/
+keywords:
+- collaboration
+- open science
+- inclusion
+- FAIR
+- CARE
+authors:
+- family-names: Vazano
+  given-names: Irene
+- family-names: Formoso
+  given-names: Jessica

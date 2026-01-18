@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: Reproducible Research Workflows
+abstract: Focuses on helping librarians understand the concept of reproducibility
+  and learn about both theoretical and practical aspects of reproducible research
+  workflows across different disciplines.
+version: 1.0.0
+date-released: '2026-01-18'
+license: CC-BY-4.0
+repository-code: https://github.com/LibraryCarpentry/lc-reproducible-research
+url: https://librarycarpentry.github.io/lc-reproducible-research/
+keywords:
+- reproducibility
+- workflow
+- open science
+- tools
+authors:
+- family-names: Bochynska
+  given-names: Agata

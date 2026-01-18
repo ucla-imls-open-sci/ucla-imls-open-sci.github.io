@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: 'Open Science Discovery Engines: Empowering Librarian Use Through a Case Study
+  Exploration of the NASA Science Explorer'
+abstract: 'The module begins by describing how the Science Explorer (SciX) fits as
+  part of the open science ecosystem and establishing how it supports the FAIR principles:
+  Findable, Accessible, Interoperable, Reusable. You will be introduced to search
+  features through examples highlighting the strengths of SciX for discipline-specific
+  and interdisciplinary queries. You will also learn how to use SciX’s suite of second
+  order operators to explore research trends and reviews, along with methods of finding
+  similar papers and papers others studying the same topic have found useful. Lastly,
+  you will learn how authors can claim papers within SciX with their ORCiD.'
+version: 0.1.1
+date-released: '2026-01-18'
+license: CC-BY-4.0
+repository-code: https://github.com/ucla-imls-open-sci/lc-scix-open-science
+url: http://ucla-imls-open-sci.info/lc-scix-open-science/
+keywords:
+- discovery
+- NASA
+- SciX
+- FAIR
+- ORCID
+- open science
+- astrophysics
+- planetary science
+- earth science
+authors:
+- family-names: Bartlett
+  given-names: Jennifer Lynn
+- family-names: Frey
+  given-names: Katie
+- family-names: Jarmak
+  given-names: Stephanie

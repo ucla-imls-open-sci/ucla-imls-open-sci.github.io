@@ -1,24 +1,20 @@
 cff-version: 1.2.0
 message: If you use this software, please cite it as below.
 type: software
-title: Open Qualitative Research (QualCoder)
+title: Open Qualitative Research (Taguette)
 abstract: Familiarizes learners with the application of open science principles to
   qualitative research. Focuses on documents or transcribed text in a variety of data
-  formats. Learners practice working with secondary qualitative data from the Qualitative
-  Data Repository (QDR) in the free software QualCoder.
+  formats and working with secondary qualitative data.
 version: 1.0.0
 date-released: '2026-01-18'
 license: CC-BY-4.0
-repository-code: https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder
-url: https://librarycarpentry.github.io/lc-qualitative-qualcoder/
+repository-code: https://github.com/LibraryCarpentry/lc-open-qualitative-research
+url: https://librarycarpentry.github.io/lc-qualitative-taguette/
 keywords:
 - qualitative research
 - open science
-- qualcoder
+- taguette
 - QDR
-- coding
 authors:
 - family-names: Porter
   given-names: Nathaniel
-- family-names: Karcher
-  given-names: Sebastian

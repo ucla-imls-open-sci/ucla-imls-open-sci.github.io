@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: Data Management (and Sharing) Plans for Librarians 101
+abstract: Walks through providing data management plan services in your library. Covers
+  DMPs, relevant resources, data interviews, using the DMPTool, and suggestions on
+  implementing DMP services.
+version: 1.0.0
+date-released: '2026-01-18'
+license: CC-BY-4.0
+repository-code: https://github.com/LibraryCarpentry/lc-dmp101
+url: https://librarycarpentry.org/lc-dmp101/
+keywords:
+- data management
+- sharing plans
+- DMP
+- DMPTool
+authors:
+- family-names: Bohman
+  given-names: Lena
+- family-names: Hertz
+  given-names: Marla
+- family-names: Orlowska
+  given-names: Daria

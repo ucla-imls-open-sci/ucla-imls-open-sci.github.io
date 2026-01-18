@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it as below.
+type: software
+title: A gentle, hands-on introduction to containers and virtual machines
+version: 1.0.0
+date-released: '2026-01-18'
+license: CC-BY-4.0
+repository-code: https://github.com/LibraryCarpentry/lc-containers_vms
+url: https://librarycarpentry.github.io/lc-containers_vms/
+keywords:
+- containers
+- virtual machines
+- infrastructure
+authors:
+- family-names: Rios
+  given-names: Fernando
+- family-names: Oliver
+  given-names: Jeffrey
