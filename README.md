@@ -174,9 +174,10 @@ This site uses:
 For detailed instructions on how to add lessons, update authors, or write blog posts, please refer to [GUIDE.md](GUIDE.md).
 
 #### Key Data Files
-- `src/data/lessons.yml`: The master list of all curriculum modules and external resources
+- `src/content/lessons/`: **(New)** Individual YAML files for each curriculum module. This replaces the old `lessons.yml` database.
 - `src/data/sitetext.yml`: Author profiles, staff list, and general site text
 - `src/content/blog/`: Markdown files for blog posts
+- `keystatic.config.ts`: Configuration for the Keystatic CMS
 
 ---
 
