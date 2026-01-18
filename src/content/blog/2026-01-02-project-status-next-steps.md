@@ -1,9 +1,16 @@
 ---
-title: "Grant Complete: Moving Our Open Science Lessons from Creation to Community"
-date: 2026-01-02
-author: "Tim Dennis"
-description: "We've submitted our final IMLS report. Here is where the project stands and how we move these lessons to 'Beta' together."
-tags: ["IMLS", "Open Science", "Community", "Carpentries"]
+title: 'Grant Complete: Moving Our Open Science Lessons from Creation to Community'
+date: 2026-01-02T00:00:00.000Z
+author: Tim Dennis
+description: >-
+  We've submitted our final IMLS report. Here is where the project stands and
+  how we move these lessons to 'Beta' together.
+tags:
+  - IMLS
+  - Open Science
+  - Community
+  - Carpentries
+slug: 2026-01-02-project-status-next-steps
 ---
 
 We have officially wrapped up the **"Lessons for Librarians in Open Science Principles and Methods"** project. As of December 2025, our final performance report is with the IMLS, marking the end of our formal grant period.

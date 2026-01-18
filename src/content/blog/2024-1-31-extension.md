@@ -1,8 +1,11 @@
 ---
-title: "New Deadline for Grant Opportunity: Open Science for Librarians 2024" 
-date: 2024-01-31
+title: 'New Deadline for Grant Opportunity: Open Science for Librarians 2024'
+date: 2024-01-31T00:00:00.000Z
 author: Library Staff
-description: "Important update: The application deadline for the 2024 lesson proposals has been extended to February 29th."
+description: >-
+  Important update: The application deadline for the 2024 lesson proposals has
+  been extended to February 29th.
+slug: 2024-1-31-extension
 ---
 
 <!---

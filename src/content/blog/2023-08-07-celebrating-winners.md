@@ -1,8 +1,13 @@
 ---
-title: Celebrating the Winners of Lessons for Librarians in Open Science Principles and Methods in 2023
-date: 2023-08-07
+title: >-
+  Celebrating the Winners of Lessons for Librarians in Open Science Principles
+  and Methods in 2023
+date: 2023-08-07T00:00:00.000Z
 author: Library Staff
-description: "Announcing the six outstanding groups of applicants selected to develop the first round of open science lessons for librarians."
+description: >-
+  Announcing the six outstanding groups of applicants selected to develop the
+  first round of open science lessons for librarians.
+slug: 2023-08-07-celebrating-winners
 ---
 
 

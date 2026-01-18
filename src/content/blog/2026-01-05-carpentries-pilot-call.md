@@ -1,9 +1,15 @@
 ---
-title: "Calling for Community Pilots: 14 New Open Science Lessons for Librarians"
-date: 2026-01-05
-author: "Tim Dennis"
-description: "Our IMLS grant is complete. Now we need the Carpentries community to help move these 14 'Alpha' lessons toward official adoption through piloting."
-tags: ["Library Carpentry", "Open Science", "Piloting"]
+title: 'Calling for Community Pilots: 14 New Open Science Lessons for Librarians'
+date: 2026-01-05T00:00:00.000Z
+author: Tim Dennis
+description: >-
+  Our IMLS grant is complete. Now we need the Carpentries community to help move
+  these 14 'Alpha' lessons toward official adoption through piloting.
+tags:
+  - Library Carpentry
+  - Open Science
+  - Piloting
+slug: 2026-01-05-carpentries-pilot-call
 ---
 
 The **"Lessons for Librarians in Open Science Principles and Methods"** project (funded by IMLS) has reached a major milestone: we have published 15 new lesson repositories developed by teams of experts across the library community.

@@ -12,11 +12,12 @@ export default config({
   collections: {
     blog: collection({
       label: 'Blog',
-      slugField: 'title',
+      slugField: 'slug',
       path: 'src/content/blog/*',
       format: { contentField: 'content' },
       schema: {
-        title: fields.slug({ name: { label: 'Title' } }),
+        title: fields.text({ label: 'Title' }),
+        slug: fields.slug({ name: { label: 'Slug (Filename)' } }),
         date: fields.date({ label: 'Date', validation: { isRequired: true } }),
         author: fields.text({ label: 'Author' }),
         description: fields.text({ label: 'Description', multiline: true }),

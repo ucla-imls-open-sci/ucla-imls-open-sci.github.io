@@ -1,8 +1,12 @@
 ---
-title: "Project Evolution: A Complete Redesign and Hub for Open Science"
-date: 2025-12-18
-author: "Tim Dennis"
-description: "Announcing a major redesign of the Open Science for Librarians hub, featuring a modernized tech stack, unified curriculum discovery, and deep integration with The Carpentries governance."
+title: 'Project Evolution: A Complete Redesign and Hub for Open Science'
+date: 2025-12-18T00:00:00.000Z
+author: Tim Dennis
+description: >-
+  Announcing a major redesign of the Open Science for Librarians hub, featuring
+  a modernized tech stack, unified curriculum discovery, and deep integration
+  with The Carpentries governance.
+slug: 2025-12-18-site-launch
 ---
 
 We are excited to unveil a major redesign and technical overhaul of the **Open Science for Librarians** website. 
