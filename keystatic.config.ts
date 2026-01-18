@@ -1,9 +1,14 @@
 import { config, fields, collection } from '@keystatic/core';
 
 export default config({
-  storage: {
-    kind: 'local',
-  },
+  storage: import.meta.env.PROD
+    ? {
+        kind: 'github',
+        repo: 'ucla-imls-open-sci/ucla-imls-open-sci.github.io',
+      }
+    : {
+        kind: 'local',
+      },
   collections: {
     blog: collection({
       label: 'Blog',
