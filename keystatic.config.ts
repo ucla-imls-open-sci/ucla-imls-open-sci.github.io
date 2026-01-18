@@ -9,6 +9,12 @@ export default config({
     : {
         kind: 'local',
       },
+  ui: {
+    brand: { name: 'IMLS Open Science ↗' },
+    navigation: {
+      'Content': ['lessons', 'blog'],
+    },
+  },
   collections: {
     blog: collection({
       label: 'Blog',
