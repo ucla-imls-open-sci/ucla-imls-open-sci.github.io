@@ -1,0 +1,29 @@
+name: Open Science 101 (Open Life Science)
+duration: 4–8h (cohort-based or self-study)
+authors:
+  - Open Life Science Community
+status: mature
+educationalLevel: Introductory
+type: external
+why_teach: >-
+  This resource emphasizes the social, ethical, and community dimensions of Open
+  Science, helping librarians understand not just how open practices work, but
+  why they matter.
+abstract: >-
+  Introductory Open Science training materials developed by Open Life Science.
+  Covers Open Science principles, equity and inclusion, community practices, and
+  sustainable research workflows.
+keywords:
+  - open science
+  - equity
+  - inclusion
+  - community
+  - research culture
+learningResourceType: course
+teaches:
+  - Explain Open Science values and practices.
+  - Identify barriers to participation in open research.
+  - Support inclusive and sustainable open workflows.
+  - Advocate for Open Science within institutions.
+url: https://openlifesci.org
+repo: https://github.com/open-life-science

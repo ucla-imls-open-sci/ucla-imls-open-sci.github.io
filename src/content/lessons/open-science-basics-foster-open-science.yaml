@@ -1,0 +1,31 @@
+name: Open Science Basics (FOSTER Open Science)
+duration: 3–6h (modular, self-paced)
+authors:
+  - FOSTER Open Science Community
+status: mature
+educationalLevel: Introductory
+type: external
+why_teach: >-
+  This course provides one of the clearest and most reusable introductions to
+  Open Science concepts available. It gives librarians shared vocabulary and
+  conceptual grounding for instruction, consultation, and infrastructure
+  discussions.
+abstract: >-
+  A modular, self-paced introduction to Open Science covering open access, open
+  data, open methods, reproducibility, research integrity, and citizen science.
+  Designed for researchers and research support professionals, with openly
+  licensed learning objects.
+keywords:
+  - open science
+  - open access
+  - open data
+  - reproducibility
+  - research integrity
+learningResourceType: course
+teaches:
+  - Define Open Science and its core components.
+  - Explain benefits and challenges of open research practices.
+  - Identify roles for libraries and support units in Open Science.
+  - Recognize how openness applies across the research lifecycle.
+url: https://open-science-training-handbook.gitbook.io/book
+repo: https://github.com/Open-Science-Training-Handbook/book

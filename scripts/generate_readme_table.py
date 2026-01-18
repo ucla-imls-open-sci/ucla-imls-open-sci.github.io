@@ -1,6 +1,8 @@
 import yaml
 import sys
 import re
+import glob
+import os
 
 def slugify(text):
     text = str(text).lower().strip()
@@ -8,15 +10,26 @@ def slugify(text):
     text = re.sub(r'[^\w\-]+', '', text)
     return re.sub(r'\-\-+', '-', text)
 
+def load_lessons():
+    lessons = []
+    lessons_dir = 'src/content/lessons'
+    for filepath in glob.glob(os.path.join(lessons_dir, '*.yaml')):
+        with open(filepath, 'r') as f:
+            data = yaml.safe_load(f)
+            if data:
+                lessons.append(data)
+    # Optional: Sort lessons by name for consistent table order
+    lessons.sort(key=lambda x: x.get('name', '').lower())
+    return lessons
+
 def generate_table():
-    with open('src/data/lessons.yml', 'r') as f:
-        data = yaml.safe_load(f)
+    lessons = load_lessons()
 
     # Table Header
     markdown = "| Lesson | Authors | Status | Links |\n"
     markdown += "| :--- | :--- | :--- | :--- |\n"
 
-    for lesson in data['lessons']:
+    for lesson in lessons:
         # Skip external resources if you only want your curriculum
         if lesson.get('type') == 'external':
             continue

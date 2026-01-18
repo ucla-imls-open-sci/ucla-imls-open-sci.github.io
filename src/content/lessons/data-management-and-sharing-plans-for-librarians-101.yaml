@@ -1,0 +1,46 @@
+name: Data Management (and Sharing) Plans for Librarians 101
+authors:
+  - Lena Bohman
+  - Marla Hertz
+  - Daria Orlowska
+status: beta
+library_carpentry_adopted: true
+educationalLevel: Introductory
+abstract: >-
+  Walks through providing data management plan services in your library. Covers
+  DMPs, relevant resources, data interviews, using the DMPTool, and suggestions
+  on implementing DMP services.
+keywords:
+  - data management
+  - sharing plans
+  - DMP
+  - DMPTool
+pilots:
+  - date: 2024-03-14T00:00:00.000Z
+    location: Internal (UCLA/Authors)
+    instructor: Authors
+    type: Internal Alpha Pilot
+    note: Initial internal run; went smoothly.
+recognition:
+  - title: Library Carpentry Adoption
+    desc: Formally adopted as an official Library Carpentry lesson.
+    url: >-
+      https://carpentries.org/blog/2024/06/library-carpentry-dmp-lesson-approved/
+  - title: CAC Presentation
+    desc: >-
+      Presented to the Library Carpentry Curriculum Advisory Committee on March
+      14, 2024.
+  - title: Selected for NIH MITRE Grant
+    desc: Selected for the RDM pathways project.
+  - title: International Proposal
+    desc: Included in a UK-based Data Steward training proposal.
+  - title: International DMP Interest Group Presentations
+    desc: Presented to international DMP interest groups in Canada and Australia.
+learningResourceType: lesson
+teaches:
+  - Provide an overview of Data Management Plans (DMP).
+  - Find DMP resources.
+  - Answer research DMP questions.
+  - Determine data services to integrate into workflows.
+url: https://librarycarpentry.org/lc-dmp101/
+repo: https://github.com/LibraryCarpentry/lc-dmp101

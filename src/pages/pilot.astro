@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import lessonsData from '../data/lessons.yml';
+import { getCollection } from 'astro:content';
 import { slugify } from '../utils/slugs';
 
-const lessons = (lessonsData as any).lessons || [];
+const lessons = (await getCollection('lessons')).map(l => l.data);
 
 // Filter lessons seeking pilots
 const alphaLessons = lessons.filter((l: any) => {

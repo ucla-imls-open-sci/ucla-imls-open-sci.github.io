@@ -1,0 +1,33 @@
+name: Collaborative Multilingual Search and Discovery Systems
+duration: 3h 00m
+authors:
+  - Eric Silberberg
+  - Jesus Alonso-Regalado
+  - Cate Kellett
+status: alpha
+educationalLevel: Intermediate
+abstract: >-
+  Guides users through creating a lightweight, open-source search and discovery
+  system for multilingual research materials using the Google Sheets API and
+  JavaScript. Addresses challenges in making research collections publicly
+  available and ethically represented.
+status_note: Planning a hybrid pilot for March 2026 (2-month asynchronous cohort).
+keywords:
+  - search
+  - multilingual
+  - discovery
+  - google sheets api
+  - javascript
+learningResourceType: lesson
+teaches:
+  - >-
+    Understand how description standards ensure ethical representation of data
+    and multilingual access.
+  - >-
+    Create a JavaScript-based website search system retrieving data from Google
+    Sheets.
+  - >-
+    Consider linguistic and cultural diversity in disseminating research
+    findings.
+url: http://ucla-imls-open-sci.info/lc-multilingual-search-discovery-system/
+repo: https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system

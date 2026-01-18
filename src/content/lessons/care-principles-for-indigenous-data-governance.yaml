@@ -1,0 +1,26 @@
+name: CARE Principles for Indigenous Data Governance
+duration: 30–60m (conceptual overview)
+authors:
+  - Global Indigenous Data Alliance
+status: mature
+educationalLevel: Introductory
+type: external
+why_teach: >-
+  CARE complements FAIR by centering people, power, and purpose, helping
+  librarians critically engage with ethical and equitable data governance.
+abstract: >-
+  A framework for Indigenous data governance emphasizing Collective Benefit,
+  Authority to Control, Responsibility, and Ethics.
+keywords:
+  - CARE
+  - indigenous data governance
+  - ethics
+  - equity
+  - data sovereignty
+learningResourceType: framework
+teaches:
+  - Explain the CARE principles.
+  - Contrast CARE with FAIR.
+  - Recognize ethical dimensions of data governance.
+url: https://www.gida-global.org/care
+repo: null

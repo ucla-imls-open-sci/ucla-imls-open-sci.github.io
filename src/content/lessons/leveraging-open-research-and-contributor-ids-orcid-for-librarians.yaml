@@ -1,0 +1,36 @@
+name: Leveraging Open Research and Contributor IDs (ORCID) for Librarians
+duration: 3h 00m
+authors:
+  - Levi Dolan
+  - Mirian Ramirez
+  - Hannah Craven
+status: pre-alpha
+educationalLevel: Introductory
+abstract: >-
+  Guides learners through creating an ORCID, understanding its significance, and
+  connecting it to major systems that update ORCID records.
+keywords:
+  - ORCID
+  - identifiers
+  - researcher profiles
+  - metadata
+pilots:
+  - date: 2025-01-28T00:00:00.000Z
+    location: Internal (Authors)
+    instructor: Levi Dolan
+    type: Alpha Teach-through
+    note: Completed teach-through; incorporating feedback.
+recognition:
+  - title: CAC Presentation
+    desc: >-
+      Presented to the Library Carpentry Curriculum Advisory Committee on August
+      5, 2025.
+  - title: Incubator Proposal
+    desc: In process of being added to the Carpentries Incubator.
+learningResourceType: lesson
+teaches:
+  - Create an ORCID profile.
+  - Understand the importance of using an ORCID.
+  - Connect ORCID to major systems for updating records.
+url: https://firbolg.github.io/LC_ORCID/
+repo: https://github.com/firbolg/LC_ORCID

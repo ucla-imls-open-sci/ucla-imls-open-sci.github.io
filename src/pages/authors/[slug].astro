@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import lessonsData from '../../data/lessons.yml';
+import { getCollection } from 'astro:content';
 import siteTextData from '../../data/sitetext.yml';
 import { siteConfig } from '../../site_config';
 import { slugify } from '../../utils/slugs';
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 }
 
 const { author } = Astro.props;
-const lessons = (lessonsData as any).lessons || [];
+const lessons = (await getCollection('lessons')).map(l => l.data);
 
 // Find lessons contributed by this author
 const authorLessons = lessons.filter((l: any) => 

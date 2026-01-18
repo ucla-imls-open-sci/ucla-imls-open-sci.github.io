@@ -1,10 +1,10 @@
 ---
-import lessonsData from '../data/lessons.yml';
+import { getCollection } from 'astro:content';
 import siteTextData from '../data/sitetext.yml';
 import { siteConfig } from '../site_config';
 import LessonCard from './LessonCard.astro';
 
-const lessons = (lessonsData as any).lessons || [];
+const lessons = (await getCollection('lessons')).map(l => l.data);
 const t = (siteTextData as any)[siteConfig.locale];
 const authorProfiles = t.authors.people || [];
 

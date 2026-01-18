@@ -1,0 +1,28 @@
+name: UNESCO Recommendation on Open Science
+duration: 1–2h (reading/reference)
+authors:
+  - UNESCO
+status: mature
+educationalLevel: Introductory
+type: external
+why_teach: >-
+  This framework establishes a shared, internationally recognized definition of
+  Open Science that librarians can use to ground institutional policy,
+  instruction, and advocacy.
+abstract: >-
+  A global policy framework defining Open Science as an inclusive approach
+  encompassing open knowledge, infrastructure, and societal engagement, with
+  strong emphasis on equity and global participation.
+keywords:
+  - open science
+  - policy
+  - governance
+  - equity
+  - global scholarship
+learningResourceType: framework
+teaches:
+  - Articulate a global definition of Open Science.
+  - Recognize institutional and policy implications of Open Science.
+  - Situate library work within international Open Science efforts.
+url: https://www.unesco.org/en/open-science/about
+repo: null

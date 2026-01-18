@@ -1,0 +1,57 @@
+name: Open Qualitative Research (QualCoder)
+authors:
+  - Nathaniel Porter
+  - Sebastian Karcher
+status: beta
+library_carpentry_adopted: true
+educationalLevel: Introductory
+duration: 4h 00m
+abstract: >-
+  Familiarizes learners with the application of open science principles to
+  qualitative research. Focuses on documents or transcribed text in a variety of
+  data formats. Learners practice working with secondary qualitative data from
+  the Qualitative Data Repository (QDR) in the free software QualCoder.
+why_teach: >-
+  QualCoder is a free, open-source alternative to expensive proprietary tools
+  like NVivo. Teaching this empowers researchers with accessible tools for
+  reproducible qualitative analysis.
+keywords:
+  - qualitative research
+  - open science
+  - qualcoder
+  - QDR
+  - coding
+pilots:
+  - date: 2025-05-20T00:00:00.000Z
+    location: Virginia Tech Libraries
+    instructor: Nathaniel Porter
+    type: Workshop
+  - date: 2025-03-10T00:00:00.000Z
+    location: Virginia Tech Libraries
+    instructor: Nathaniel Porter
+    type: Workshop
+  - date: 2025-06-03T00:00:00.000Z
+    location: IASSIST 2025 Conference (Bristol, UK)
+    instructor: Sebastian Karcher
+    type: Workshop
+recognition:
+  - title: JeSLIB Article Accepted
+    desc: >-
+      A peer-reviewed article describing this curriculum was accepted for
+      publication in the Journal of eScience Librarianship (JeSLIB).
+  - title: CAC Presentation
+    desc: >-
+      Presented to the Library Carpentry Curriculum Advisory Committee on April
+      3, 2025.
+learningResourceType: lesson
+teaches:
+  - >-
+    Work with secondary qualitative data from the Qualitative Data Repository
+    (QDR).
+  - Use the free software QualCoder for qualitative analysis.
+  - >-
+    Discuss options and limitations for open research with proprietary
+    qualitative analysis packages.
+  - Understand options for sharing source data and coded analysis projects.
+url: https://librarycarpentry.github.io/lc-qualitative-qualcoder/
+repo: https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder

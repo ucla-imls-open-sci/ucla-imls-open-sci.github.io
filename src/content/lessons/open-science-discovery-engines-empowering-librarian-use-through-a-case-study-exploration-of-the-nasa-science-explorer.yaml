@@ -1,0 +1,62 @@
+name: >-
+  Open Science Discovery Engines: Empowering Librarian Use Through a Case Study
+  Exploration of the NASA Science Explorer
+duration: 4h 15m
+authors:
+  - Jennifer Lynn Bartlett
+  - Katie Frey
+  - Stephanie Jarmak
+contributors:
+  - Tim Dennis
+  - Zikang Eric Huang
+  - Madeline Kim
+  - Lawrence Lee
+content_contributors:
+  - Manuel Pichardo Marcano
+  - Brit Myers
+  - Olivia Harper Wilkins
+status: pre-alpha
+educationalLevel: Introductory
+abstract: >-
+  The module begins by describing how the Science Explorer (SciX) fits as part
+  of the open science ecosystem and establishing how it supports the FAIR
+  principles: Findable, Accessible, Interoperable, Reusable. You will be
+  introduced to search features through examples highlighting the strengths of
+  SciX for discipline-specific and interdisciplinary queries. You will also
+  learn how to use SciX’s suite of second order operators to explore research
+  trends and reviews, along with methods of finding similar papers and papers
+  others studying the same topic have found useful. Lastly, you will learn how
+  authors can claim papers within SciX with their ORCiD.
+keywords:
+  - discovery
+  - NASA
+  - SciX
+  - FAIR
+  - ORCID
+  - open science
+  - astrophysics
+  - planetary science
+  - earth science
+pilots:
+  - date: 2024-09-15T00:00:00.000Z
+    location: Internal
+    instructor: Jennifer Lynn Bartlett
+    type: Small Test Run
+    note: Initial test run; classroom alpha pending.
+recognition:
+  - title: Governance Roadmap
+    desc: >-
+      Scheduled for presentation to the Library Carpentry Curriculum Advisory
+      Committee.
+learningResourceType: lesson
+teaches:
+  - Describe how SciX supports FAIR principles.
+  - >-
+    Utilize SciX search features for discipline-specific and interdisciplinary
+    queries.
+  - Employ SciX's second-order operators to explore research trends.
+  - Claim papers within SciX using ORCID.
+url: http://ucla-imls-open-sci.info/lc-scix-open-science/
+repo: https://github.com/ucla-imls-open-sci/lc-scix-open-science
+doi: 10.5281/zenodo.18187546
+version: 0.1.1

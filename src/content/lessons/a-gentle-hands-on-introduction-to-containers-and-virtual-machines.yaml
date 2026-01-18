@@ -1,0 +1,35 @@
+name: A gentle, hands-on introduction to containers and virtual machines
+duration: 3h 00m
+authors:
+  - Fernando Rios
+  - Jeffrey Oliver
+status: beta
+status_note: >-
+  Ready for community piloting. Accepted for presentation at the RDAP Summit on
+  April 13, 2026.
+educationalLevel: Intermediate
+keywords:
+  - containers
+  - virtual machines
+  - infrastructure
+pilots:
+  - date: 2024-10-10T00:00:00.000Z
+    location: University of Arizona
+    instructor: Fernando Rios & Jeffrey Oliver
+    type: Alpha Pilot
+  - date: 2025-06-05T00:00:00.000Z
+    location: University of Arizona
+    instructor: Fernando Rios & Jeffrey Oliver
+    type: Alpha Pilot
+    note: Initial test session.
+  - date: 2026-04-13T00:00:00.000Z
+    location: RDAP Summit 2026
+    instructor: Hafeez Adepoju (University of Arizona) & Chreston Miller (Virginia Tech)
+    type: Beta Pilot
+    note: Workshop at the RDAP Summit.
+learningResourceType: lesson
+teaches:
+  - Using containers
+  - Virtual machines
+url: https://librarycarpentry.github.io/lc-containers_vms/
+repo: https://github.com/LibraryCarpentry/lc-containers_vms

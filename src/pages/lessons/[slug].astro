@@ -1,16 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import LessonStatusBanner from '../../components/LessonStatusBanner.astro';
-import lessonsData from '../../data/lessons.yml';
+import { getCollection } from 'astro:content';
 import siteTextData from '../../data/sitetext.yml';
 import { siteConfig } from '../../site_config';
 import { slugify } from '../../utils/slugs';
 
 export async function getStaticPaths() {
-  const lessons = (lessonsData as any).lessons || [];
-  return lessons.map((lesson: any) => ({
-    params: { slug: slugify(lesson.name) },
-    props: { lesson },
+  const lessons = await getCollection('lessons');
+  return lessons.map((lesson) => ({
+    params: { slug: slugify(lesson.data.name) },
+    props: { lesson: lesson.data },
   }));
 }
 

@@ -1,0 +1,26 @@
+name: The ACRL Open Science Cookbook
+duration: Self-paced reference
+authors:
+  - Association of College and Research Libraries
+status: mature
+educationalLevel: Introductory
+type: external
+why_teach: >-
+  This resource provides librarians with concrete, practice-oriented examples of
+  how Open Science principles appear in real library services, consultations,
+  and programs.
+abstract: >-
+  A curated collection of short case studies and practical guidance designed to
+  help librarians support Open Science across research workflows.
+keywords:
+  - open science
+  - librarians
+  - scholarly communication
+  - research support
+learningResourceType: reference
+teaches:
+  - Recognize common Open Science support scenarios in libraries.
+  - Identify practical approaches to supporting open research practices.
+  - Connect Open Science principles to everyday library work.
+url: https://www.ala.org/news/2025/06/new-acrl-open-science-cookbook
+repo: null

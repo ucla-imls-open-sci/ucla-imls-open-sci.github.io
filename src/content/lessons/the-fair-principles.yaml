@@ -1,0 +1,26 @@
+name: The FAIR Principles
+duration: 30–60m (conceptual overview)
+authors:
+  - Wilkinson et al.
+status: mature
+educationalLevel: Introductory
+type: external
+why_teach: >-
+  FAIR provides the dominant conceptual framework for research data management
+  and is essential for librarians supporting data stewardship and
+  machine-actionable research outputs.
+abstract: >-
+  A set of guiding principles for making research data Findable, Accessible,
+  Interoperable, and Reusable, with emphasis on machine-actionability.
+keywords:
+  - FAIR
+  - research data management
+  - metadata
+  - interoperability
+learningResourceType: framework
+teaches:
+  - Explain the FAIR principles.
+  - Describe why machine-actionability matters.
+  - Connect FAIR to data curation and repository practices.
+url: https://www.go-fair.org/fair-principles/
+repo: null

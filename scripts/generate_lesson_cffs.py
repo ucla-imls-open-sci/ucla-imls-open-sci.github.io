@@ -1,10 +1,11 @@
 import yaml
 import os
 import re
+import glob
 from datetime import date
 
 # Configuration
-LESSONS_FILE = 'src/data/lessons.yml'
+LESSONS_DIR = 'src/content/lessons'
 OUTPUT_DIR = 'generated_citations'
 
 def slugify(text):
@@ -13,9 +14,14 @@ def slugify(text):
     return text.strip('-')
 
 def load_lessons():
-    with open(LESSONS_FILE, 'r') as f:
-        data = yaml.safe_load(f)
-    return data.get('lessons', [])
+    lessons = []
+    # Use glob to find all yaml files in the directory
+    for filepath in glob.glob(os.path.join(LESSONS_DIR, '*.yaml')):
+        with open(filepath, 'r') as f:
+            data = yaml.safe_load(f)
+            if data:
+                lessons.append(data)
+    return lessons
 
 def generate_cff(lesson):
     # Extract data

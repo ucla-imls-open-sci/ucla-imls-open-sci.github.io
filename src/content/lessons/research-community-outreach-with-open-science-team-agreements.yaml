@@ -1,0 +1,24 @@
+name: Research Community Outreach with Open Science Team Agreements
+duration: 2h 15m
+authors:
+  - Samantha Teplitzky
+  - Ariel Deardorff
+  - Samantha Wilairat
+status: alpha
+educationalLevel: Introductory
+abstract: >-
+  Introduces the Open Science Team Agreement template as a practical tool for
+  researchers and librarians to advocate for open science practices and plan
+  research outreach activities.
+keywords:
+  - team agreements
+  - community
+  - open science
+  - outreach
+learningResourceType: lesson
+teaches:
+  - Summarize the benefits of an open science team agreement.
+  - Modify the open science team agreement for an example research group.
+  - Design an outreach plan for a specific research audience.
+url: https://librarycarpentry.github.io/lc-team-agreements/
+repo: https://github.com/LibraryCarpentry/lc-team-agreements

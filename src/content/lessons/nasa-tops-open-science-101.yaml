@@ -1,0 +1,28 @@
+name: 'NASA TOPS: Open Science 101'
+duration: 6–8h (self-paced)
+authors:
+  - NASA Transform to Open Science (TOPS)
+status: mature
+educationalLevel: Introductory
+type: external
+why_teach: >-
+  NASA TOPS offers a structured, authoritative introduction to Open Science
+  principles that librarians can reference or complete to build shared
+  understanding with researchers.
+abstract: >-
+  An introductory curriculum developed by NASA as part of the Transform to Open
+  Science initiative. Covers openness, transparency, reproducibility, and data
+  sharing, with an optional certification pathway.
+keywords:
+  - open science
+  - certification
+  - reproducibility
+  - data sharing
+  - research culture
+learningResourceType: course
+teaches:
+  - Define core Open Science principles.
+  - Explain the benefits of open and reproducible research.
+  - Recognize how Open Science practices apply across disciplines.
+url: https://science.nasa.gov/open-science/training/
+repo: null

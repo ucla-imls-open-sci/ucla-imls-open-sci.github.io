@@ -1,7 +1,9 @@
 ---
-import lessonsData from '../data/lessons.yml';
+import { getCollection } from 'astro:content';
 
-const lessons = (lessonsData as any).lessons.filter((l: any) => l.type !== 'external');
+const lessons = (await getCollection('lessons'))
+    .map(l => l.data)
+    .filter((l: any) => l.type !== 'external');
 
 // Helper to determine status
 const getStatus = (lesson: any, milestone: string) => {

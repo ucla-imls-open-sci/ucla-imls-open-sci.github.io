@@ -1,0 +1,42 @@
+name: >-
+  Open and Reproducible Research Cloud Workflows: A Firsthand Experience for
+  Librarians
+duration: 3h 08m
+authors:
+  - Daniel Kerchner
+status: alpha
+educationalLevel: Intermediate
+why_teach: >-
+  Cloud computing is becoming essential for modern research. By teaching this
+  lesson, you empower librarians to move beyond theory and gain hands-on
+  confidence with the actual tools (SSH, RStudio Server) their researchers use
+  daily.
+abstract: >-
+  This lesson provides librarians with firsthand experience in open and
+  reproducible research workflows using cloud computing. It aims to shift
+  librarians' perspectives by engaging them directly in a reproducible research
+  workflow using command-line tools and cloud resources.
+keywords:
+  - reproducibility
+  - cloud
+  - workflow
+  - shell
+  - ssh
+  - rstudio
+pilots:
+  - date: 2023-08-15T00:00:00.000Z
+    location: UCLA Data Science Center
+    instructor: Daniel Kerchner
+    type: Hybrid
+learningResourceType: lesson
+teaches:
+  - Explain the concept and benefits of cloud computing in open research.
+  - Log in to a remote computer using SSH and execute basic shell commands.
+  - Use SCP to transfer files between local and remote computers.
+  - Clone a public GitHub repository onto a remote computer.
+  - Run R code to analyze data within a remote RStudio server session.
+  - >-
+    Identify opportunities for librarians to employ skills for open and
+    reproducible research.
+url: https://kerchner.github.io/lc-open-reproducible-research-cloud/
+repo: https://github.com/kerchner/lc-open-reproducible-research-cloud

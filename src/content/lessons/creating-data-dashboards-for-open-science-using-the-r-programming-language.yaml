@@ -1,0 +1,35 @@
+name: Creating Data Dashboards for Open Science Using the R Programming Language
+duration: 3h 36m
+authors:
+  - Aditya Ranganath
+status: alpha
+educationalLevel: Intermediate
+abstract: >-
+  An introduction to Shiny, a package for writing and publishing web
+  applications in R. Enables researchers to develop interactive web applications
+  and data dashboards without extensive web development experience.
+keywords:
+  - dashboards
+  - R
+  - shiny
+  - data visualization
+  - web applications
+prerequisites:
+  - name: Introduction to R (Library Carpentry)
+    url: https://librarycarpentry.org/lc-r/
+pilots:
+  - date: 2025-05-12T00:00:00.000Z
+    location: CRDDS, CU Boulder
+    instructor: Aditya Ranganath
+    type: Virtual Workshop
+learningResourceType: lesson
+teaches:
+  - >-
+    Understand the importance of web applications and dashboards for applied
+    research.
+  - Learn the basic syntax and vocabulary of the Shiny package.
+  - Develop interactive Shiny applications that respond to user inputs.
+  - Create data dashboards using the shinydashboard package.
+  - Publish Shiny applications.
+url: https://aranganath24.github.io/data-dashboard-carpentries/
+repo: https://github.com/aranganath24/data-dashboard-carpentries

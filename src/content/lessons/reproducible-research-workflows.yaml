@@ -1,0 +1,23 @@
+name: Reproducible Research Workflows
+authors:
+  - Agata Bochynska
+status: pre-alpha
+educationalLevel: Intermediate
+abstract: >-
+  Focuses on helping librarians understand the concept of reproducibility and
+  learn about both theoretical and practical aspects of reproducible research
+  workflows across different disciplines.
+keywords:
+  - reproducibility
+  - workflow
+  - open science
+  - tools
+learningResourceType: lesson
+teaches:
+  - Explain what research reproducibility is and list benefits/challenges.
+  - Explain how different disciplines define reproducibility differently.
+  - Provide examples of reproducible research workflows.
+  - List and use tools for increasing research reproducibility.
+  - Provide examples of how libraries can support research reproducibility.
+url: https://librarycarpentry.github.io/lc-reproducible-research/
+repo: https://github.com/LibraryCarpentry/lc-reproducible-research

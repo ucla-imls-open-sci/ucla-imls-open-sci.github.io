@@ -1,8 +1,8 @@
 ---
-import lessonsData from '../data/lessons.yml';
+import { getCollection } from 'astro:content';
 
 // Count lessons seeking pilots
-const lessons = (lessonsData as any).lessons || [];
+const lessons = (await getCollection('lessons')).map(l => l.data);
 const alphaLessons = lessons.filter((l: any) => {
   const status = l.status?.toLowerCase() || '';
   return status.includes('alpha') && !status.includes('pre') && l.type !== 'external';

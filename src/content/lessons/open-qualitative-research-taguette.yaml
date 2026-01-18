@@ -1,0 +1,42 @@
+name: Open Qualitative Research (Taguette)
+authors:
+  - Nathaniel Porter
+status: alpha
+educationalLevel: Introductory
+abstract: >-
+  Familiarizes learners with the application of open science principles to
+  qualitative research. Focuses on documents or transcribed text in a variety of
+  data formats and working with secondary qualitative data.
+keywords:
+  - qualitative research
+  - open science
+  - taguette
+  - QDR
+pilots:
+  - date: 2025-04-03T00:00:00.000Z
+    location: Co-taught Workshop
+    instructor: Sebastian Karcher
+    type: Co-taught Pilot
+  - date: 2025-04-01T00:00:00.000Z
+    location: External Pilot
+    instructor: Authors
+    type: Pilot
+    note: Taught twice using data from QDR.
+learningResourceType: lesson
+teaches:
+  - >-
+    Work with secondary qualitative data from the Qualitative Data Repository
+    (QDR).
+  - Use the free software Taguette for qualitative analysis.
+  - >-
+    Discuss options and limitations for open research with proprietary
+    qualitative analysis packages.
+  - Understand options for sharing source data and coded analysis projects.
+url: https://librarycarpentry.github.io/lc-qualitative-taguette/
+repo: https://github.com/LibraryCarpentry/lc-open-qualitative-research
+library_carpentry_adopted: true
+recognition:
+  - title: JeSLIB Article Accepted
+    desc: >-
+      A peer-reviewed article describing this curriculum was accepted for
+      publication in the Journal of eScience Librarianship (JeSLIB).
