@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Configuration
-GITHUB_ORG="ucla-imls-open-sci"
 GENERATED_DIR="generated_citations"
 
 # Check if gh cli is installed
@@ -24,34 +23,37 @@ echo "Starting CITATION.cff PR creation process..."
 for cff_file in "$GENERATED_DIR"/*.cff; do
     [ -e "$cff_file" ] || continue
 
-    # Extract repo name from filename (assuming format CITATION-repo-name.cff)
-    # This matches the output format of our python script
-    filename=$(basename "$cff_file")
-    repo_name_with_prefix="${filename%.cff}"
-    repo_name="${repo_name_with_prefix#CITATION-}"
+    # Extract repo URL from CFF content
+    repo_url=$(grep "repository-code:" "$cff_file" | awk '{print $2}')
 
-    # Special handling for known repos if naming doesn't match exactly
-    # Ideally, generate_lesson_cffs.py should output exact repo names
-    # For now, let's assume the python script does a good job of slugifying to match repo names
-    # or we can maintain a mapping here if needed.
-
-    echo "Processing $repo_name..."
-
-    # Check if repo exists
-    if ! gh repo view "$GITHUB_ORG/$repo_name" &> /dev/null;
-        then
-        echo "  Warning: Repository $GITHUB_ORG/$repo_name not found. Skipping."
+    if [ -z "$repo_url" ]; then
+        echo "  Warning: No repository-code found in $cff_file. Skipping."
         continue
     fi
 
+    # Extract owner/repo from URL (remove https://github.com/ and .git if present)
+    # Also handle trailing slashes just in case
+    full_repo_name=$(echo "$repo_url" | sed -e 's/https:\/\/github.com\///' -e 's/\.git$//' -e 's/\/$//')
+    
+    echo "Processing $full_repo_name..."
+
+    # Check if repo exists/accessible
+    if ! gh repo view "$full_repo_name" &> /dev/null; then
+         echo "  Warning: Repository $full_repo_name not found or not accessible. Skipping."
+         continue
+    fi
+
     # Clone the repo to a temp directory
-    temp_repo_dir="_temp_repos/$repo_name"
+    # Use just the repo name for the directory to avoid nested dirs
+    repo_slug=$(basename "$full_repo_name")
+    temp_repo_dir="_temp_repos/$repo_slug"
+    
     if [ -d "$temp_repo_dir" ]; then
         rm -rf "$temp_repo_dir"
     fi
     
-    echo "  Cloning $GITHUB_ORG/$repo_name..."
-    gh repo clone "$GITHUB_ORG/$repo_name" "$temp_repo_dir" -- -q
+    echo "  Cloning $full_repo_name..."
+    gh repo clone "$full_repo_name" "$temp_repo_dir" -- -q
 
     # Copy the new CFF file
     cp "$cff_file" "$temp_repo_dir/CITATION.cff"
@@ -65,24 +67,26 @@ for cff_file in "$GENERATED_DIR"/*.cff; do
         echo "  No changes detected in CITATION.cff. Skipping."
     else
         # Create branch
-        branch_name="update-citation-cff-$(date +%Y%m%d)"
+        branch_name="update-citation-cff-$(date +%Y%m%d-%H%M%S)"
         git checkout -b "$branch_name"
 
         # Commit changes
         git add CITATION.cff
         git commit -m "chore: update CITATION.cff with latest metadata"
 
-        # Push branch
-        git push origin "$branch_name"
+        # Push branch (this might fail if we don't have write access, so we capture that)
+        if git push origin "$branch_name"; then
+            # Create Pull Request
+            gh pr create \
+                --title "chore: update CITATION.cff metadata" \
+                --body "This PR updates the CITATION.cff file with the latest metadata from the central website configuration. This ensures accurate citations for this lesson." \
+                --base main \
+                --head "$branch_name"
 
-        # Create Pull Request
-        gh pr create \
-            --title "chore: update CITATION.cff metadata" \
-            --body "This PR updates the CITATION.cff file with the latest metadata from the central website configuration. This ensures accurate citations for this lesson." \
-            --base main \
-            --head "$branch_name"
-
-        echo "  Pull Request created successfully!"
+            echo "  Pull Request created successfully!"
+        else
+            echo "  Error: Could not push to '$full_repo_name'. You might not have write access. If this is an external repo, you would need to fork it first."
+        fi
     fi
 
     # Cleanup
