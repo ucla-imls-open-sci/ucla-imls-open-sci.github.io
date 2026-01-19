@@ -11,6 +11,9 @@ export default defineConfig({
   integrations: [react(), // Only load Keystatic in development to avoid adapter requirement for static builds
   ...(process.env.NODE_ENV === 'development' ? [keystatic()] : []), markdoc()],
   vite: {
+    optimizeDeps: {
+      exclude: ['@keystatic/core', '@keystatic/astro'],
+    },
     plugins: [yaml()],
     css: {
       preprocessorOptions: {
