@@ -12,7 +12,10 @@ export default defineConfig({
   ...(process.env.NODE_ENV === 'development' ? [keystatic()] : []), markdoc()],
   vite: {
     optimizeDeps: {
-      exclude: ['@keystatic/core', '@keystatic/astro'],
+      exclude: ['@keystatic/core', '@keystatic/astro', 'zod'],
+    },
+    ssr: {
+      noExternal: ['@keystatic/core', '@keystatic/astro'],
     },
     plugins: [yaml()],
     css: {

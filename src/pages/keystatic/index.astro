@@ -1,6 +1,5 @@
 ---
-import { Keystatic } from '@keystatic/core/ui';
-import config from '../../../keystatic.config';
+import KeystaticApp from '../../components/KeystaticApp';
 
 export const prerender = true;
 ---
@@ -25,4 +24,4 @@ export const prerender = true;
   }(window.location))
 </script>
 
-<Keystatic config={config} client:only="react" />
+<KeystaticApp client:only="react" />
