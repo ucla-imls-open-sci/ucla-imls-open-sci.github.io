@@ -3,8 +3,7 @@ import { config, fields, collection } from '@keystatic/core';
 export default config({
   storage: import.meta.env.PROD
     ? {
-        kind: 'github',
-        repo: 'ucla-imls-open-sci/ucla-imls-open-sci.github.io',
+        kind: 'cloud',
       }
     : {
         kind: 'local',
