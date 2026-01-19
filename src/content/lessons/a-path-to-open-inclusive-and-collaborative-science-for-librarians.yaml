@@ -1,27 +1,26 @@
 name: A Path to Open, Inclusive, and Collaborative Science for Librarians
+duration: 3h 0m
 authors:
   - Irene Vazano
   - Jessica Formoso
+contributors: []
+content_contributors: []
 status: alpha
+status_note: Explicitly noted as not yet taught as of April 2025.
 educationalLevel: Introductory
 abstract: >-
   Designed to empower participants with the knowledge and skills needed for
   effective open science practices, with an emphasis on collaboration and
   inclusivity. Focuses on overcoming language, socioeconomic, and geographical
   barriers.
-status_note: Explicitly noted as not yet taught as of April 2025.
 keywords:
   - collaboration
   - open science
   - inclusion
   - FAIR
   - CARE
-recognition:
-  - title: CAC Presentation
-    desc: >-
-      Presented to the Library Carpentry Curriculum Advisory Committee on April
-      3, 2025.
 learningResourceType: lesson
+type: internal
 teaches:
   - >-
     Understand open science's motivations and challenges for non-native English
@@ -31,3 +30,11 @@ teaches:
   - Apply best practices for a more inclusive research network.
 url: https://librarycarpentry.github.io/lc-collaborative-science/
 repo: https://github.com/LibraryCarpentry/lc-collaborative-science
+library_carpentry_adopted: false
+pilots: []
+recognition:
+  - title: CAC Presentation
+    desc: >-
+      Presented to the Library Carpentry Curriculum Advisory Committee on April
+      3, 2025.
+prerequisites: []
