@@ -1,5 +1,5 @@
 ---
-import { makePage } from '@keystatic/astro/ui';
+import { Keystatic } from '@keystatic/astro/ui';
 import config from '../../../keystatic.config';
 
 export const prerender = true;
@@ -25,4 +25,4 @@ export const prerender = true;
   }(window.location))
 </script>
 
-<makePage.Keystatic config={config} />
+<Keystatic config={config} client:only="react" />
