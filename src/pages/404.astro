@@ -9,7 +9,7 @@ import Layout from '../layouts/PageLayout.astro';
     if (l.pathname.startsWith(projectBase)) {
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        projectBase + '/?' +
+        projectBase + '/?p=' +
         l.pathname.slice(projectBase.length).split('/').join('/') +
         (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
