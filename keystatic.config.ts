@@ -9,6 +9,9 @@ export default config({
     : {
         kind: 'local',
       },
+  cloud: {
+    project: 'ucla-imls-opensci/ucla-imls-open-sci',
+  },
   ui: {
     brand: { name: 'IMLS Open Science ↗' },
     navigation: {
