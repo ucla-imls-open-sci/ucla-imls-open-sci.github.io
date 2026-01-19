@@ -86,6 +86,14 @@ export default config({
             ],
             defaultValue: 'lesson'
         }),
+        type: fields.select({
+            label: 'Type (Internal/External)',
+            options: [
+                { label: 'Internal (Curriculum)', value: 'internal' },
+                { label: 'External Resource', value: 'external' },
+            ],
+            defaultValue: 'internal',
+        }),
         teaches: fields.array(fields.text({ label: 'Learning Objective' }), { label: 'Teaches', itemLabel: props => props.value }),
         url: fields.url({ label: 'Lesson URL' }),
         repo: fields.url({ label: 'Repository URL' }),
