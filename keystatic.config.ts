@@ -25,7 +25,7 @@ export default config({
       format: { contentField: 'content' },
       schema: {
         title: fields.text({ label: 'Title' }),
-        slug: fields.slug({ name: { label: 'Slug' } }),
+        slug: fields.text({ label: 'Slug', validation: { length: { min: 1 } } }),
         date: fields.date({ label: 'Date', validation: { isRequired: true } }),
         author: fields.text({ label: 'Author' }),
         description: fields.text({ label: 'Description', multiline: true }),
