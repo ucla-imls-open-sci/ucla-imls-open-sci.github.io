@@ -1,4 +1,4 @@
-import { config, fields, collection, singleton } from '@keystatic/core';
+import { config, fields, collection } from '@keystatic/core';
 
 export default config({
   storage: import.meta.env.PROD
@@ -13,83 +13,7 @@ export default config({
     brand: { name: 'IMLS Open Science ↗' },
     navigation: {
       'Content': ['lessons', 'blog'],
-      'Settings': ['site'],
     },
-  },
-  singletons: {
-    site: singleton({
-      label: 'Site Settings',
-      path: 'src/data/sitetext',
-      format: 'yaml',
-      schema: {
-        en: fields.object({
-            about: fields.object({
-                title: fields.text({ label: 'Title' }),
-                text: fields.text({ label: 'Subtitle' }),
-                body: fields.text({ label: 'Body Text', multiline: true }),
-            }, { label: 'About Section' }),
-            staff: fields.object({
-                title: fields.text({ label: 'Title' }),
-                people: fields.array(
-                    fields.object({
-                        name: fields.text({ label: 'Name' }),
-                        role: fields.text({ label: 'Role' }),
-                        image: fields.text({ label: 'Image Path' }),
-                        orcid: fields.text({ label: 'ORCID' }),
-                        social: fields.array(
-                            fields.object({
-                                url: fields.text({ label: 'URL' }),
-                                icon: fields.text({ label: 'Icon Class (FontAwesome)' }),
-                            }),
-                            { label: 'Social Links', itemLabel: props => props.fields.url.value }
-                        ),
-                    }),
-                    { label: 'Staff Members', itemLabel: props => props.fields.name.value }
-                ),
-            }, { label: 'Project Team' }),
-            team: fields.object({
-                title: fields.text({ label: 'Title' }),
-                text: fields.text({ label: 'Subtitle' }),
-                people: fields.array(
-                    fields.object({
-                        name: fields.text({ label: 'Name' }),
-                        role: fields.text({ label: 'Role' }),
-                        image: fields.text({ label: 'Image Path' }),
-                        orcid: fields.text({ label: 'ORCID' }),
-                        social: fields.array(
-                            fields.object({
-                                url: fields.text({ label: 'URL' }),
-                                icon: fields.text({ label: 'Icon Class (FontAwesome)' }),
-                            }),
-                            { label: 'Social Links', itemLabel: props => props.fields.url.value }
-                        ),
-                    }),
-                    { label: 'Committee Members', itemLabel: props => props.fields.name.value }
-                ),
-            }, { label: 'Committee' }),
-            authors: fields.object({
-                title: fields.text({ label: 'Title' }),
-                people: fields.array(
-                    fields.object({
-                        name: fields.text({ label: 'Name' }),
-                        lastname: fields.text({ label: 'Last Name (for sorting)' }),
-                        role: fields.text({ label: 'Role' }),
-                        image: fields.text({ label: 'Image Path' }),
-                        orcid: fields.text({ label: 'ORCID' }),
-                        social: fields.array(
-                            fields.object({
-                                url: fields.text({ label: 'URL' }),
-                                icon: fields.text({ label: 'Icon Class (FontAwesome)' }),
-                            }),
-                            { label: 'Social Links', itemLabel: props => props.fields.url.value }
-                        ),
-                    }),
-                    { label: 'Authors', itemLabel: props => props.fields.name.value }
-                ),
-            }, { label: 'Lesson Authors' }),
-        }, { label: 'English Content' }),
-      },
-    }),
   },
   collections: {
     blog: collection({
