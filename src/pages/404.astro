@@ -11,7 +11,7 @@ import Layout from '../layouts/PageLayout.astro';
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
         projectBase + '/?p=' +
         l.pathname.slice(projectBase.length).split('/').join('/') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
         l.hash
       );
     }
