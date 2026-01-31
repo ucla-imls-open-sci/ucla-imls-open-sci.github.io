@@ -35,10 +35,11 @@ pilots:
     instructor: Sebastian Karcher
     type: Workshop
 recognition:
-  - title: JeSLIB Article Accepted
+  - title: JeSLIB Article Published
     desc: >-
-      A peer-reviewed article describing this curriculum was accepted for
-      publication in the Journal of eScience Librarianship (JeSLIB).
+      A peer-reviewed article describing this curriculum is published in the
+      Journal of eScience Librarianship (JeSLIB).
+    url: https://doi.org/10.7191/jeslib.1172
   - title: CAC Presentation
     desc: >-
       Presented to the Library Carpentry Curriculum Advisory Committee on April

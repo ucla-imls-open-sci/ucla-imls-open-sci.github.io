@@ -36,7 +36,8 @@ url: https://librarycarpentry.github.io/lc-qualitative-taguette/
 repo: https://github.com/LibraryCarpentry/lc-open-qualitative-research
 library_carpentry_adopted: true
 recognition:
-  - title: JeSLIB Article Accepted
+  - title: JeSLIB Article Published
     desc: >-
-      A peer-reviewed article describing this curriculum was accepted for
-      publication in the Journal of eScience Librarianship (JeSLIB).
+      A peer-reviewed article describing this curriculum is published in the
+      Journal of eScience Librarianship (JeSLIB).
+    url: https://doi.org/10.7191/jeslib.1172
