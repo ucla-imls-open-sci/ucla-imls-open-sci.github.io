@@ -55,6 +55,7 @@ body:
         - Open Research Cloud Workflows
         - Open Science Hardware
         - Collaborative Multilingual Search and Discovery Systems
+        - Reproducible Research Workflows
     validations:
       required: true
 
