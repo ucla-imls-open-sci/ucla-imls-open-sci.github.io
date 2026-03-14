@@ -16,6 +16,14 @@ const { title, description } = Astro.props;
     
     <SEO title={title} description={description} />
 
+    <!-- Theme color -->
+    <meta name="theme-color" content="#212529" />
+
+    <!-- Preconnect for external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
@@ -47,10 +55,29 @@ const { title, description } = Astro.props;
         }
       })();
     </script>
+  <style>
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      background: #000;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      z-index: 9999;
+      font-size: 1rem;
+      text-decoration: none;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
   </head>
   <body id="page-top">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <Navbar />
+    <main id="main-content">
     <slot />
+    </main>
     <Footer />
 
     <!-- Scripts -->

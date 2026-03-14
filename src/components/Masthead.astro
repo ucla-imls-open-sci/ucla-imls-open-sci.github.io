@@ -11,7 +11,7 @@ const header = t.header;
   <div class="container">
     <div class="intro-text">
       {header.title && <div class="intro-lead-in" set:html={marked.parseInline(header.title)} />}
-      {header.text && <div class="intro-heading text-uppercase" set:html={marked.parseInline(header.text)} />}
+      {header.text && <h1 class="intro-heading text-uppercase" set:html={marked.parseInline(header.text)} />}
       {header.button && (
         <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href={header.buttonlink}>
           {header.button}

@@ -29,14 +29,14 @@ const authors = t.authors;
               <ul class="list-inline social-buttons">
                 {person.social && person.social.map((network: any) => (
                   <li class="list-inline-item">
-                    <a 
-                      href={network.url.includes('@') ? `mailto:${network.url}` : network.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      aria-label={`Link to ${network.url}`}
+                    <a
+                      href={network.url.includes('@') ? `mailto:${network.url}` : network.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Link to ${network.url}${network.url.includes('@') ? '' : ' (opens in new tab)'}`}
                       class={network.url.includes('orcid.org') ? 'orcid-link' : ''}
                     >
-                      <i class={network.icon}></i>
+                      <i class={network.icon} aria-hidden="true"></i>
                     </a>
                   </li>
                 ))}

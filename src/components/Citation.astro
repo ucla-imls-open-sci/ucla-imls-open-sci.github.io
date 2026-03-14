@@ -36,13 +36,14 @@ const bibtexCitation = `@software{ucla_imls_open_sci_${year},
     {cff.doi && (
         <a href={`https://doi.org/${cff.doi}`} target="_blank" rel="noopener noreferrer">
             <img src={`https://zenodo.org/badge/DOI/${cff.doi}.svg`} alt="DOI" />
+            <span class="sr-only"> (opens in new tab)</span>
         </a>
     )}
   </div>
   <div class="card-body bg-white">
     <p class="small text-muted mb-4">
       If you use these materials in your own teaching or research, please cite the project using the formats below. 
-      The metadata is derived from our <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CITATION.cff" target="_blank" class="font-weight-bold">CITATION.cff</a> file.
+      The metadata is derived from our <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CITATION.cff" target="_blank" class="font-weight-bold">CITATION.cff<span class="sr-only"> (opens in new tab)</span></a> file.
     </p>
 
     <!-- APA style -->

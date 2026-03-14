@@ -24,7 +24,7 @@ const navLinks = (navData as any)[siteConfig.locale]?.nav || [];
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      Menu<i class="fas fa-bars"></i>
+      Menu<i class="fas fa-bars" aria-hidden="true"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav text-uppercase ml-auto">
@@ -43,8 +43,9 @@ const navLinks = (navData as any)[siteConfig.locale]?.nav || [];
         <li class="nav-item d-flex align-items-center">
           <div class="theme-switch-wrapper ml-3">
             <label class="theme-switch" for="checkbox" style="margin-bottom: 0;">
-              <input type="checkbox" id="checkbox" />
-              <div class="slider round"></div>
+              <input type="checkbox" id="checkbox" aria-label="Toggle dark mode" />
+              <span class="sr-only">Toggle dark mode</span>
+              <div class="slider round" aria-hidden="true"></div>
             </label>
           </div>
         </li>

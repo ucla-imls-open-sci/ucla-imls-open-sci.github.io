@@ -56,10 +56,10 @@ const showBanner = !isStable && (isAlpha || isBeta || isPreAlpha);
                 </div>
                 <div class="banner-actions">
                   <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/issues/new?template=pilot-interest.yml" class="btn btn-banner-primary" target="_blank">
-                    <i class="fas fa-rocket mr-2"></i>I'm Interested in Piloting
+                    <i class="fas fa-rocket mr-2" aria-hidden="true"></i>I'm Interested in Piloting<span class="sr-only"> (opens in new tab)</span>
                   </a>
                   <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CONTRIBUTING.md#pilot-our-lessons" class="btn btn-banner-secondary" target="_blank">
-                    <i class="fas fa-book mr-2"></i>View Pilot Guide
+                    <i class="fas fa-book mr-2" aria-hidden="true"></i>View Pilot Guide<span class="sr-only"> (opens in new tab)</span>
                   </a>
                 </div>
               </>
@@ -75,7 +75,7 @@ const showBanner = !isStable && (isAlpha || isBeta || isPreAlpha);
                 </p>
                 {statusNote && (
                   <div class="status-note">
-                    <i class="fas fa-info-circle mr-2"></i>
+                    <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>
                     {statusNote}
                   </div>
                 )}
@@ -92,10 +92,10 @@ const showBanner = !isStable && (isAlpha || isBeta || isPreAlpha);
                 </div>
                 <div class="banner-actions">
                   <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/issues/new?template=pilot-interest.yml" class="btn btn-banner-primary" target="_blank">
-                    <i class="fas fa-rocket mr-2"></i>I'm Interested in Piloting
+                    <i class="fas fa-rocket mr-2" aria-hidden="true"></i>I'm Interested in Piloting<span class="sr-only"> (opens in new tab)</span>
                   </a>
                   <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CONTRIBUTING.md#pilot-our-lessons" class="btn btn-banner-secondary" target="_blank">
-                    <i class="fas fa-book mr-2"></i>View Pilot Guide
+                    <i class="fas fa-book mr-2" aria-hidden="true"></i>View Pilot Guide<span class="sr-only"> (opens in new tab)</span>
                   </a>
                 </div>
               </>
@@ -111,13 +111,13 @@ const showBanner = !isStable && (isAlpha || isBeta || isPreAlpha);
                 </p>
                 {statusNote && (
                   <div class="status-note">
-                    <i class="fas fa-info-circle mr-2"></i>
+                    <i class="fas fa-info-circle mr-2" aria-hidden="true"></i>
                     {statusNote}
                   </div>
                 )}
                 <div class="banner-actions">
                   <a href="#details" class="btn btn-banner-secondary">
-                    <i class="fas fa-eye mr-2"></i>Preview Lesson Details
+                    <i class="fas fa-eye mr-2" aria-hidden="true"></i>Preview Lesson Details
                   </a>
                 </div>
               </>
@@ -143,10 +143,10 @@ const showBanner = !isStable && (isAlpha || isBeta || isPreAlpha);
             </p>
             <div class="banner-actions">
               <a href="#details" class="btn btn-banner-primary">
-                <i class="fas fa-play-circle mr-2"></i>Start Teaching
+                <i class="fas fa-play-circle mr-2" aria-hidden="true"></i>Start Teaching
               </a>
               <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/issues/new" class="btn btn-banner-secondary" target="_blank">
-                <i class="fas fa-comment mr-2"></i>Share Feedback
+                <i class="fas fa-comment mr-2" aria-hidden="true"></i>Share Feedback<span class="sr-only"> (opens in new tab)</span>
               </a>
             </div>
           </div>
@@ -287,7 +287,7 @@ const showBanner = !isStable && (isAlpha || isBeta || isPreAlpha);
   padding: 0.875rem 2rem;
   border-radius: 50px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   display: inline-flex;
   align-items: center;
   font-size: 1.05rem;
@@ -310,7 +310,7 @@ const showBanner = !isStable && (isAlpha || isBeta || isPreAlpha);
   padding: 0.875rem 2rem;
   border-radius: 50px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   display: inline-flex;
   align-items: center;
   font-size: 1.05rem;
@@ -324,15 +324,26 @@ const showBanner = !isStable && (isAlpha || isBeta || isPreAlpha);
   text-decoration: none;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .btn-banner-primary,
+  .btn-banner-secondary {
+    transition: none;
+  }
+  .btn-banner-primary:hover,
+  .btn-banner-secondary:hover {
+    transform: none;
+  }
+}
+
 /* Beta specific button color */
 .banner-beta .btn-banner-secondary {
-  border-color: #0dcaf0;
-  color: #0dcaf0;
+  border-color: #087f97;
+  color: #087f97;
 }
 
 .banner-beta .btn-banner-secondary:hover {
-  background-color: #0dcaf0;
-  color: #000;
+  background-color: #087f97;
+  color: #fff;
 }
 
 /* Responsive */
