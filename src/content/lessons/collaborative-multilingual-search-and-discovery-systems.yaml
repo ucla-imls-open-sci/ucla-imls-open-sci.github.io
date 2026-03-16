@@ -10,7 +10,8 @@ abstract: >-
   Guides users through creating a lightweight, open-source search and discovery
   system for multilingual research materials using the Google Sheets API and
   JavaScript. Addresses challenges in making research collections publicly
-  available and ethically represented.
+  available and ethically represented. It also helps you to design a plan to
+  promote your project and prompt participation and collaboration.
 status_note: Planning a hybrid pilot for March 2026 (2-month asynchronous cohort).
 keywords:
   - search
@@ -27,7 +28,7 @@ teaches:
     Create a JavaScript-based website search system retrieving data from Google
     Sheets.
   - >-
-    Consider linguistic and cultural diversity in disseminating research
-    findings.
+    Develop a plan to promote your project and encourage participation and
+    collaboration in multilingual and culturally diverse contexts.
 url: http://ucla-imls-open-sci.info/lc-multilingual-search-discovery-system/
 repo: https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system
