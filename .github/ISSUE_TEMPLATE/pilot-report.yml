@@ -1,0 +1,182 @@
+name: Pilot Report (Post-Workshop Feedback)
+description: Submit feedback after completing a pilot workshop
+title: "[Pilot Report]: <Lesson title> — <Institution>"
+labels: ["pilot-report", "community"]
+assignees: ["jt14den"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for piloting an Open Science lesson! Your feedback goes directly to lesson authors and helps refine the curriculum for the broader community.
+
+        Please complete this report within a week of your workshop while details are fresh. Your responses will be acknowledged in a Carpentries blog post recognizing pilot instructors.
+
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Your name (as you'd like it to appear in acknowledgments)
+      placeholder: Jane Doe
+    validations:
+      required: true
+
+  - type: input
+    id: affiliation
+    attributes:
+      label: Affiliation
+      description: Institution or organization
+      placeholder: University Library, Research Center, etc.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: lesson
+    attributes:
+      label: Lesson taught
+      options:
+        - A Path to Open, Inclusive, and Collaborative Science for Librarians
+        - Data Management (and Sharing) Plans for Librarians 101
+        - Open Qualitative Research
+        - Authoring Open Science
+        - Containers and Virtual Machines
+        - ORCID for Librarians
+        - Open Science Team Agreements
+        - Open Science Discovery Engines
+        - Data Dashboards with R
+        - Open Research Cloud Workflows
+        - Open Science Hardware
+        - Collaborative Multilingual Search and Discovery Systems
+        - Reproducible Research Workflows
+    validations:
+      required: true
+
+  - type: input
+    id: date
+    attributes:
+      label: Workshop date
+      description: Date or date range the workshop was held
+      placeholder: "2026-04-15"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Workshop format
+      options:
+        - In person
+        - Virtual
+        - Hybrid
+    validations:
+      required: true
+
+  - type: input
+    id: learners
+    attributes:
+      label: Number of learners
+      placeholder: "12"
+    validations:
+      required: true
+
+  - type: textarea
+    id: audience
+    attributes:
+      label: Audience description
+      description: Who attended? What was their background and familiarity with the topic?
+      placeholder: Academic librarians with some familiarity with data management, no prior ORCID experience
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty level
+      description: How did learners find the difficulty of the lesson overall?
+      options:
+        - Too easy
+        - About right
+        - Too difficult
+        - Mixed — varied across episodes
+    validations:
+      required: true
+
+  - type: textarea
+    id: timing
+    attributes:
+      label: Timing
+      description: How did actual timing compare to estimates? Note any episodes that ran long or short.
+      placeholder: |
+        Episode 1 (Introduction): estimated 20 min, actual 30 min — discussion ran long
+        Episode 2: about right
+        Total: 3.5 hrs vs. 3 hr estimate
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_worked
+    attributes:
+      label: What worked well?
+      description: Content, exercises, flow, or delivery that landed effectively
+    validations:
+      required: true
+
+  - type: textarea
+    id: what_to_improve
+    attributes:
+      label: What needs improvement?
+      description: Anything confusing, missing, too long, too short, or that you'd change before teaching again
+    validations:
+      required: true
+
+  - type: textarea
+    id: instructor_notes
+    attributes:
+      label: Instructor notes to add
+      description: Tips, warnings, or context that would help the next instructor teaching this lesson
+      placeholder: Learners often confuse X with Y — worth adding a clarifying note before Episode 3
+    validations:
+      required: false
+
+  - type: textarea
+    id: issues
+    attributes:
+      label: Specific content issues
+      description: Link to or describe specific issues to fix. If you've already opened issues in the lesson repo, paste the links here.
+      placeholder: |
+        - Exercise 2 instructions are ambiguous — opened https://github.com/...
+        - Figure in Episode 4 is missing alt text
+    validations:
+      required: false
+
+  - type: textarea
+    id: survey_notes
+    attributes:
+      label: Learner survey results
+      description: If you ran pre/post surveys, summarize key findings or paste a link to results
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: teach_again
+    attributes:
+      label: Would you teach this lesson again?
+      options:
+        - label: Yes, I plan to teach this lesson again
+
+  - type: checkboxes
+    id: acknowledgment
+    attributes:
+      label: Blog acknowledgment
+      description: Pilot instructors are acknowledged in a Carpentries blog post
+      options:
+        - label: Yes, I consent to being named as a pilot instructor in a Carpentries blog post recognizing this pilot
+    validations:
+      required: false
+
+  - type: textarea
+    id: other
+    attributes:
+      label: Anything else?
+      description: Additional feedback for the lesson authors or project team
+    validations:
+      required: false
