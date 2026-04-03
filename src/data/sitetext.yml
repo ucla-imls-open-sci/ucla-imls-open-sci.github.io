@@ -21,34 +21,28 @@ en:
       text: View project history
       buttonlink: /project-history
   services: &id003
-    title: Program
-    text: Creating a librarian-focused curriculum for open science!
+    title: About the Project
+    text: An IMLS-funded curriculum for open science, built by and for librarians.
     section: services
     list:
-    - title: Program Overview
-      desc: 'This call seeks to support **continued skills development** for librarians
-        in open science to effectively provide instruction to new researchers and
-        effectively collaborate with faculty and researchers in science projects using
-        open science practices. We aim to fund projects with high potential for **subsequent
-        impact on the open science community**. We invite proposals based on **diverse
-        intellectual approaches** and **personal backgrounds** to achieve these ends. '
-      icon: fas fa-clipboard-list
-    - title: Program Goals
-      desc: This program will result in 14 open science course modules for librarians
-        at any career stage, with seven lesson proposals selected each year of the
-        grant. These curricula will be published online in an unrestricted and freely
-        available manner for reuse and remixing. These lesson modules will be developed
-        and supported through two virtual summer workshops, and we will use feedback
-        from lesson piloting to test the learning objectives with librarian learners.
-      icon: fas fa-bullseye
-    - title: Program Parameters
-      desc: We are seeking lesson proposals intended for use in synchronous instruction
-        settings. Lesson proposals should support both in-person and virtual environments.
-        The completed lesson is expected to be 90 minutes to 3 hours long. We prefer
-        submissions that use open resources, such as open-source tools and software,
-        and resources that are broadly accessible to all.
-      icon: fas fa-edit
-    another_title: Read the [Full Call for Proposal](/#blog)
+    - title: What We Built
+      desc: Between 2023 and 2024, two cohorts of librarians proposed, developed,
+        and refined 14 lessons on open science principles and methods. All lessons
+        are built on The Carpentries Workbench and released under CC-BY 4.0, free
+        to teach and adapt.
+      icon: fas fa-book-open
+    - title: Where It Stands
+      desc: The grant period has ended. The Library Carpentry Governance Committee
+        now stewards the curriculum. One lesson, DMP 101, has been formally adopted
+        into the Library Carpentry curriculum. The remaining lessons are in Alpha or
+        Beta and actively seeking community pilots.
+      icon: fas fa-check-circle
+    - title: How to Get Involved
+      desc: You can pilot any lesson now. Pilots run 1.5 to 4 hours, in any format.
+        No specialized expertise required. Every pilot is credited in a Carpentries
+        blog post. Browse the lessons and file a pilot interest issue to get started.
+      icon: fas fa-chalkboard-teacher
+    another_title: "[View the curriculum](/#lessontab)"
   timeline: &id004
     title: Timeline
     text: for Lessons for Librarians in Open Science
