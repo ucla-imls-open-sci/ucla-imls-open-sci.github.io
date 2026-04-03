@@ -41,10 +41,13 @@ const totalSeekingPilots = alphaLessons.length + betaLessons.length;
               </span>
             </div>
             <div class="pilot-banner-actions">
-              <a href="#lessontab?filter=seeking-pilots&type=status" class="btn btn-pilot-primary">View Lessons Seeking Pilots</a>
-              <a href="https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/blob/main/CONTRIBUTING.md#pilot-our-lessons" target="_blank" class="btn btn-pilot-secondary">Learn About Piloting<span class="sr-only"> (opens in new tab)</span></a>
+              <a href="/#lessontab" class="btn btn-pilot-primary">View Lessons Seeking Pilots</a>
+              <a href="/pilot" class="btn btn-pilot-secondary">How to Pilot a Lesson</a>
             </div>
-            <button class="pilot-banner-close" aria-label="Close banner" onclick="document.getElementById('pilot-banner').style.display='none'; localStorage.setItem('pilotBannerDismissed', 'true');">
+            <p class="pilot-banner-email">
+              No GitHub account? Email <a href="mailto:tdennis@library.ucla.edu">tdennis@library.ucla.edu</a> to express interest.
+            </p>
+            <button class="pilot-banner-close" aria-label="Close banner" onclick="document.getElementById('pilot-banner').style.display='none'; sessionStorage.setItem('pilotBannerDismissed', 'true');">
               <i class="fas fa-times"></i>
             </button>
           </div>
@@ -183,6 +186,18 @@ const totalSeekingPilots = alphaLessons.length + betaLessons.length;
   }
 }
 
+.pilot-banner-email {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.pilot-banner-email a {
+  color: #087f97;
+  text-decoration: underline;
+}
+
 .pilot-banner-close {
   position: absolute;
   top: 1rem;
@@ -239,7 +254,7 @@ const totalSeekingPilots = alphaLessons.length + betaLessons.length;
 
 <script>
   // Check if banner was previously dismissed
-  if (typeof window !== 'undefined' && localStorage.getItem('pilotBannerDismissed') === 'true') {
+  if (typeof window !== 'undefined' && sessionStorage.getItem('pilotBannerDismissed') === 'true') {
     const banner = document.getElementById('pilot-banner');
     if (banner) {
       banner.style.display = 'none';
