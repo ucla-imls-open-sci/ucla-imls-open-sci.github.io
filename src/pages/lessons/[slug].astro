@@ -5,6 +5,7 @@ import { getCollection } from 'astro:content';
 import siteTextData from '../../data/sitetext.yml';
 import { siteConfig } from '../../site_config';
 import { slugify } from '../../utils/slugs';
+import githubHealthData from '../../data/github-health.json';
 
 export async function getStaticPaths() {
   const lessons = await getCollection('lessons');
@@ -95,9 +96,47 @@ const generateCitation = (l: any) => {
 };
 
 const citation = generateCitation(lesson);
+
+// GitHub health signals
+const health = lesson.repo ? (githubHealthData as any).lessons?.[lesson.repo] : null;
+
+function formatDate(dateStr: string, style: 'short' | 'long' = 'short'): string {
+  const d = new Date(dateStr + 'T00:00:00Z');
+  return style === 'long'
+    ? d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' })
+    : d.toLocaleDateString('en-US', { month: 'long', year: 'numeric', timeZone: 'UTC' });
+}
+
+// JSON-LD structured data
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LearningResource',
+  name: lesson.name,
+  description: lesson.abstract || `A lesson on ${lesson.name} for librarians and researchers.`,
+  url: `${siteConfig.url}/lessons/${slugify(lesson.name)}`,
+  ...(lesson.teaches?.length ? { teaches: lesson.teaches } : {}),
+  ...(lesson.educationalLevel ? { educationalLevel: lesson.educationalLevel } : {}),
+  ...(lesson.keywords?.length ? { keywords: lesson.keywords.join(', ') } : {}),
+  ...(lesson.authors?.length ? {
+    author: lesson.authors.map((name: string) => ({ '@type': 'Person', name }))
+  } : {}),
+  ...(health?.pushedAt ? { dateModified: health.pushedAt } : {}),
+  ...(lesson.doi ? { identifier: `https://doi.org/${lesson.doi}` } : {}),
+  inLanguage: 'en',
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  provider: {
+    '@type': 'Organization',
+    name: 'UCLA IMLS Open Science',
+    url: siteConfig.url,
+  },
+};
 ---
 
 <Layout title={lesson.name} description={lesson.abstract || `A lesson on ${lesson.name} for librarians and researchers.`}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </Fragment>
+
   <!-- Hero Section -->
   <header class="masthead" style="background-image: url('/assets/img/background-image-blue.png'); background-size: cover; min-height: 450px; padding-top: 6rem; padding-bottom: 3rem;">
     <div class="container">
@@ -385,6 +424,59 @@ const citation = generateCitation(lesson);
                 )}
             </div>
           </div>
+
+          <!-- Repository Health Card -->
+          {health && (
+            <div class="card border-0 shadow-sm mb-4">
+              <div class="card-header bg-white font-weight-bold">
+                <i class="fas fa-heartbeat mr-2 text-muted" aria-hidden="true"></i>Repository Health
+              </div>
+              <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                  {health.pushedAt && (
+                    <li class="mb-2">
+                      <i class="fas fa-calendar-alt mr-2 text-muted" style="width: 20px;" aria-hidden="true"></i>
+                      <strong>Last updated:</strong> {formatDate(health.pushedAt, 'short')}
+                    </li>
+                  )}
+                  {health.contributorCount !== null && (
+                    <li class="mb-2">
+                      <i class="fas fa-users mr-2 text-muted" style="width: 20px;" aria-hidden="true"></i>
+                      <strong>Contributors:</strong> {health.contributorCount}{health.contributorCountTruncated ? '+' : ''} {health.contributorCount === 1 ? 'person' : 'people'}
+                    </li>
+                  )}
+                  {health.stars > 0 && (
+                    <li class="mb-2">
+                      <i class="fas fa-star mr-2 text-warning" style="width: 20px;" aria-hidden="true"></i>
+                      <strong>Bookmarked:</strong> {health.stars} {health.stars === 1 ? 'time' : 'times'} on GitHub
+                    </li>
+                  )}
+                  {health.openIssues > 0 && (
+                    <li class="mb-0">
+                      <i class="fas fa-comments mr-2 text-muted" style="width: 20px;" aria-hidden="true"></i>
+                      <strong>Open discussions:</strong> {health.openIssues}
+                    </li>
+                  )}
+                </ul>
+
+                <details class="mt-3">
+                  <summary class="small text-primary" style="cursor: pointer;">What does this mean?</summary>
+                  <p class="small text-muted mt-2 mb-0">
+                    These signals come from the lesson's GitHub repository — the place where
+                    authors store and update the curriculum. <strong>Last updated</strong> tells
+                    you when the lesson materials were most recently changed.
+                    <strong>Contributors</strong> counts how many people have worked on it.
+                    Together they give a sense of whether the lesson is actively maintained.
+                  </p>
+                </details>
+
+                <p class="small text-muted mt-3 mb-0" style="font-size: 0.8rem;">
+                  <i class="fas fa-sync-alt mr-1" aria-hidden="true"></i>Updated weekly from
+                  <a href={lesson.repo} target="_blank" rel="noopener" class="text-muted">GitHub</a>.
+                </p>
+              </div>
+            </div>
+          )}
 
           <!-- Authors Card -->
           <div class="card bg-light border-0 shadow-sm">

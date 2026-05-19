@@ -1,9 +1,17 @@
 ---
 import { slugify } from '../utils/slugs';
+import githubHealthData from '../data/github-health.json';
 
 const { lesson, authorMap } = Astro.props;
 const lessonSlug = slugify(lesson.name);
 const isExternal = lesson.type === 'external';
+
+const cardHealth = lesson.repo ? (githubHealthData as any).lessons?.[lesson.repo] : null;
+const cardLastUpdated = cardHealth?.pushedAt
+  ? new Date(cardHealth.pushedAt + 'T00:00:00Z').toLocaleDateString('en-US', {
+      month: 'short', year: 'numeric', timeZone: 'UTC'
+    })
+  : null;
 
 // Helper to get status color
 const getStatusColor = (status: string) => {
@@ -102,6 +110,12 @@ const authorImages = !isExternal && lesson.authors ? lesson.authors.map((authorN
             <span class="badge badge-light border fw-normal">+{lesson.keywords.length - 4}</span>
         )}
       </div>
+
+      {cardLastUpdated && (
+        <p class="small text-muted mb-2" style="font-size: 0.78rem;">
+          <i class="fas fa-clock mr-1" aria-hidden="true"></i>Updated {cardLastUpdated}
+        </p>
+      )}
 
       <div class="mt-auto pt-3 border-top d-flex align-items-center justify-content-between">
         {isExternal ? (

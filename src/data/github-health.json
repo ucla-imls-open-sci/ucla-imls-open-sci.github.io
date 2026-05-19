@@ -1,0 +1,170 @@
+{
+  "fetchedAt": "2026-05-19T23:27:44.157Z",
+  "lessons": {
+    "https://github.com/LibraryCarpentry/lc-containers_vms": {
+      "stars": 0,
+      "forks": 1,
+      "openIssues": 9,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-01-26",
+      "contributorCount": 3,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/LibraryCarpentry/lc-collaborative-science": {
+      "stars": 0,
+      "forks": 1,
+      "openIssues": 4,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2025-05-12",
+      "contributorCount": 5,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/ucla-imls-open-sci/lc-authoring-open-science": {
+      "stars": 0,
+      "forks": 1,
+      "openIssues": 3,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-04-02",
+      "contributorCount": 1,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/ucla-imls-open-sci/lc-open-science-community-of-practice": {
+      "stars": 0,
+      "forks": 1,
+      "openIssues": 3,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-04-01",
+      "contributorCount": 2,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/ucla-imls-open-sci/lc-multilingual-search-discovery-system": {
+      "stars": 2,
+      "forks": 1,
+      "openIssues": 3,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-04-01",
+      "contributorCount": 4,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/aranganath24/data-dashboard-carpentries": {
+      "stars": 0,
+      "forks": 2,
+      "openIssues": 2,
+      "pushedAt": "2026-01-06",
+      "updatedAt": "2025-05-13",
+      "contributorCount": 2,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/LibraryCarpentry/lc-dmp101": {
+      "stars": 1,
+      "forks": 4,
+      "openIssues": 14,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-04-15",
+      "contributorCount": 9,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/firbolg/LC_ORCID": {
+      "stars": 1,
+      "forks": 1,
+      "openIssues": 2,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-03-19",
+      "contributorCount": 1,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/kerchner/lc-open-reproducible-research-cloud": {
+      "stars": 0,
+      "forks": 2,
+      "openIssues": 1,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-04-05",
+      "contributorCount": 3,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/LibraryCarpentry/open-qualitative-research-qualcoder": {
+      "stars": 0,
+      "forks": 2,
+      "openIssues": 12,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-04-16",
+      "contributorCount": 6,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/LibraryCarpentry/lc-open-qualitative-research": {
+      "stars": 2,
+      "forks": 3,
+      "openIssues": 13,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-04-16",
+      "contributorCount": 4,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/ucla-imls-open-sci/lc-scix-open-science": {
+      "stars": 1,
+      "forks": 1,
+      "openIssues": 6,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-04-01",
+      "contributorCount": 3,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/ucla-imls-open-sci/lc-open-hw": {
+      "stars": 3,
+      "forks": 1,
+      "openIssues": 2,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2026-05-07",
+      "contributorCount": 2,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/LibraryCarpentry/lc-reproducible-research": {
+      "stars": 0,
+      "forks": 1,
+      "openIssues": 3,
+      "pushedAt": "2025-05-12",
+      "updatedAt": "2025-05-12",
+      "contributorCount": 4,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    },
+    "https://github.com/LibraryCarpentry/lc-team-agreements": {
+      "stars": 0,
+      "forks": 1,
+      "openIssues": 2,
+      "pushedAt": "2026-05-19",
+      "updatedAt": "2025-05-12",
+      "contributorCount": 3,
+      "contributorCountTruncated": false,
+      "license": "NOASSERTION",
+      "archived": false
+    }
+  }
+}
