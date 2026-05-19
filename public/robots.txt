@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ucla-imls-open-sci.info/sitemap-index.xml

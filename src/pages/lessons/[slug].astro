@@ -97,7 +97,7 @@ const generateCitation = (l: any) => {
 const citation = generateCitation(lesson);
 ---
 
-<Layout title={lesson.name} description={`A lesson on ${lesson.name} for librarians.`}>
+<Layout title={lesson.name} description={lesson.abstract || `A lesson on ${lesson.name} for librarians and researchers.`}>
   <!-- Hero Section -->
   <header class="masthead" style="background-image: url('/assets/img/background-image-blue.png'); background-size: cover; min-height: 450px; padding-top: 6rem; padding-bottom: 3rem;">
     <div class="container">

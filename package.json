@@ -12,6 +12,7 @@
     "@astrojs/markdoc": "^0.15.10",
     "@astrojs/react": "^4.4.2",
     "@astrojs/rss": "^4.0.14",
+    "@astrojs/sitemap": "^3.7.2",
     "@keystatic/astro": "^5.0.6",
     "@keystatic/core": "^0.5.48",
     "astro": "^5.16.6",
