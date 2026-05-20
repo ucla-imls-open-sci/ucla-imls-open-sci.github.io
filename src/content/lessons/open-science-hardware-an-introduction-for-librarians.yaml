@@ -1,7 +1,8 @@
 name: 'Open science hardware: an introduction for librarians'
 authors:
-  - Julieta Arancio
-status: pre-alpha
+  - name: Julieta Arancio
+    orcid: "0000-0002-4015-8418"
+status: alpha
 educationalLevel: Introductory
 abstract: >-
   Introduces librarians to the fundamentals of open science hardware (OSH) and

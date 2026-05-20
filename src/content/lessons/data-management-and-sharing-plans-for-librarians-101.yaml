@@ -1,8 +1,11 @@
 name: Data Management (and Sharing) Plans for Librarians 101
 authors:
-  - Lena Bohman
-  - Marla Hertz
-  - Daria Orlowska
+  - name: Lena Bohman
+    orcid: "0000-0002-0943-9844"
+  - name: Marla Hertz
+    orcid: "0000-0002-7634-1188"
+  - name: Daria Orlowska
+    orcid: "0000-0002-9907-2856"
 status: beta
 library_carpentry_adopted: true
 educationalLevel: Introductory

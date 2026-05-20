@@ -19,7 +19,7 @@ const lessons = defineCollection({
   schema: z.object({
     name: z.string(),
     duration: z.string().optional(),
-    authors: z.array(z.string()).optional(),
+    authors: z.array(z.object({ name: z.string(), orcid: z.string().optional() })).optional(),
     contributors: z.array(z.string()).optional(),
     content_contributors: z.array(z.string()).optional(),
     status: z.enum(['pre-alpha', 'alpha', 'beta', 'mature']).optional(),

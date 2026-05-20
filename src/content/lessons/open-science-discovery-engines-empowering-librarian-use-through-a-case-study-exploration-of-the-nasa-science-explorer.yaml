@@ -3,9 +3,12 @@ name: >-
   Exploration of the NASA Science Explorer
 duration: 4h 15m
 authors:
-  - Jennifer Lynn Bartlett
-  - Katie Frey
-  - Stephanie Jarmak
+  - name: Jennifer Lynn Bartlett
+    orcid: "0000-0002-5364-5415"
+  - name: Katie Frey
+    orcid: "0000-0003-0104-5853"
+  - name: Stephanie Jarmak
+    orcid: "0000-0002-1241-1187"
 contributors:
   - Tim Dennis
   - Zikang Eric Huang

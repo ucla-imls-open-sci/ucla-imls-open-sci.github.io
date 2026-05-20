@@ -1,8 +1,10 @@
 name: A Path to Open, Inclusive, and Collaborative Science for Librarians
 duration: 3h 0m
 authors:
-  - Irene Vazano
-  - Jessica Formoso
+  - name: Irene Vazano
+    orcid: "0009-0005-7764-747X"
+  - name: Jessica Formoso
+    orcid: "0000-0002-3112-9118"
 contributors: []
 content_contributors: []
 status: alpha

@@ -20,10 +20,10 @@ const { author } = Astro.props;
 const lessons = (await getCollection('lessons')).map(l => l.data);
 
 // Find lessons contributed by this author
-const authorLessons = lessons.filter((l: any) => 
-    l.authors && l.authors.some((name: string) => 
-        name.trim() === author.name.trim() || 
-        name.trim() === `${author.name} ${author.lastname}`.trim()
+const authorLessons = lessons.filter((l: any) =>
+    l.authors && l.authors.some((a: { name: string }) =>
+        a.name.trim() === author.name.trim() ||
+        a.name.trim() === `${author.name} ${author.lastname}`.trim()
     )
 );
 

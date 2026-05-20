@@ -59,11 +59,11 @@ const getResourceIcon = (type: string) => {
 const resourceIcon = getResourceIcon(lesson.learningResourceType);
 
 // Pre-calculate author images to simplify template
-const authorImages = !isExternal && lesson.authors ? lesson.authors.map((authorName: string) => {
-    const cleanName = authorName.trim();
+const authorImages = !isExternal && lesson.authors ? lesson.authors.map((author: { name: string; orcid?: string }) => {
+    const cleanName = author.name.trim();
     const rawImage = authorMap[cleanName] || '/assets/img/committee/default.jpeg';
     return {
-        name: authorName,
+        name: author.name,
         src: rawImage.startsWith('/') ? rawImage : `/${rawImage}`
     };
 }) : [];

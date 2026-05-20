@@ -1,7 +1,9 @@
 name: Open Qualitative Research (QualCoder)
 authors:
-  - Nathaniel Porter
-  - Sebastian Karcher
+  - name: Nathaniel Porter
+    orcid: "0000-0002-0479-6777"
+  - name: Sebastian Karcher
+    orcid: "0000-0001-8249-7388"
 status: beta
 library_carpentry_adopted: true
 educationalLevel: Introductory

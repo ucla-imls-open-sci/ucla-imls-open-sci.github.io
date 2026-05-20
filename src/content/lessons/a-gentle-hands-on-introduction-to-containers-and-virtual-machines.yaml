@@ -1,8 +1,10 @@
 name: A gentle, hands-on introduction to containers and virtual machines
 duration: 3h 00m
 authors:
-  - Fernando Rios
-  - Jeffrey Oliver
+  - name: Fernando Rios
+    orcid: "0000-0001-5144-6764"
+  - name: Jeffrey Oliver
+    orcid: "0000-0003-1249-1473"
 status: beta
 status_note: >-
   Ready for community piloting. Accepted for presentation at the RDAP Summit on

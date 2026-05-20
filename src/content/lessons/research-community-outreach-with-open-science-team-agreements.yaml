@@ -1,9 +1,12 @@
 name: Research Community Outreach with Open Science Team Agreements
 duration: 2h 15m
 authors:
-  - Samantha Teplitzky
-  - Ariel Deardorff
-  - Samantha Wilairat
+  - name: Samantha Teplitzky
+    orcid: "0000-0001-9071-7080"
+  - name: Ariel Deardorff
+    orcid: "0000-0001-8930-6089"
+  - name: Samantha Wilairat
+    orcid: "0000-0003-0365-9509"
 status: alpha
 educationalLevel: Introductory
 abstract: >-

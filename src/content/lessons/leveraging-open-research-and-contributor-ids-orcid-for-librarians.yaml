@@ -1,9 +1,12 @@
 name: Leveraging Open Research and Contributor IDs (ORCID) for Librarians
 duration: 3h 00m
 authors:
-  - Levi Dolan
-  - Mirian Ramirez
-  - Hannah Craven
+  - name: Levi Dolan
+    orcid: "0000-0002-7476-8012"
+  - name: Mirian Ramirez
+    orcid: "0000-0001-7151-512X"
+  - name: Hannah Craven
+    orcid: "0000-0002-2121-6150"
 status: pre-alpha
 educationalLevel: Introductory
 abstract: >-

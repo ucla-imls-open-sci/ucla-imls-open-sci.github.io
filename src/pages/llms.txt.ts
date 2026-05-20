@@ -6,10 +6,15 @@ export const GET: APIRoute = async () => {
   const lessons = await getCollection('lessons');
   const siteUrl = 'https://ucla-imls-open-sci.info';
 
-  const header = `# UCLA IMLS Open Science Lesson Catalog
-# ${siteUrl}
-# An openly licensed library of open science curriculum for librarians and researchers.
-# Generated at build time. Full catalog: ${siteUrl}/api/lessons.json
+  const header = `# UCLA IMLS Open Science
+
+> Openly licensed open science curriculum for librarians and researchers, developed through an IMLS grant at UCLA. Lessons cover data management, qualitative research, containers, reproducibility, and more. All lessons are free to teach and adapt under CC BY 4.0.
+
+## API
+
+- [Lesson Catalog JSON](${siteUrl}/api/lessons.json): Full machine-readable catalog of all lessons. Includes name, status, authors with ORCIDs, keywords, pilot count, GitHub repository health signals, and DOIs where available. CORS-open.
+
+## Lessons
 
 `;
 

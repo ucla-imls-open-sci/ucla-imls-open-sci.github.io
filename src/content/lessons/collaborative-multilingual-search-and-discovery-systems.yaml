@@ -1,9 +1,12 @@
 name: Collaborative Multilingual Search and Discovery Systems
 duration: 3h 00m
 authors:
-  - Eric Silberberg
-  - Jesus Alonso-Regalado
-  - Cate Kellett
+  - name: Eric Silberberg
+    orcid: "0000-0002-4779-119X"
+  - name: Jesus Alonso-Regalado
+    orcid: "0000-0002-4813-1628"
+  - name: Cate Kellett
+    orcid: "0000-0001-7667-8730"
 status: alpha
 educationalLevel: Intermediate
 abstract: >-

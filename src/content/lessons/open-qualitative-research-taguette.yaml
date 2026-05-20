@@ -1,6 +1,7 @@
 name: Open Qualitative Research (Taguette)
 authors:
-  - Nathaniel Porter
+  - name: Nathaniel Porter
+    orcid: "0000-0002-0479-6777"
 status: alpha
 educationalLevel: Introductory
 abstract: >-

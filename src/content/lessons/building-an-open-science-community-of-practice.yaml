@@ -1,7 +1,8 @@
 name: Building an Open Science Community of Practice
 duration: 90m
 authors:
-  - Camille Thomas
+  - name: Camille Thomas
+    orcid: "0000-0001-7053-1596"
 status: pre-alpha
 educationalLevel: Introductory
 abstract: >-

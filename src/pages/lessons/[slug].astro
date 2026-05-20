@@ -65,19 +65,19 @@ const isExternal = lesson.type === 'external';
 // Citation Helper
 const generateCitation = (l: any) => {
     const year = new Date().getFullYear(); // Or use a 'date' field if added later
-    const authorList = l.authors ? l.authors.map((a: string) => {
-        const parts = a.split(' ');
+    const authorList = l.authors ? l.authors.map((a: { name: string }) => {
+        const parts = a.name.split(' ');
         const last = parts[parts.length - 1];
         const first = parts[0][0];
         return `${last}, ${first}.`;
     }).join(', ') : 'UCLA IMLS Open Science';
-    
+
     let apa = `${authorList} (${year}). ${l.name}. UCLA IMLS Open Science. ${siteConfig.url}/lessons/${slugify(l.name)}`;
     if (l.doi) {
         apa += ` https://doi.org/${l.doi}`;
     }
-    
-    const bibtexAuthor = l.authors ? l.authors.join(' and ') : 'UCLA IMLS Open Science';
+
+    const bibtexAuthor = l.authors ? l.authors.map((a: { name: string }) => a.name).join(' and ') : 'UCLA IMLS Open Science';
     const bibtexId = slugify(l.name).replace(/-/g, '_');
     let bibtex = `@misc{${bibtexId}_${year},
   author = {${bibtexAuthor}},
@@ -118,7 +118,11 @@ const jsonLd = {
   ...(lesson.educationalLevel ? { educationalLevel: lesson.educationalLevel } : {}),
   ...(lesson.keywords?.length ? { keywords: lesson.keywords.join(', ') } : {}),
   ...(lesson.authors?.length ? {
-    author: lesson.authors.map((name: string) => ({ '@type': 'Person', name }))
+    author: lesson.authors.map((a: { name: string; orcid?: string }) => ({
+      '@type': 'Person',
+      name: a.name,
+      ...(a.orcid ? { sameAs: `https://orcid.org/${a.orcid}` } : {}),
+    }))
   } : {}),
   ...(health?.pushedAt ? { dateModified: health.pushedAt } : {}),
   ...(lesson.doi ? { identifier: `https://doi.org/${lesson.doi}` } : {}),
@@ -466,6 +470,9 @@ const jsonLd = {
                     authors store and update the curriculum. <strong>Last updated</strong> tells
                     you when the lesson materials were most recently changed.
                     <strong>Contributors</strong> counts how many people have worked on it.
+                    <strong>Open discussions</strong> are questions, bug reports, or improvement
+                    suggestions that haven't been resolved yet — a higher number can mean active
+                    community interest or areas the lesson is still refining.
                     Together they give a sense of whether the lesson is actively maintained.
                   </p>
                 </details>
@@ -482,26 +489,27 @@ const jsonLd = {
           <div class="card bg-light border-0 shadow-sm">
             <div class="card-body">
               <h4 class="card-title mb-4">Authors</h4>
-              {lesson.authors && lesson.authors.map((authorName: string) => {
-                  const profile = getAuthorDetails(authorName);
+              {lesson.authors && lesson.authors.map((author: { name: string; orcid?: string }) => {
+                  const profile = getAuthorDetails(author.name);
                   const rawImage = profile?.image || '/assets/img/committee/default.jpeg';
                   const image = rawImage.startsWith('/') ? rawImage : `/${rawImage}`;
-                  const authorSlug = slugify(authorName);
+                  const authorSlug = slugify(author.name);
+                  const orcid = author.orcid || profile?.orcid;
                   return (
                     <div class="media mb-4 align-items-center">
-                        <img 
-                            class="mr-3 rounded-circle" 
-                            src={image} 
-                            alt={authorName} 
+                        <img
+                            class="mr-3 rounded-circle"
+                            src={image}
+                            alt={author.name}
                             style="width: 64px; height: 64px; object-fit: cover;"
                         />
                         <div class="media-body">
                             <h5 class="mt-0 mb-0" style="font-size: 1.1rem;">
-                                <a href={`/authors/${authorSlug}`} class="text-dark">{authorName}</a>
+                                <a href={`/authors/${authorSlug}`} class="text-dark">{author.name}</a>
                             </h5>
                             {profile?.role && <small class="text-muted d-block">{profile.role}</small>}
-                            {profile?.orcid && (
-                                <a href={`https://orcid.org/${profile.orcid}`} target="_blank" rel="noopener noreferrer" class="text-muted" style="font-size: 0.85rem;" aria-label={`ORCID for ${authorName}`}>
+                            {orcid && (
+                                <a href={`https://orcid.org/${orcid}`} target="_blank" rel="noopener noreferrer" class="text-muted" style="font-size: 0.85rem;" aria-label={`ORCID for ${author.name}`}>
                                     <i class="fab fa-orcid text-success mr-1"></i>
                                 </a>
                             )}

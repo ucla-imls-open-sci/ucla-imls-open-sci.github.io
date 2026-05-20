@@ -1,6 +1,7 @@
 name: Reproducible Research Workflows
 authors:
-  - Agata Bochynska
+  - name: Agata Bochynska
+    orcid: "0000-0002-4148-3561"
 status: pre-alpha
 educationalLevel: Intermediate
 abstract: >-

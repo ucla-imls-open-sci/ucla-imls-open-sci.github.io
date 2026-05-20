@@ -3,7 +3,8 @@ name: >-
   Librarians
 duration: 3h 08m
 authors:
-  - Daniel Kerchner
+  - name: Daniel Kerchner
+    orcid: "0000-0001-8314-8742"
 status: alpha
 educationalLevel: Intermediate
 why_teach: >-
