@@ -3,6 +3,9 @@ import { getCollection } from 'astro:content';
 import siteTextData from '../data/sitetext.yml';
 import { siteConfig } from '../site_config';
 import LessonCard from './LessonCard.astro';
+import { Image } from 'astro:assets';
+import uclaLogoImg from '../assets/img/clients/Uxd_Wht_A_Library_300.png';
+import imlsLogoImg from '../assets/img/imls_logo_2c.png';
 
 const lessons = (await getCollection('lessons')).map(l => l.data);
 const t = (siteTextData as any)[siteConfig.locale];
@@ -100,8 +103,8 @@ const themes = Object.keys(themeMapping);
             <!-- Legend -->
             <div class="d-flex justify-content-center align-items-center text-muted small mt-2">
                 <span class="mr-4 d-flex align-items-center">
-                    <img src="/assets/img/clients/Uxd_Wht_A_Library_300.png" alt="UCLA Library" width="80" height="20" style="height: 20px; margin-right: 8px; filter: brightness(0);" />
-                    <img src="/assets/img/imls_logo_2c.png" alt="IMLS" width="46" height="22" style="height: 22px; margin-right: 8px;" /> 
+                    <Image src={uclaLogoImg} alt="UCLA Library" width={80} height={20} style="height: 20px; margin-right: 8px; filter: brightness(0);" loading="lazy" decoding="async" />
+                    <Image src={imlsLogoImg} alt="IMLS" width={46} height={22} style="height: 22px; margin-right: 8px;" loading="lazy" decoding="async" />
                     IMLS Curriculum
                 </span>
                 <span class="d-flex align-items-center">

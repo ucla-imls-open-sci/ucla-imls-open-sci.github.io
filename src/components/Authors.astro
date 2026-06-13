@@ -1,8 +1,9 @@
 ---
 import { siteConfig } from '../site_config';
 import siteTextData from '../data/sitetext.yml';
-
 import { slugify } from '../utils/slugs';
+import { Image } from 'astro:assets';
+import { resolveImage } from '../utils/images';
 
 const t = (siteTextData as any)[siteConfig.locale];
 const authors = t.authors;
@@ -22,7 +23,7 @@ const authors = t.authors;
           <div class="col-sm-4">
             <div class="staff-member text-center mb-5">
               <a href={`/authors/${authorSlug}`}>
-                <img class="mx-auto rounded-circle mb-3" src={person.image} alt={person.name} style="width: 200px; height: 200px; overflow: hidden; object-fit: cover;" />
+                <Image src={resolveImage(person.image)} alt={person.name} width={200} height={200} class="mx-auto rounded-circle mb-3" style="object-fit: cover;" loading="lazy" decoding="async" />
               </a>
               <h4><a href={`/authors/${authorSlug}`} class="text-dark">{person.name}</a></h4>
               <p class="text-muted">{person.role}</p>

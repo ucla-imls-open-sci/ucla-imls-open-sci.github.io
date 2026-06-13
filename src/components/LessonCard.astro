@@ -1,6 +1,10 @@
 ---
 import { slugify } from '../utils/slugs';
 import githubHealthData from '../data/github-health.json';
+import { Image } from 'astro:assets';
+import { resolveImage } from '../utils/images';
+import uclaLogoImg from '../assets/img/clients/Uxd_Wht_A_Library_300.png';
+import imlsLogoImg from '../assets/img/imls_logo_2c.png';
 
 const { lesson, authorMap } = Astro.props;
 const lessonSlug = slugify(lesson.name);
@@ -126,20 +130,22 @@ const authorImages = !isExternal && lesson.authors ? lesson.authors.map((author:
             <div class="d-flex w-100 align-items-center justify-content-between">
                 <div class="avatars d-flex">
                     {authorImages.map((img: any) => (
-                        <img
-                            src={img.src}
+                        <Image
+                            src={resolveImage(img.src)}
                             alt={img.name}
                             title={img.name}
-                            width="32"
-                            height="32"
+                            width={32}
+                            height={32}
                             class="rounded-circle border border-white"
                             style="width: 32px; height: 32px; margin-right: -10px; object-fit: cover;"
+                            loading="lazy"
+                            decoding="async"
                         />
                     ))}
                 </div>
                 <div class="d-flex align-items-center">
-                    <img src="/assets/img/clients/Uxd_Wht_A_Library_300.png" alt="UCLA Library" width="80" height="20" style="height: 20px; margin-right: 12px; filter: brightness(0);" />
-                    <img src="/assets/img/imls_logo_2c.png" alt="IMLS" width="46" height="22" style="height: 22px;" title="Supported by IMLS" />
+                    <Image src={uclaLogoImg} alt="UCLA Library" width={80} height={20} style="height: 20px; margin-right: 12px; filter: brightness(0);" loading="lazy" decoding="async" />
+                    <Image src={imlsLogoImg} alt="IMLS" width={46} height={22} style="height: 22px;" title="Supported by IMLS" loading="lazy" decoding="async" />
                 </div>
             </div>
         )}

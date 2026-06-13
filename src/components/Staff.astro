@@ -2,6 +2,8 @@
 import { siteConfig } from '../site_config';
 import siteTextData from '../data/sitetext.yml';
 import { marked } from 'marked';
+import { Image } from 'astro:assets';
+import { resolveImage } from '../utils/images';
 
 const t = (siteTextData as any)[siteConfig.locale];
 const staff = t.staff;
@@ -18,7 +20,7 @@ const staff = t.staff;
       {staff.people.map((person: any) => (
         <div class="col-sm-4">
           <div class="staff-member">
-            <img class="mx-auto rounded-circle" src={person.image} alt={person.name} />
+            <Image src={resolveImage(person.image)} alt={person.name} width={250} height={250} class="mx-auto rounded-circle" style="object-fit: cover;" loading="lazy" decoding="async" />
             <h4>{person.name}</h4>
             <p class="text-muted">{person.role}</p>
             <ul class="list-inline social-buttons">

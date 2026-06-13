@@ -1,0 +1,70 @@
+---
+/**
+ * LessonFeedback.astro
+ *
+ * Two GitHub CTAs on lesson pages:
+ *   1. Leave Feedback — opens a pre-filled lesson-feedback.yml issue
+ *   2. Star this project — links to the main repo for starring
+ *
+ * Both require a GitHub account, so they share one card with one note.
+ *
+ * Props:
+ *   lessonId    — slug (fallback for issue title)
+ *   lessonTitle — human-readable title pre-filled in the issue title
+ */
+
+interface Props {
+  lessonId: string;
+  lessonTitle?: string;
+  lessonRepo?: string | null;
+}
+
+const { lessonId, lessonTitle, lessonRepo } = Astro.props;
+const label = lessonTitle || lessonId;
+const siteRepo = 'ucla-imls-open-sci/ucla-imls-open-sci.github.io';
+
+const feedbackHref = `https://github.com/${siteRepo}/issues/new?template=lesson-feedback.yml&title=${encodeURIComponent(`Feedback: ${label}`)}`;
+const starHref     = lessonRepo ?? `https://github.com/${siteRepo}`;
+---
+
+<section class="mt-5" aria-label="Share your experience">
+  <div class="card border-0 shadow-sm lf-card">
+    <div class="card-body text-center py-4">
+      <p class="font-weight-bold mb-1">Found this useful? Help us improve.</p>
+      <p class="small text-muted mb-3">
+        Your feedback shapes the curriculum. Starring the project boosts its visibility.
+      </p>
+      <div class="d-flex justify-content-center flex-wrap lf-btn-group">
+        <a
+          href={feedbackHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-primary"
+        >
+          <i class="fab fa-github mr-2" aria-hidden="true"></i>Leave Feedback<span class="sr-only"> (opens in new tab)</span>
+        </a>
+        <a
+          href={starHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline-secondary"
+        >
+          <i class="fas fa-star mr-2" aria-hidden="true"></i>Star This Project<span class="sr-only"> (opens in new tab)</span>
+        </a>
+      </div>
+      <p class="small text-muted mt-3 mb-0">
+        Both require a free <a href="https://github.com/signup" target="_blank" rel="noopener noreferrer" class="text-muted text-decoration-underline">GitHub account</a>.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .lf-card {
+    border-top: 3px solid #007bff;
+    background-color: #f8f9fa;
+  }
+  .lf-btn-group {
+    gap: 0.75rem;
+  }
+</style>

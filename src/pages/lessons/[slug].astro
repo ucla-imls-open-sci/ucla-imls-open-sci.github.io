@@ -1,7 +1,10 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import LessonStatusBanner from '../../components/LessonStatusBanner.astro';
+import LessonFeedback from '../../components/LessonFeedback.astro';
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import { resolveImage } from '../../utils/images';
 import siteTextData from '../../data/sitetext.yml';
 import { siteConfig } from '../../site_config';
 import { slugify } from '../../utils/slugs';
@@ -319,6 +322,9 @@ const jsonLd = {
             </div>
           </div>
 
+          <!-- Feedback Widget -->
+          <LessonFeedback lessonId={slugify(lesson.name)} lessonTitle={lesson.name} lessonRepo={lesson.repo} />
+
         </div>
 
         <!-- Sidebar: Authors & Resources -->
@@ -497,11 +503,15 @@ const jsonLd = {
                   const orcid = author.orcid || profile?.orcid;
                   return (
                     <div class="media mb-4 align-items-center">
-                        <img
-                            class="mr-3 rounded-circle"
-                            src={image}
+                        <Image
+                            src={resolveImage(image)}
                             alt={author.name}
-                            style="width: 64px; height: 64px; object-fit: cover;"
+                            width={64}
+                            height={64}
+                            class="mr-3 rounded-circle"
+                            style="object-fit: cover;"
+                            loading="lazy"
+                            decoding="async"
                         />
                         <div class="media-body">
                             <h5 class="mt-0 mb-0" style="font-size: 1.1rem;">

@@ -1,6 +1,8 @@
 ---
 import { siteConfig } from '../site_config';
 import navData from '../data/navigation.yml';
+import { Image } from 'astro:assets';
+import navLogoImg from '../assets/img/clients/Uxd_Wht_A_Library_300.png';
 
 // Access the specific locale's nav data
 // We assume structure matches: { [locale]: { nav: [] } }
@@ -10,7 +12,7 @@ const navLinks = (navData as any)[siteConfig.locale]?.nav || [];
   <div class="container">
     <a class="navbar-brand js-scroll-trigger" href="/#">
       {siteConfig.logo ? (
-        <img height={siteConfig.logo.height} src={siteConfig.logo.path} alt={siteConfig.title} />
+        <Image src={navLogoImg} height={siteConfig.logo.height} width={200} alt={siteConfig.title} loading="eager" decoding="async" />
       ) : (
         siteConfig.title
       )}

@@ -1,0 +1,58 @@
+name: Lesson Feedback
+description: Share your experience with an IMLS Open Science lesson
+title: "Feedback: "
+labels: ["feedback"]
+assignees: ["jt14den"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking a moment to share your experience. Your feedback goes directly to lesson authors and helps improve the curriculum.
+
+  - type: dropdown
+    id: satisfaction
+    attributes:
+      label: Did this lesson meet your needs?
+      options:
+        - "Yes"
+        - "Partly"
+        - "No"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: issues
+    attributes:
+      label: If partly or no — what was the biggest issue?
+      description: Select all that apply.
+      options:
+        - label: Missing prerequisites
+        - label: Too advanced
+        - label: Too basic
+        - label: "Instructions didn't work"
+        - label: Not enough examples
+        - label: Hard to follow
+        - label: Outdated information
+        - label: Other
+
+  - type: dropdown
+    id: role
+    attributes:
+      label: I am a
+      options:
+        - Librarian
+        - Researcher
+        - Student
+        - Research Support Staff
+        - Instructor / Educator
+        - Other
+    validations:
+      required: false
+
+  - type: textarea
+    id: comment
+    attributes:
+      label: Anything else?
+      description: Any other thoughts about this lesson.
+    validations:
+      required: false

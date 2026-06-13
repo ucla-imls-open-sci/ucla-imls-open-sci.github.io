@@ -1,5 +1,7 @@
 ---
 import { siteConfig } from '../site_config';
+import { Image } from 'astro:assets';
+import imlsLogoImg from '../assets/img/imls_logo_2c.png';
 ---
 <footer class="footer" id="footer" style="background-color: white">
   <div class="container">
@@ -14,7 +16,7 @@ import { siteConfig } from '../site_config';
         <ul class="image" style="padding-left: 0; list-style: none; text-align: center;">
             <li>
                 <a href="https://www.imls.gov" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/img/imls_logo_2c.png" alt="Institute of Museum and Library Services" style="max-height: 50px;" />
+                    <Image src={imlsLogoImg} alt="Institute of Museum and Library Services" width={200} height={50} style="max-height: 50px; width: auto;" loading="lazy" decoding="async" />
                     <span class="sr-only"> (opens in new tab)</span>
                 </a>
             </li>

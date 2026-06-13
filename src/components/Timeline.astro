@@ -2,6 +2,8 @@
 import { siteConfig } from '../site_config';
 import siteTextData from '../data/sitetext.yml';
 import { marked } from 'marked';
+import { Image } from 'astro:assets';
+import { resolveImage } from '../utils/images';
 
 const t = (siteTextData as any)[siteConfig.locale];
 const timeline = t.timeline;
@@ -24,7 +26,7 @@ let align = timeline.start_align || 'left';
              return (
                <li class={inverted ? "timeline-inverted" : ""}>
                   <div class="timeline-image">
-                    <img class="rounded-circle img-fluid" src={event.image} alt={event.alt || ""} />
+                    <Image src={resolveImage(event.image)} alt={event.alt || ""} width={80} height={80} class="rounded-circle img-fluid" style="object-fit: cover;" loading="lazy" decoding="async" />
                   </div>
                   <div class="timeline-panel">
                     <div class="timeline-heading">

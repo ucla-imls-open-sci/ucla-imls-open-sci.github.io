@@ -5,6 +5,8 @@ import siteTextData from '../../data/sitetext.yml';
 import { siteConfig } from '../../site_config';
 import { slugify } from '../../utils/slugs';
 import LessonCard from '../../components/LessonCard.astro';
+import { Image } from 'astro:assets';
+import { resolveImage } from '../../utils/images';
 
 export async function getStaticPaths() {
   const t = (siteTextData as any)['en-US']; // Defaulting to en-US for paths
@@ -44,11 +46,15 @@ const image = rawImage.startsWith('/') ? rawImage : `/${rawImage}`;
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-4 text-center mb-4 mb-md-0">
-          <img 
-            src={image} 
-            alt={author.name} 
-            class="rounded-circle img-fluid shadow" 
-            style="width: 250px; height: 250px; object-fit: cover; border: 8px solid #fff;"
+          <Image
+            src={resolveImage(image)}
+            alt={author.name}
+            width={250}
+            height={250}
+            class="rounded-circle img-fluid shadow"
+            style="object-fit: cover; border: 8px solid #fff;"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div class="col-md-8">

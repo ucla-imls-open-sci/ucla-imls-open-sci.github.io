@@ -170,22 +170,35 @@
   .lesson-item .card {
     background-color: var(--bg-card);
   }
-  
+
+  // Seeking-pilots cards use a scoped inline gradient — override with !important
+  .card-seeking-pilots {
+    background: var(--bg-card) !important;
+    border-top-color: var(--ucla-gold) !important;
+    border-left-color: var(--ucla-gold) !important;
+  }
+
   // Ensure card body text is readable
   .card-body {
     color: var(--text-main);
-    
+
     .text-muted {
       color: var(--text-muted) !important;
     }
-    
-    // Links inside cards (like lesson titles)
-    a.text-dark {
-      color: var(--text-main) !important; 
+
+    // Links inside cards (lesson titles) — beat Bootstrap's .text-dark !important
+    a.text-dark,
+    .card-title a {
+      color: var(--text-main) !important;
       &:hover {
         color: var(--ucla-gold) !important;
       }
     }
+  }
+
+  // UCLA Library logo uses filter:brightness(0) (black) — invert for dark card backgrounds
+  .card-body img[alt="UCLA Library"] {
+    filter: brightness(0) invert(1) !important;
   }
   
   // Team Member Cards

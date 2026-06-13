@@ -16,7 +16,12 @@ const siteUrl = Astro.url.href;
 const siteImage = new URL(image || siteConfig.logo.path, Astro.url);
 ---
 
-<!-- Global Metadata -->
+<!-- Core -->
+<title>{siteTitle}</title>
+<meta name="description" content={siteDescription} />
+<link rel="canonical" href={siteUrl} />
+
+<!-- Open Graph -->
 <meta property="og:locale" content={siteConfig.locale} />
 <meta property="og:type" content={type} />
 <meta property="og:title" content={siteTitle} />
