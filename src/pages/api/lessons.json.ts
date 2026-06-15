@@ -31,7 +31,7 @@ export const GET: APIRoute = async () => {
         type: l.data.type ?? 'lesson',
         githubHealth: health
           ? {
-              lastUpdated: health.pushedAt ?? null,
+              lastUpdated: health.contentUpdatedAt ?? health.pushedAt ?? null,
               stars: health.stars ?? 0,
               contributors: health.contributorCount ?? null,
               openIssues: health.openIssues ?? 0,

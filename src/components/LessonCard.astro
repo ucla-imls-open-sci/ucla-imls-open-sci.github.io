@@ -11,8 +11,9 @@ const lessonSlug = slugify(lesson.name);
 const isExternal = lesson.type === 'external';
 
 const cardHealth = lesson.repo ? (githubHealthData as any).lessons?.[lesson.repo] : null;
-const cardLastUpdated = cardHealth?.pushedAt
-  ? new Date(cardHealth.pushedAt + 'T00:00:00Z').toLocaleDateString('en-US', {
+const cardUpdatedDate = cardHealth?.contentUpdatedAt ?? cardHealth?.pushedAt;
+const cardLastUpdated = cardUpdatedDate
+  ? new Date(cardUpdatedDate + 'T00:00:00Z').toLocaleDateString('en-US', {
       month: 'short', year: 'numeric', timeZone: 'UTC'
     })
   : null;

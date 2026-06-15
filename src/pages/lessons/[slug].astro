@@ -443,10 +443,10 @@ const jsonLd = {
               </div>
               <div class="card-body">
                 <ul class="list-unstyled mb-0">
-                  {health.pushedAt && (
+                  {(health.contentUpdatedAt ?? health.pushedAt) && (
                     <li class="mb-2">
                       <i class="fas fa-calendar-alt mr-2 text-muted" style="width: 20px;" aria-hidden="true"></i>
-                      <strong>Last updated:</strong> {formatDate(health.pushedAt, 'short')}
+                      <strong>Last updated:</strong> {formatDate(health.contentUpdatedAt ?? health.pushedAt, 'short')}
                     </li>
                   )}
                   {health.contributorCount !== null && (

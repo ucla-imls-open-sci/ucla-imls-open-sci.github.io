@@ -34,6 +34,26 @@ function formatDate(isoString) {
   return isoString.slice(0, 10); // YYYY-MM-DD
 }
 
+// Last commit that touched actual lesson content. Repo-level pushed_at is
+// misleading: a bulk template/CI push bumps every repo to the same date even
+// when no lesson content changed. Filtering by the content path fixes that.
+async function fetchLastContentDate(owner, repo, headers) {
+  for (const path of ['episodes', '_episodes']) {
+    const res = await fetch(
+      `https://api.github.com/repos/${owner}/${repo}/commits?path=${path}&per_page=1`,
+      { headers }
+    );
+    if (res.ok) {
+      const commits = await res.json();
+      if (Array.isArray(commits) && commits.length > 0) {
+        const c = commits[0].commit;
+        return formatDate(c?.committer?.date ?? c?.author?.date);
+      }
+    }
+  }
+  return null; // no content directory; consumers fall back to pushedAt
+}
+
 async function fetchRepoHealth(owner, repo, headers) {
   const repoRes = await fetch(`https://api.github.com/repos/${owner}/${repo}`, { headers });
 
@@ -63,11 +83,14 @@ async function fetchRepoHealth(owner, repo, headers) {
     }
   }
 
+  const contentUpdatedAt = await fetchLastContentDate(owner, repo, headers);
+
   return {
     stars: data.stargazers_count ?? 0,
     forks: data.forks_count ?? 0,
     openIssues: data.open_issues_count ?? 0,
     pushedAt: formatDate(data.pushed_at),
+    contentUpdatedAt,
     updatedAt: formatDate(data.updated_at),
     contributorCount,
     contributorCountTruncated,
