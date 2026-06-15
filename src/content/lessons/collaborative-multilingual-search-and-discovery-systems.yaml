@@ -15,7 +15,12 @@ abstract: >-
   JavaScript. Addresses challenges in making research collections publicly
   available and ethically represented. It also helps you to design a plan to
   promote your project and prompt participation and collaboration.
-status_note: Planning a hybrid pilot for March 2026 (2-month asynchronous cohort).
+status_note: Completed a hybrid 8-week asynchronous cohort pilot in spring 2026; refining toward beta.
+pilots:
+  - date: 2026-05-06T00:00:00.000Z
+    location: Virtual (listserv-recruited cohort)
+    instructor: Eric Silberberg, Cate Kellett & Jesus Alonso-Regalado
+    type: Alpha Pilot (hybrid async cohort)
 keywords:
   - search
   - multilingual
