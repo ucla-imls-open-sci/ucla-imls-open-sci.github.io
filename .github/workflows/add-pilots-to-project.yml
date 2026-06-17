@@ -1,0 +1,23 @@
+name: Add pilot issues to project
+
+# Adds any issue labeled `pilot` or `pilot-report` to the Open Science Pilots
+# project board (https://github.com/orgs/ucla-imls-open-sci/projects/1) so the
+# pilot lifecycle can be tracked in one place.
+#
+# Requires a repo or org secret `ADD_TO_PROJECT_PAT`: a fine-grained or classic
+# PAT with `project` scope (the default GITHUB_TOKEN cannot write org projects).
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  add-to-project:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/add-to-project@v1.0.2
+        with:
+          project-url: https://github.com/orgs/ucla-imls-open-sci/projects/1
+          github-token: ${{ secrets.ADD_TO_PROJECT_PAT }}
+          labeled: pilot, pilot-report
+          label-operator: OR
