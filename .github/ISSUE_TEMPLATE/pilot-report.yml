@@ -35,17 +35,19 @@ body:
       label: Lesson taught
       options:
         - A Path to Open, Inclusive, and Collaborative Science for Librarians
-        - Data Management (and Sharing) Plans for Librarians 101
-        - Open Qualitative Research
         - Authoring Open Science
+        - Cloud Workflows for Librarians
         - Containers and Virtual Machines
-        - ORCID for Librarians
-        - Open Science Team Agreements
-        - Open Science Discovery Engines
-        - Data Dashboards with R
-        - Open Research Cloud Workflows
+        - Creating Data Dashboards with R
+        - Data Management (and Sharing) Plans for Librarians 101
+        - Multilingual Search and Discovery
+        - NASA SciX for Librarians
+        - Open Qualitative Research (QualCoder)
+        - Open Qualitative Research (Taguette)
+        - Open Science Community of Practice
         - Open Science Hardware
-        - Collaborative Multilingual Search and Discovery Systems
+        - Open Science Team Agreements
+        - ORCID for Librarians
         - Reproducible Research Workflows
     validations:
       required: true
