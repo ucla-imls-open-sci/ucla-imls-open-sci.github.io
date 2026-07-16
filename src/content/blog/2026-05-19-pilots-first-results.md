@@ -21,7 +21,7 @@ In January we [called for pilots](/blog/2026-01-05-carpentries-pilot-call). In A
 Thank you to the instructors who ran sessions and took the time to report back:
 
 <div class="table-responsive">
-<table class="content-table">
+<table class="table table-hover">
   <thead>
     <tr><th>Lesson</th><th>Instructor(s)</th><th>Institution</th><th>Date</th></tr>
   </thead>

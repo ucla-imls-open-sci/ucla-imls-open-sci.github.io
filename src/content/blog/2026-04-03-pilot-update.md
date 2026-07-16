@@ -18,7 +18,7 @@ In January we [put out a call for community pilots](/blog/2026-01-05-carpentries
 Here's who's teaching what:
 
 <div class="table-responsive">
-<table class="content-table">
+<table class="table table-hover">
   <thead>
     <tr><th>Lesson</th><th>Instructor</th><th>Institution</th></tr>
   </thead>
