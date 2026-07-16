@@ -1,20 +1,23 @@
 name: Pilot a Lesson (Beta Workshop Interest)
 description: Express interest in piloting an IMLS UCLA Open Science lesson
-title: "[Pilot Interest]: <Lesson title>"
+title: "[Pilot Interest]: "
 labels: ["pilot", "community", "beta"]
 assignees: ["jt14den"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for your interest in piloting an Open Science lesson for librarians.
-        This issue helps lesson authors and the project team coordinate beta pilot workshops.
+        Thanks for your interest in piloting an Open Science lesson for librarians.
+
+        **What a pilot is:** you teach one of our lessons to a real audience and tell us how it went. You do *not* need to be an expert in the topic — testing a lesson with an instructor who didn't write it is exactly what these materials need. Sessions run **1.5 to 4 hours** and can be a formal workshop or an informal brown-bag.
+
+        **What happens next:** we'll connect you with the lesson authors before your session, and you file a short [Pilot Report](https://github.com/ucla-imls-open-sci/ucla-imls-open-sci.github.io/issues/new?template=pilot-report.yml) afterward. Browse the lessons first on the [pilot page](https://ucla-imls-open-sci.info/pilot/).
 
   - type: input
     id: name
     attributes:
       label: Name
-      description: Your name
+      description: As you'd like it to appear if we credit you
       placeholder: Jane Doe
     validations:
       required: true
@@ -37,6 +40,24 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: github
+    attributes:
+      label: GitHub username
+      description: So we can tag you in coordination threads (optional)
+      placeholder: "@jdoe"
+    validations:
+      required: false
+
+  - type: input
+    id: orcid
+    attributes:
+      label: ORCID
+      description: Used to credit you on the lesson page and in project outputs (optional)
+      placeholder: 0000-0000-0000-0000
+    validations:
+      required: false
+
   - type: dropdown
     id: lesson
     attributes:
@@ -44,20 +65,44 @@ body:
       multiple: true
       options:
         - A Path to Open, Inclusive, and Collaborative Science for Librarians
-        - Data Management (and Sharing) Plans for Librarians 101
-        - Open Qualitative Research
         - Authoring Open Science
+        - Cloud Workflows for Librarians
         - Containers and Virtual Machines
-        - ORCID for Librarians
-        - Open Science Team Agreements
-        - Open Science Discovery Engines
-        - Data Dashboards with R
-        - Open Research Cloud Workflows
+        - Creating Data Dashboards with R
+        - Data Management (and Sharing) Plans for Librarians 101
+        - Multilingual Search and Discovery
+        - NASA SciX for Librarians
+        - Open Qualitative Research (QualCoder)
+        - Open Qualitative Research (Taguette)
+        - Open Science Community of Practice
         - Open Science Hardware
-        - Collaborative Multilingual Search and Discovery Systems
+        - Open Science Team Agreements
+        - ORCID for Librarians
         - Reproducible Research Workflows
+        - Not sure yet — open to suggestions
     validations:
       required: true
+
+  - type: textarea
+    id: coinstructors
+    attributes:
+      label: Co-instructors
+      description: Names (and GitHub usernames, if known) of anyone teaching with you
+      placeholder: "Jesse Sadler (@jessesadler)"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: carpentries_experience
+    attributes:
+      label: Carpentries teaching experience
+      options:
+        - Certified Carpentries instructor
+        - Have taught Carpentries-style workshops before
+        - New to teaching Carpentries lessons
+        - Prefer not to say
+    validations:
+      required: false
 
   - type: dropdown
     id: format
@@ -84,8 +129,8 @@ body:
     id: timing
     attributes:
       label: Tentative timing
-      description: Approximate timeframe for the pilot
-      placeholder: Fall 2025, Spring 2026, etc.
+      description: Approximate timeframe, or a target date if you have one
+      placeholder: Summer 2026, or "2026-08-20"
     validations:
       required: false
 
@@ -93,6 +138,16 @@ body:
     id: notes
     attributes:
       label: Additional notes or questions
-      description: Anything else you’d like us to know
+      description: Anything else you'd like us to know
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Crediting
+      description: Pilot instructors are credited on the lesson page, in a Carpentries blog post, and in any future publications that reference the curriculum
+      options:
+        - label: Yes, you may credit me (name and affiliation) as a pilot instructor
     validations:
       required: false

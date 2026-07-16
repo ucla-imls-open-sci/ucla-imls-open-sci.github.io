@@ -2,9 +2,9 @@ name: A gentle, hands-on introduction to containers and virtual machines
 duration: 3h 00m
 authors:
   - name: Fernando Rios
-    orcid: "0000-0001-5144-6764"
+    orcid: "0000-0001-6262-3260"
   - name: Jeffrey Oliver
-    orcid: "0000-0003-1249-1473"
+    orcid: "0000-0003-2160-1086"
 status: beta
 status_note: >-
   Ready for community piloting. Accepted for presentation at the RDAP Summit on
@@ -18,17 +18,61 @@ pilots:
   - date: 2024-10-10T00:00:00.000Z
     location: University of Arizona
     instructor: Fernando Rios & Jeffrey Oliver
+    instructors:
+      - name: Fernando Rios
+        orcid: "0000-0001-6262-3260"
+        role: instructor
+      - name: Jeffrey Oliver
+        orcid: "0000-0003-2160-1086"
+        role: instructor
     type: Alpha Pilot
   - date: 2025-06-05T00:00:00.000Z
     location: University of Arizona
     instructor: Fernando Rios & Jeffrey Oliver
+    instructors:
+      - name: Fernando Rios
+        orcid: "0000-0001-6262-3260"
+        role: instructor
+      - name: Jeffrey Oliver
+        orcid: "0000-0003-2160-1086"
+        role: instructor
     type: Alpha Pilot
     note: Initial test session.
   - date: 2026-04-13T00:00:00.000Z
     location: RDAP Summit 2026
     instructor: Hafeez Adepoju (University of Arizona) & Chreston Miller (Virginia Tech)
+    instructors:
+      - name: Hafeez Adepoju
+        role: instructor
+      - name: Chreston Miller
+        role: instructor
     type: Beta Pilot
-    note: Workshop at the RDAP Summit.
+    note: >-
+      Workshop at the RDAP Summit. TODO: Hafeez's and Chreston's ORCID/GitHub
+      not yet confirmed — ask Tim.
+  - date: 2026-07-15T00:00:00.000Z
+    location: UC Santa Barbara (Carpentry @ UCSB Library)
+    instructor: Juliet Cohen, Seth Erickson & Jairo Melo-Flórez
+    instructors:
+      - name: Juliet Cohen
+        orcid: "0000-0001-8217-4028"
+        github: julietcohen
+        role: instructor
+      - name: Seth Erickson
+        orcid: "0000-0002-5570-7201"
+        github: srerickson
+        role: instructor
+      - name: Jairo Melo-Flórez
+        orcid: "0000-0002-2020-1163"
+        github: jairomelo
+        role: instructor
+      - name: Jose Niño Muriel
+        role: helper
+    type: Community Pilot
+    note: >-
+      3-hour in-person session, 10am-1pm PT.
+      https://carpentry.library.ucsb.edu/workshop/2026/07/15/ucsb-containers/
+      TODO: Jose's ORCID/GitHub not yet confirmed — ask Tim.
 learningResourceType: lesson
 teaches:
   - Using containers

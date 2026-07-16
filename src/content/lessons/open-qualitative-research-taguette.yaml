@@ -17,10 +17,18 @@ pilots:
   - date: 2025-04-03T00:00:00.000Z
     location: Co-taught Workshop
     instructor: Sebastian Karcher
+    instructors:
+      - name: Sebastian Karcher
+        orcid: "0000-0001-8249-7388"
+        role: instructor
     type: Co-taught Pilot
   - date: 2025-04-01T00:00:00.000Z
     location: External Pilot
-    instructor: Authors
+    instructor: Nathaniel Porter
+    instructors:
+      - name: Nathaniel Porter
+        orcid: "0000-0002-0479-6777"
+        role: instructor
     type: Pilot
     note: Taught twice using data from QDR.
 learningResourceType: lesson

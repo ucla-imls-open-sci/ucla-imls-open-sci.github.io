@@ -39,7 +39,15 @@ const lessons = defineCollection({
       z.object({
         date: z.date().or(z.string()).optional(), // Date might be string in yaml if not iso
         location: z.string().optional(),
-        instructor: z.string().optional(),
+        instructor: z.string().optional(), // legacy plain-text fallback
+        instructors: z.array(
+          z.object({
+            name: z.string(),
+            orcid: z.string().optional(),
+            github: z.string().optional(),
+            role: z.enum(['instructor', 'helper']).optional(), // defaults to instructor
+          })
+        ).optional(), // structured, linkable credit
         type: z.string().optional(),
         note: z.string().optional(),
       })

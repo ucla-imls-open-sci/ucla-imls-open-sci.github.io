@@ -1,11 +1,11 @@
 name: Data Management (and Sharing) Plans for Librarians 101
 authors:
   - name: Lena Bohman
-    orcid: "0000-0002-0943-9844"
+    orcid: "0000-0002-0505-7036"
   - name: Marla Hertz
-    orcid: "0000-0002-7634-1188"
+    orcid: "0000-0001-7929-7756"
   - name: Daria Orlowska
-    orcid: "0000-0002-9907-2856"
+    orcid: "0000-0003-3497-7103"
 status: beta
 library_carpentry_adopted: true
 educationalLevel: Introductory
@@ -21,9 +21,34 @@ keywords:
 pilots:
   - date: 2024-03-14T00:00:00.000Z
     location: Internal (UCLA/Authors)
-    instructor: Authors
+    instructor: Lena Bohman, Marla Hertz & Daria Orlowska
+    instructors:
+      - name: Lena Bohman
+        orcid: "0000-0002-0943-9844"
+        role: instructor
+      - name: Marla Hertz
+        orcid: "0000-0002-7634-1188"
+        role: instructor
+      - name: Daria Orlowska
+        orcid: "0000-0002-9907-2856"
+        role: instructor
     type: Internal Alpha Pilot
     note: Initial internal run; went smoothly.
+  - date: 2026-05-19T00:00:00.000Z
+    location: Bradley University (CARLI)
+    instructor: Jennifer Stubbs
+    instructors:
+      - name: Jennifer Stubbs
+        orcid: "0000-0002-6080-5703"
+        github: jas58
+        role: instructor
+    type: Community Pilot
+    note: >-
+      Episode 1 ran 40 min, episode 2 ran 45 min; barely reached episode 3 in
+      two hours. Discussion was engaged and ran long. Flagged NSF 26-202 (new
+      8-section required DMP template, effective April 27, 2026) and updated NIH
+      Data Management and Sharing form as live policy changes needing lesson
+      updates.
 recognition:
   - title: Library Carpentry Adoption
     desc: Formally adopted as an official Library Carpentry lesson.
