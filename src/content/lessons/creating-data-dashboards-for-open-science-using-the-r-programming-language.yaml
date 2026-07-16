@@ -23,6 +23,21 @@ pilots:
     location: CRDDS, CU Boulder
     instructor: Aditya Ranganath
     type: Virtual Workshop
+  - date: 2026-04-01T00:00:00.000Z
+    location: Virginia Tech
+    instructor: Nathaniel Porter & Jesse Sadler
+    instructors:
+      - name: Nathaniel Porter
+        orcid: "0000-0002-0479-6777"
+        role: instructor
+      - name: Jesse Sadler
+        role: instructor
+    type: Community Pilot
+    note: >-
+      Date is approximate (April 1 used as a Spring 2026 placeholder).
+      Issue #61 gave "Spring 2026" as tentative timing with no exact date
+      on record or follow-up report filed; reported as taught in the May
+      2026 pilot-results post.
 learningResourceType: lesson
 teaches:
   - >-
