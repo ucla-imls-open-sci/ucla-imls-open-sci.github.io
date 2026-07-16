@@ -127,6 +127,19 @@ const jsonLd = {
       ...(a.orcid ? { sameAs: `https://orcid.org/${a.orcid}` } : {}),
     }))
   } : {}),
+  ...(lesson.pilots?.some((p: any) => p.instructors?.some((i: any) => i.orcid)) ? {
+    contributor: Array.from(
+      new Map(
+        lesson.pilots.flatMap((p: any) => p.instructors || [])
+          .filter((i: { orcid?: string }) => i.orcid)
+          .map((i: { name: string; orcid?: string }) => [i.orcid, i])
+      ).values()
+    ).map((i: any) => ({
+      '@type': 'Person',
+      name: i.name,
+      sameAs: `https://orcid.org/${i.orcid}`,
+    }))
+  } : {}),
   ...(health?.pushedAt ? { dateModified: health.pushedAt } : {}),
   ...(lesson.doi ? { identifier: `https://doi.org/${lesson.doi}` } : {}),
   inLanguage: 'en',
@@ -233,6 +246,13 @@ const jsonLd = {
           {lesson.pilots && lesson.pilots.length > 0 && (
             <div class="mt-5">
                 <h4><i class="fas fa-history mr-2 text-muted"></i>Workshop History</h4>
+                {lesson.authors && lesson.authors.length > 0 && (
+                    <p class="text-muted small mb-3">
+                        Piloting is what moves a lesson past what the authors can test alone.
+                        Thanks to {lesson.authors.map((a: { name: string }) => a.name).join(', ')} for
+                        opening this lesson to outside review.
+                    </p>
+                )}
                 <div class="table-responsive">
                     <table class="table table-hover table-sm mt-3">
                         <thead class="thead-light">
@@ -249,7 +269,29 @@ const jsonLd = {
                                     <td>{new Date(pilot.date).toLocaleDateString()}</td>
                                     <td>{pilot.location}</td>
                                     <td><span class="badge badge-light border">{pilot.type}</span></td>
-                                    <td>{pilot.instructor}</td>
+                                    <td>
+                                        {pilot.instructors && pilot.instructors.length > 0 ? (
+                                            pilot.instructors.map((person: { name: string; orcid?: string; github?: string; role?: string }, idx: number) => (
+                                                <span class="mr-2 d-inline-block">
+                                                    {idx > 0 && <span class="mr-2">·</span>}
+                                                    {person.name}
+                                                    {person.role === 'helper' && <span class="badge badge-light border ml-1" style="font-size: 0.7rem;">helper</span>}
+                                                    {person.orcid && (
+                                                        <a href={`https://orcid.org/${person.orcid}`} target="_blank" rel="noopener noreferrer" class="ml-1" aria-label={`ORCID for ${person.name}`}>
+                                                            <i class="fab fa-orcid text-success"></i>
+                                                        </a>
+                                                    )}
+                                                    {person.github && (
+                                                        <a href={`https://github.com/${person.github}`} target="_blank" rel="noopener noreferrer" class="ml-1" aria-label={`GitHub for ${person.name}`}>
+                                                            <i class="fab fa-github text-dark"></i>
+                                                        </a>
+                                                    )}
+                                                </span>
+                                            ))
+                                        ) : (
+                                            pilot.instructor
+                                        )}
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>
