@@ -2,8 +2,9 @@ name: Authoring Open Science
 duration: 3h 00m
 authors:
   - name: Kathryn Miller
+    orcid: "0000-0001-8005-089X"
   - name: Andrea Medina-Smith
-    orcid: "0000-0002-1463-5460"
+    orcid: "0000-0002-1217-701X"
 status: alpha
 educationalLevel: Introductory
 abstract: >-
