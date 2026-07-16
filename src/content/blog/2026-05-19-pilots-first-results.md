@@ -26,24 +26,27 @@ Thank you to the instructors who ran sessions and took the time to report back:
     <tr><th>Lesson</th><th>Instructor(s)</th><th>Institution</th><th>Date</th></tr>
   </thead>
   <tbody>
-    <tr><td>Containers and Virtual Machines</td><td>Fernando Rios &amp; Jeffrey Oliver</td><td>University of Arizona</td><td>Oct 2024, Jun 2025</td></tr>
+    <tr><td>Containers and Virtual Machines</td><td><a href="https://orcid.org/0000-0001-6262-3260">Fernando Rios</a> &amp; <a href="https://orcid.org/0000-0003-2160-1086">Jeffrey Oliver</a></td><td>University of Arizona</td><td>Oct 2024, Jun 2025</td></tr>
     <tr><td>Containers and Virtual Machines</td><td>Hafeez Adepoju &amp; Chreston Miller</td><td>University of Arizona / Virginia Tech</td><td>Apr 2026 (RDAP Summit)</td></tr>
-    <tr><td>Data Dashboards with R</td><td>Aditya Ranganath</td><td>CU Boulder (CRDDS)</td><td>May 2025</td></tr>
-    <tr><td>Data Dashboards with R</td><td>Nathaniel Porter &amp; Jesse Sadler</td><td>Virginia Tech</td><td>Spring 2026</td></tr>
-    <tr><td>Open Qualitative Research (QualCoder)</td><td>Nathaniel Porter</td><td>Virginia Tech</td><td>Mar &amp; May 2025</td></tr>
-    <tr><td>Open Qualitative Research (QualCoder)</td><td>Sebastian Karcher</td><td>IASSIST 2025, Bristol UK</td><td>Jun 2025</td></tr>
-    <tr><td>DMP 101</td><td>Jennifer Stubbs</td><td>Bradley University / CARLI</td><td>May 2026</td></tr>
+    <tr><td>Data Dashboards with R</td><td><a href="https://orcid.org/0000-0003-1272-6354">Aditya Ranganath</a></td><td>CU Boulder (CRDDS)</td><td>May 2025</td></tr>
+    <tr><td>Data Dashboards with R</td><td><a href="https://orcid.org/0000-0002-0479-6777">Nathaniel Porter</a> &amp; Jesse Sadler</td><td>Virginia Tech</td><td>Spring 2026</td></tr>
+    <tr><td>Open Qualitative Research (QualCoder)</td><td><a href="https://orcid.org/0000-0002-0479-6777">Nathaniel Porter</a></td><td>Virginia Tech</td><td>Mar &amp; May 2025</td></tr>
+    <tr><td>Open Qualitative Research (QualCoder)</td><td><a href="https://orcid.org/0000-0001-8249-7388">Sebastian Karcher</a></td><td>IASSIST 2025, Bristol UK</td><td>Jun 2025</td></tr>
+    <tr><td>DMP 101</td><td><a href="https://orcid.org/0000-0002-6080-5703">Jennifer Stubbs</a> (<a href="https://github.com/jas58">GitHub</a>)</td><td>Bradley University / CARLI</td><td>May 2026</td></tr>
+    <tr><td>Containers and Virtual Machines</td><td><a href="https://orcid.org/0000-0001-8217-4028">Juliet Cohen</a>, <a href="https://orcid.org/0000-0002-5570-7201">Seth Erickson</a> &amp; <a href="https://orcid.org/0000-0002-2020-1163">Jairo Melo-Flórez</a></td><td><a href="https://carpentry.library.ucsb.edu/workshop/2026/07/15/ucsb-containers/">UC Santa Barbara</a></td><td>Jul 2026</td></tr>
   </tbody>
 </table>
 </div>
 
-Seven external community pilots across four lessons. Institutions in Illinois, Colorado, Arizona, Virginia, and the UK.
+Eight external community pilots across four lessons. Institutions in Illinois, Colorado, Arizona, Virginia, California, and the UK.
+
+None of this happens without lesson authors willing to hand their material to someone else and let it get picked apart: thanks to [Fernando Rios](https://orcid.org/0000-0001-6262-3260), [Jeffrey Oliver](https://orcid.org/0000-0003-2160-1086), [Aditya Ranganath](https://orcid.org/0000-0003-1272-6354), [Nathaniel Porter](https://orcid.org/0000-0002-0479-6777), [Sebastian Karcher](https://orcid.org/0000-0001-8249-7388), [Lena Bohman](https://orcid.org/0000-0002-0505-7036), [Marla Hertz](https://orcid.org/0000-0001-7929-7756), and [Daria Orlowska](https://orcid.org/0000-0003-3497-7103) for opening their lessons to outside testing.
 
 ## What the Feedback Looks Like
 
 Nathaniel Porter's post-pilot notes on Data Dashboards with R ran to 20 specific items: timing estimates that were off, accessibility language to fix, screenshot quality issues, a code block with a logic error. The kind of review that doesn't come from the people who wrote the lesson. Lesson author Aditya Ranganath is working through the list.
 
-Jennifer Stubbs is teaching DMP101 today at Bradley University through CARLI. During prep she flagged two live funder policy changes the lesson needs to address: NSF 26-202 (a new required DMP template with 8 defined subsections, effective April 27, 2026) and an updated NIH Data Management and Sharing form. She also posted her full rehearsal timings. In practice the lesson runs about 100 minutes across five episodes, which is useful for anyone planning their session length.
+Jennifer Stubbs taught DMP 101 on May 19 at Bradley University through CARLI. During prep she flagged two live funder policy changes the lesson needs to address: NSF 26-202 (a new required DMP template with 8 defined subsections, effective April 27, 2026) and an updated NIH Data Management and Sharing form. In the session, episode 1 ran 40 minutes and episode 2 ran 45. She barely reached episode 3 in two hours. The discussion ran long. She didn't follow the script closely, but a notetaker said it sounded natural throughout.
 
 Sebastian Karcher took QualCoder to IASSIST 2025 in Bristol. The lesson has now been taught in the US and the UK, by two different instructors, to different audience types. That range is what moves a lesson from Alpha to Beta.
 
